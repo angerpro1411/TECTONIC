@@ -24,7 +24,7 @@ use ieee.std_logic_1164.all;
 
 entity SKID_BUFFER is
     generic(
-            DATA_WIDTH : integer := 8;
+            DATA_WIDTH : integer := 8
     );
     port(
         i_CLK     : in std_logic;
