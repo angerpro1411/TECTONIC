@@ -81,7 +81,7 @@ begin
 				VC_REG <= (others => '0');
 			else 
 				HC_REG <= HC_NX;
-				HC_REG <= HC_NX;
+				VC_REG <= VC_NX;
 			end if;
 		end if;					
 	end process;
