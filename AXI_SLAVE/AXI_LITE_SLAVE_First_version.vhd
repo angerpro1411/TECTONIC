@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Duy-Manh NGUYEN
 -- 
 -- Create Date: 04/22/2024 02:32:56 PM
 -- Design Name: 
