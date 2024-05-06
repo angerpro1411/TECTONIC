@@ -1,0 +1,3 @@
+The last one who works and synthesizable is AXI_LITE_SLAVE_VHD_OLDVERSION. This one is modified from my_AXI_SLAVE. 
+The problem of my_AXI_SLAVE is that works with VHDL2008 and VIVADO of Xilinx doesn't support synthezise VHDL2008,
+so it is impossible to create IP and testing after RTL code.
