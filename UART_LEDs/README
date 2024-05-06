@@ -1,0 +1,1 @@
+UART_WRITE2.c is the program in C using to send one character from keyboard to LEDs of NEXYSA7_100T.
