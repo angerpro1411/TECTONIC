@@ -1,4 +1,24 @@
---05/05/2024 Non confirm and check syntax yet.
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 05/06/2024 01:31:54 PM
+-- Design Name: 
+-- Module Name: FRAME_COUNTER - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- --05/05/2024 Non confirm and check syntax yet.
+-- 06/05/2024 Check syntax -> OK
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -6,15 +26,16 @@ use ieee.numeric_std.all;
 entity FRAME_COUNTER is
     generic(
     		SYS_CLK : integer := 100; --100MHz
+    		COUNT_MAX : integer := 3;
             HMAX : integer := 640;
-            VMAX : integer := 480;
-             )
+            VMAX : integer := 480
+             );
     port(
          i_CLK   : in std_logic;
          i_RST_n : in std_logic;
          SYNC_CLR: in std_logic;
          HC      : out std_logic_vector(10 downto 0);
-         VC      : out std_logic(10 downto 0)
+         VC      : out std_logic_vector(10 downto 0);
          FRAME_START : out std_logic;
          FRAME_END   : out std_logic             
 );
@@ -31,26 +52,25 @@ begin
 
 	--CLK divider divides 100MHz to 25MHz
     CLK_DIV : process(i_CLK,i_RST_n)
-    	signal COUNT : integer range 0 to COUNT_MAX;
-    	signal COUNT_MAX : integer := 3;
+    	variable COUNT : integer range 0 to COUNT_MAX; 	
 	begin
 		if i_RST_n = '0' then
-			COUNT <= 0;
+			COUNT := 0;
 			TICK_25M <= '0';
 		else
 			if rising_edge(i_CLK) then
-				COUNT <= COUNT + 1;
+				COUNT := COUNT + 1;
 				TICK_25M <= '0';
 				if COUNT = COUNT_MAX then
-					COUNT <= 0;
-					TICK_25M = '1';
+					COUNT := 0;
+					TICK_25M <= '1';
 				end if;
 			end if;
 		end if;
 	end process;
 	
 	--CONTROL HC and VC bus.
-	STATE REGIS : process(i_CLK,i_RST_n)
+	STATE_REGIS : process(i_CLK,i_RST_n)
 	begin
 		if i_RST_n = '0' then
 			HC_REG <= (others => '0');
@@ -77,7 +97,7 @@ begin
 		end if;
 	end process;
 	
-	VC_INCREASE : process (TICK_25M,VC_REG)
+	VC_INCREASE : process (TICK_25M,VC_REG,HC_REG)
 	begin
 		VC_NX <= VC_REG;
 		if (TICK_25M = '1' and HC_REG = HMAX - 1) then
@@ -91,7 +111,7 @@ begin
 	HC <= std_logic_vector(HC_REG);
 	VC <= std_logic_vector(VC_REG);
 	
-	FRAME_START <= '1' when HC_REG = (others => '0') and VC_REG = (others => '0');
-	FRAME_END <= '1' when HC_REG = HMAX - 1 and VC_REG = VMAX - 1;
+	FRAME_START <= '1' when to_integer(HC_REG) = 0 and to_integer(VC_REG) = 0 else '0';
+	FRAME_END <= '1' when HC_REG = HMAX - 1 and VC_REG = VMAX - 1 else '0';
 	
 end architecture;
