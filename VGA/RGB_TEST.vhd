@@ -11,7 +11,8 @@
 -- Description: 
 -- 
 -- Dependencies: 
--- 
+-- Change at 15:12 07/05/2024, now we can control screen's color by SW1 to SW6 of Zedboard. Each 2 consecutive SW
+-- are 2 MSB bits of each color, for example, SW1 and SW2 are 2MSB bits of RED.
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
@@ -29,7 +30,8 @@ entity RGB_TEST is
         HSYNC   : out std_logic;
         VSYNC   : out std_logic;
         
-        
+        --i_RGB_DATA: in std_logic_vector(11 downto 0);
+        SW      : in std_logic_vector(5 downto 0);
         o_RGB_DATA: out std_logic_vector(11 downto 0)
     );
 end RGB_TEST;
@@ -63,6 +65,11 @@ begin
         o_RGB_DATA => o_RGB_DATA  
     );
     
-    i_RGB_DATA <= X"ABC";
+    i_RGB_DATA(1 downto 0) <= "00";
+    i_RGB_DATA(3 downto 2) <= SW(1 downto 0);
+    i_RGB_DATA(5 downto 4) <= "00";
+    i_RGB_DATA(7 downto 6) <= SW(3 downto 2);
+    i_RGB_DATA(9 downto 8) <= "00";
+    i_RGB_DATA(11 downto 10) <= SW(5 downto 4);
 
 end TEST;
