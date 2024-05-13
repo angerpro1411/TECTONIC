@@ -18,6 +18,7 @@
 -- https://www.realdigital.org/doc/a9fee931f7a172423e1ba73f66ca4081
 -- https://docs.amd.com/v/u/en-US/axi_lite_ipif_ds765
 -- https://docs.amd.com/v/u/en-US/pg155-axi-lite-ipif
+-- How to perform Read and Write AXI-LITE in C Vitis : https://www.youtube.com/watch?v=MbteffkRi8Y
 ----------------------------------------------------------------------------------
 
 
