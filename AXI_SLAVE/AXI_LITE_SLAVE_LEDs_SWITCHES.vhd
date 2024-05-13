@@ -4,23 +4,25 @@
 -- 
 -- Create Date: 04/30/2024 02:32:56 PM
 -- Design Name: 
--- Module Name: AXI_LITE_SLAVE - Behavioral
+-- Module Name: AXI_LITE_SLAVE - RTL
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
--- Description: 
--- Follow the xilinx slave example
+-- Description: Follow the xilinx slave example.
 -- Dependencies: 
--- 
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
 -- https://www.realdigital.org/doc/a9fee931f7a172423e1ba73f66ca4081
 -- https://docs.amd.com/v/u/en-US/axi_lite_ipif_ds765
 -- https://docs.amd.com/v/u/en-US/pg155-axi-lite-ipif
+-- https://www.youtube.com/watch?v=MbteffkRi8Y
 ----------------------------------------------------------------------------------
-
-
+-- Approach : This test create Output Leds and Input SW in Zedboard to test Write Read Operation AXI-Slave-Lite.
+-- Line 234 : Write to Register0. Line 334 : Read from SW. But in fact they share the same address "00" and create two
+-- register apart, therefore in C code, when we write and read in the same address, but in fact, that points to different register,
+-- so we will see the different result.
+----------------------------------------------------------------------------------
 
 LIBRARY ieee;
 use ieee.std_logic_1164.all;
