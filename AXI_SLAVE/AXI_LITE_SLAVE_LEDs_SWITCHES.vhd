@@ -39,9 +39,11 @@ entity AXI_LITE_SLAVE_VHD_OLDVERSION is
 	);
 	PORT(
 	    
-	    --Output test signal
+	    -------------------Input, Output test signal-------------------------
 	    LEDs           : out std_logic_vector(7 downto 0);
-	
+	    SW             : in std_logic_vector(7 downto 0);
+	    ---------------------------------------------------------------------
+	    
 		----------------------------Global signal----------------------------
 		S_AXI_ACLK 		: in std_logic;
 		S_AXI_ARESETN		: in std_logic;
@@ -328,7 +330,8 @@ begin
 				if (RD_FROM_SLAVE_REG_EN = '1') then
 					case LOC_ADDR is
 						when "00" =>
-							S_AXI_RDATA <= AXI_SLAVE_R0;
+							S_AXI_RDATA(31 downto 8) <= (others => '0');
+							S_AXI_RDATA(7 downto 0) <= SW;
 						when "01" =>
 							S_AXI_RDATA <= AXI_SLAVE_R1;
 						when "10" =>
@@ -344,7 +347,7 @@ begin
     end process;
     
     --Output USERs
-    LEDs <= AXI_SLAVE_R2(7 downto 0) and AXI_SLAVE_R3(7 downto 0);
+    LEDs <= AXI_SLAVE_R0(7 downto 0) and AXI_SLAVE_R3(7 downto 0);
 
 end architecture;
 
