@@ -67,6 +67,8 @@ int main()
 	 */
 	REG00 = 0xFF;
 	REG03 = 0x22;
+
+	//Write to real register in Hardware.
 	*slave_reg03 = REG03;
 	*slave_reg00 = REG00;
 	LEDs = REG00 & REG03;
