@@ -6,9 +6,10 @@
 I used Raspberry 4 model B to add the OS inside, you can choose whatever you want but recommended with reduce time to stay with choosing OS
 we can choose the avaible in rpi-imager by install the rpi-imager package in Ubuntu.
 Attention! Don't forget to attach your SD card in to your PC/laptop.
-> sudo apt-get install rpi-imager
-> rpi-imager
-
+```
+sudo apt-get install rpi-imager
+rpi-imager
+```
 #rpi-imager tool
  
   ![Screenshot from 2024-05-31 13-28-54](https://github.com/angerpro1411/TECTONIC/assets/166725219/54429c6e-4fed-42f6-a928-fad5de534ece)
@@ -29,7 +30,7 @@ control GPIO, not to display hdmi to screen. You can choose RaspDebian 64 withou
 - Enable SSH (to connect Ethernet with PC/Laptop)
 - Set username/password.
 - Configure wireless LAN.
-- Set local time
+- Set local time.
 - -> Save
 - Then click Write and wait the OS done in your SD card.
 - After finsihed, put your SD card to Raspberry Pi.
@@ -42,7 +43,9 @@ control GPIO, not to display hdmi to screen. You can choose RaspDebian 64 withou
 - Now when you connect your PC/Laptop and Pi through Ethernet cable, you will see Wired/Pi connected/On
 2.4. Connect and Control Pi through SSH.
 - Time to use your username and hostname that you used to set-up for RaspBerry Pi
-> ssh username@hostname.local
+```
+ssh username@hostname.local
+```
 - First time connect, it will ask the security, just type "yes".
 - Then it asks the pi's password.
 Tara you succeed to connect with Pi.
@@ -50,14 +53,17 @@ Tara you succeed to connect with Pi.
 3. Control GPIO of PI
 - Tons of tutorials to control PI u can check in Youtube but basically, all GPIO is inside folder /sys/class/gpio/
 - For example, you want to control GPIO1 :
-> cd /sys/class/gpio
-> echo 1 > export
-> ls
+```
+cd /sys/class/gpio
+echo 1 > export
+ls
+```
 - You will see gpio1 now export as a file inside folder.
-- > echo out/in > gpio1/direction #choose direction for GPIO1
-- > echo 1 > gpio1/value #make output is high
-- > echo 0 > gpio1/value #make output is low
-
+```
+echo out/in > gpio1/direction #choose direction for GPIO1
+echo 1 > gpio1/value #make output is high
+echo 0 > gpio1/value #make output is low
+```
 - That is basic control for PI GPIO.
 
 4.GPIO Raspberry Pi hardware
