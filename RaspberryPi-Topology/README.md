@@ -1,6 +1,6 @@
 1. Reference:
 - Connect raspberry pi 3 B+ with Ubuntu using wifi/ethernet - 2022 : https://www.youtube.com/watch?v=YXA66QXrH1c
-- HOW TO control the GPIO Pins: https://www.youtube.com/watch?v=0zaawzBxGcY
+- HOW TO control the GPIO Pins: [https://www.youtube.com/watch?v=0zaawzBxGcY](https://www.youtube.com/watch?v=RDAOxX6vqqs)
 - Full tutorial control PI - Embedded : https://www.youtube.com/watch?v=1WDagiA8fdU&list=PLGs0VKk2DiYxdMjCJmcP6jt4Yw6OHK85O
 2. In this project :
 I used Raspberry 4 model B to add the OS inside, you can choose whatever you want but recommended with reduce time to stay with choosing OS
@@ -52,17 +52,23 @@ Tara you succeed to connect with Pi.
 
 3. Control GPIO of PI
 - Tons of tutorials to control PI u can check in Youtube but basically, all GPIO is inside folder /sys/class/gpio/
-- For example, you want to control GPIO1 :
+- Download and build gpio command for Pi:
 ```
-cd /sys/class/gpio
-echo 1 > export
-ls
+git clone https://github.com/WiringPi/WiringPi.git
+cd ~/wiringPi
+./build
+
+#Check all the status of GPIO
+gpio readall
+
 ```
-- You will see gpio1 now export as a file inside folder.
+- For example, you want to control GPIO20 :
 ```
-echo out/in > gpio1/direction #choose direction for GPIO1
-echo 1 > gpio1/value #make output is high
-echo 0 > gpio1/value #make output is low
+gpio mode 20 out 	#output for gpio20
+gpio write 20 1 	#write 1 to gpio20
+
+gpio mode 20 in		#back to default(important to avoid short circuit)
+gpio read 20		#return the value of GPIO20
 ```
 - That is basic control for PI GPIO.
 
