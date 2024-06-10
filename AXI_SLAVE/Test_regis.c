@@ -31,6 +31,8 @@
  * | UART TYPE   BAUD RATE                        |
  * ------------------------------------------------
  */
+/*This code C uses under Vitis enviroment of Xilinx*/
+
 
 #include <stdio.h>
 #include "xil_printf.h"
