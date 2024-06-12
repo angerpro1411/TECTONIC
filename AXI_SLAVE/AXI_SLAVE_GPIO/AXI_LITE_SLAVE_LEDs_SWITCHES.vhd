@@ -30,7 +30,7 @@ use ieee.numeric_std.all;
 
 
 
-entity AXI_LITE_SLAVE_VHD_OLDVERSION is
+entity AXI_LITE_SLAVE_LEDs_SWITCHES is
 	GENERIC(
 		DATA_WIDTH		: integer := 32;
 		STROBE_WIDTH	: integer := 4;--datawidth/8
@@ -116,7 +116,7 @@ entity AXI_LITE_SLAVE_VHD_OLDVERSION is
 	
 end entity;
 
-architecture RTL of AXI_LITE_SLAVE_VHD_OLDVERSION is
+architecture RTL of AXI_LITE_SLAVE_LEDs_SWITCHES is
 
 	--functions
 	function APPLY_W_STRB(
