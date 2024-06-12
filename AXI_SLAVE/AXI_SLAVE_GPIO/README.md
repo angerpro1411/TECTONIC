@@ -56,10 +56,10 @@ minicom -D /dev/ttyACM0 -b 115200
 
 > Feel free to change the .c code after fully understand how the code works.
 > If any error happends after copy test_regis.c into helloword.c, it only comes from FPGA_BASE_ADDRESS, if you know where it is inside Vitis, that oke. But unless, go back Vivado, **Open Block Design**, go to **Address Editor**, you can see FPGA_BASE_ADDRESS over there. Normally it is 0x4000_0000, but sometimes it is different.
-> You even can change the VHDL file if you don't want LEDs = register00 and register03(bitwise operation). I write code at the near the last line of AXI_LITE_SLAVE..vhd file.
+> You even can change the VHDL file if you don't want LEDs = register00 and register03(bitwise operation). I wrote Leds logic combination near the last line of AXI_LITE_SLAVE..vhd file.
 
 ![image](https://github.com/angerpro1411/TECTONIC/assets/166725219/2ea97e69-0574-4403-8fe2-b3c3883e8b52)
-> Change the code, it means you need to update IP and re-do every steps exept create project.
+> Change the VHDL code, it means you need to update IP and re-do every steps exept create project. Remember .c code can not change the system, we only use it to produce the outside signal(from PS) and get calcalation and result from Hardware(FPGA-PL) that we already designed in VHDL.
 
 ## Conclusion
 We already passed all steps to integrate AXI_LITE_SLAVE IP to control Leds also read SW's status. Pass through basic create Block Design and use Vitis to boot our system to ZYNQ7.
