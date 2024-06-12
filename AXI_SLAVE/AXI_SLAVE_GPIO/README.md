@@ -61,6 +61,6 @@ minicom -D /dev/ttyACM0 -b 115200
 ![image](https://github.com/angerpro1411/TECTONIC/assets/166725219/2ea97e69-0574-4403-8fe2-b3c3883e8b52)
 > Change the code, it means you need to update IP and re-do every steps exept create project.
 
-##Conclusion
+## Conclusion
 We already passed all steps to integrate AXI_LITE_SLAVE IP to control Leds also read SW's status. Pass through basic create Block Design and use Vitis to boot our system to ZYNQ7.
 
