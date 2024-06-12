@@ -39,6 +39,8 @@
 #include "xparameters.h"
 #include "sleep.h"
 
+#define FGPA_BASE_ADDRESS 0x40000000
+
 volatile unsigned int *slave_reg00;
 volatile unsigned int *slave_reg01;
 volatile unsigned int *slave_reg02;
@@ -56,13 +58,13 @@ int main()
 	/*
 	 * Point the register correspond to each address.
 	 */
-	slave_reg00 = (volatile unsigned int *)XPAR_AXI_LITE_SLAVE_LEDS_SWITCHES_0_BASEADDR;
-	slave_reg01 = (volatile unsigned int *)(XPAR_AXI_LITE_SLAVE_LEDS_SWITCHES_0_BASEADDR + 4);
-	slave_reg02 = (volatile unsigned int *)(XPAR_AXI_LITE_SLAVE_LEDS_SWITCHES_0_BASEADDR + 8);
-	slave_reg03 = (volatile unsigned int *)(XPAR_AXI_LITE_SLAVE_LEDS_SWITCHES_0_BASEADDR + 12);
+	slave_reg00 = (volatile unsigned int *)FGPA_BASE_ADDRESS;
+	slave_reg01 = (volatile unsigned int *)(FGPA_BASE_ADDRESS + 4);
+	slave_reg02 = (volatile unsigned int *)(FGPA_BASE_ADDRESS + 8);
+	slave_reg03 = (volatile unsigned int *)(FGPA_BASE_ADDRESS + 12);
 
 	//SW shares the same address "00" in hardware specification. Read VHDL code to more understanding.
-	SW = (volatile unsigned int *)XPAR_AXI_LITE_SLAVE_LEDS_SWITCHES_0_BASEADDR;
+	SW = (volatile unsigned int *)FGPA_BASE_ADDRESS;
 
 	/*
 	 * 7LEDs display. In the hardware specification, we define that 7-Leds = REG00 and REG03.
