@@ -228,7 +228,14 @@ begin
 				-- Create a new branch to define AXI registers, so we can write from various sources.
 				-- This source can manipulate Regs inside PL, but from PS(processor) is always priority by if else condition.
 				elsif DAT_VALID_REG0 = '1' then
+					
+					--Put dirty signal into R1
+					AXI_SLAVE_R1 <= (others => '0');
+					
+					--Increase value at R0 by 1 and put at R2
 					AXI_SLAVE_R2 <= std_logic_vector(unsigned(AXI_SLAVE_R0) + 1);
+					
+					--Put fresh signal into R3
 					AXI_SLAVE_R3 <= std_logic_vector(to_unsigned(1,32));
 				end if;
 			end if;
@@ -345,7 +352,7 @@ begin
 				DECODE_EN <= '1';
 		    elsif(WR_TO_SLAVE_REG_EN = '1'and DECODE_EN <= '1') then
 		    	DECODE_EN <= '0';
-	        elsif(AXI_SLAVE_R0(10) = '1' and DECODE_EN <= '0') then
+	        elsif(AXI_SLAVE_R1(0) = '1' and DECODE_EN <= '0') then
 	        	DECODE_EN <= '1';
 				DAT_VALID_REG0 <= '1';
 	        else
