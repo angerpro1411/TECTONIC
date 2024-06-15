@@ -43,12 +43,11 @@
 //You can check your base address at Address Editor in Vivado Design Block.
 #define FPGA_BASE_ADDR 0x40000000
 
-#define WRITE 1
-#define READ 0
-
-#define FULL 2
-#define EMPTY 1
-#define noFULLnoEMPTY 0
+//Function declarations
+void WRITE_DATA(unsigned int data);
+void VALID_DATA();
+unsigned int READ_DATA();
+void INVALID_DATA();
 
 volatile unsigned int *slave_reg00;
 volatile unsigned int *slave_reg01;
@@ -63,7 +62,7 @@ int main()
 	unsigned int option;
 	unsigned int data=0;
 	//Start program.
-	xil_printf("/****************Program starts*****************/\r\n");
+	xil_printf("/-------------------Program starts------------------/\r\n");
 	/*
 	 * Point the register correspond to each address.
 	 */
@@ -73,28 +72,22 @@ int main()
 	slave_reg03 = (volatile unsigned int *)(FPGA_BASE_ADDR + 12);
 
 	while(1){
-		CHECK_FIFO_STATUS();
-		xil_printf("\r\nWrite or Read 1/0");
-		scanf("%d",&option);
+		xil_printf("\r\nFill the data to REG00(maximum 32b) 0x");
+		scanf("%x",&data);
 
-		//check option and compare with status
-		if(option == WRITE && CHECK_FIFO_STATUS() == FULL){
-			xil_printf("\r\n Can not write when full, go back to option");
-			continue;
-		}
-		else if(option == READ && CHECK_FIFO_STATUS() == EMPTY){
-			xil_printf("\r\n Can not read when empty, go back to option");
-			continue;
-		}
+		//Write data into reg0
+		WRITE_DATA(data);
 
-		if (option == WRITE){
-			xil_printf("\r\nFill the data 0x");
-			scanf("%x",&data);
-			WRITE_FIFO(data);
-		}
-		else if (option == READ)
-			READ_FIFO();
-	}
+		//tell system that data fresh in reg0
+		VALID_DATA;
+
+		//Wait new data is cming
+		POLLING_DATA();
+
+		//Read new data
+		READ_DATA();
+
+		xil_printf("End program.");
 
     return 0;
 }
@@ -105,7 +98,7 @@ void WRITE_DATA(unsigned int data){
     REG00 = REG00 | data;
 
     //Write data into register0
-    *slave_reg00 = REG00
+    *slave_reg00 = REG00;
 }
 
 //Valid signal is bit0 of regis1
@@ -113,5 +106,25 @@ void VALID_DATA(){
     unsigned int REG01 = 1;
 
     //Write data into register1
-    
+    *slave_reg00 = REG01;
+}
+
+//Read new data at regis02
+unsigned int READ_DATA(){
+	return *slave_reg02;
+}
+
+//Wait fresh data on regis02
+void POLLING_DATA(){
+
+	//read continuously value of reg03 till equal 1
+	while(*slave_reg03);
+}
+
+//Invalid data at regis03
+void INVALID_DATA(){
+	unsigned int REG03 = 0;
+
+	//Write invalid bit to reg03
+	*slave_reg03 = REG03;
 }
