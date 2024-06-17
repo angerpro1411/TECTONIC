@@ -43,11 +43,12 @@
 //You can check your base address at Address Editor in Vivado Design Block.
 #define FPGA_BASE_ADDR 0x40000000
 
-//Function declarations
+//Function declarations*slave_reg03
 void WRITE_DATA(unsigned int data);
 void VALID_DATA();
 unsigned int READ_DATA();
 void INVALID_DATA();
+void POLLING_DATA();
 
 volatile unsigned int *slave_reg00;
 volatile unsigned int *slave_reg01;
@@ -62,7 +63,7 @@ int main()
 	unsigned int option;
 	unsigned int data=0;
 	//Start program.
-	xil_printf("/-------------------Program starts------------------/\r\n");
+	xil_printf("\r\n/-------------------Program starts------------------/");
 	/*
 	 * Point the register correspond to each address.
 	 */
@@ -79,16 +80,19 @@ int main()
 		WRITE_DATA(data);
 
 		//tell system that data fresh in reg0
-		VALID_DATA;
+		VALID_DATA();
 
 		//Wait new data is cming
 		POLLING_DATA();
 
 		//Read new data
-		READ_DATA();
+		xil_printf("\r\nNew data is 0x%x",READ_DATA());
 
-		xil_printf("End program.");
+		//Put dirty to data we just read
+		INVALID_DATA();
 
+		xil_printf("\r\nEnd program.");
+	}
     return 0;
 }
 
@@ -106,7 +110,7 @@ void VALID_DATA(){
     unsigned int REG01 = 1;
 
     //Write data into register1
-    *slave_reg00 = REG01;
+    *slave_reg01 = REG01;
 }
 
 //Read new data at regis02
@@ -116,9 +120,12 @@ unsigned int READ_DATA(){
 
 //Wait fresh data on regis02
 void POLLING_DATA(){
-
+	unsigned int REG03 = 0;
+	do{
 	//read continuously value of reg03 till equal 1
-	while(*slave_reg03);
+		REG03 = *slave_reg03;}
+	while(REG03 == 0);
+
 }
 
 //Invalid data at regis03
