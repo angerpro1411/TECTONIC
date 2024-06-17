@@ -60,7 +60,6 @@ volatile unsigned int *slave_reg03;
 
 int main()
 {
-	unsigned int option;
 	unsigned int data=0;
 	//Start program.
 	xil_printf("\r\n/-------------------Program starts------------------/");
@@ -79,7 +78,11 @@ int main()
 		//Write data into reg0
 		WRITE_DATA(data);
 
-		//tell system that data fresh in reg0
+		//Verification Reg00
+		xil_printf("\r\nslave_reg00 is 0x%x",*slave_reg00);
+
+		//tell system that data fresh in reg0.
+		//We could let comment VALID_DATA() function to see the data flow is interrupted.
 		VALID_DATA();
 
 		//Wait new data is cming
@@ -115,7 +118,8 @@ void VALID_DATA(){
 
 //Read new data at regis02
 unsigned int READ_DATA(){
-	return *slave_reg02;
+	unsigned REG02 = *slave_reg02;
+	return REG02;
 }
 
 //Wait fresh data on regis02
