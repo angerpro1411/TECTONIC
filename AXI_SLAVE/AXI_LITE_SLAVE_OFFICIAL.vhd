@@ -46,9 +46,10 @@ entity AXI_LITE_SLAVE_VHD_OLDVERSION is
         -- ADDR_LSB = 2 for 32 bits address(n downto 2)
         -- ADDR_LSB = 3 for 64 bits address(n downto 3)		
 		
-		-- 4 configuration words, System 32-b byte addressable -----------------------------------
-        --													  |	  8	   |   8   |   8   |    8   |    => one word = 32 bits
-        --													  ---------	-------------------------
+		-- 4 configuration words, System 32-b byte addressable  
+		-----------------------------------
+		--|   8   |   8   |   8   |    8   |    => one word = 32 bits
+		----------------------------------
 		--With 32 bit data, we need 2-bits address(total 2^2 = 4 addresses) to addressing each 8 bit in one word 32 bits.
 		--With 64 bit data, we need 3-bits address(total 2^3 = 8 addresses) to addressing each 8 bit in one word 64 bits.
 		ADDRLSB			: integer := 2 -- log2(DATA_WIDTH) - 3	= log2(32) - 3 = 5-3 =2
