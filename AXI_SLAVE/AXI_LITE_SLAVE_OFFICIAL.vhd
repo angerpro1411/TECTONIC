@@ -33,10 +33,25 @@ entity AXI_LITE_SLAVE_VHD_OLDVERSION is
 	GENERIC(
 		DATA_WIDTH		: integer := 32;
 		STROBE_WIDTH	: integer := 4;--datawidth/8
-		ADDRESS_WIDTH	: integer := 4;-- 4 configuration words, System 32-b byte addressable -----------------------------------
-									   --													  |	  8	   |   8   |   8   |    8   |    => one word = 32 bits
-									   --													  ---------	-------------------------
-		ADDRLSB			: integer := 2 -- log2(DATA_WIDTH) - 3	
+		
+		--Correspond to number of registers.
+		--For example, ADDress_WIDTH = 4 bits, we lose 2 bit for addrlsb, so we have 2 bits left for address register => 2^2 = 4 register.
+		--As we always lose 2 bit for ADDRLSB with 32b system, if we want to have 32 registers => it means 5 bit address regis, so total 2+5=7 bit for address width 
+		ADDRESS_WIDTH	: integer := 4;
+		
+		
+        -- Example-specific design signals
+        -- local parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTH
+        -- ADDR_LSB is used for addressing 32/64 bit registers/memories
+        -- ADDR_LSB = 2 for 32 bits address(n downto 2)
+        -- ADDR_LSB = 3 for 64 bits address(n downto 3)		
+		
+		-- 4 configuration words, System 32-b byte addressable -----------------------------------
+        --													  |	  8	   |   8   |   8   |    8   |    => one word = 32 bits
+        --													  ---------	-------------------------
+		--With 32 bit data, we need 2-bits address(total 2^2 = 4 addresses) to addressing each 8 bit in one word 32 bits.
+		--With 64 bit data, we need 3-bits address(total 2^3 = 8 addresses) to addressing each 8 bit in one word 64 bits.
+		ADDRLSB			: integer := 2 -- log2(DATA_WIDTH) - 3	= log2(32) - 3 = 5-3 =2
 	);
 	PORT(
 	    
