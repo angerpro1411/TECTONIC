@@ -47,7 +47,9 @@ entity ADDRESSING_PIXEL is
 		--8-bit lines from 0 to 239 and 9 bits row from 0 to 319
 		ADDRESS : in std_logic_vector(16 downto 0);
 		
+        READ_EN : out std_logic;
 		o_DATA : out std_logic_vector(VGA_ZEDBOARD-1 downto 0);
+        VALID_RD_DATA : out std_logic;
 		--
 		DONE_WRITE : out std_logic	
 	);
@@ -84,8 +86,8 @@ architecture RTL of ADDRESSING_PIXEL is
     end component;    
 
     --Signal declarations
-    signal LINE_NUMBER : std_logic_vector(7 downto 0); -- from 0 to 239
-    signal PIXEL_NUMBER : std_logic_vector(8 downto 0); -- from 0 to 319
+    signal LINE_NUMBER,LINE_NUMBER_REG : std_logic_vector(7 downto 0); -- from 0 to 239
+    signal PIXEL_NUMBER,PIXEL_NUMBER_REG : std_logic_vector(8 downto 0); -- from 0 to 319
     
     --Array to choose which line we are pointing to.
     type LINE_PTR_ARRAY is array (0 to IMAGE_HEIGHT-1) of std_logic;
@@ -93,7 +95,9 @@ architecture RTL of ADDRESSING_PIXEL is
 
     --Array to bring out all of output buffer into a MUX
     type DATA_OUT_ARRAY is array (0 to IMAGE_HEIGHT-1) of std_logic_vector (VGA_ZEDBOARD-1 downto 0);
-    signal DATA_OUT: DATA_OUT_ARRAY;    
+    signal DATA_OUT: DATA_OUT_ARRAY;
+    
+    signal READ_EN_REG : std_logic;    
 
 begin
 
@@ -115,6 +119,19 @@ begin
         PIXEL_NUMBER <= ADDRESS(8 downto 0);
     end process;
     
+    ADDRESS_REGISTER: process(i_CLK)
+    begin
+        if rising_edge(i_CLK) then
+            if i_RSTn = '0' then         
+                LINE_NUMBER_REG <= (others => '0');
+                PIXEL_NUMBER_REG <= (others => '0');
+            else
+                LINE_NUMBER_REG <= LINE_NUMBER;
+                PIXEL_NUMBER_REG <= PIXEL_NUMBER;
+            end if;
+        end if;
+    end process;    
+    
     CHOOSING_LINE_PROCESS: process(LINE_NUMBER,i_WRITE,i_READ)
     begin
         WRITE_LINE_PTR <= (others => '0');
@@ -128,10 +145,24 @@ begin
         if rising_edge(i_CLK) then
             if i_RSTn = '0' then
                 o_DATA <= (others => '0');
+                READ_EN_REG <= '1';
+                VALID_RD_DATA <= '0';
+            elsif i_READ = '1' and READ_EN_REG = '1' then
+                READ_EN_REG <= '0';
+                VALID_RD_DATA <= '0';
+            elsif READ_EN_REG = '0' then
+                READ_EN_REG <= '1';
+                VALID_RD_DATA <= '1';
+                o_DATA <= DATA_OUT( to_integer(unsigned(LINE_NUMBER_REG))  );
             else
-                o_DATA <= DATA_OUT( to_integer(unsigned(LINE_NUMBER))  );
+                READ_EN_REG <= '1';
+                VALID_RD_DATA <= '0';
             end if;
         end if;
     end process;
+
+    --When read_en is on, it means we can realise read operation and after 
+    READ_EN <= READ_EN_REG;
+
 
 end architecture;
