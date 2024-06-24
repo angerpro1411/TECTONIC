@@ -35,7 +35,7 @@ architecture RTL of BRAM_2CONTROL is
 	type RAM_TYPE is array (0 to IMAGE_WIDTH-1) of std_logic_vector(VGA_ZEDBOARD-1 downto 0);
 	signal RAM : RAM_TYPE;
 
-	signal ADDRESS_INT : integer;	
+	signal ADDRESS_INT : integer range 0 to 319;	
 	
 begin
 
