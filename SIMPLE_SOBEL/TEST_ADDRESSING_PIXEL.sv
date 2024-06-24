@@ -41,8 +41,8 @@ initial begin
     repeat(3)
         @(negedge clk);
 
-    //write totall oneline 
-    for(int i=0;i<240;i++) begin   
+    //write total oneline 
+    for(int i=0;i<320;i++) begin   
         @(posedge clk);
         wr = 1'b1;
         rd = 1'b0;
@@ -50,6 +50,60 @@ initial begin
         addr[16:9] = 0;
         addr[8:0] = i; 
     end
+
+    //write totall oneline 
+    for(int i=0;i<320;i++) begin   
+        @(posedge clk);
+        wr = 1'b1;
+        rd = 1'b0;
+        i_data = i*2;
+        addr[16:9] = 1;
+        addr[8:0] = i; 
+    end
+
+    //repeat(2)
+        @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b1;
+    addr[16:9] = 0;
+    addr[8:0] = 10; 
+
+    @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b0;
+
+    //repeat(2)
+        @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b1;
+    addr[16:9] = 1;
+    addr[8:0] = 10;
+
+        @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b0;
+    
+    //repeat(2)
+        @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b1;
+    addr[16:9] = 0;
+    addr[8:0] = 50;
+
+    @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b0;
+
+    //repeat(2)
+        @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b1;
+    addr[16:9] = 1;
+    addr[8:0] = 50;    
+
+    @(posedge clk);
+    wr = 1'b0;
+    rd = 1'b0;
 
 end
 
