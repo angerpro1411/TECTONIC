@@ -355,6 +355,8 @@ begin
 				DECODE_EN <= '1';
 		    elsif(WR_TO_SLAVE_REG_EN = '1'and DECODE_EN = '1') then
 		    	DECODE_EN <= '0';
+			WR_CMD <= '0';
+			RD_CMD <= '0';
 	        elsif(AXI_SLAVE_R0(10) = '1' and DECODE_EN = '0') then
 	        	DECODE_EN <= '1';
 	            case AXI_SLAVE_R0(9 downto 8) is
