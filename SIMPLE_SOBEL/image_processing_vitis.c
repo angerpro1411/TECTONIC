@@ -24,6 +24,7 @@
 //Image define region
 #define imageWidth 320
 #define imageHeight 240
+#define PixelNumber 320*240
 #define imageSize 320*240*3
 #define headerSize 0x8A
 #define fileSize imageSize+headerSize
@@ -31,7 +32,7 @@
 
 //Global static
 u32 pixel_24b[imageWidth*imageHeight];
-
+u32 pixel_count;
 
 
 //You can check your base address at Address Editor in Vivado Design Block.
@@ -48,12 +49,18 @@ volatile unsigned int *slave_reg03 = (volatile unsigned int *)(FPGA_BASE_ADDR + 
 //Function declaration
 void WRITE_COMMAND(unsigned int data,unsigned int line, unsigned int row);
 unsigned int READ_COMMAND(unsigned int line, unsigned int row);
-
+void INCREASE_PIXEL_COUNT_BY1();
+void RESET_PIXEL_COUNT();
+u8 CHECK_PIXEL_COUNT();
 
 int main()
 {
 	//---------------------------Sending data part-----------------------------------//
 	int Status;
+    
+    u32 i;//index
+
+    
 	u8 *imageData;
 
 	imageData = malloc(sizeof(u8)*(fileSize));
@@ -86,10 +93,17 @@ int main()
 
 	//After header data, we concatenate 3 elements of array to become one,
 	//because each elements inside array is one byte, but 1 pixel is 3 bytes.
-	for (int i=headerSize; i<fileSize;++i){
-		pixel_24b[i]
-	}
+    //So how many pixel we will have with that loop. (fileSize-headerSize)/3 = 320*240
+	for (i=headerSize; i<fileSize;i=i+3){     
+		pixel_24b[pixel_count] = (u32)(imageData[i]<<16) | (u32)(imageData[i+1]<<8) | (u32)(imageData[i+2]);
+        INCREASE_PIXEL_COUNT_BY1();
+    }
+    Status = CHECK_PIXEL_COUNT();
+    if (Status == 1){
+        return XST_FAILURE;
+    }
 
+    //After that we have an array pixel_24b who contains all pixel we need to process.
 
 
 	//Pixel data is starting after header.
@@ -101,11 +115,21 @@ int main()
 	xil_printf("\r\n/-------------------Program starts------------------/");
 	xil_printf("\r\nRemember Data writing in memory cell is 24bits, but reduce to 12 bits \
 			due to compress pixel. R-G-B is 24 bits, but we only take 4 each.");
-	for(u32 line =0; line < imageHeight; ++line){
-		for (u32 row = headerSize; row< headerSize+imageWidth; ++row){
-			WRITE_COMMAND(imageData[row], line, row);
-		}
-	}
+    
+    RESET_PIXEL_COUNT();
+    for(u32 line = 0; line < imageHeight;line++){
+        for(u32 row = 0; row < imageWidth; row++){
+                WRITE_COMMAND(pixel_24b[pixel_count], line, row);
+                INCREASE_PIXEL_COUNT_BY1();
+        }
+    }
+
+    Status = CHECK_PIXEL_COUNT();
+    if (Status == 1){
+        return XST_FAILURE;
+    }
+    //If we pass this step, it means all our pixel already stayed well in Block Ram.
+    xil_printf("\r\n All our pixel already stayed well in Block Ram.");
 
     return 0;
 }
@@ -154,4 +178,22 @@ unsigned int READ_COMMAND(unsigned int line, unsigned int row){
 	REG01 = *slave_reg01;
 
 	return REG01;
+}
+
+void INCREASE_PIXEL_COUNT_BY1(){
+    ++pixel_count;
+}
+
+void RESET_PIXEL_COUNT(){
+    pixel_count = 0;
+}
+
+//this function uses to check whether 
+u8 CHECK_PIXEL_COUNT(){
+    if (pixel_count != PixelNumber){
+        xil_printf("We haven't used all Pixel => Error => Check back");
+        return 1;
+    }
+    else
+        return 0; 
 }
