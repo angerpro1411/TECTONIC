@@ -4,7 +4,10 @@ use ieee.numeric_std.all;
 
 entity BRAM_2CONTROL is
 	generic(
-		--Image resolution = 1/4 vga = 320x240 
+		--Image resolution = 1/4 vga = 320x240 = 76_800 => need 17 bits for address -> take 19 bits for full VGA.
+        --so full VGA is 2^19 = 524_288
+        --Full VGA is fail because of size of FPGA, that cost 320 Block Ram, but we only have 280.
+        --Finally come back with 1/4 VGA => 17 bit
 		IMAGE_WIDTH : integer := 320;
 		IMAGE_HEIGHT : integer := 240;
 		
@@ -18,8 +21,8 @@ entity BRAM_2CONTROL is
 		--one compressed pixel with R-G-B 4x3 = 12bits.
 		i_DATA : in std_logic_vector(VGA_ZEDBOARD-1 downto 0);
 		
-		--LINE WIDTH is 320 means 9 bits.
-		ADDRESS : in std_logic_vector(8 downto 0);
+		--ADDRESS PIXEL is 19 bits wide.
+		ADDRESS : in std_logic_vector(16 downto 0);
 		
 		i_WRITE : in std_logic;
 		i_READ : in std_logic;
@@ -31,11 +34,15 @@ end entity;
 
 architecture RTL of BRAM_2CONTROL is
 
-	--1/4 vga resolution 320x240, wide = 320 pixel
-	type RAM_TYPE is array (0 to IMAGE_WIDTH-1) of std_logic_vector(VGA_ZEDBOARD-1 downto 0);
+    --ADDRESS will work as we divide to 240 lines, and 320 rows.
+    --So line 0 is from 0 to 319.
+    --Line 1 is from 320 to 639....
+    --till Line 239 from 320x239=76480 to 320x239+319=76799.
+
+	type RAM_TYPE is array (0 to 76799) of std_logic_vector(VGA_ZEDBOARD-1 downto 0);
 	signal RAM : RAM_TYPE;
 
-	signal ADDRESS_INT : integer range 0 to 319;	
+	signal ADDRESS_INT : integer range 0 to 76799;	
 	
 begin
 
