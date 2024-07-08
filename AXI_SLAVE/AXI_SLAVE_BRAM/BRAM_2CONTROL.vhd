@@ -39,10 +39,10 @@ architecture RTL of BRAM_2CONTROL is
     --Line 1 is from 320 to 639....
     --till Line 239 from 320x239=76480 to 320x239+319=76799.
 
-	type RAM_TYPE is array (0 to 76479) of std_logic_vector(VGA_ZEDBOARD-1 downto 0);
+	type RAM_TYPE is array (0 to 76799) of std_logic_vector(VGA_ZEDBOARD-1 downto 0);
 	signal RAM : RAM_TYPE;
 
-	signal ADDRESS_INT : integer range 0 to 76479;	
+	signal ADDRESS_INT : integer range 0 to 76799;	
 	
 begin
 
