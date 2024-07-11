@@ -55,7 +55,7 @@ unsigned int READ_COMMAND(unsigned int line, unsigned int row);
 void INCREASE_PIXEL_COUNT_BY1();
 void RESET_PIXEL_COUNT();
 u8 CHECK_PIXEL_COUNT();
-void READ_PIXEL();
+void TEST_READ_PIXEL();
 
 int main()
 {
@@ -97,15 +97,26 @@ int main()
 	}
 
 	//Start program.
-	xil_printf("\r\n/-------------------Program starts------------------/");
+	//xil_printf("\r\n/-------------------Program starts------------------/");
 
 	//Wait image from terminal.
-	xil_printf("\r\n/-------------------Wait image from terminal------------------/");
+	//xil_printf("\r\n/-------------------Wait image from terminal------------------/");
 
 	while(ReceivBytes < fileSize){
 		ReceivBytes += XUartPs_Recv(&myUart_PS,&imageData[ReceivBytes], fileSize-ReceivBytes);
 	}
+/*
+	//for compression, we only keep 4 bits MSB and this part will check the image after compression.
+	for (i=headerSize; i<fileSize;i++){
+		imageData[i] = imageData[i] & 0xF0;
+	}
 
+	u32 SendBytes = 0;
+	while(SendBytes < fileSize){
+		SendBytes += XUartPs_Send(&myUart_PS,&imageData[SendBytes], 1);
+	}
+*/
+    //-------------------------------------------------------------------------------------
 
 	//The loop below, we remove header data(so index starting from the end of headersize)
 	//, and then we concatenate 3 elements of array to become one(to get one pixel),
@@ -119,6 +130,9 @@ int main()
     if (Status == 1){
         return XST_FAILURE;
     }
+
+
+
 
     //After concatenate, inside array pixel_24b, we have total 320x240 pixels, each pixel is 24bits long.
 //  //check pixel received and concatenate.
@@ -153,8 +167,9 @@ int main()
     //If we pass this step, it means all our pixel already stayed well in Block Ram.
     xil_printf("\r\n All our pixel already stayed well in Block Ram.");
 
-    //This part for read back pixel inside block RAM
-    READ_PIXEL();
+    //This part for read back pixel inside block RAM - Verification function
+   // TEST_READ_PIXEL();
+
 
     return 0;
 }
@@ -223,7 +238,8 @@ u8 CHECK_PIXEL_COUNT(){
         return 0;
 }
 
-void READ_PIXEL(){
+//This part for read back pixel inside block RAM - Verification function
+void TEST_READ_PIXEL(){
 	int line, row;
 	while(1){
 		xil_printf("\r\nEnter the line: ");
@@ -233,3 +249,5 @@ void READ_PIXEL(){
 		xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_COMMAND(line,row));
 	}
 }
+
+
