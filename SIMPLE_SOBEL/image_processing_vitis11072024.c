@@ -1,7 +1,12 @@
 /*
- * This project we use "lenna image 320x240
+ * This project we use "lenna image 320x240".
  */
 
+/*
+ * 11/07/2024 One must download gtkterm under Linux OS to succeed download image from computer to Zedboard.
+ * Check all function including Read Image -> Put to array 8b -> Concatenate to array 24b
+ *  							-> Send image to Block Ram -> Read back data from Block Ram. Oke
+ */
 
 
 /******************************************************************************
@@ -32,15 +37,13 @@
 
 //Global static
 u32 pixel_24b[imageWidth*imageHeight];
-u32 pixel_count;
+u32 pixel_count = 0;
 
 
 //You can check your base address at Address Editor in Vivado Design Block.
 #define FPGA_BASE_ADDR 0x40000000
 
-/*
- * Point the register correspond to each address.
- */
+//Point the register correspond to each address.
 volatile unsigned int *slave_reg00 = (volatile unsigned int *)FPGA_BASE_ADDR;
 volatile unsigned int *slave_reg01 = (volatile unsigned int *)(FPGA_BASE_ADDR + 4);;
 volatile unsigned int *slave_reg02 = (volatile unsigned int *)(FPGA_BASE_ADDR + 8);;
@@ -52,19 +55,20 @@ unsigned int READ_COMMAND(unsigned int line, unsigned int row);
 void INCREASE_PIXEL_COUNT_BY1();
 void RESET_PIXEL_COUNT();
 u8 CHECK_PIXEL_COUNT();
+void READ_PIXEL();
 
 int main()
 {
 	//---------------------------Sending data part-----------------------------------//
 	int Status;
-    
+
     u32 i;//index
 
-    
+
 	u8 *imageData;
 
 	imageData = malloc(sizeof(u8)*(fileSize));
-	u32 totalReceivBytes,ReceivBytes = 0;
+	u32 ReceivBytes = 0;
 
 	XUartPs_Config *myUartConfig;
 	XUartPs myUart_PS;
@@ -82,19 +86,32 @@ int main()
 
 	Status = XUartPs_SetBaudRate(&myUart_PS, 115200);
 	if (Status != XST_SUCCESS) {
-		xil_printf("\r\nXUartPs_SetBaudRate fail or get a lot of errors.");
+		xil_printf("\r\nXUartPs_SetBaudRate fail.");
 		return XST_FAILURE;
 	}
 
-	while(totalReceivBytes < fileSize){
-		ReceivBytes = XUartPs_Recv(&myUart_PS,&imageData[totalReceivBytes], fileSize);
-		totalReceivBytes += ReceivBytes;
+	/* Check hardware build. */
+	Status = XUartPs_SelfTest(&myUart_PS);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
 	}
 
-	//After header data, we concatenate 3 elements of array to become one,
+	//Start program.
+	xil_printf("\r\n/-------------------Program starts------------------/");
+
+	//Wait image from terminal.
+	xil_printf("\r\n/-------------------Wait image from terminal------------------/");
+
+	while(ReceivBytes < fileSize){
+		ReceivBytes += XUartPs_Recv(&myUart_PS,&imageData[ReceivBytes], fileSize-ReceivBytes);
+	}
+
+
+	//The loop below, we remove header data(so index starting from the end of headersize)
+	//, and then we concatenate 3 elements of array to become one(to get one pixel),
 	//because each elements inside array is one byte, but 1 pixel is 3 bytes.
     //So how many pixel we will have with that loop. (fileSize-headerSize)/3 = 320*240
-	for (i=headerSize; i<fileSize;i=i+3){     
+	for (i=headerSize; i<fileSize;i=i+3){
 		pixel_24b[pixel_count] = (u32)(imageData[i]<<16) | (u32)(imageData[i+1]<<8) | (u32)(imageData[i+2]);
         INCREASE_PIXEL_COUNT_BY1();
     }
@@ -102,6 +119,12 @@ int main()
     if (Status == 1){
         return XST_FAILURE;
     }
+
+    //After concatenate, inside array pixel_24b, we have total 320x240 pixels, each pixel is 24bits long.
+//  //check pixel received and concatenate.
+//	for(i = 0;i<PixelNumber;++i){
+//		xil_printf("\r\n%0x",pixel_24b[i]);
+//	}
 
     //After that we have an array pixel_24b who contains all pixel we need to process.
 
@@ -111,11 +134,10 @@ int main()
 
 	//---------------------------End of sending part---------------------------------//
 
-	//Start program.
-	xil_printf("\r\n/-------------------Program starts------------------/");
+
 	xil_printf("\r\nRemember Data writing in memory cell is 24bits, but reduce to 12 bits \
-			due to compress pixel. R-G-B is 24 bits, but we only take 4 each.");
-    
+			due to compress pixel. R-G-B is 24 bits, it means 8 bits for each color but we only keep 4b each.");
+
     RESET_PIXEL_COUNT();
     for(u32 line = 0; line < imageHeight;line++){
         for(u32 row = 0; row < imageWidth; row++){
@@ -130,6 +152,9 @@ int main()
     }
     //If we pass this step, it means all our pixel already stayed well in Block Ram.
     xil_printf("\r\n All our pixel already stayed well in Block Ram.");
+
+    //This part for read back pixel inside block RAM
+    READ_PIXEL();
 
     return 0;
 }
@@ -188,12 +213,23 @@ void RESET_PIXEL_COUNT(){
     pixel_count = 0;
 }
 
-//this function uses to check whether 
+//this function uses to check whether
 u8 CHECK_PIXEL_COUNT(){
     if (pixel_count != PixelNumber){
         xil_printf("We haven't used all Pixel => Error => Check back");
         return 1;
     }
     else
-        return 0; 
+        return 0;
+}
+
+void READ_PIXEL(){
+	int line, row;
+	while(1){
+		xil_printf("\r\nEnter the line: ");
+		scanf("%d",&line);
+		xil_printf("Enter the row: ");
+		scanf("%d",&row);
+		xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_COMMAND(line,row));
+	}
 }
