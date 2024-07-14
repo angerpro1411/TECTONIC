@@ -64,8 +64,11 @@ architecture RTL of RGB_2_GRAY is
     signal REG0_DONE, REG1_DONE, REG2_DONE, REG3_DONE, REG4_DONE, REG5_DONE, REG6_DONE, REG7_DONE, REG8_DONE: std_logic;
 
 begin
-
+    --Predefine color, register and output
     i_READ <= i_READ_REG;
+    TEMP_B <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-0 downto VGA_ZEDBOARD-1-0-3)) ;
+    TEMP_G <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-4 downto VGA_ZEDBOARD-1-4-3)) ;
+    TEMP_R <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-8 downto VGA_ZEDBOARD-1-8-3)) ;											
     GRAY_MATRIX9_OUT <= std_logic_vector(REG0 & REG1 & REG2 & REG3 & REG4 & REG5 & REG6 & REG7 & REG8);
 
     --After i_READ one cycle clock, we will have valid data from port "o_DATA_fr_RAM"
@@ -87,22 +90,13 @@ begin
     -- Gray pixel = 0.3*Red pixel + 0.59*Green pixel + 0.11*Blue pixel
 	-- 12 bit value is split into B,G and R components - 4 bit each
 	-- and multiplied with their respective weights.
-	-- Maximum 4bits is 16. 16*0.3 = 4.8~5, 16*0.59 = 9,44~9 and 16*0.11 = 1.76~2
-    GET_WEIGHTS : process(i_CLK)
-    begin
-        if rising_edge(i_CLK) then 
-            TEMP_B <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-0 downto VGA_ZEDBOARD-1-0-3))  * "0101";
-            TEMP_G <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-4 downto VGA_ZEDBOARD-1-4-3))  * "1001";
-            TEMP_R <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-8 downto VGA_ZEDBOARD-1-8-3))  * "0010";
-            WEIGHT_VALID <= DATA_IN_VALID;
-        end if;  
-    end process;
-    
+	-- Maximum actually TEMP_B, TEMP_G and TEMP_R are 4 bits MSB each of 8 bits, not normal 4 bits.
+	-- Pretend they are actual 8 bit, if we want to get 0.3, 0.59 and 0.11.
     GET_SUM : process(i_CLK)
     begin
         if rising_edge(i_CLK) then
             GRAY_OUT_8 <= TEMP_B + TEMP_G + TEMP_R;
-            GRAY_OUT_VALID <= WEIGHT_VALID;
+            GRAY_OUT_VALID <= DATA_IN_VALID;
         end if;
     end process;
 
