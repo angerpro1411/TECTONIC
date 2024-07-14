@@ -66,9 +66,9 @@ architecture RTL of RGB_2_GRAY is
 begin
     --Predefine color, register and output
     i_READ <= i_READ_REG;
-    TEMP_B <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-0 downto VGA_ZEDBOARD-1-0-3)) ;
-    TEMP_G <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-4 downto VGA_ZEDBOARD-1-4-3)) ;
-    TEMP_R <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-8 downto VGA_ZEDBOARD-1-8-3)) ;											
+    TEMP_B <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-0 downto VGA_ZEDBOARD-1-0-3) & "0000") ;
+    TEMP_G <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-4 downto VGA_ZEDBOARD-1-4-3) & "0000") ;
+    TEMP_R <= unsigned(o_DATA_fr_RAM(VGA_ZEDBOARD-1-8 downto VGA_ZEDBOARD-1-8-3) & "0000") ;											
     GRAY_MATRIX9_OUT <= std_logic_vector(REG0 & REG1 & REG2 & REG3 & REG4 & REG5 & REG6 & REG7 & REG8);
 
     --After i_READ one cycle clock, we will have valid data from port "o_DATA_fr_RAM"
@@ -92,10 +92,13 @@ begin
 	-- and multiplied with their respective weights.
 	-- Maximum actually TEMP_B, TEMP_G and TEMP_R are 4 bits MSB each of 8 bits, not normal 4 bits.
 	-- Pretend they are actual 8 bit, if we want to get 0.3, 0.59 and 0.11.
+	-- For Red, we need actually sum of two shift right 2 and 5. It means we divine by 4 and divine by 32. And 1/4+1/32 = 9/32 ~=0.281.
+	-- For Green, sum of two shift right 1 and 4. 1/2+1/16 = 9/16 ~= 0.562.
+	-- For Blue, sum of two shift right 4 and 5. 1/16+1/32 = 3/32 ~= 0.093
     GET_SUM : process(i_CLK)
     begin
         if rising_edge(i_CLK) then
-            GRAY_OUT_8 <= TEMP_B + TEMP_G + TEMP_R;
+            GRAY_OUT_8 <= (TEMP_B >> 4 + TEMP_B >> 5) + (TEMP_G >> 1 + TEMP_G >> 4) + (TEMP_R >> 2 + TEM_R >> 5);
             GRAY_OUT_VALID <= DATA_IN_VALID;
         end if;
     end process;
