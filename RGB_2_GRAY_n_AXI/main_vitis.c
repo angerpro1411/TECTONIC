@@ -6,6 +6,7 @@
  * 11/07/2024 One must download gtkterm under Linux OS to succeed download image from computer to Zedboard.
  * Check all function including Read Image -> Put to array 8b -> Concatenate to array 24b
  *  							-> Send image to Block Ram -> Read back data from Block Ram. Oke
+ * 25/07 Adding new header file for gray image and send back to the computer, now we can put a 24b color image BMP and get 8b gray image in computer 
  */
 
 
@@ -34,10 +35,17 @@
 #define headerSize 0x8A
 #define fileSize imageSize+headerSize
 
+//Gray Image define region
+#define BMP_Header 14
+#define DIB_Header 124
+#define ColorTable_NBytes 1024
+#define Gray_HeaderSize BMP_Header+DIB_Header+ColorTable_NBytes
+
 
 //Global static
 u32 pixel_24b[imageWidth*imageHeight];
 u32 pixel_count = 0;
+u8 GrayImageData[PixelNumber+Gray_HeaderSize];
 
 
 //You can check your base address at Address Editor in Vivado Design Block.
@@ -65,6 +73,7 @@ void RGB_GET_CONTROL();
 void START_SIGNAL();
 void TEST_READ_GRAY_PIXEL();
 void RESET_STATUS_REGISTER();
+void New_Header_GrayImage();
 
 int main()
 {
@@ -72,7 +81,6 @@ int main()
 	int Status;
 
     u32 i;//index
-    u8 GrayImageData[PixelNumber+headerSize];
 
 	u8 *imageData;
 
@@ -169,22 +177,27 @@ int main()
     READ_STATUS_REGIS();
 
 
-    //If we pass this step, it means all our pixel already stayed well in Block Ram.
-    //xil_printf("\r\n All our pixel already stayed well in Block Ram.");
+    //If we pass this step, it means all our pixel already stayed well in Color_BRam.
+    //xil_printf("\r\n All our pixel already stayed well in Color_BRam.");
 
+    //Start signal to start processing RGB to Gray pixel and also give the
+    // access color and gray Bram to RGB_2_GRAY
     START_SIGNAL();
     READ_STATUS_REGIS();
 
+    //Wait all gray pixel inside Gray_bram
     WAIT_DONE_WRITE_GRAY();
     READ_STATUS_REGIS();
 
+    //Pay back control permission to AXI
     AXI_GET_CONTROL();
     READ_STATUS_REGIS();
 
+    //Write back gray-data into an array
     RESET_PIXEL_COUNT();
     for(u32 line = 0; line < imageHeight;line++){
         for(u32 row = 0; row < imageWidth; row++){
-        		GrayImageData[headerSize+pixel_count] = READ_GRAY_DATA(line, row);
+        		GrayImageData[Gray_HeaderSize+pixel_count] = READ_GRAY_DATA(line, row);
                 INCREASE_PIXEL_COUNT_BY1();
         }
     }
@@ -197,24 +210,17 @@ int main()
     RESET_STATUS_REGISTER();
     READ_STATUS_REGIS();
 
-	for(i=0;i<headerSize;++i){
-		if(i == 2)
-			GrayImageData[i] = 0x8A;
-		else if(i == 3)
-			GrayImageData[i] = 0x2C;
-		else if(i == 4)
-			GrayImageData[i] = 0x01;
-		else if(i == 28)
-			GrayImageData[i] = 0x08;
-		else
-			GrayImageData[i] = imageData[i];
-	}
+
+    //Change the header file
+    New_Header_GrayImage();
+
 	//xil_printf("\r\nFinish new gray pixel.");
 
 
+	//Sending gray data back to computer for visually seen it.
 	//xil_printf("\r\nSending pixel back to computer.");
 	u32 SendBytes = 0;
-	while(SendBytes < PixelNumber+headerSize){
+	while(SendBytes < PixelNumber+Gray_HeaderSize){
 		SendBytes += XUartPs_Send(&myUart_PS,&GrayImageData[SendBytes], 1);
 	}
 
@@ -389,13 +395,123 @@ void RESET_STATUS_REGISTER(){
 
 }
 
+//This function has 1024 values in array that took from a gray image(format BMP).
+//That gray image took from GIMP after processing.
+void New_Header_GrayImage(){
+	u32 cnt = 0;
+
+	//BMP file to computer
+	GrayImageData[0] = 0x42;
+	GrayImageData[1] = 0x4D;
+
+	//File size in total
+	GrayImageData[2] = 0x8A;
+	GrayImageData[3] = 0x30;
+	GrayImageData[4] = 0x01;
+	//GrayImageData[5] = 0x00;
+
+	//Total offset from beginning to pixel data
+	GrayImageData[10] = 0x8A;
+	GrayImageData[11] = 0x04;
+	//GrayImageData[12:13] = 0x00;
+
+	//Size of DIB header
+	GrayImageData[14] = 0x7C;
+	//GrayImageData[15:17] = 0x00;
+
+	//Image Width
+	GrayImageData[18] = 0x40;
+	GrayImageData[19] = 0x01;
+	//GrayImageData[20:21] = 0x00;
+
+	//Image Height
+	GrayImageData[22] = 0xF0;
+	//GrayImageData[23:25] = 0x00;
+
+	//1 plane
+	GrayImageData[26] = 0x01;
+	//GrayImageData[27] = 0x00;
+
+	//8 bits per pixel
+	GrayImageData[28] = 0x08;
+	//GrayImageData[29] = 0x00;
+
+	//GrayImageData[30:33] = 0x00;
+
+	//image size
+	//GrayImageData[34] = 0x00;
+	GrayImageData[35] = 0x2C;
+	GrayImageData[36] = 0x01;
+	//GrayImageData[37] = 0x00;
+
+	//x pixel per meter
+	GrayImageData[38] = 0x13;
+	GrayImageData[39] = 0x0B;
+	//GrayImageData[40:41] = 0x00;
+
+	//y pixel per meter
+	GrayImageData[42] = 0x13;
+	GrayImageData[43] = 0x0B;
+	//GrayImageData[44:45] = 0x00;
+
+	//Colors in color table
+	//GrayImageData[46] = 0x00;
+	GrayImageData[47] = 0x01;
+	//GrayImageData[48:49] = 0x00;
+
+	//Color counts 0 -> 255
+	//GrayImageData[50] = 0x00;
+	GrayImageData[51] = 0x01;
+	//GrayImageData[52:53] = 0x00;
+
+	//Red bit mask
+	//GrayImageData[54:55] = 0x00;
+	GrayImageData[56] = 0xFF;
+	//GrayImageData[57] = 0x00;
+
+	//Green bit mask
+	//GrayImageData[58] = 0x00;
+	GrayImageData[59] = 0xFF;
+	//GrayImageData[60:61] = 0x00;
+
+	//Blue bit mask
+	GrayImageData[62] = 0xFF;
+	//GrayImageData[63:65] = 0x00;
+
+	//Alpha bit mask
+	//GrayImageData[66:69] = 0x00;
+
+	//Color space type
+	GrayImageData[70] = 0x42;
+	GrayImageData[71] = 0x47;
+	GrayImageData[72] = 0x52;
+	GrayImageData[73] = 0x73;
+
+	//36 Bytes zero for color space end point
+	//GrayImageData[74:109] = 0x00;
+
+	//12 Bytes zero for gamma R,G,B channel
+	//GrayImageData[110:121] = 0x00;
+
+	//Intent
+	GrayImageData[122] = 0x02;
+	//GrayImageData[123:125] = 0x00;
+
+	//12 Bytes zero till end
+	//GrayImageData[126:137] = 0x00;
 
 
 
 
-
-
-
+	//Create color table
+	for(unsigned int i = BMP_Header+DIB_Header;i <Gray_HeaderSize;i = i+4){
+		GrayImageData[i+0] = cnt;
+		GrayImageData[i+1] = cnt;
+		GrayImageData[i+2] = cnt;
+		GrayImageData[i+3] = 0;
+		cnt++;
+	}
+}
 
 
 
