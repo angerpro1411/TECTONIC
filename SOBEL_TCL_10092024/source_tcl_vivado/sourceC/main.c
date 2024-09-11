@@ -1,4 +1,10 @@
 /*
+ * Vitis -> Generate Linker Script -> Change Heap Size from 1KB to 512 KB, to store dynamic allocation array.
+ * src -> lscript.ld -> Heap Size from 0x400 to 0x80000
+ */
+
+
+/*
  * This project we use "lenna image 320x240".
  */
 
@@ -6,7 +12,10 @@
  * 11/07/2024 One must download gtkterm under Linux OS to succeed download image from computer to Zedboard.
  * Check all function including Read Image -> Put to array 8b -> Concatenate to array 24b
  *  							-> Send image to Block Ram -> Read back data from Block Ram. Oke
- * 25/07 Adding new header file for gray image and send back to the computer, now we can put a 24b color image BMP and get 8b gray image in computer 
+ */
+
+/*
+ * 02/09/2024 Check all done. Work well. Close program. Further update.
  */
 
 
@@ -53,9 +62,13 @@ u8 GrayImageData[PixelNumber+Gray_HeaderSize];
 
 //Point the register correspond to each address.
 volatile unsigned int *slave_reg00 = (volatile unsigned int *)FPGA_BASE_ADDR;
-volatile unsigned int *slave_reg01 = (volatile unsigned int *)(FPGA_BASE_ADDR + 4);;
-volatile unsigned int *slave_reg02 = (volatile unsigned int *)(FPGA_BASE_ADDR + 8);;
-volatile unsigned int *slave_reg03 = (volatile unsigned int *)(FPGA_BASE_ADDR + 12);;
+volatile unsigned int *slave_reg01 = (volatile unsigned int *)(FPGA_BASE_ADDR + 4);
+volatile unsigned int *slave_reg02 = (volatile unsigned int *)(FPGA_BASE_ADDR + 8);
+volatile unsigned int *slave_reg03 = (volatile unsigned int *)(FPGA_BASE_ADDR + 12);
+volatile unsigned int *slave_reg04 = (volatile unsigned int *)(FPGA_BASE_ADDR + 16);
+volatile unsigned int *slave_reg05 = (volatile unsigned int *)(FPGA_BASE_ADDR + 20);
+volatile unsigned int *slave_reg06 = (volatile unsigned int *)(FPGA_BASE_ADDR + 24);
+volatile unsigned int *slave_reg07 = (volatile unsigned int *)(FPGA_BASE_ADDR + 28);
 
 //Function declaration
 void WRITE_COMMAND(unsigned int data,unsigned int line, unsigned int row);
@@ -64,17 +77,34 @@ void INCREASE_PIXEL_COUNT_BY1();
 void RESET_PIXEL_COUNT();
 u8 CHECK_PIXEL_COUNT();
 void READ_STATUS_REGIS();
-void TEST_READ_PIXEL();
 void WAIT_DONE_WRITE_COLOR();
 void WAIT_DONE_WRITE_GRAY();
+void WAIT_DONE_WRITE_SOBEL();
 u8 READ_GRAY_DATA(unsigned int line, unsigned int row);
+u8 READ_SOBEL_DATA(unsigned int line, unsigned int row);
+u8 READ_SOBEL_DATA_byADDR(unsigned int address);
 void AXI_GET_CONTROL();
 void RGB_GET_CONTROL();
-void START_SIGNAL();
-void TEST_READ_GRAY_PIXEL();
-void RESET_STATUS_REGISTER();
+void SOBEL_GET_CONTROL();
+void START_COLOR2GRAY();
+void START_GRAY2SOBEL();
 void New_Header_GrayImage();
-
+void TEST_READ_COLOR_PIXEL();
+void TEST_READ_GRAY_PIXEL();
+void TEST_READ_SOBEL_PIXEL();
+void SET_THRESHOLD(u32 threshold);
+void ENABLE_REG00();
+void DISABLE_REG00();
+void CLR_REG00();
+void CLR_REG01();
+void CLR_REG02();
+void CLR_REG03();
+void READ_REG(char reg);
+void RST_DONE_COLOR_SIGNAL();
+void RST_DONE_GRAY_SIGNAL();
+void RST_DONE_SOBEL_SIGNAL();
+void READ_RD_DATA_REG();
+void FINISH_IMAGE();
 int main()
 {
 	//---------------------------Sending data part-----------------------------------//
@@ -108,15 +138,21 @@ int main()
 	}
 
 	//Start program.
-	////xil_printf("\r\n/-------------------Program starts------------------/");
+	//xil_printf("\r\n/-------------------Program starts------------------/");
 
 	//Wait image from terminal.
-	////xil_printf("\r\n/-------------------Wait image from terminal------------------/");
+	//xil_printf("\r\n/-------------------Wait image from terminal------------------/");
 
+//While loop to re-use the algorithm.
+while(1){
+
+//Step 1: Sending image through UART to Processing system - arm processor(accompanied with teraterm or gtkterm send image file).
+//All image pixel now will be stored in array imageData[].
 	while(ReceivBytes < fileSize){
 		ReceivBytes += XUartPs_Recv(&myUart_PS,&imageData[ReceivBytes], fileSize-ReceivBytes);
 	}
-
+	//Reset receiBytes for next roll.
+	ReceivBytes = 0;
 
 /*
 	//for compression, we only keep 4 bits MSB and this part will check the image after compression.
@@ -132,15 +168,22 @@ int main()
     //-------------------------------------------------------------------------------------
 
 
-
+//Step 2: Starting from headerSize.
 	//The loop below, we remove header data(so index starting from the end of headersize)
 	//, and then we concatenate 3 elements of array to become one(to get one pixel),
 	//because each elements inside array is one byte, but 1 pixel is 3 bytes.
     //So how many pixel we will have with that loop. (fileSize-headerSize)/3 = 320*240
+
+	//Clear array
+	for (i=0;i<imageWidth*imageHeight;i++){
+		pixel_24b[i] = 0;
+	}
+
 	for (i=headerSize; i<fileSize;i=i+3){
 		pixel_24b[pixel_count] = (u32)(imageData[i]<<16) | (u32)(imageData[i+1]<<8) | (u32)(imageData[i+2]);
         INCREASE_PIXEL_COUNT_BY1();
     }
+
     Status = CHECK_PIXEL_COUNT();
     if (Status == 1){
         return XST_FAILURE;
@@ -157,7 +200,17 @@ int main()
 
 	//xil_printf("\r\nRemember Data writing in memory cell is 24bits, but reduce to 12 bits due to compress pixel.");
 
+//Step 3: Sending pixel to color bram.
+    //set threshold
+    SET_THRESHOLD(15000);
+
     RESET_PIXEL_COUNT();
+
+	//Axi bus gets control.
+    AXI_GET_CONTROL();
+    READ_STATUS_REGIS();
+
+	//Sending 24-bit image pixel to fpga particularly Color_bram.
     for(u32 line = 0; line < imageHeight;line++){
         for(u32 row = 0; row < imageWidth; row++){
                 WRITE_COMMAND(pixel_24b[pixel_count], line, row);
@@ -170,64 +223,109 @@ int main()
     if (Status == 1){
         return XST_FAILURE;
     }
+    RESET_PIXEL_COUNT();
+
 
     //Wait done_write_color when all color pixel stores in color_bram
-    READ_STATUS_REGIS();
     WAIT_DONE_WRITE_COLOR();
     READ_STATUS_REGIS();
+
+//    TEST_READ_COLOR_PIXEL();
+
+    //Reset done color signal.
+    RST_DONE_COLOR_SIGNAL();
+    READ_STATUS_REGIS();
+
 
 
     //If we pass this step, it means all our pixel already stayed well in Color_BRam.
     //xil_printf("\r\n All our pixel already stayed well in Color_BRam.");
 
+//Step 4: Starting processing color pixel, change it to gray pixel and write back to gray_bram
     //Start signal to start processing RGB to Gray pixel and also give the
     // access color and gray Bram to RGB_2_GRAY
-    START_SIGNAL();
-    READ_STATUS_REGIS();
+    RGB_GET_CONTROL();
+    START_COLOR2GRAY();
 
     //Wait all gray pixel inside Gray_bram
     WAIT_DONE_WRITE_GRAY();
+    RST_DONE_GRAY_SIGNAL();
     READ_STATUS_REGIS();
 
-    //Pay back control permission to AXI
-    AXI_GET_CONTROL();
+
+    //Read gray pixel
+	//AXI_GET_CONTROL();
+	//READ_STATUS_REGIS();
+    //TEST_READ_GRAY_PIXEL();
+
+//Step 5: When all gray pixel is in gray bram, we start processing to sobel pixel.
+    //Give back control permission to
+    SOBEL_GET_CONTROL();
+    START_GRAY2SOBEL();
+
+    //Wait all sobel pixel inside sobel bram
+    WAIT_DONE_WRITE_SOBEL();
+    RST_DONE_SOBEL_SIGNAL();
     READ_STATUS_REGIS();
+
 
     //Write back gray-data into an array
-    RESET_PIXEL_COUNT();
-    for(u32 line = 0; line < imageHeight;line++){
-        for(u32 row = 0; row < imageWidth; row++){
-        		GrayImageData[Gray_HeaderSize+pixel_count] = READ_GRAY_DATA(line, row);
-                INCREASE_PIXEL_COUNT_BY1();
-        }
-    }
-    Status = CHECK_PIXEL_COUNT();
-    if (Status == 1){
-        return XST_FAILURE;
-    }
-    RESET_PIXEL_COUNT();
+//    RESET_PIXEL_COUNT();
+//    for(u32 line = 0; line < imageHeight;line++){
+//        for(u32 row = 0; row < imageWidth; row++){
+//        		GrayImageData[Gray_HeaderSize+pixel_count] = READ_GRAY_DATA(line, row);
+//                INCREASE_PIXEL_COUNT_BY1();
+//        }
+//    }
+//    RESET_PIXEL_COUNT();
 
-    RESET_STATUS_REGISTER();
+
+//Step 6: Write back sobel-data into an array(We still use GrayImageData array to store sobel image)
+//Considering and explaination: Sobel algorithm takes 3x3 pixels to get only one new pixel at the center of 3x3 matrix.
+//It means we can not have result of both first line and last line, also first pixel of second line from the top
+//and last pixel of second line from bottom. Totally we lose 320x2 + 2 = 642 pixels. All 642 pixels we will fill up with zero.
+//Inside sobel_bram, we only have 76800 - 642 = 76158 pixels. And these numbers of pixel will localize between
+//first 321 zero pixels and last 321 zero pixels.
+
+	AXI_GET_CONTROL();
+	READ_STATUS_REGIS();
+
+	//Clear array before store
+
+	for(i = 0; i < PixelNumber+Gray_HeaderSize; i++){
+		GrayImageData[i] = 0;
+	}
+
+    for(i = 0; i <=76157;i++){
+        		GrayImageData[Gray_HeaderSize+321+i] = READ_SOBEL_DATA_byADDR(i);
+    }
+
     READ_STATUS_REGIS();
 
-
+	//6.1 : Header file for gray type image is different from color image, so neccessarily change it.
     //Change the header file
     New_Header_GrayImage();
 
-	//xil_printf("\r\nFinish new gray pixel.");
+	//xil_printf("\r\nFinish new sobel pixel.");
 
 
-	//Sending gray data back to computer for visually seen it.
+	//6.2: Sending gray data back to computer for visually seen it.
 	//xil_printf("\r\nSending pixel back to computer.");
-	u32 SendBytes = 0;
+
+    u32 SendBytes = 0;
 	while(SendBytes < PixelNumber+Gray_HeaderSize){
 		SendBytes += XUartPs_Send(&myUart_PS,&GrayImageData[SendBytes], 1);
 	}
+	//Reset SendBytes for next roll.
+	SendBytes = 0;
 
-
+	//FINISH_IMAGE();
+}
     return 0;
 
 }
+
+/*--------------------------Function definitions :: Start----------------------------------*/
 
 //line from 0 to 239, row from 0 to 319
 void WRITE_COMMAND(unsigned int data,unsigned int line, unsigned int row){
@@ -246,12 +344,13 @@ void WRITE_COMMAND(unsigned int data,unsigned int line, unsigned int row){
 
 	*slave_reg01 = data;
 	*slave_reg00 = COMMAND_REG;
+
 }
 
 unsigned int READ_COMMAND(unsigned int line, unsigned int row){
 	unsigned int COMMAND_REG = 0;
 	unsigned int RESPOND = 0;
-	unsigned int REG01 =0;
+	unsigned int REG04 =0;
 	unsigned int address = line*320+row;
 	//Enable Command register
 	COMMAND_REG = COMMAND_REG | 0x40000; //0100_0000_0000_0000_0000
@@ -266,20 +365,30 @@ unsigned int READ_COMMAND(unsigned int line, unsigned int row){
 
 	//while loop to wait valid data at bit 31 of register01
 	do{
-		RESPOND = *slave_reg01;
+		RESPOND = *slave_reg04;
 		RESPOND &= (1<<31);
 	}while(RESPOND == 0);
 
+	//Reset valid fresh data
+	*slave_reg03 = *slave_reg03 | 0x80000000;
+	*slave_reg03 = *slave_reg03 & 0x7FFFFFFF;
+
 	//only get 12b data
-	REG01 = *slave_reg01;
-	REG01 &= 0x00000FFF;
-	return REG01;
+	REG04 = *slave_reg04;
+	REG04 &= 0x00000FFF;
+	return REG04;
 }
 
 u8 READ_GRAY_DATA(unsigned int line, unsigned int row){
 	u32 RESPOND_FR_STATUS_REGIS = 0;
 	u32 COMMAND = 0;
 	u32 address = line*320+row;
+
+	//Enable register03
+	COMMAND = COMMAND | (1<<26);
+
+	//Read gray option
+	COMMAND = COMMAND | (1<<30);
 
 	//enable read
 	COMMAND = COMMAND | (1<<25);
@@ -291,35 +400,82 @@ u8 READ_GRAY_DATA(unsigned int line, unsigned int row){
 	*slave_reg03 = COMMAND;
 
 	do{
-		RESPOND_FR_STATUS_REGIS = *slave_reg03;
+		RESPOND_FR_STATUS_REGIS = *slave_reg04;
 		RESPOND_FR_STATUS_REGIS &=(1<<31);
 	}while(RESPOND_FR_STATUS_REGIS == 0);
 
-	return (u8)(*slave_reg03 & 0x000000FF);
+	//Reset valid fresh data
+	*slave_reg03 = *slave_reg03 | 0x80000000;
+	*slave_reg03 = *slave_reg03 & 0x7FFFFFFF;
+
+	return (u8)(*slave_reg04 & 0x000000FF);
 
 }
 
-//This part for read back pixel inside block RAM - Verification function
-void TEST_READ_PIXEL(){
-	int line, row;
-	while(1){
-		//xil_printf("\r\nEnter the line: ");
-		scanf("%d",&line);
-		//xil_printf("\r\nEnter the row: ");
-		scanf("%d",&row);
-		//xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_COMMAND(line,row));
-	}
+u8 READ_SOBEL_DATA(unsigned int line, unsigned int row){
+	u32 RESPOND_FR_STATUS_REGIS = 0;
+	u32 COMMAND = 0;
+	u32 address = line*320+row;
+
+	//Enable register03
+	COMMAND = COMMAND | (1<<26);
+
+	//Read sobel option
+	COMMAND = COMMAND & 0xBFFFFFFF;
+
+	//enable read
+	COMMAND = COMMAND | (1<<25);
+
+	//push address
+	COMMAND = COMMAND | (address << 8);
+
+	//Write to register 3
+	*slave_reg03 = COMMAND;
+
+	do{
+		RESPOND_FR_STATUS_REGIS = *slave_reg04;
+		RESPOND_FR_STATUS_REGIS &=(1<<31);
+	}while(RESPOND_FR_STATUS_REGIS == 0);
+
+	//Reset valid fresh data
+	*slave_reg03 = *slave_reg03 | 0x80000000;
+	*slave_reg03 = *slave_reg03 & 0x7FFFFFFF;
+
+	return (u8)(*slave_reg04 & 0x000000FF);
+
 }
 
-void TEST_READ_GRAY_PIXEL(){
-	int line, row;
-	while(1){
-		//xil_printf("\r\nEnter the line: ");
-		scanf("%d",&line);
-		//xil_printf("\r\nEnter the row: ");
-		scanf("%d",&row);
-		//xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_GRAY_DATA(line,row));
-	}
+
+u8 READ_SOBEL_DATA_byADDR(unsigned int address){
+	u32 RESPOND_FR_STATUS_REGIS = 0;
+	u32 COMMAND = 0;
+
+	//Enable register03
+	COMMAND = COMMAND | (1<<26);
+
+	//Read sobel option
+	COMMAND = COMMAND & 0xBFFFFFFF;
+
+	//enable read
+	COMMAND = COMMAND | (1<<25);
+
+	//push address
+	COMMAND = COMMAND | (address << 8);
+
+	//Write to register 3
+	*slave_reg03 = COMMAND;
+
+	do{
+		RESPOND_FR_STATUS_REGIS = *slave_reg04;
+		RESPOND_FR_STATUS_REGIS &=(1<<31);
+	}while(RESPOND_FR_STATUS_REGIS == 0);
+
+	//Reset valid fresh data
+	*slave_reg03 = *slave_reg03 | 0x80000000;
+	*slave_reg03 = *slave_reg03 & 0x7FFFFFFF;
+
+	return (u8)(*slave_reg04 & 0x000000FF);
+
 }
 
 void INCREASE_PIXEL_COUNT_BY1(){
@@ -343,57 +499,78 @@ u8 CHECK_PIXEL_COUNT(){
 
 
 void READ_STATUS_REGIS(){
-	//xil_printf("\r\nValue of STATUS Register is 0x%x",*slave_reg02);
+	//xil_printf("\r\nValue of STATUS Register is 0x%x",*slave_reg05);
 }
 
 void WAIT_DONE_WRITE_COLOR(){
-	//xil_printf("\r\nFinish writing color pixel to COLOR_BRAM");
 	u32 DONE_WRITE_COLOR = 0;
+	//xil_printf("\r\nWaiting for finish writing color pixel to COLOR_BRAM");
 	while(1){
-		DONE_WRITE_COLOR = *slave_reg02 & 0x00000002;
+		DONE_WRITE_COLOR = *slave_reg05 & 0x00000001;
 		if (DONE_WRITE_COLOR != 0)
 			break;
 	}
+	//xil_printf("\r\nDone writing color pixel to COLOR_BRAM");
 }
 
 void WAIT_DONE_WRITE_GRAY(){
-	//xil_printf("\r\nFinish writing gray pixel to GRAY_BRAM");
 	u32 DONE_WRITE_GRAY = 0;
+	//xil_printf("\r\nWaiting for finish writing color pixel to GRAY_BRAM");
 	while(1) {
-		DONE_WRITE_GRAY = *slave_reg02 & 0x00000001;
+		DONE_WRITE_GRAY = *slave_reg05 & 0x00000002;
 		if (DONE_WRITE_GRAY != 0)
 			break;
 	}
+	//xil_printf("\r\nDone writing gray pixel to GRAY_BRAM");
 }
 
-
-
-void RGB_GET_CONTROL(){
-	//xil_printf("\r\nRGB gets control.");
-	*slave_reg02 = *slave_reg02 | 0x80000000;
+void WAIT_DONE_WRITE_SOBEL(){
+	u32 DONE_WRITE_GRAY = 0;
+	//xil_printf("\r\nWaiting for finish writing color pixel to SOBEL_BRAM");
+	while(1) {
+		DONE_WRITE_GRAY = *slave_reg05 & 0x00000004;
+		if (DONE_WRITE_GRAY != 0)
+			break;
+	}
+	//xil_printf("\r\nDone writing gray pixel to SOBEL_BRAM");
 }
 
 void AXI_GET_CONTROL(){
 	//xil_printf("\r\nAXI gets control.");
+	*slave_reg02 = *slave_reg02 & 0x3FFFFFFF;
+}
+
+void RGB_GET_CONTROL(){
+	//xil_printf("\r\nRGB gets control.");
 	*slave_reg02 = *slave_reg02 & 0x7FFFFFFF;
+	*slave_reg02 = *slave_reg02 | 0x40000000;
 }
 
-
-void START_SIGNAL(){
-	//xil_printf("\r\nStart processing pixels.");
-	//turn bit 31th and 30th to 1
-	*slave_reg02 = *slave_reg02 | 0xC0000000;
-
-	//turn bit 30th to 0
+void SOBEL_GET_CONTROL(){
+	//xil_printf("\r\nSOBEL gets control.");
+	*slave_reg02 = *slave_reg02 | 0x80000000;
 	*slave_reg02 = *slave_reg02 & 0xBFFFFFFF;
-
 }
 
-void RESET_STATUS_REGISTER(){
-	//xil_printf("\r\nReset Status register02 bit01 and bit00.");
-	*slave_reg02 = *slave_reg02 & 0xFFFFFFFC;
 
+void START_COLOR2GRAY(){
+	//xil_printf("\r\nStart processing color to gray pixels.");
+	//turn 28th to 1
+	*slave_reg02 = *slave_reg02 | 0x10000000;
+
+	//turn bit 28th to 0
+	*slave_reg02 = *slave_reg02 & 0xEFFFFFFF;
 }
+
+void START_GRAY2SOBEL(){
+	//xil_printf("\r\nStart processing gray to sobel pixels.");
+	//turn 29th to 1
+	*slave_reg02 = *slave_reg02 | 0x20000000;
+
+	//turn bit 29th to 0
+	*slave_reg02 = *slave_reg02 & 0xDFFFFFFF;
+}
+
 
 //This function has 1024 values in array that took from a gray image(format BMP).
 //That gray image took from GIMP after processing.
@@ -513,16 +690,107 @@ void New_Header_GrayImage(){
 	}
 }
 
+void TEST_READ_COLOR_PIXEL(){
+	int line, row;
+	while(1){
+		//xil_printf("\r\nEnter the line: ");
+		scanf("%d",&line);
+		//xil_printf("\r\nEnter the row: ");
+		scanf("%d",&row);
+		//xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_COMMAND(line,row));
+		READ_RD_DATA_REG();
+	}
+}
 
+void TEST_READ_GRAY_PIXEL(){
+	int line, row;
+	while(1){
+		//xil_printf("\r\nEnter the line: ");
+		scanf("%d",&line);
+		//xil_printf("\r\nEnter the row: ");
+		scanf("%d",&row);
+		//xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_GRAY_DATA(line,row));
+	}
+}
 
+void TEST_READ_SOBEL_PIXEL(){
+	int line, row;
+	while(1){
+		//xil_printf("\r\nEnter the line: ");
+		scanf("%d",&line);
+		//xil_printf("\r\nEnter the row: ");
+		scanf("%d",&row);
+		//xil_printf("\r\nRead at (%d,%d) 0x%x",line,row,READ_SOBEL_DATA(line,row));
+	}
+}
 
+void SET_THRESHOLD(u32 threshold){
+	//Write to register 2
+	*slave_reg02 = *slave_reg02 | (threshold << 3);
+}
 
+void ENABLE_REG00(){
+	//Enable register00 at bit 18th
+	*slave_reg00 = *slave_reg00 | 0x00040000; //0100_0000_0000_0000_0000
+}
 
+void DISABLE_REG00(){
+	//Disable Register00 at bit18th
+	*slave_reg00 = *slave_reg00 & 0xFFFBFFFF;
+}
 
+void CLR_REG00(){
+	*slave_reg00 = 0;
+}
+void CLR_REG01(){
+	*slave_reg01 = 0;
+}
+void CLR_REG02(){
+	*slave_reg02 = 0;
+}
+void CLR_REG03(){
+	*slave_reg03 = 0;
+}
 
+void RST_DONE_COLOR_SIGNAL(){
+	*slave_reg02 = *slave_reg02 | 0x00000001;
+	*slave_reg02 = *slave_reg02 & 0xFFFFFFFE;
+}
 
+void RST_DONE_GRAY_SIGNAL(){
+	*slave_reg02 = *slave_reg02 | 0x00000002;
+	*slave_reg02 = *slave_reg02 & 0xFFFFFFFD;
+}
 
+void RST_DONE_SOBEL_SIGNAL(){
+	*slave_reg02 = *slave_reg02 | 0x00000004;
+	*slave_reg02 = *slave_reg02 & 0xFFFFFFFB;
+}
 
+void READ_REG(char reg){
+	switch (reg) {
+		case 0:
+			//xil_printf("\r\nValue of reg %d is %0x",reg,*slave_reg00);
+			break;
+		case 1:
+			//xil_printf("\r\nValue of reg %d is %0x",reg,*slave_reg01);
+			break;
+		case 2:
+			//xil_printf("\r\nValue of reg %d is %0x",reg,*slave_reg02);
+			break;
+		case 3:
+			//xil_printf("\r\nValue of reg %d is %0x",reg,*slave_reg03);
+			break;
+	}
+}
 
+void READ_RD_DATA_REG(){
+	//xil_printf("\r\nValue of RD_DATA_REGISTER is %0x",*slave_reg04);
+}
 
+void FINISH_IMAGE(){
+	*slave_reg02 = *slave_reg02 | 0x08000000;
+	*slave_reg02 = *slave_reg02 & 0xF7FFFFFF;
+}
+/*--------------------------Function definitions :: End----------------------------------*/
 

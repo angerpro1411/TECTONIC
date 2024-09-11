@@ -26,6 +26,8 @@ entity BRAM_2CONTROL is
 		
 		i_WRITE : in std_logic;
 		i_READ : in std_logic;
+
+		DONE_WRITE : out std_logic;
 		
 		--Data is comprised of 3 pixel.
 		o_DATA : out std_logic_vector(VGA_ZEDBOARD-1 downto 0)
@@ -42,7 +44,9 @@ architecture RTL of BRAM_2CONTROL is
 	type RAM_TYPE is array (0 to 76799) of std_logic_vector(VGA_ZEDBOARD-1 downto 0);
 	signal RAM : RAM_TYPE;
 
-	signal ADDRESS_INT : integer range 0 to 76799;	
+	signal ADDRESS_INT : integer range 0 to 76800;
+	
+	signal CNT_NB_WR_CMD : integer range 0 to 76800;
 	
 begin
 
@@ -64,6 +68,27 @@ begin
 				o_DATA <= (others => '0');
 			elsif i_READ = '1' then
 				o_DATA <= RAM(ADDRESS_INT);
+			end if;
+		end if;
+	end process;
+
+	DONE_WRITE_PROCESS: process(i_CLK)
+	begin
+		if rising_edge(i_CLK) then
+			if i_RSTn = '0' then
+				DONE_WRITE <= '0';
+				CNT_NB_WR_CMD <= 0;
+			else
+				if i_WRITE = '1' then
+					CNT_NB_WR_CMD <= CNT_NB_WR_CMD + 1;
+					DONE_WRITE <= '0';
+					if CNT_NB_WR_CMD = 76799 then
+						CNT_NB_WR_CMD <= 0;
+						DONE_WRITE <= '1';
+					end if;
+				else 
+					DONE_WRITE <= '0';
+				end if;
 			end if;
 		end if;
 	end process;
