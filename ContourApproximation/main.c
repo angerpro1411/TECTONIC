@@ -41,8 +41,9 @@ int main(){
 
 
 
-    //first line calculated
-    l = LinearLine(p[0],p[9]);
+    //first line calculated by first point and last point,
+    //two important points that we must keep
+    l = LinearLine(p[0],p[sizeof(p)/8 - 1]);
     // printf("a = %f, b = %f, c = %f\n",l.a,l.b,l.c);
     // printf("distance between lines and p1 is : %f\n",Distance_Point_Line(p[1],l));
 
@@ -61,7 +62,7 @@ int main(){
                 }
             }
             else{
-                l = LinearLine(p[i],p[9]);
+                l = LinearLine(p[i],p[sizeof(p)/8 - 1]);
                 newLandMark = i;
                 break;                
             }
