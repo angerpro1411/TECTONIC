@@ -6,6 +6,9 @@
 #define XPAR_AXI_LITE_SLAVE_VHD_O_0_HIGHADDR 0x40000FFF
 * 0x40000000 is the address of Reg0 and +4 next for next reg(4 regs in total design).
 *
+* We need understand why each reg addr we need to add 4, because memory is aligned by Bytem so each 32 bits are aligned in 4 rows.
+*
+*
 * Modify REG0 to control Write and Read to FIFO
 * Bit10th to enable READ/WRITE. Bit9/8 to control on/off read/write. 7->0  is write data
 * Read data will be read at REG1 and also FIFO_STATUS at bit 9th and 8th corresponde to FULL et EMPTY
