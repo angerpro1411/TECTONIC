@@ -6,8 +6,7 @@
 #define XPAR_AXI_LITE_SLAVE_VHD_O_0_HIGHADDR 0x40000FFF
 * 0x40000000 is the address of Reg0 and +4 next for next reg(4 regs in total design).
 *
-* We need understand why each reg addr we need to add 4, because memory is aligned by Bytem so each 32 bits are aligned in 4 rows.
-*
+
 *
 * Modify REG0 to control Write and Read to FIFO
 * Bit10th to enable READ/WRITE. Bit9/8 to control on/off read/write. 7->0  is write data
@@ -50,6 +49,19 @@
 #define EMPTY 1
 #define noFULLnoEMPTY 0
 
+/*
+* We need understand why each reg addr we need to add 4, because memory is aligned by Bytem so each 32 bits are aligned in 4 rows.
+* Each register points to 32-bits memory so the address need to be divisible by 4.
+* We create a function-an equation to address each address.
+*/
+
+#define BYTE_ADDRESSIBLE 4
+
+#define REG0_OFFSET 0*BYTE_ADDRESSIBLE
+#define REG1_OFFSET 1*BYTE_ADDRESSIBLE
+#define REG2_OFFSET 2*BYTE_ADDRESSIBLE
+#define REG3_OFFSET 3*BYTE_ADDRESSIBLE
+
 volatile unsigned int *slave_reg00;
 volatile unsigned int *slave_reg01;
 volatile unsigned int *slave_reg02;
@@ -72,10 +84,10 @@ int main()
 	/*
 	 * Point the register correspond to each address.
 	 */
-	slave_reg00 = (volatile unsigned int *)XPAR_S_AXI_LITE_FIFO_0_BASEADDR;
-	slave_reg01 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + 4);
-	slave_reg02 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + 8);
-	slave_reg03 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + 12);
+	slave_reg00 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + REG0_OFFSET);
+	slave_reg01 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + REG1_OFFSET);
+	slave_reg02 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + REG2_OFFSET);
+	slave_reg03 = (volatile unsigned int *)(XPAR_S_AXI_LITE_FIFO_0_BASEADDR + REG3_OFFSET);
 
 	while(1){
 		CHECK_FIFO_STATUS();
