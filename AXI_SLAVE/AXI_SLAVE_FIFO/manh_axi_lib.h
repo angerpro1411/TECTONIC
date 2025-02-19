@@ -22,5 +22,5 @@
 #define BIT_CLR(data,n)             ( data = data & ~(1<<n) )
 #define BIT_READ(data,n)            ( (data>>n) & 0x00000001)
 #define BIT_WRITE(data,n,value)     ( value?            BIT_SET(data,n) : BIT_CLR(data,n) )
-#define BIT_TOGGLE(data,n)          ( BIT_READ(data,n)? BIT_CLR(data,n) : BIT_SET(data,n) )
+#define BIT_TOGGLE(data,n)          ( data = data ^   1<<n )
 
