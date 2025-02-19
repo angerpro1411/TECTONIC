@@ -28,23 +28,19 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-
 entity AXI_LITE_SLAVE_32REG is
 	GENERIC(
-		DATA_WIDTH		: integer := 32;
-		STROBE_WIDTH	: integer := 4;--datawidth/8
-		
-        --Number of IP will connect to bus
-        NUMBER_IPs      : integer := 32;
+		DATA_WIDTH		: natural := 32;
+		STROBE_WIDTH	: natural := 4;--datawidth/8
+        
+        --5 bits for ip address, mean 32 ips
+        NUMBER_Bit_IPs_ADDR      : natural := 5;
 
-        --Number of regs for each IP
-        NUMBER_REGs     : integer := 32;
+        --5 bits for reg address, mean 32 regs each ips
+        NUMBER_Bit_REGs_ADDR     : natural := 5;        
 
-		--Correspond to number of registers.
-        --2 bit words for system 32bit, byte addressable or word addressable.
-		ADDRESS_WIDTH	: integer := log2(NUMBER_IPs) + log2(NUMBER_REGs) + 2;
-		
-		
+
+
         -- Example-specific design signals
         -- local parameter for addressing 32 bit / 64 bit C_S_AXI_DATA_WIDTH
         -- ADDR_LSB is used for addressing 32/64 bit registers/memories
@@ -56,7 +52,7 @@ entity AXI_LITE_SLAVE_32REG is
         --													  ---------	-------------------------
 		--With 32 bit data, we need 2-bits address(total 2^2 = 4 addresses) to addressing each 8 bit in one word 32 bits.
 		--With 64 bit data, we need 3-bits address(total 2^3 = 8 addresses) to addressing each 8 bit in one word 64 bits.
-		ADDRLSB			: integer := 2 -- log2(DATA_WIDTH) - 3	= log2(32) - 3 = 5-3 =2
+		ADDRLSB			: natural := 2 -- log2(DATA_WIDTH) - 3	= log2(32) - 3 = 5-3 =2
 	);
 	PORT(
 	    
@@ -77,8 +73,11 @@ entity AXI_LITE_SLAVE_32REG is
 		--Write address ready. Indicate that Slave is ready to accept an address.
 		S_AXI_AWREADY		: out std_logic;
 		
+--		--Write address, issue by master, accepted by slave.
+--		S_AXI_AWADDR		: in std_logic_vector((integer(LOG2(NUMBER_IPs)) + integer(LOG2(NUMBER_REGs)) + 2)-1 downto 0);
+		
 		--Write address, issue by master, accepted by slave.
-		S_AXI_AWADDR		: in std_logic_vector(ADDRESS_WIDTH-1 downto 0);
+		S_AXI_AWADDR		: in std_logic_vector((NUMBER_Bit_IPs_ADDR + NUMBER_Bit_REGs_ADDR + ADDRLSB)-1 downto 0);		
 			
 		----------------------------Write data channel----------------------------
 		
@@ -108,8 +107,11 @@ entity AXI_LITE_SLAVE_32REG is
 		
 		------------------------------Read address channel----------------------------
 		
+--		--Read Address. issue by Master, accepted by Slave.
+--		S_AXI_ARADDR		: in std_logic_vector((integer(LOG2(NUMBER_IPs)) + integer(LOG2(NUMBER_REGs)) + 2)-1 downto 0);
+		
 		--Read Address. issue by Master, accepted by Slave.
-		S_AXI_ARADDR		: in std_logic_vector(ADDRESS_WIDTH-1 downto 0);
+		S_AXI_ARADDR		: in std_logic_vector((NUMBER_Bit_IPs_ADDR + NUMBER_Bit_REGs_ADDR + ADDRLSB)-1 downto 0);		
 				
 		--Read address valid. address from Master is valid, and Slave can accept it.
 		S_AXI_ARVALID		: in std_logic;
@@ -137,6 +139,17 @@ end entity;
 
 architecture RTL of AXI_LITE_SLAVE_32REG is
 
+    --Number of IP will connect to bus
+    constant NUMBER_IPs      : natural := 2**NUMBER_Bit_IPs_ADDR;
+
+    --Number of regs for each IP
+    constant NUMBER_REGs     : natural := 2*NUMBER_Bit_REGs_ADDR;
+
+	--AXILITE signals to transactions
+    --Correspond to number of registers.
+    --2 bit words for system 32bit, byte addressable or word addressable.
+    constant ADDRESS_WIDTH	: integer := NUMBER_Bit_IPs_ADDR + NUMBER_Bit_REGs_ADDR + ADDRLSB;	
+    
 	--functions
 	function APPLY_W_STRB(
 		OLD_DATA : std_logic_vector(DATA_WIDTH-1 downto 0);
@@ -153,14 +166,16 @@ architecture RTL of AXI_LITE_SLAVE_32REG is
 					TMP(8*(I+1)-1 downto 8*I) := OLD_DATA(8*(I+1)-1 downto 8*I);
 				end if;
 			end loop;
-				return TMP;
+        return TMP;
 	end function APPLY_W_STRB;
 
     function CHECK_LOC_ADDR(
-        LOC_ADDR : std_logic_vector(ADDRESS_WIDTH-ADDRLSB-1 downto 0);
+        LOC_ADDR : std_logic_vector(ADDRESS_WIDTH-ADDRLSB-1 downto 0)
     )   return integer is
     variable TMP : integer range 0 to (NUMBER_IPs*NUMBER_REGs - 1);
+    begin 
         TMP := to_integer(unsigned(LOC_ADDR));
+        return TMP;
     end function CHECK_LOC_ADDR;
 	
 
@@ -170,8 +185,6 @@ architecture RTL of AXI_LITE_SLAVE_32REG is
 	
 	
 	
-	
-	--AXILITE signals to transactions
 	signal WRITEnAWRITE_VALID_EN: std_logic;
 	signal B_HANDSHAKE_EN : std_logic;
 	
