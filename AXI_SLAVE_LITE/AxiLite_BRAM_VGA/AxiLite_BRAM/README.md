@@ -1,0 +1,1 @@
+This folder uses to test WR and RD BLOCK RAM by using AXI_LITE_SLAVE. It can be used for further development.
