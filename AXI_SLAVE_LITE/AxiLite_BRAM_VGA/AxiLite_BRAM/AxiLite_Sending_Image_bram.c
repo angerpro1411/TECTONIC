@@ -97,6 +97,7 @@ int main(){
 	}
 
 	print("\r\nFinish send data to block ram");
+	print("\r\nPixel DATA starts at addr 138(Header)+1024(Color table) = 1162");
 
 	Status = CHECK_PIXEL_COUNT();
 	if (Status == 1){
