@@ -1,0 +1,2 @@
+- This folder contains VHDL files and C file, Soft-hard codesign.
+- The design that first, we send pixel data image from PC into DDR via ARM processor, then ARM processor will get pixel data from ddr, send to BRAM via AXI_LITE (PL part). After finished, VGA controller will get data from BRAM and display on screen.
