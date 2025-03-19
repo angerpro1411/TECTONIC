@@ -1,1 +1,2 @@
 - HDL files for simulation include top file in system verilog.
+- With this simulation, we create a part of AXI_LITE to control the registers, and signals as we pretent processor will do in the reality.
