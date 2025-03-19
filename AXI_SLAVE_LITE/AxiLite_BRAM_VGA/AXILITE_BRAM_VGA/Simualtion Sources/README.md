@@ -1,0 +1,1 @@
+- HDL files for simulation include top file in system verilog.
