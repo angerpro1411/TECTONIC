@@ -23,29 +23,31 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 
-entity Top_Design is
+entity FIFO_TOP is
 	GENERIC(
-			ADDR_WIDTH : integer := 3;		
-			DATA_WIDTH : integer := 8
+            ALMOST_FULL_LEFT_SLOTS     : integer := 2;       
+            ALMOST_EMPTY_AVAI_SLOTS    : integer := 2;	
+	
+			DATA_WIDTH : integer := 8;
+			ADDR_WIDTH : integer := 3
 	);
 	PORT(
 		i_CLK,i_RST_n : in std_logic;
 		WR_DATA		  : in std_logic_vector(DATA_WIDTH-1 downto 0);
 		WR,RD 		  : in std_logic;
 		RD_DATA 	  : out std_logic_vector(DATA_WIDTH-1 downto 0);
+		ALMOST_FULL_FLAG,ALMOST_EMPTY_FLAG : out std_logic;
 		FULL,EMPTY	  : out std_logic		
 	);
-end Top_Design;
+end FIFO_TOP;
 
-architecture STRUCTURE of Top_Design is
+architecture STRUCTURE of FIFO_TOP is
 
 ---------------------------COMPONENT DECLARATION---------------------------
 	COMPONENT RAM_2PORT is
 		GENERIC(
 				DATA_WIDTH : integer := 8;
-				ADDR_WIDTH : integer := 3;
-				--in this case, we got 3-bit ram, it means addr from 0 to 2**3-1(0 to 7)
-				RAM_DEPTH  : integer := 7
+				ADDR_WIDTH : integer := 3
 		);
 		
 		PORT (
@@ -57,17 +59,20 @@ architecture STRUCTURE of Top_Design is
 		 );
 	end COMPONENT RAM_2PORT;
 	
-	COMPONENT FIFO_CONTROLLER is
-		GENERIC(
-				ADDR_WIDTH : integer := 3
-			   );
-		PORT   (	
-			i_CLK,i_RST_n	: in std_logic;
-			WR,RD 			: in std_logic;
-			WR_ADDR,RD_ADDR : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-			FULL,EMPTY		: out std_logic
-		 );
-	end COMPONENT FIFO_CONTROLLER;	
+    COMPONENT FIFO_CONTROLLER is
+        GENERIC(
+            ALMOST_FULL_LEFT_SLOTS     : integer := 2;
+            ALMOST_EMPTY_AVAI_SLOTS    : integer := 2;       
+            ADDR_WIDTH : integer := 3
+               );
+        PORT   (	
+            i_CLK,i_RST_n	: in std_logic;
+            WR,RD 			: in std_logic;
+            ALMOST_FULL_FLAG,ALMOST_EMPTY_FLAG : out std_logic;
+            WR_ADDR,RD_ADDR : out std_logic_vector(ADDR_WIDTH-1 downto 0);
+            FULL,EMPTY		: out std_logic
+         );
+    end COMPONENT FIFO_CONTROLLER;
 
 ---------------------------SIGNAL DECLARATION---------------------------
 	signal WE_SIGNAL		: std_logic;
@@ -80,7 +85,12 @@ begin
 	FULL <= FULL_SIGNAL;
 
 ---------------------------PORT MAP CONNECTION---------------------------
-	RAM_COMPONENT: RAM_2PORT PORT MAP(
+	RAM_COMPONENT: RAM_2PORT 
+	GENERIC MAP(
+        DATA_WIDTH => DATA_WIDTH,
+        ADDR_WIDTH => ADDR_WIDTH  
+	)
+	PORT MAP(
 		i_CLK => i_CLK,
 		WE 	  => WE_SIGNAL,	    
 		RD_ADDR	=> RD_ADDR_SIGNAL,
@@ -89,13 +99,21 @@ begin
 		RD_DATA	=> RD_DATA				
 	);
 	
-	FIFO_CONTROLLER_COMPONENT : FIFO_CONTROLLER PORT MAP(
+	FIFO_CONTROLLER_COMPONENT : FIFO_CONTROLLER
+    GENERIC MAP(
+        ALMOST_FULL_LEFT_SLOTS => ALMOST_FULL_LEFT_SLOTS,
+        ALMOST_EMPTY_AVAI_SLOTS => ALMOST_EMPTY_AVAI_SLOTS, 
+        ADDR_WIDTH => ADDR_WIDTH   
+    )
+	PORT MAP(
 		i_CLK	=> i_CLK,
 		i_RST_n	=> i_RST_n,
 		WR		=> WR,
 		RD 		=> RD,
 		WR_ADDR => WR_ADDR_SIGNAL,
 		RD_ADDR => RD_ADDR_SIGNAL,
+		ALMOST_FULL_FLAG => ALMOST_FULL_FLAG,
+		ALMOST_EMPTY_FLAG => ALMOST_EMPTY_FLAG, 
 		FULL	=> FULL_SIGNAL,
 		EMPTY	=> EMPTY
 	);

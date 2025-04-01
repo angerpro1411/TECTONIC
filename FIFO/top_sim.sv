@@ -26,15 +26,23 @@ module FIFO_SIM(
     logic rd,wr;
     logic full,empty;
     logic [7:0] wr_data,rd_data;
-    
-    localparam [7:0] data [0:7] = '{8'hAF,8'hBA,8'h5A,8'h41,
-    								8'h50,8'h12,8'hFC,8'hEE};
+    logic ALMOST_FULL_FLAG,ALMOST_EMPTY_FLAG;
            
-    Top_Design uut (
+    FIFO_TOP 
+    #(
+        .ALMOST_FULL_LEFT_SLOTS(4),
+        .ALMOST_EMPTY_AVAI_SLOTS(4),
+        .DATA_WIDTH(8),
+        .ADDR_WIDTH(4)
+    )
+
+    uut (
     				.i_CLK(clk),
     				.i_RST_n(rst),
     				.RD(rd),
     				.WR(wr),
+                    .ALMOST_FULL_FLAG(ALMOST_FULL_FLAG),
+                    .ALMOST_EMPTY_FLAG(ALMOST_EMPTY_FLAG),
     				.FULL(full),
     				.EMPTY(empty),
     				.WR_DATA(wr_data),
@@ -53,19 +61,17 @@ module FIFO_SIM(
     
     //reset control
     initial begin
-		rst = 1;
 		rd = 1'b0;
-		wr = 1'b0;
+		wr = 1'b0;        
+        rst = 0;
 		#13;
-		rst = 0;
-		#7;
 		rst = 1;
     end 
     
     //run-time control
     initial begin
         repeat(4000) begin
-            @(negedge(clk));
+            @(posedge(clk));
         end
         $stop;
     end
@@ -73,143 +79,113 @@ module FIFO_SIM(
     //stimulus
     initial begin
         repeat(2)
-            @(negedge clk);
+            @(posedge clk);
             
             //Write till full
-            @(negedge clk);
-            wr_data = data[0];
-            wr = 1'b1;
-            @(negedge clk);
-            wr = 1'b0;
+            repeat(17) begin
+                @(posedge clk);
+                wr_data = $urandom_range(0,255);
+                wr = 1'b1;
+                @(posedge clk);
+                wr = 1'b0;
+            end
 
-            @(negedge clk);
-            wr_data = data[1];
-            wr = 1'b1;
-            @(negedge clk);
-            wr = 1'b0;
             
-            @(negedge clk);
-            wr_data = data[2];
-            wr = 1'b1;
-            @(negedge clk);
-            wr = 1'b0;                    
+            //Read-Write same time when full
+            repeat(2) begin
+                @(posedge clk);
+                wr_data = 0;
+                wr = 1'b1;
+                rd = 1'b1;
+                @(posedge clk);
+                rd = 1'b0;
+                wr = 1'b0;            
+            end
 
-            @(negedge clk);
-            wr_data = data[3];
+            @(posedge clk);
+            wr_data = $urandom_range(0,255);
             wr = 1'b1;
-            @(negedge clk);
-            wr = 1'b0;
-            
-            @(negedge clk);
-            wr_data = data[4];
-            wr = 1'b1;
-            @(negedge clk);
-            wr = 1'b0;
-            
-            @(negedge clk);
-            wr_data = data[5];
-            wr = 1'b1;
-            @(negedge clk);
-            wr = 1'b0;           
-
-            @(negedge clk);
-            rd = 1'b1;
-            @(negedge clk);
-            rd = 1'b0;
-            
-            //Read-Write same time
-            @(negedge clk);
-            wr_data = 0;
-            wr = 1'b1;
-            rd = 1'b1;
-            @(negedge clk);
-            rd = 1'b0;
-            wr = 1'b0;            
-            
-            @(negedge clk);
-            wr_data = data[6];
-            wr = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             wr = 1'b0;
               
-            @(negedge clk);
-            wr_data = data[7];
+            @(posedge clk);
+            wr_data = $urandom_range(0,255);
             wr = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             wr = 1'b0;  
 
-            @(negedge clk);
-            wr_data = data[0];
+            @(posedge clk);
+            wr_data = $urandom_range(0,255);
             wr = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             wr = 1'b0;
             // full 
             
             //Continue to write but the wr_addr won't change
-            @(negedge clk);
+            @(posedge clk);
             wr_data = 0;
             wr = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             wr = 1'b0;
             
-            @(negedge clk);
+            @(posedge clk);
             wr_data = 0;
             wr = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             wr = 1'b0;                      
             
             //Write and read at the same time at Full state, no operation performs 
-            @(negedge clk);
+            @(posedge clk);
             wr_data = 0;
             wr = 1'b1;
             rd = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b0;
             wr = 1'b0;  
             
-            @(negedge clk);
+            @(posedge clk);
             wr_data = 0;
             wr = 1'b1;
             rd = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b0;
             wr = 1'b0;
             
             //Read till Empty
-            repeat(8) 
+            repeat(14) 
             begin
-                @(negedge clk);
+                @(posedge clk);
                 rd = 1'b1;
-                @(negedge clk);
+                @(posedge clk);
                 rd = 1'b0;
             end              
             //Empty
               
             //Continue Read but the rd_addr won't change
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b0;
             
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b0;
             
             //continue Read-Write at the Empty state, no performs
-            @(negedge clk);
+            @(posedge clk);
             wr_data = 0;
             wr = 1'b1;
             rd = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b0;
             wr = 1'b0;  
             
-            @(negedge clk);
+            @(posedge clk);
             wr_data = 0;
             wr = 1'b1;
             rd = 1'b1;
-            @(negedge clk);
+            @(posedge clk);
             rd = 1'b0;
             wr = 1'b0;            
                                                                                                                    

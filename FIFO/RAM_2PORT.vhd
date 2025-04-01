@@ -27,9 +27,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity RAM_2PORT is
 	GENERIC(
 			DATA_WIDTH : integer := 8;
-			ADDR_WIDTH : integer := 3;
-			--in this case, we got 3-bit ram, it means addr from 0 to 2**3-1(0 to 7)
-			RAM_DEPTH  : integer := 7
+			ADDR_WIDTH : integer := 3
 	);
 	
 	PORT (
@@ -44,7 +42,7 @@ end RAM_2PORT;
 architecture RTL of RAM_2PORT is
 	
 	
-	type RAM_TYPE is array (0 to RAM_DEPTH) of std_logic_vector(DATA_WIDTH-1 downto 0);
+	type RAM_TYPE is array (0 to 2**ADDR_WIDTH - 1) of std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal RAM : RAM_TYPE;
 
 begin
@@ -58,11 +56,14 @@ begin
 		end if;
 	end process;
 
-	READ_OP	: process(i_CLK)
+    --Delay one cycle to have data
+	READ_OP : process(i_CLK) 
 	begin
-		if rising_edge(i_CLK) then 
+		if rising_edge(i_CLK) then
 			RD_DATA <= RAM(to_integer(unsigned(RD_ADDR)));
-		end if; 
+		end if;
 	end process;
+    
+
 
 end RTL;
