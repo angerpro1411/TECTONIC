@@ -1,0 +1,1 @@
+- This folder contains all files to display an image from DDR via VGA.
