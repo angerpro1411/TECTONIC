@@ -1,0 +1,3 @@
+- This folder contains C files to create a pixel array from reading image.bmp.
+- Objective is avoiding the wasted time for sending image via terminal(UART) each time we need to test.
+- After process, we will have a file who contains an array of pixel data, and we can use it to test.
