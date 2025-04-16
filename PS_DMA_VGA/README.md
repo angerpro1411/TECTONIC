@@ -41,4 +41,36 @@ image after processing. Second objective of project that we want to be independa
 - For sure, we need something to store data, write and read it with the address. And inside FPGA, we have block ram. For optimization, our block ram has dual-port, write port connects to PS, PS(Arm) has full right to write block ram and read port will switch between VGA and PS. Before actually let VGA read data inside block ram, I just want to make sure that these data I write to block ram are correct, so I want to read it and compare it with actual pixel value that I can see through Ghex(a software that helps us read file under hex format). When correct datas are stored inside block ram, it means I have no problem with axi_lite_slave, code C to write data into register and data inside block ram now are all correct. Right now, the problem is only timing to display pixel data via VGA on screen.
 
 ### Pixel data controller
-- Due to limited capacity of block ram, we can not store a whole VGA image inside a block ram, it is too big for Zynq. So the image that we use is only 1/4 VGA scale, means 320x240.
+- Due to limited capacity of block ram, we can not store a whole VGA image inside a block ram, it is too big for Zynq. So the image that we use is only 1/4 VGA scale, means 320x240. I was adding one more IP called Pixel data controller - actually Position image controller. This IP has a mission that controls the position of our image, because our image scales 1/4 VGA now, not full screen. It basically bases on Horizontal counter and Vertical counter (25MHz) and we will know where the CRT beam is.
+
+### Simulation  
+- We integrate Pixel controller into VGA, so we have a new VGA where we can control the image position, now we need to test whether they work well or not. It works well when VGA only launches a READ COMMAND to block ram inside the specific HC and VC. Not too complicated but before implement on Zedboard, I want to be sure that all components work correctly. Simulation folder could be fought in AXI_SLAVE_LITE/AxiLite_BRAM_VGA/AXILITE_BRAM_VGA/Simulation Sources.
+
+### Develop software C on Vitis
+- Software-hardware co-design, after finish design hardware part, we need to manipulate CPU(core Arm) to control our IP. First thing, config Uart to wait the image's transaction from PC to DDR. After received whole image file, only send pixel data to block ram. Then change the access control to VGA, so VGA is able to read block ram.
+
+### Test on Zedboard
+- When all IPs work correctly under simulation, so it means nothing wrong with your logic design(in case of you can distinguish between RTL code and non-synthesizable code), write the physic connection inside .xdc file and see the result
+
+## PS - DMA - IPs
+> This is my first time working with Xilinx's DMA IP, which is available as a configurable block within the Block Design environment in Vivado. To use it in our application, we need to adjust its configuration parameters to ensure compatibility with our custom IP.\
+Since the DMA is a pre-built Xilinx IP core, there's no need to develop it in VHDL or Verilog—no additional hardware development is required. Instead, we need to understand how to interact with it through the software APIs (Application Programming Interfaces) provided by Xilinx.\
+To gain a deeper understanding of how the Xilinx DMA functions, I created two separate test projects. These experiments helped me explore its configuration and usage in different data transfer scenarios.
+
+### AXI STREAM
+![image](https://github.com/user-attachments/assets/81247f64-801e-4dc7-a519-74162438dc16)
+
+- Before working with the applications, it is important to understand the AXI4-Stream protocol, which is utilized by the Xilinx DMA engine for interfacing with other IP cores. Official documentation is available online, but a brief overview is provided here.\
+The AXI4-Stream interface defines a unidirectional data channel with separate master and slave roles. At a minimum, it requires three signals: TVALID, TREADY, and TDATA. The master asserts TVALID to indicate that valid data is available on TDATA, while the slave asserts TREADY to signal its ability to accept data.\
+A successful data transfer occurs only when both TVALID and TREADY are high during the same rising edge of the clock. Once TVALID is asserted by the master, both TVALID and TDATA must remain stable until TREADY is asserted by the slave. The master must not change TDATA or de-assert TVALID until a handshake (i.e., TVALID && TREADY) has occurred. This ensures reliable, lossless data transfer.
+
+### 1.DMA - Inverter
+- The objective of this application is still learning about DMA, but what does this application do? Old move but we do it again, send image via gtkterm(virtual terminal) by Uart then the IP inverter will change value of each pixel by (255-value) then send back to the ddr, this application applies for gray image.
+- Three essential IPs are Inverter, DMA and Zynq processing system. 
+![Screenshot from 2025-04-16 17-55-37](https://github.com/user-attachments/assets/1a98a747-9547-4bf3-aa2c-7941ed78dd21)
+
+- We need config Zynq by adding one HP(High Performance) Slave Interface, so PS can control DMA via HP port. 
+#### IP - Inverter
+- IP Inverter includes 2 side channels, master and slave stream. Slave channel will receive data from DMA, process it, put data in master channel, then send back to DMA. As I described, it will invert all pixel value.
+
+#### Develop software C on Vitis  
