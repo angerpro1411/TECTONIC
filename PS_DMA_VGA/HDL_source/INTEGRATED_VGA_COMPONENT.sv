@@ -102,6 +102,7 @@ module INTEGRATED_VGA_COMPONENT #
 
         //These ports to connect to FIFO
         .D_FROM_FIFO(D_OUT_FIFO),
+        .FIFO_EMPTY(EMPTY),
         .RD_FIFO(RD_FIFO)
     );
 
