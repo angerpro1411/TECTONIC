@@ -23,6 +23,7 @@ entity POSITION_CONTROLLER is
 
         --These ports to connect to FIFO
         D_FROM_FIFO     : in std_logic_vector(FIFO_DATA_SCALE-1 downto 0);
+        FIFO_EMPTY      : in std_logic;
         RD_FIFO         : out std_logic
     );
 end entity;
@@ -48,8 +49,11 @@ architecture RTL of POSITION_CONTROLLER is
      constant END1_LINE : integer := START_PT+WIDTH_RESO;
      constant START_LINE : integer := VB + VD/4;
      constant LAST_LINE : integer := START_LINE+HEIGHT_RESO; 
-
-
+     
+     -- State machine to control reading fifo signal for the first time,
+     -- If first time read is correct, then subsequences are oke.
+     type STATE is (WAIT_FIRST_PIXEL,READ_DATA);
+     signal PRE_STATE : STATE;
 
 begin
     HC_UNSIGNED <= unsigned(HC);
@@ -65,7 +69,7 @@ begin
             if i_RSTn = '0' then 
                 RD_FIFO <= '0';
             else
-                if INSIDE_IMAGE = '1' and TICK_25 = '1' then
+                if INSIDE_IMAGE = '1' and TICK_25 = '1' and PRE_STATE = READ_DATA then
                     RD_FIFO <= '1';
                 else
                     RD_FIFO <= '0';
@@ -74,6 +78,17 @@ begin
         end if;     
     end process;
 
-
+    CONTROL_STATE: process(i_CLK)
+    begin
+        if rising_edge(i_CLK) then
+            if i_RSTn = '0' then
+                PRE_STATE <= WAIT_FIRST_PIXEL;
+            else
+                if (FIFO_EMPTY = '0') and (HC_UNSIGNED = START_PT) and (VC_UNSIGNED = START_LINE) then
+                    PRE_STATE <= READ_DATA;
+                end if;
+            end if;
+        end if;
+    end process;
 
 end architecture RTL;
