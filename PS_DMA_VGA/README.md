@@ -57,7 +57,7 @@ image after processing. Second objective of project that we want to be independa
 Since the DMA is a pre-built Xilinx IP core, there's no need to develop it in VHDL or Verilog—no additional hardware development is required. Instead, we need to understand how to interact with it through the software APIs (Application Programming Interfaces) provided by Xilinx.\
 To gain a deeper understanding of how the Xilinx DMA functions, I created two separate test projects. These experiments helped me explore its configuration and usage in different data transfer scenarios.
 
-### AXI STREAM
+### 0.AXI STREAM
 ![image](https://github.com/user-attachments/assets/81247f64-801e-4dc7-a519-74162438dc16)
 
 - Before working with the applications, it is important to understand the AXI4-Stream protocol, which is utilized by the Xilinx DMA engine for interfacing with other IP cores. Official documentation is available online, but a brief overview is provided here.\
@@ -74,3 +74,12 @@ A successful data transfer occurs only when both TVALID and TREADY are high duri
 - IP Inverter includes 2 side channels, master and slave stream. Slave channel will receive data from DMA, process it, put data in master channel, then send back to DMA. As I described, it will invert all pixel value.
 
 #### Develop software C on Vitis  
+- Now how can you know that your IP works correctly ? In my case, I created an array to send some elements, another array to store back the return elements. I print my result when the program finishes and check whether the values are correct invert values or not. Just simple. One more thing we need to config DMA Xilinx, that the sending direction and the receiving need to active at the same time, unless the data will be stuck in DMA's FIFO. And when do you know that transfers finish? DMA has their own status register, so we can check DMA's status. If it stops, it means no tranfer is working at that time, so we can read safe-correct data.
+- Play a big shot, we invert more data, this time, we try to invert an image, lenna gray and check our image result, see our IP works well or not. Here is my result. 
+![Screenshot from 2025-04-22 11-30-30](https://github.com/user-attachments/assets/b232baf7-3f36-4a60-9666-ee60e307f88b)
+Yeah, our IP works well, our AXI-STREAM protocol HDL that we wrote works well with simple IPs. Time to move on more complicated IP.
+
+### 2.DMA - VGA
+- Now we want to see our images who are stored in DMA that display via VGA, so we can check the result rightaway, no need for changing header image file(too tedious with repetitive code). If you really want to see how I can change header file from color to gray(under BMP format), you can check in the RGB_GRAY_SOBEL_nAXI folder, c file, NEW_HEAD_GRAY_IMAGE function. But it is boring honestly.
+
+  
