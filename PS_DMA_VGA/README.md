@@ -82,4 +82,34 @@ Yeah, our IP works well, our AXI-STREAM protocol HDL that we wrote works well wi
 ### 2.DMA - VGA
 - Now we want to see our images who are stored in DMA that display via VGA, so we can check the result rightaway, no need for changing header image file(too tedious with repetitive code). If you really want to see how I can change header file from color to gray(under BMP format), you can check in the RGB_GRAY_SOBEL_nAXI folder, c file, NEW_HEAD_GRAY_IMAGE function. But it is boring honestly.
 
-  
+#### New VGA IP
+- Hey it isn't totally new, actually now older VGA will combine to other IPs so that it will appropriate for different type of images. 
+- Not like when we want to get data from block ram, data from block ram is easy to get, when you have their address correspond to each pixel. With DMA, data sends in stream, so atleast you want something to control your stream, so adding FIFO is important. => **Adding FIFO, our FIFO that we create so we can control it as we want, change the parameter, not Xilinx FIFO.**
+- Imagine that if we want to display a color image, we config DMA send one byte each? Why?
+> The default Xilinx DMA interface typically operates with 32-bit word transfers. However, in color image data, each pixel is commonly represented using 24 bits(3 consecutive bytes) - 8 bits each for Red-Green-Blue). Transfering 32 bits per time cause misaligne, resulting in undesired patterns as (Red-Green-Blue-Red) where the last byte belongs to the next pixel. This not only make data harder to control, but also creates confusion in the future when trying to understand or debug system, even if we are the ones who originally wrote it. It causes waste time and unnecessary problem. Keep everything simple is our choice. \
+While 24-bit transfers would preserve pixel structure, they are inefficient in most architecture since 24 isn't power of 2. It requires extra logic to handle, multiple cycles to process, so just avoid it.
+
+- Now, we know that DMA will send byte in order and it will be RED-GREEN-BLUE and repeat RED-GREEN-BLUE. While VGA Zedboard using 12 bits data for each pixel - 4 bits each for R-G-B, we need create an IP who has input data 8-bit(receive from DMA), slice 4 bits MSB, do it 3 times, to have 4-bit RED, 4-bit GREEN and 4-bit BLUE. Gather them into 12 bits data and put it in FIFO./
+=> **Adding one IP called PIXEL_CONTROLLER**.
+
+- One more IP that I want to add, it called Posistion_Controller. It helps us control image position on VGA screen.
+=> **Adding one IP called POSITION_CONTROLLER**.
+
+-Finally we have total 4 component in new VGA(VGA included).
+![Screenshot from 2025-04-22 16-27-55](https://github.com/user-attachments/assets/52e338f3-3fc7-4481-a1f4-6130798f2fc8)
+
+
+#### Simulation
+- We will not declare the simulation at IP level because each IP is around 100-150 code line with not too compicated logic.
+##### 1.First check: Pixel_controller -> FIFO
+- Create a test bench and hope to see when we send a stream data, every 3 consecutive bytes will create one pixel data and on the 4th cycle, Pixel_controller will launch a write fifo command, and write the correct data into FIFO. Check it several times, compare data in FIFO with 3 consecutive precedent bytes. If everything is fine, means nothing problem in syntax, connections or simple logic.
+
+##### 2.Second check: Position controller -> VGA
+- Create a test bench and hope to see the data only appears under desired Horizontal counter and Vertical counter. Unless, we fail.
+
+#### 3.Third check: Pixel_controller -> FIFO -> Position controller -> VGA
+- Create a test bench and hope the data flow is correct. That includes the conditions as first check and second check. If it works well, means nothing wrong with connections, syntax and data flow.
+
+#### 4.Fourth check: AXI STREAM
+- It is very important to check whether AXI STREAM works well or not. Two conditions need to be checked that, data only is accepted only when TVALID and TREADY asserted same time, second condition that if FIFO full, mean the TREADY isn't high, TVALID must keep high and TDATA can not change till the handshake takes place.
+- Check at 2 level, simulation and debug ILA(Intergrated Logic Analyzer) - real time check.
