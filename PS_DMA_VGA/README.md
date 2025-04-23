@@ -113,3 +113,9 @@ While 24-bit transfers would preserve pixel structure, they are inefficient in m
 #### 4.Fourth check: AXI STREAM
 - It is very important to check whether AXI STREAM works well or not. Two conditions need to be checked that, data only is accepted only when TVALID and TREADY asserted same time, second condition that if FIFO full, mean the TREADY isn't high, TVALID must keep high and TDATA can not change till the handshake takes place.
 - Check at 2 level, simulation and debug ILA(Intergrated Logic Analyzer) - real time check.
+
+#### Block Design under VIVADO
+- All these IPs combine to new Integrated_VGA, connects with Xilinx IP under Vivado block design.
+![image](https://github.com/user-attachments/assets/1087f2ab-df9a-4d30-b99c-20fe684e81fa)
+
+- There are 3 main components that we need to focus: Processing system(Zynq), DMA and our IP. Our IP is done with all checks before. Now is the time to config Xilinx's IP
