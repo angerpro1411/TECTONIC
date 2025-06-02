@@ -14,3 +14,10 @@ We can actually see every step of process from original to the last result.
 ![alt text](<Screenshot from 2025-05-28 17-06-16.png>)
 
 3. Photo_2
+![alt text](<Screenshot from 2025-06-02 13-47-58.png>)
+
+4. Photo_3
+![alt text](<Screenshot from 2025-06-02 14-09-12.png>)
+
+5. Photo_4
+![alt text](<Screenshot from 2025-06-02 14-39-21.png>)
