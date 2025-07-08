@@ -1,4 +1,5 @@
 #include "parameters.h"
+#include "RGB2HSV.h"
 
 
 //These functions to conversion bgr to hsv
@@ -16,7 +17,7 @@ u8 Minof3(u8 b, u8 g, u8 r){
     return min;
 }
 
-u8 findHSV(PixelBGR* in,PixelHSV* out){
+void findHSV(PixelBGR* in,PixelHSV* out, u32 PixelNumber){
     
     float tmp = 0.0;
 

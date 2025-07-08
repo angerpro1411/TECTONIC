@@ -1,10 +1,11 @@
-#define imageWidth 320
-#define imageHeight 240
-#define PixelNumber imageWidth*imageHeight
-#define imageSize imageWidth*imageHeight*3
-#define headerSize 0x8A
-#define fileSize imageSize+headerSize 
-
+// #define imageWidth 320
+// #define imageHeight 240
+// #define PixelNumber imageWidth*imageHeight
+// #define imageSize imageWidth*imageHeight*3
+// #define headerSize 0x8A
+// #define fileSize imageSize+headerSize 
+#ifndef _PARAMETERS_H_
+#define _PARAMETERS_H_
 
 typedef unsigned char u8;
 typedef unsigned short int u16;
@@ -17,3 +18,5 @@ typedef struct{
 typedef struct{
     unsigned char h,s,v;
 }PixelHSV;
+
+#endif
