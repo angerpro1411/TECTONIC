@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="BackGrRemoval.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval.cpp"/>
+    <originFiles name="BackGrRemoval.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval.h"/>
+    <originFiles name="RGB2HSV.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/RGB2HSV.cpp"/>
+    <originFiles name="RGB2HSV.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/RGB2HSV.h"/>
+    <originFiles name="parameters.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/parameters.h"/>
+  </source>
+  <testbench>
+    <originFiles name="13.bmp" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/13.bmp"/>
+    <originFiles name="13_320x240.bmp" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/13_320x240.bmp"/>
+    <originFiles name="BackGrRemoval_tb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval_tb.cpp"/>
+    <originFiles name="parameters.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/parameters.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

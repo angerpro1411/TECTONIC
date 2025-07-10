@@ -1,0 +1,15 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="BackGrRemoval" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="BackGrRemoval"/>
+            </pragma>
+        </directive>
+        <directive functionName="BackGrRemoval" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="BackGrRemoval"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

@@ -1,0 +1,318 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../BackGrRemoval_tb.cpp in debug mode
+In file included from ../../../../BackGrRemoval_tb.cpp:3:
+../../../../parameters.h:4:9: error: ‘ap_uint’ does not name a type; did you mean ‘uint’?
+ typedef ap_uint<8> u8;
+         ^~~~~~~
+         uint
+../../../../parameters.h:5:9: error: ‘ap_uint’ does not name a type; did you mean ‘uint’?
+ typedef ap_uint<16> u16;
+         ^~~~~~~
+         uint
+../../../../parameters.h:6:9: error: ‘ap_uint’ does not name a type; did you mean ‘uint’?
+ typedef ap_uint<32> u32;
+         ^~~~~~~
+         uint
+../../../../parameters.h:8:9: error: ‘ap_fixed’ does not name a type
+ typedef ap_fixed<16,8> fx_t;
+         ^~~~~~~~
+../../../../parameters.h:11:5: error: ‘u8’ does not name a type
+     u8 r,g,b;
+     ^~
+../../../../parameters.h:15:5: error: ‘u8’ does not name a type
+     u8 h,s,v;
+     ^~
+In file included from ../../../../BackGrRemoval_tb.cpp:4:
+../../../../RGB2HSV.h:3:1: error: ‘u8’ does not name a type
+ u8 MaxOf3(u8 b, u8 g, u8 r);
+ ^~
+../../../../RGB2HSV.h:4:1: error: ‘u8’ does not name a type
+ u8 Minof3(u8 b, u8 g, u8 r);
+ ^~
+../../../../RGB2HSV.h:5:1: error: ‘u8’ does not name a type
+ u8 findHSV(PixelBGR* in,PixelHSV* out);
+ ^~
+In file included from ../../../../BackGrRemoval_tb.cpp:5:
+../../../../BackGrRemoval.h:4:36: error: ‘u8’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                    ^~
+../../../../BackGrRemoval.h:4:49: error: ‘u8’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                                 ^~
+../../../../BackGrRemoval.h:4:64: error: ‘u32’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                                                ^~~
+../../../../BackGrRemoval.h:4:74: error: ‘u32’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                                                          ^~~
+../../../../BackGrRemoval_tb.cpp:7:1: error: ‘u32’ does not name a type
+ u32 FileSizeReturner(FILE *fptr);
+ ^~~
+../../../../BackGrRemoval_tb.cpp:8:1: error: ‘u8’ does not name a type
+ u8 MaxOf3(u8 b, u8 g, u8 r);
+ ^~
+../../../../BackGrRemoval_tb.cpp:9:1: error: ‘u8’ does not name a type
+ u8 MinOf3(u8 b, u8 g, u8 r);
+ ^~
+../../../../BackGrRemoval_tb.cpp:10:1: error: ‘u8’ does not name a type
+ u8 findHSV(PixelBGR* in,PixelHSV* out, u32 PixelNumber);
+ ^~
+../../../../BackGrRemoval_tb.cpp:11:33: error: ‘u8’ has not been declared
+ void BackGrRemoval(PixelBGR* in,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                 ^~
+../../../../BackGrRemoval_tb.cpp:11:46: error: ‘u8’ has not been declared
+ void BackGrRemoval(PixelBGR* in,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                              ^~
+../../../../BackGrRemoval_tb.cpp:11:61: error: ‘u32’ has not been declared
+ void BackGrRemoval(PixelBGR* in,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                                             ^~~
+../../../../BackGrRemoval_tb.cpp:11:71: error: ‘u32’ has not been declared
+ void BackGrRemoval(PixelBGR* in,u8 threshold,u8 kernel_size,u32 width,u32 height);
+                                                                       ^~~
+../../../../BackGrRemoval_tb.cpp: In function ‘int main()’:
+../../../../BackGrRemoval_tb.cpp:23:5: error: ‘u32’ was not declared in this scope
+     u32 fileSize = FileSizeReturner(fptr);
+     ^~~
+../../../../BackGrRemoval_tb.cpp:27:5: error: ‘u8’ was not declared in this scope
+     u8 imageData[fileSize];
+     ^~
+../../../../BackGrRemoval_tb.cpp:29:7: error: expected ‘;’ before ‘FILE_OUT’
+     u8 FILE_OUT[fileSize];
+       ^~~~~~~~~
+       ;
+../../../../BackGrRemoval_tb.cpp:31:11: error: ‘imageData’ was not declared in this scope
+     fread(imageData, 1, fileSize, fptr);
+           ^~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:31:25: error: ‘fileSize’ was not declared in this scope
+     fread(imageData, 1, fileSize, fptr);
+                         ^~~~~~~~
+../../../../BackGrRemoval_tb.cpp:31:25: note: suggested alternative: ‘fileno’
+     fread(imageData, 1, fileSize, fptr);
+                         ^~~~~~~~
+                         fileno
+../../../../BackGrRemoval_tb.cpp:34:8: error: expected ‘;’ before ‘width’
+     u32 width = (u32)(imageData[21] << 24) |
+        ^~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:38:8: error: expected ‘;’ before ‘height’
+     u32 height  = (u32)(imageData[25] << 24) |
+        ^~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:43:8: error: expected ‘;’ before ‘PixelNumber’
+     u32 PixelNumber = width*height;
+        ^~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:44:8: error: expected ‘;’ before ‘Offset2Pixel’
+     u32 Offset2Pixel = (u32)(imageData[13] << 24) |
+        ^~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:49:7: error: expected ‘;’ before ‘bytesPerPixel’
+     u8 bytesPerPixel = 3;
+       ^~~~~~~~~~~~~~
+       ;
+../../../../BackGrRemoval_tb.cpp:56:8: error: expected ‘;’ before ‘rowSize_wPadding’
+     u32 rowSize_wPadding = (width*bytesPerPixel+3) & ~3;
+        ^~~~~~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:58:8: error: expected ‘;’ before ‘RealImageSize’
+     u32 RealImageSize = height*rowSize_wPadding;
+        ^~~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:59:9: error: ‘pixelData’ was not declared in this scope
+     u8* pixelData = malloc(sizeof(u8)*RealImageSize);
+         ^~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:59:39: error: ‘RealImageSize’ was not declared in this scope
+     u8* pixelData = malloc(sizeof(u8)*RealImageSize);
+                                       ^~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:62:16: error: ‘Offset2Pixel’ was not declared in this scope
+     fseek(fptr,Offset2Pixel,SEEK_SET);
+                ^~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:67:42: error: ‘PixelNumber’ was not declared in this scope
+     PixelBGR *input = (PixelBGR *)malloc(PixelNumber * sizeof(PixelBGR));
+                                          ^~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:71:8: error: expected ‘;’ before ‘PixelBGRCounter’
+     u32 PixelBGRCounter = 0;
+        ^~~~~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:72:19: error: ‘height’ was not declared in this scope
+     for(int y=0;y<height;y++){
+                   ^~~~~~
+../../../../BackGrRemoval_tb.cpp:74:12: error: expected ‘;’ before ‘rowIndex’
+         u32 rowIndex = (height-1-y);
+            ^~~~~~~~~
+            ;
+../../../../BackGrRemoval_tb.cpp:75:23: error: ‘width’ was not declared in this scope
+         for(int x=0;x<width;x++){
+                       ^~~~~
+../../../../BackGrRemoval_tb.cpp:76:16: error: expected ‘;’ before ‘idx’
+             u32 idx = rowIndex*rowSize_wPadding+x*bytesPerPixel;
+                ^~~~
+                ;
+../../../../BackGrRemoval_tb.cpp:77:23: error: ‘PixelBGRCounter’ was not declared in this scope
+                 input[PixelBGRCounter].b = pixelData[idx];
+                       ^~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:77:23: note: suggested alternative: ‘PixelBGR’
+                 input[PixelBGRCounter].b = pixelData[idx];
+                       ^~~~~~~~~~~~~~~
+                       PixelBGR
+../../../../BackGrRemoval_tb.cpp:77:54: error: ‘idx’ was not declared in this scope
+                 input[PixelBGRCounter].b = pixelData[idx];
+                                                      ^~~
+../../../../BackGrRemoval_tb.cpp:77:54: note: suggested alternative: ‘id_t’
+                 input[PixelBGRCounter].b = pixelData[idx];
+                                                      ^~~
+                                                      id_t
+../../../../BackGrRemoval_tb.cpp:85:31: error: ‘width’ was not declared in this scope
+     BackGrRemoval(input,45,11,width,height);
+                               ^~~~~
+../../../../BackGrRemoval_tb.cpp:85:37: error: ‘height’ was not declared in this scope
+     BackGrRemoval(input,45,11,width,height);
+                                     ^~~~~~
+../../../../BackGrRemoval_tb.cpp:99:3: error: ‘FILE_OUT’ was not declared in this scope
+   FILE_OUT[i] = imageData[i];
+   ^~~~~~~~
+../../../../BackGrRemoval_tb.cpp:99:3: note: suggested alternative: ‘FILE’
+   FILE_OUT[i] = imageData[i];
+   ^~~~~~~~
+   FILE
+../../../../BackGrRemoval_tb.cpp:104:5: error: ‘PixelBGRCounter’ was not declared in this scope
+     PixelBGRCounter = 0;
+     ^~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:104:5: note: suggested alternative: ‘PixelBGR’
+     PixelBGRCounter = 0;
+     ^~~~~~~~~~~~~~~
+     PixelBGR
+../../../../BackGrRemoval_tb.cpp:107:12: error: expected ‘;’ before ‘rowIndex’
+         u32 rowIndex = (height-1-y);
+            ^~~~~~~~~
+            ;
+../../../../BackGrRemoval_tb.cpp:109:16: error: expected ‘;’ before ‘idx’
+             u32 idx = rowIndex*rowSize_wPadding+x*bytesPerPixel;
+                ^~~~
+                ;
+../../../../BackGrRemoval_tb.cpp:110:27: error: ‘idx’ was not declared in this scope
+                 pixelData[idx] = input[PixelBGRCounter].b;
+                           ^~~
+../../../../BackGrRemoval_tb.cpp:110:27: note: suggested alternative: ‘id_t’
+                 pixelData[idx] = input[PixelBGRCounter].b;
+                           ^~~
+                           id_t
+../../../../BackGrRemoval_tb.cpp:119:9: error: ‘FILE_OUT’ was not declared in this scope
+   fputc(FILE_OUT[i],fptr);
+         ^~~~~~~~
+../../../../BackGrRemoval_tb.cpp:119:9: note: suggested alternative: ‘FILE’
+   fputc(FILE_OUT[i],fptr);
+         ^~~~~~~~
+         FILE
+../../../../BackGrRemoval_tb.cpp: At global scope:
+../../../../BackGrRemoval_tb.cpp:132:36: error: ‘u8’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height){
+                                    ^~
+../../../../BackGrRemoval_tb.cpp:132:49: error: ‘u8’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height){
+                                                 ^~
+../../../../BackGrRemoval_tb.cpp:132:64: error: ‘u32’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height){
+                                                                ^~~
+../../../../BackGrRemoval_tb.cpp:132:74: error: ‘u32’ has not been declared
+ void BackGrRemoval(PixelBGR* inBGR,u8 threshold,u8 kernel_size,u32 width,u32 height){
+                                                                          ^~~
+../../../../BackGrRemoval_tb.cpp: In function ‘void BackGrRemoval(PixelBGR*, int, int, int, int)’:
+../../../../BackGrRemoval_tb.cpp:134:5: error: ‘u16’ was not declared in this scope
+     u16 total_Pixel_in_kernel = kernel_size*kernel_size;
+     ^~~
+../../../../BackGrRemoval_tb.cpp:135:8: error: expected ‘;’ before ‘EightyPercentOfKernel’
+     u16 EightyPercentOfKernel = (int)(total_Pixel_in_kernel*0.8f);
+        ^~~~~~~~~~~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:136:8: error: expected ‘;’ before ‘Gr_pixel_in_total’
+     u16 Gr_pixel_in_total = 0;
+        ^~~~~~~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:137:8: error: expected ‘;’ before ‘Half_size_kernel’
+     u16 Half_size_kernel = (int)((kernel_size-1)/2);
+        ^~~~~~~~~~~~~~~~~
+        ;
+../../../../BackGrRemoval_tb.cpp:138:5: error: ‘u32’ was not declared in this scope
+     u32 PixelNumber = width*height;
+     ^~~
+../../../../BackGrRemoval_tb.cpp:150:43: error: ‘PixelNumber’ was not declared in this scope
+     PixelHSV *outHSV = (PixelHSV *)malloc(PixelNumber * sizeof(PixelHSV));
+                                           ^~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:151:5: error: ‘findHSV’ was not declared in this scope
+     findHSV(inBGR,outHSV,PixelNumber);
+     ^~~~~~~
+../../../../BackGrRemoval_tb.cpp:158:12: error: expected ‘;’ before ‘y’
+     for(u32 y = 0+Half_size_kernel; y < height-Half_size_kernel+1; y++){
+            ^~
+            ;
+../../../../BackGrRemoval_tb.cpp:158:37: error: ‘y’ was not declared in this scope
+     for(u32 y = 0+Half_size_kernel; y < height-Half_size_kernel+1; y++){
+                                     ^
+../../../../BackGrRemoval_tb.cpp:158:48: error: ‘Half_size_kernel’ was not declared in this scope
+     for(u32 y = 0+Half_size_kernel; y < height-Half_size_kernel+1; y++){
+                                                ^~~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:159:16: error: expected ‘;’ before ‘x’
+         for(u32 x = 0+Half_size_kernel; x < width-Half_size_kernel+1; x++){
+                ^~
+                ;
+../../../../BackGrRemoval_tb.cpp:159:41: error: ‘x’ was not declared in this scope
+         for(u32 x = 0+Half_size_kernel; x < width-Half_size_kernel+1; x++){
+                                         ^
+../../../../BackGrRemoval_tb.cpp:163:25: error: expected ‘;’ before ‘j’
+                 for (u32 j = y-Half_size_kernel; j <y+Half_size_kernel;j++){
+                         ^~
+                         ;
+../../../../BackGrRemoval_tb.cpp:163:50: error: ‘j’ was not declared in this scope
+                 for (u32 j = y-Half_size_kernel; j <y+Half_size_kernel;j++){
+                                                  ^
+../../../../BackGrRemoval_tb.cpp:164:28: error: expected ‘;’ before ‘i’
+                     for(u32 i = x-Half_size_kernel;i < x+Half_size_kernel;i++){
+                            ^~
+                            ;
+../../../../BackGrRemoval_tb.cpp:164:52: error: ‘i’ was not declared in this scope
+                     for(u32 i = x-Half_size_kernel;i < x+Half_size_kernel;i++){
+                                                    ^
+../../../../BackGrRemoval_tb.cpp:166:29: error: ‘Gr_pixel_in_total’ was not declared in this scope
+                             Gr_pixel_in_total++;
+                             ^~~~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:170:21: error: ‘Gr_pixel_in_total’ was not declared in this scope
+                 if (Gr_pixel_in_total >= EightyPercentOfKernel)
+                     ^~~~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:170:42: error: ‘EightyPercentOfKernel’ was not declared in this scope
+                 if (Gr_pixel_in_total >= EightyPercentOfKernel)
+                                          ^~~~~~~~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp:171:29: error: expected ‘;’ before ‘j’
+                     for (u32 j = y-Half_size_kernel; j <y+Half_size_kernel;j++){
+                             ^~
+                             ;
+../../../../BackGrRemoval_tb.cpp:171:54: error: ‘j’ was not declared in this scope
+                     for (u32 j = y-Half_size_kernel; j <y+Half_size_kernel;j++){
+                                                      ^
+../../../../BackGrRemoval_tb.cpp:172:32: error: expected ‘;’ before ‘i’
+                         for(u32 i = x-Half_size_kernel;i < x+Half_size_kernel;i++){
+                                ^~
+                                ;
+../../../../BackGrRemoval_tb.cpp:172:56: error: ‘i’ was not declared in this scope
+                         for(u32 i = x-Half_size_kernel;i < x+Half_size_kernel;i++){
+                                                        ^
+../../../../BackGrRemoval_tb.cpp:180:13: error: ‘Gr_pixel_in_total’ was not declared in this scope
+             Gr_pixel_in_total = 0;
+             ^~~~~~~~~~~~~~~~~
+../../../../BackGrRemoval_tb.cpp: At global scope:
+../../../../BackGrRemoval_tb.cpp:188:1: error: ‘u32’ does not name a type
+ u32 FileSizeReturner(FILE *fptr){
+ ^~~
+../../../../BackGrRemoval_tb.cpp:198:1: error: ‘u8’ does not name a type
+ u8 MaxOf3(u8 b, u8 g, u8 r){
+ ^~
+../../../../BackGrRemoval_tb.cpp:205:1: error: ‘u8’ does not name a type
+ u8 Minof3(u8 b, u8 g, u8 r){
+ ^~
+../../../../BackGrRemoval_tb.cpp:212:1: error: ‘u8’ does not name a type
+ u8 findHSV(PixelBGR* in,PixelHSV* out, u32 PixelNumber){
+ ^~
+make: *** [csim.mk:79: obj/BackGrRemoval_tb.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

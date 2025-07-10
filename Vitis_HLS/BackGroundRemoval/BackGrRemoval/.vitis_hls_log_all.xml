@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_1_load_117', BackGrRemoval.cpp:114) on array 'h_1' due to limited memory ports (II = 59). Please consider using a memory core with more ports or partitioning the array 'h_1'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html&#xA;" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T15:03:45.801+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_1_load_101', BackGrRemoval.cpp:114) on array 'h_1' due to limited memory ports (II = 51). Please consider using a memory core with more ports or partitioning the array 'h_1'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:54:49.108+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_0_load_69', BackGrRemoval.cpp:114) on array 'h_0' due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array 'h_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:45:52.677+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_0_load_7', BackGrRemoval.cpp:114) on array 'h_0' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'h_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:41:53.413+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_0_load_5', BackGrRemoval.cpp:114) on array 'h_0' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'h_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:40:58.637+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_0_load_3', BackGrRemoval.cpp:114) on array 'h_0' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'h_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:40:57.198+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'BackGrRemoval' (loop 'image_row_loop_image_column_loop'): Unable to schedule 'load' operation ('h_0_load_1', BackGrRemoval.cpp:114) on array 'h_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'h_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:40:55.821+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'findHSV' (loop 'HSV_LOOP'): Unable to schedule 'store' operation ('out_h_30_addr_2_write_ln51', RGB2HSV.cpp:51) of constant 0 on array 'out_h_30' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'out_h_30'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:40:47.992+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (BackGrRemoval.cpp:84:9)" projectName="BackGrRemoval" solutionName="solution1" date="2025-07-10T14:40:09.025+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

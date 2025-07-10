@@ -1,0 +1,3526 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: RGB2HSV.cpp, Line: 32, Column: 18 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Minof3(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 14, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: RGB2HSV.cpp, Line: 31, Column: 11 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MaxOf3(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 109, Column: 17 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        load_kernel
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 110, Column: 39 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 123, Column: 21 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        whiten_kernel
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 124, Column: 43 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        load_kernel
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:109:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:110:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        whiten_kernel
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:123:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:124:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        HSV_LOOP
+  - String:          ''' ('
+  - LoopLoc:         'RGB2HSV.cpp:28:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          findHSV
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 80, Column: 8 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          h
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '32'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 81, Column: 8 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          s
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            inBGR
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '24'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.14
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.19
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.24
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.29
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.34
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.39
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.44
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.49
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.54
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.59
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.64
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.73
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.78
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.83
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.88
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.93
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.98
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.103
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.108
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.113
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.118
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.123
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.132
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.137
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.142
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.147
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.152
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.157
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.162
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.167
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.172
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.177
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.182
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.191
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.196
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.201
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.206
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.211
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.216
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.221
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.226
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.231
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.236
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.241
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.250
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.255
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.260
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.265
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.270
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.275
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.280
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.285
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.290
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.295
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.300
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.309
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.314
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.319
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.324
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.329
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.334
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.339
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.344
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.349
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.354
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.359
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.368
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.373
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.378
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.383
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.388
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.393
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.398
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.403
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.408
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.413
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.418
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.427
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.432
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.437
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.442
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.447
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.452
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.457
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.462
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.467
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.472
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.477
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.486
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.491
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.496
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.501
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.506
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.511
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.516
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.521
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.526
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.531
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.536
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.545
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.550
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.555
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.560
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.565
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.570
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.575
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.580
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.585
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.590
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.595
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.604
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.609
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.614
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.619
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.624
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.629
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.634
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.639
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.644
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.649
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 130, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc90.10.store.654
+  - ArrayName:       inBGR
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'BackGrRemoval(PixelBGR*, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.49
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.1.load.6
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 8, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.2.load.6
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...
