@@ -49,18 +49,6 @@ BEGIN
 
     o_DATA <= o_DATA_SIGNAL;
 
-    -- unpack the 264-bit bus into 11 o_DATA_SIGNAL
-    PIXEL_ARRAY(0) <= o_DATA_SIGNAL( 23 downto   0);
-    PIXEL_ARRAY(1) <= o_DATA_SIGNAL( 47 downto  24);
-    PIXEL_ARRAY(2) <= o_DATA_SIGNAL( 71 downto  48);
-    PIXEL_ARRAY(3) <= o_DATA_SIGNAL( 95 downto  72);
-    PIXEL_ARRAY(4) <= o_DATA_SIGNAL(119 downto  96);
-    PIXEL_ARRAY(5) <= o_DATA_SIGNAL(143 downto 120);
-    PIXEL_ARRAY(6) <= o_DATA_SIGNAL(167 downto 144);
-    PIXEL_ARRAY(7) <= o_DATA_SIGNAL(191 downto 168);
-    PIXEL_ARRAY(8) <= o_DATA_SIGNAL(215 downto 192);
-    PIXEL_ARRAY(9) <= o_DATA_SIGNAL(239 downto 216);
-    PIXEL_ARRAY(10)<= o_DATA_SIGNAL(263 downto 240);
     
     WR_COUNTER_PROC : process(i_CLK)
     begin
