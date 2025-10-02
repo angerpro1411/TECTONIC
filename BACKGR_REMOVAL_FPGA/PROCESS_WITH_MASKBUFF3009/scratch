@@ -1,0 +1,18 @@
+    CHECK_PASS_ALL_CONDITIONS: process(i_CLK)
+    begin
+        if rising_edge(i_CLK) then
+            if i_RSTn = '0' then
+                s_o_WHITEN_KERNEL_DELAY1 <= '0';
+            else
+                if VALID_TOTAL_SUM = '1' then
+                    if CNT_UPPER_THRESHOLD >= THRESHOLD_TOTAL_MASK and PASS_CHECK_KERNEL_DELAY1 = '1' then
+                        s_o_WHITEN_KERNEL_DELAY1 <= '1';
+                    else
+                        s_o_WHITEN_KERNEL_DELAY1 <= '0';
+                    end if;
+                else 
+                    s_o_WHITEN_KERNEL_DELAY1 <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
