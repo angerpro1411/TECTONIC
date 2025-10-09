@@ -1,0 +1,11 @@
+    MASK_CALCUL MASK_CALCUL3
+    ( 
+        .i_CLK(i_CLK),       
+        .i_RSTn(i_RSTn),
+        .i_DATA_RGB(IN_2_CALCULMASK3),
+        .i_DATA_VALID(IN_2_CALCULMASK_VALID3),
+        
+        .i_H_THRESHOLD(THRESHOLD),
+        .o_MASK_VALID(CALCMASK_2_MUL_VALID3),
+        .o_MASK(CALCMASK_2_MUL3)
+    );
