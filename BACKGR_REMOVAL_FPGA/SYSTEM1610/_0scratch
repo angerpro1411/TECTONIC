@@ -1,0 +1,12 @@
+    logic[10:0]i_11DATA_BUFF0;
+    logic[10:0]i_11DATA_BUFF1;
+    logic[10:0]i_11DATA_BUFF2;
+    logic[10:0]i_11DATA_BUFF3;
+    logic[10:0]i_11DATA_BUFF4;
+    logic[10:0]i_11DATA_BUFF5;
+    logic[10:0]i_11DATA_BUFF6;
+    logic[10:0]i_11DATA_BUFF7;
+    logic[10:0]i_11DATA_BUFF8;
+    logic[10:0]i_11DATA_BUFF9;
+    logic[10:0]i_11DATA_BUFF10;
+    logic[10:0]i_11DATA_BUFF11;
