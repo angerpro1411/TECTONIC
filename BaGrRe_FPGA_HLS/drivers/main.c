@@ -28,12 +28,6 @@ int sendTimes = 0;
 
 int main(){
 
-	for(int i=0;i<PixelNumber;i++){
-		pixelDataInvert[imageSize-3-3*i] = pixelData[0+3*i];
-		pixelDataInvert[imageSize-2-3*i] = pixelData[1+3*i];
-		pixelDataInvert[imageSize-1-3*i] = pixelData[2+3*i];
-	}
-
 
 /**********************************************DMA CONFIG::START******************************************************************/
 	XAxiDma_Config *myAxiDma_Config = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
