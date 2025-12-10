@@ -1,0 +1,16 @@
+16:01:26 DEBUG : Logs will be stored at '/home/dell3561-49/Obj_Detect_TCL/workspace/IDE.log'.
+16:01:26 INFO  : Platform repository initialization has completed.
+16:01:26 INFO  : Registering command handlers for Vitis TCF services
+16:01:26 ERROR : Error from executing command 'deleteProjects': Specified project 'Obj_Detect_platform' doesn't exist in the workspace
+16:01:31 INFO  : Result from executing command 'getProjects': 
+16:01:31 INFO  : Result from executing command 'getPlatforms': 
+16:01:31 INFO  : Result from executing command 'getProjects': 
+16:01:31 INFO  : Result from executing command 'getPlatforms': Obj_Detect_platform|/home/dell3561-49/Obj_Detect_TCL/workspace/Obj_Detect_platform/export/Obj_Detect_platform/Obj_Detect_platform.xpfm
+16:01:37 INFO  : Result from executing command 'getProjects': 
+16:01:37 INFO  : Result from executing command 'getPlatforms': Obj_Detect_platform|/home/dell3561-49/Obj_Detect_TCL/workspace/Obj_Detect_platform/export/Obj_Detect_platform/Obj_Detect_platform.xpfm
+16:01:37 INFO  : Result from executing command 'reportPlatform': {Obj_Detect_platform={standalone_domain={Os=standalone, DomainName=standalone_domain, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}, ps7_domain={Os=standalone, DomainName=ps7_domain, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}}}
+16:01:37 INFO  : Result from executing command 'reportPlatform': {Obj_Detect_platform={standalone_domain={Os=standalone, DomainName=standalone_domain, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}, ps7_domain={Os=standalone, DomainName=ps7_domain, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}}}
+16:01:37 INFO  : Result from executing command 'reportPlatform': {Obj_Detect_platform={standalone_domain={Os=standalone, DomainName=standalone_domain, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}, ps7_domain={Os=standalone, DomainName=ps7_domain, CpuType=cortex-a9, CpuInstance=ps7_cortexa9_0}}}
+16:01:38 INFO  : plnx-install-location is set to ''
+16:01:39 INFO  : Successfully done query RDI_DATADIR 
+16:01:42 INFO  : Checking for BSP changes to sync application flags for project 'obj_detect_app'...

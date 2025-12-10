@@ -1,0 +1,1165 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 10 10:12:58 2025
+# Process ID: 767449
+# Current directory: /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/vivado.jou
+# Running On: dell3561-49, OS: Linux, CPU Frequency: 2346.439 MHz, CPU Physical cores: 6, Host memory: 16483 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/AXIS_CONC8to24'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/Object_detect'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/ContourDetection'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/BackGrRe_NoCtrl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/AXIS_SLICE24to8'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/VGA_STREAM_320x240'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+Command: link_design -top design_1_wrapper -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_AXIS_CONV8to24_0_0/design_1_AXIS_CONV8to24_0_0.dcp' for cell 'design_1_i/AXIS_CONV8to24_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_AXIS_SLICE24to8_0_0/design_1_AXIS_SLICE24to8_0_0.dcp' for cell 'design_1_i/AXIS_SLICE24to8_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_BackGrRemovalStream_0_0/design_1_BackGrRemovalStream_0_0.dcp' for cell 'design_1_i/BackGrRemovalStream_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_INTEGRATED_VGA_COMPO_0_0/design_1_INTEGRATED_VGA_COMPO_0_0.dcp' for cell 'design_1_i/INTEGRATED_VGA_COMPO_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.dcp' for cell 'design_1_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_hls_object_green_cla_0_0/design_1_hls_object_green_cla_0_0.dcp' for cell 'design_1_i/hls_object_green_cla_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp' for cell 'design_1_i/axi_mem_intercon/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.dcp' for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1801.816 ; gain = 0.000 ; free physical = 5667 ; free virtual = 9011
+INFO: [Netlist 29-17] Analyzing 856 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:56]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:61]
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc:367]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc:367]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc:372]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc:372]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc:375]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc:375]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/xdc/zedboard_master.xdc]
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2171.312 ; gain = 0.000 ; free physical = 5546 ; free virtual = 8889
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM32X1S => RAM32X1S (RAMS32): 33 instances
+
+29 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2171.312 ; gain = 771.527 ; free physical = 5546 ; free virtual = 8889
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:00.56 . Memory (MB): peak = 2171.312 ; gain = 0.000 ; free physical = 5526 ; free virtual = 8869
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Retarget
+INFO: [Opt 31-1566] Pulled 7 inverters resulting in an inversion of 44 pins
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 56 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 21187361c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2794.742 ; gain = 490.875 ; free physical = 4862 ; free virtual = 8197
+INFO: [Opt 31-389] Phase Retarget created 81 cells and removed 134 cells
+INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 4 load pin(s).
+Phase 2 Constant propagation | Checksum: 1fdcfbb50
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2794.742 ; gain = 490.875 ; free physical = 4861 ; free virtual = 8196
+INFO: [Opt 31-389] Phase Constant propagation created 136 cells and removed 903 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 28 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1cfbbcad3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2794.742 ; gain = 490.875 ; free physical = 4860 ; free virtual = 8196
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 542 cells
+INFO: [Opt 31-1021] In phase Sweep, 97 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1cfbbcad3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2826.758 ; gain = 522.891 ; free physical = 4860 ; free virtual = 8196
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 2260aadc2
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2826.758 ; gain = 522.891 ; free physical = 4860 ; free virtual = 8196
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+INFO: [Opt 31-1555] control_set_opt supports Versal devices only, and device 7z020 is unsupported
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 197fe74b2
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2826.758 ; gain = 522.891 ; free physical = 4860 ; free virtual = 8196
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 34 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              81  |             134  |                                             27  |
+|  Constant propagation         |             136  |             903  |                                             28  |
+|  Sweep                        |               0  |             542  |                                             97  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             34  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2826.758 ; gain = 0.000 ; free physical = 4860 ; free virtual = 8195
+Ending Logic Optimization Task | Checksum: 1b05d7f2c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2826.758 ; gain = 522.891 ; free physical = 4860 ; free virtual = 8195
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2826.758 ; gain = 0.000 ; free physical = 4860 ; free virtual = 8195
+Ending Netlist Obfuscation Task | Checksum: 1b05d7f2c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2826.758 ; gain = 0.000 ; free physical = 4860 ; free virtual = 8195
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2826.758 ; gain = 655.445 ; free physical = 4860 ; free virtual = 8195
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4792 ; free virtual = 8130
+INFO: [Common 17-1381] The checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4768 ; free virtual = 8107
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 167976199
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4768 ; free virtual = 8107
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4768 ; free virtual = 8107
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9abc8351
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.76 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4741 ; free virtual = 8089
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1aa6fb19b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4706 ; free virtual = 8045
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1aa6fb19b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4706 ; free virtual = 8045
+Phase 1 Placer Initialization | Checksum: 1aa6fb19b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2927.676 ; gain = 0.000 ; free physical = 4706 ; free virtual = 8045
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1c1bdb47a
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4778 ; free virtual = 8118
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1d9fa0c6b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4778 ; free virtual = 8117
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1d9fa0c6b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4777 ; free virtual = 8117
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 20c70489e
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:08 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4748 ; free virtual = 8088
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 3 LUTNM shape to break, 1595 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 3, two critical 0, total 3, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 730 nets or LUTs. Breaked 3 LUTs, combined 727 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-457] Pass 1. Identified 5 candidate cells for DSP register optimization.
+INFO: [Physopt 32-665] Processed cell design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_32_reg_1499_reg. 8 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/hls_object_green_cla_0/inst/mul_ln509_reg_2645_reg. 14 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/hls_object_green_cla_0/inst/empty_50_reg_2614_reg. 14 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/hls_object_green_cla_0/inst/mul_ln509_1_reg_2650_reg. 14 registers were pushed out.
+INFO: [Physopt 32-665] Processed cell design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/tmp_product. 8 registers were pushed out.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 5 nets or cells. Created 58 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2957.836 ; gain = 0.000 ; free physical = 4743 ; free virtual = 8083
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 8 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2957.836 ; gain = 0.000 ; free physical = 4743 ; free virtual = 8083
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2957.836 ; gain = 0.000 ; free physical = 4743 ; free virtual = 8083
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            3  |            727  |                   730  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |           58  |              0  |                     5  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            8  |              0  |                     4  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           69  |            727  |                   739  |           0  |           9  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 22e494c7f
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:09 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4740 ; free virtual = 8080
+Phase 2.4 Global Placement Core | Checksum: 14f5c26a5
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:10 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4736 ; free virtual = 8075
+Phase 2 Global Placement | Checksum: 14f5c26a5
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:10 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4736 ; free virtual = 8075
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 130783a00
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:10 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4736 ; free virtual = 8076
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1efc3f833
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:11 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4730 ; free virtual = 8078
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1ce9d769d
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:11 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4730 ; free virtual = 8078
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 13e492f0a
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:11 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4730 ; free virtual = 8078
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 190009a62
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:12 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4723 ; free virtual = 8071
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1b06d0c7f
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:14 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4727 ; free virtual = 8067
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 2582fec57
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:14 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4724 ; free virtual = 8065
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1352d49d9
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:14 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4724 ; free virtual = 8064
+Phase 3 Detail Placement | Checksum: 1352d49d9
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:14 . Memory (MB): peak = 2957.836 ; gain = 30.160 ; free physical = 4721 ; free virtual = 8061
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: e039ed76
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.775 | TNS=-4.374 |
+Phase 1 Physical Synthesis Initialization | Checksum: e5d39971
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2984.566 ; gain = 0.000 ; free physical = 4676 ; free virtual = 8024
+INFO: [Place 46-33] Processed net design_1_i/BackGrRemovalStream_0/inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_data_V_U/grp_fu_804_ce, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: e5d39971
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.58 . Memory (MB): peak = 2984.566 ; gain = 0.000 ; free physical = 4669 ; free virtual = 8019
+Phase 4.1.1.1 BUFG Insertion | Checksum: e039ed76
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:16 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4669 ; free virtual = 8019
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.239. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 137ff59fe
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:50 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4710 ; free virtual = 8052
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:50 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4710 ; free virtual = 8052
+Phase 4.1 Post Commit Optimization | Checksum: 137ff59fe
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4710 ; free virtual = 8052
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 137ff59fe
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4710 ; free virtual = 8051
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                2x2|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 137ff59fe
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4710 ; free virtual = 8051
+Phase 4.3 Placer Reporting | Checksum: 137ff59fe
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4709 ; free virtual = 8051
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2984.566 ; gain = 0.000 ; free physical = 4709 ; free virtual = 8051
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4709 ; free virtual = 8051
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 10e8a4c6a
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4709 ; free virtual = 8051
+Ending Placer Task | Checksum: 34ce049e
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4709 ; free virtual = 8051
+INFO: [Common 17-83] Releasing license: Implementation
+100 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:25 ; elapsed = 00:00:51 . Memory (MB): peak = 2984.566 ; gain = 56.891 ; free physical = 4709 ; free virtual = 8051
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2984.566 ; gain = 0.000 ; free physical = 4678 ; free virtual = 8020
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2984.566 ; gain = 0.000 ; free physical = 4636 ; free virtual = 7978
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.85 . Memory (MB): peak = 3009.480 ; gain = 16.910 ; free physical = 4623 ; free virtual = 7990
+INFO: [Common 17-1381] The checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4627 ; free virtual = 7976
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 3.29s |  WALL: 1.14s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4627 ; free virtual = 7976
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.239 | TNS=-0.387 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1601cc6b7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4616 ; free virtual = 7974
+
+Phase 2 SLR Crossing Optimization
+Phase 2 SLR Crossing Optimization | Checksum: 1601cc6b7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4616 ; free virtual = 7973
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.239 | TNS=-0.387 |
+
+Phase 3 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 3 Fanout Optimization | Checksum: 1601cc6b7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4616 ; free virtual = 7973
+
+Phase 4 Single Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 142 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_12
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ADDRBWRADDR[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ram_reg_i_12__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[53]_6.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ram_reg_i_57__2
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[6].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_14
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ADDRBWRADDR[6].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ram_reg_i_14__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[53]_4.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ram_reg_i_64__2
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[2].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_18
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ADDRBWRADDR[2].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ram_reg_i_18__8
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[53]_0.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ram_reg_i_76__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[0].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_20
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ADDRBWRADDR[0].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ram_reg_i_20__8
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/ap_CS_fsm_reg[76].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_82__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_3770.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377[8]_i_1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_1_14.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/icmp_ln529_reg_281[0]_i_4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln541_fu_284_p2.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_2
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_4_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_4
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[2].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[2]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[3].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[3]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[4].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[4]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[5].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[5]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[6].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[6]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[7].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[7]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/zext_ln583_fu_431_p1[9].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln1_reg_610_reg[1]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796_reg[15]_27[13].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_1_5_i_4__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_46_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_46
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/and_ln341_1_reg_637[0]_i_1_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/and_ln341_1_reg_637[0]_i_1
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_fu_519_p2.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_2
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/imgR_U/and_ln341_1_reg_637[0]_i_43_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/imgR_U/and_ln341_1_reg_637[0]_i_43
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/imgR_U/ram_reg_1_6__0_0[2].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/imgR_U/and_ln341_1_reg_637[0]_i_27
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/grp_hls_object_green_classification_Pipeline_pass_4_fu_912_obj_is_green_d0.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/and_ln341_1_reg_637_reg[0]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/add_ln488_2_reg_2499_reg[15]_0[14].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_0_0_i_20
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg_reg[8]__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_0_0_i_41__0_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_0_0_i_41__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[12]_i_9_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[12]_i_9
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_55__0_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_55__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_32_reg_1499_pp0_iter12_reg[1].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_4_psdsp
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0[6].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_25__3
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_173_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_173
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_1[6].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_10__8
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_ln509_1_reg_2650[4]_alias.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_134_psdsp
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_37__1_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_37__1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address0[12].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_21__4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_138_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_138
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_5[12].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_4__12
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[12]_i_5_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[12]_i_5
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln_reg_604[6].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln_reg_604_reg[6]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796_reg[15]_27[8].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_1_5_i_9__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_50_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_50
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_52_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_52
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0[7].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_24__3
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_1[7].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_9__8
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_40__1_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_40__1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address0[11].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_22__4
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_5[11].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_5__12
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/add_ln488_2_reg_2499_reg[15]_0[9].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_0_0_i_25
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_0_0_i_46__0_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/ram_reg_0_0_i_46__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg[5].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg_reg[5]__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[3].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_17
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_42_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_42
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_3_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_3
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q1[9].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/cur_reg_2514[9]_i_1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln489_fu_1710_p2.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln489_reg_2536[0]_i_1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln489_reg_2536[0]_i_2_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln489_reg_2536[0]_i_2
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/icmp_ln489_reg_2536.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/icmp_ln489_reg_2536_reg[0]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/select_ln537_reg_343[3].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/select_ln537_reg_343_reg[8]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/ram_reg_0_0_i_70_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/ram_reg_0_0_i_70
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[1].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_19
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ADDRBWRADDR[1].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ram_reg_i_19__8
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[53].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ram_reg_i_79__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[9].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/cur_7_reg_2525[9]_i_1
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_5_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/max_x_addr_reg_377[8]_i_5
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/empty_50_reg_2614[1]_alias.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_4_psdsp_1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_53__0_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_53__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_4_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg[7].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg_reg[7]__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[8]_i_3_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[8]_i_3
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln_reg_604[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln_reg_604_reg[8]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_47_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_47
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[0].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[0]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[8]_0[1].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/max_x_addr_reg_377_reg[1]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/ram_reg_0_0_i_66_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/ram_reg_0_0_i_66
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/imgG_U/ram_reg_1_6__0_0[3].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_3
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_22_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_22
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln_reg_604_reg[5]_0[5].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln_reg_604_reg[5]
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_34_reg_1494_pp0_iter12_reg[5].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_34_reg_1494_pp0_iter11_reg_reg[5]_srl9_srlopt
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_145_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_145
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_43_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_43
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[5].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_15
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ADDRBWRADDR[5].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/flow_control_loop_pipe_sequential_init_U/ram_reg_i_15__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[53]_3.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830/flow_control_loop_pipe_sequential_init_U/ram_reg_i_67__2
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/select_ln537_reg_343[1].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/select_ln537_reg_343_reg[6]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg[6].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/select_ln601_reg_761_pp0_iter11_reg_reg[6]__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/ram_reg_0_0_i_73_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889/ram_reg_0_0_i_73
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[8]_i_4_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/zext_ln607_3_reg_796[8]_i_4
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/mul_ln509_reg_2645[3]_alias.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_121_psdsp
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_61__0_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_61__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0[4].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_27__3
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_167_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_167
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_1[4].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_12__5
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_14_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_14
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_32_reg_1499_pp0_iter12_reg[0].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_5_psdsp
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_5_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[3]_i_5
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_40_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_40
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_32_reg_1499_pp0_iter12_reg[7].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[7]_i_2_psdsp
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0[11].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_20__4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_147_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_147
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_1[11].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_5__8
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_174_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_174
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/label_map_q0[14].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/cur_7_reg_2525[14]_i_1
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/imgG_U/imgG_q0[5].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_8
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_15_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/imgG_U/and_ln341_1_reg_637[0]_i_15
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln492_1_reg_2550[0]_i_4_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln492_1_reg_2550[0]_i_4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/icmp_ln492_1_reg_2550.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/icmp_ln492_1_reg_2550_reg[0]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_ln509_1_reg_2650[9]_alias.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_131_psdsp_4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_34_reg_1494_pp0_iter12_reg[3].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_34_reg_1494_pp0_iter11_reg_reg[3]_srl9_srlopt
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln492_1_reg_2550[0]_i_5_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/label_map_U/icmp_ln492_1_reg_2550[0]_i_5
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_ln509_1_reg_2650[1]_alias.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_157_psdsp
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_161_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_161
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/label_map_U/zext_ln580_reg_556_reg[7].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/label_map_U/ram_reg_i_33__1
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/zext_ln561_reg_2717_reg[8]_0[7].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944/ram_reg_i_4__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_142_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_142
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_56__0_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_56__0
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/zext_ln583_fu_431_p1[11].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln1_reg_610_reg[3]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/mul_ln509_reg_2645[1]_alias.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_123_psdsp
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_49_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_49
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_23__3
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_1[8].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_8__8
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_44_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_44
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/zext_ln583_fu_431_p1[10].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/lshr_ln1_reg_610_reg[2]
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/empty_50_reg_2614[5]_alias.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[7]_i_4_psdsp_1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[7]_i_4_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547[7]_i_4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_45_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass_4_fu_912/ram_reg_0_0_i_45
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813_ap_start_reg.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813_ap_start_reg_reg
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813/flow_control_loop_pipe_sequential_init_U/cur_fu_44[8]_i_3_n_10.  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813/flow_control_loop_pipe_sequential_init_U/cur_fu_44[8]_i_3
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_55__1_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_55__1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813/flow_control_loop_pipe_sequential_init_U/D[8].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813/flow_control_loop_pipe_sequential_init_U/cur_fu_44[8]_i_1
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address0[6].  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_27__4
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[49]_6.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813/flow_control_loop_pipe_sequential_init_U/ram_reg_i_122__0
+INFO: [Physopt 32-663] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/p_reg_reg_5[6].  Re-placed instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mac_muladd_7ns_7ns_8ns_14_4_1_U131/hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1_DSP48_0_U/ram_reg_i_10__12
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_171_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/ram_reg_i_171
+INFO: [Physopt 32-662] Processed net design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_62__0_n_10.  Did not re-place instance design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/ram_reg_i_62__0
+INFO: [Physopt 32-661] Optimized 53 nets.  Re-placed 53 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 53 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 53 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.067 | TNS=0.000 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7982
+Phase 4 Single Cell Placement Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7982
+
+Phase 5 Multi Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
+Phase 5 Multi Cell Placement Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7982
+
+Phase 6 Rewire
+INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
+Phase 6 Rewire | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7982
+
+Phase 7 Critical Cell Optimization
+INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
+Phase 7 Critical Cell Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7980
+
+Phase 8 Fanout Optimization
+INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
+Phase 8 Fanout Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7980
+
+Phase 9 Single Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Single Cell Placement Optimization was not performed.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7980
+Phase 9 Single Cell Placement Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7980
+
+Phase 10 Multi Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
+Phase 10 Multi Cell Placement Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7980
+
+Phase 11 Rewire
+INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
+Phase 11 Rewire | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4632 ; free virtual = 7980
+
+Phase 12 Critical Cell Optimization
+INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
+Phase 12 Critical Cell Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 13 SLR Crossing Optimization
+Phase 13 SLR Crossing Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 14 Fanout Optimization
+INFO: [Physopt 32-670] No setup violation found.  Fanout Optimization was not performed.
+Phase 14 Fanout Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 15 Single Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Single Cell Placement Optimization was not performed.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+Phase 15 Single Cell Placement Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 16 Multi Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
+Phase 16 Multi Cell Placement Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 17 Rewire
+INFO: [Physopt 32-670] No setup violation found.  Rewire was not performed.
+Phase 17 Rewire | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 18 Critical Cell Optimization
+INFO: [Physopt 32-670] No setup violation found.  Critical Cell Optimization was not performed.
+Phase 18 Critical Cell Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 19 DSP Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+Phase 19 DSP Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 20 BRAM Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+Phase 20 BRAM Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 21 URAM Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+Phase 21 URAM Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4635 ; free virtual = 7982
+
+Phase 22 Shift Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+Phase 22 Shift Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4634 ; free virtual = 7982
+
+Phase 23 DSP Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+Phase 23 DSP Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4634 ; free virtual = 7982
+
+Phase 24 BRAM Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+Phase 24 BRAM Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4634 ; free virtual = 7982
+
+Phase 25 URAM Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+Phase 25 URAM Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4634 ; free virtual = 7982
+
+Phase 26 Shift Register Optimization
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+Phase 26 Shift Register Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4634 ; free virtual = 7982
+
+Phase 27 Critical Pin Optimization
+INFO: [Physopt 32-670] No setup violation found.  Critical Pin Optimization was not performed.
+Phase 27 Critical Pin Optimization | Checksum: 2083c4265
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:03 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4634 ; free virtual = 7982
+
+Phase 28 Very High Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net design_1_i/hls_object_green_cla_0/inst/ap_CS_fsm_state90. Replicated 2 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 2 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 2 new cells, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.067 | TNS=0.000 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+Phase 28 Very High Fanout Optimization | Checksum: 1cc5b36f5
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+
+Phase 29 Single Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Single Cell Placement Optimization was not performed.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+Phase 29 Single Cell Placement Optimization | Checksum: 1cc5b36f5
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+
+Phase 30 Multi Cell Placement Optimization
+INFO: [Physopt 32-670] No setup violation found.  Multi Cell Placement Optimization was not performed.
+Phase 30 Multi Cell Placement Optimization | Checksum: 1cc5b36f5
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+
+Phase 31 SLR Crossing Optimization
+Phase 31 SLR Crossing Optimization | Checksum: 1cc5b36f5
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+
+Phase 32 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.067 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.067 | TNS=0.000 |
+Phase 32 Critical Path Optimization | Checksum: 1cc5b36f5
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+
+Phase 33 BRAM Enable Optimization
+Phase 33 BRAM Enable Optimization | Checksum: 1cc5b36f5
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+INFO: [Physopt 32-960] Skip hold-fix as initial WHS does not violate hold threshold 250 ps
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.067 | TNS=0.000 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization            |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Single Cell Placement   |          0.306  |          0.387  |            0  |              0  |                    53  |           0  |           1  |  00:00:02  |
+|  Multi Cell Placement    |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Rewire                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Critical Cell           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  SLR Crossing            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  DSP Register            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Critical Pin            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Very High Fanout        |          0.000  |          0.000  |            2  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  BRAM Enable             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                   |          0.306  |          0.387  |            2  |              0  |                    54  |           0  |           8  |  00:00:02  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+Ending Physical Synthesis Task | Checksum: 1298b614d
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:04 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+INFO: [Common 17-83] Releasing license: Implementation
+294 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:05 . Memory (MB): peak = 3017.484 ; gain = 0.000 ; free physical = 4642 ; free virtual = 7990
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.83 . Memory (MB): peak = 3038.199 ; gain = 20.715 ; free physical = 4599 ; free virtual = 7971
+INFO: [Common 17-1381] The checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+Command: route_design -directive NoTimingRelaxation
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'NoTimingRelaxation'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 9175d74e ConstDB: 0 ShapeSum: 7a1f12 RouteDB: 0
+Post Restoration Checksum: NetGraph: 27d05d40 | NumContArr: 1e065e21 | Constraints: 190a55ad | Timing: 0
+Phase 1 Build RT Design | Checksum: 5ee1110e
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3142.914 ; gain = 60.957 ; free physical = 4476 ; free virtual = 7832
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 5ee1110e
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3142.914 ; gain = 60.957 ; free physical = 4476 ; free virtual = 7832
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 5ee1110e
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3142.914 ; gain = 60.957 ; free physical = 4476 ; free virtual = 7832
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 17cb4b7ff
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 3187.047 ; gain = 105.090 ; free physical = 4431 ; free virtual = 7796
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.121  | TNS=0.000  | WHS=-0.182 | THS=-119.697|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 14428
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 14428
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 15e8fc130
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 3187.047 ; gain = 105.090 ; free physical = 4432 ; free virtual = 7796
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 15e8fc130
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 3187.047 ; gain = 105.090 ; free physical = 4432 ; free virtual = 7796
+Phase 3 Initial Routing | Checksum: 21edca27e
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:30 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4231 ; free virtual = 7588
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1613
+ Number of Nodes with overlaps = 454
+ Number of Nodes with overlaps = 188
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 23
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.239  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 22fa3d428
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:11 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4234 ; free virtual = 7591
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.239  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1727bc582
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:11 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4234 ; free virtual = 7591
+Phase 4 Rip-up And Reroute | Checksum: 1727bc582
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:11 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4234 ; free virtual = 7591
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1727bc582
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:11 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4234 ; free virtual = 7591
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1727bc582
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:11 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4234 ; free virtual = 7591
+Phase 5 Delay and Skew Optimization | Checksum: 1727bc582
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:11 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4234 ; free virtual = 7591
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 13ec26e90
+
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:12 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4237 ; free virtual = 7594
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.239  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 14daad27d
+
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:12 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4237 ; free virtual = 7594
+Phase 6 Post Hold Fix | Checksum: 14daad27d
+
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:12 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4237 ; free virtual = 7594
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 11.1186 %
+  Global Horizontal Routing Utilization  = 7.67757 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 13c33b9ca
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:12 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4237 ; free virtual = 7594
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 13c33b9ca
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:12 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4237 ; free virtual = 7594
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 11938dacb
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:13 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4237 ; free virtual = 7594
+
+Phase 10 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.238  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+
+Phase 10 Post Router Timing | Checksum: 1b4d46760
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:14 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4236 ; free virtual = 7593
+INFO: [Route 35-61] The design met the timing requirement.
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 11 Post-Route Event Processing
+Phase 11 Post-Route Event Processing | Checksum: 96ba22ae
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:14 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4227 ; free virtual = 7592
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:14 . Memory (MB): peak = 3408.047 ; gain = 326.090 ; free physical = 4227 ; free virtual = 7592
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+313 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:31 ; elapsed = 00:01:15 . Memory (MB): peak = 3408.047 ; gain = 361.844 ; free physical = 4227 ; free virtual = 7592
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+323 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3496.090 ; gain = 0.000 ; free physical = 4153 ; free virtual = 7548
+INFO: [Common 17-1381] The checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mac_muladd_8ns_6ns_40ns_41_4_1_U178/hls_object_green_classification_mac_muladd_8ns_6ns_40ns_41_4_1_DSP48_1_U/p_reg_reg input design_1_i/hls_object_green_cla_0/inst/mac_muladd_8ns_6ns_40ns_41_4_1_U178/hls_object_green_classification_mac_muladd_8ns_6ns_40ns_41_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product input design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product__0 input design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U171/tmp_product input design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U171/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U173/tmp_product input design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U173/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U174/tmp_product input design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U174/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/empty_50_reg_2614_reg output design_1_i/hls_object_green_cla_0/inst/empty_50_reg_2614_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/tmp_product output design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_32_reg_1499_reg output design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/tmp_32_reg_1499_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_8ns_10ns_17_1_1_U125/tmp_product output design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_8ns_10ns_17_1_1_U125/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_9ns_11ns_19_1_1_U126/tmp_product output design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_9ns_11ns_19_1_1_U126/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product output design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product__0 output design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product output design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__0 output design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__1 output design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U171/tmp_product output design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U171/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U173/tmp_product output design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U173/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U174/tmp_product output design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U174/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_ln509_1_reg_2650_reg output design_1_i/hls_object_green_cla_0/inst/mul_ln509_1_reg_2650_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_ln509_reg_2645_reg output design_1_i/hls_object_green_cla_0/inst/mul_ln509_reg_2645_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/empty_50_reg_2614_reg multiplier stage design_1_i/hls_object_green_cla_0/inst/empty_50_reg_2614_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838/mul_9ns_11ns_19_1_1_U23/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_8ns_10ns_17_1_1_U125/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_8ns_10ns_17_1_1_U125/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_9ns_11ns_19_1_1_U126/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983/mul_9ns_11ns_19_1_1_U126/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/buff0_reg multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/buff0_reg__0 multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/buff0_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product__0 multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_32ns_34ns_65_2_1_U163/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/buff0_reg multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/buff0_reg__0 multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/buff0_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/buff0_reg__1 multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/buff0_reg__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__0 multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__1 multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_41ns_43ns_56_3_1_U164/tmp_product__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U171/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U171/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U173/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U173/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U174/tmp_product multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_8ns_10ns_17_1_1_U174/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_ln509_1_reg_2650_reg multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_ln509_1_reg_2650_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/hls_object_green_cla_0/inst/mul_ln509_reg_2645_reg multiplier stage design_1_i/hls_object_green_cla_0/inst/mul_ln509_reg_2645_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A2)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A6' of cell design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A4)+((~A4)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[10] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[6]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[11] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[7]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[12] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[8]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[13] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[9]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[4] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[0]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[5] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[1]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[6] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[2]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[7] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[3]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[8] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[4]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRARDADDR[9] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/Q[5]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/WR_ADDR_REG_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[10] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[6]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[11] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[7]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[12] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[8]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[13] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[9]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[4] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[0]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[5] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[1]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[6] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[2]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[7] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[3]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[8] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[4]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg has an input control pin design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg/ADDRBWRADDR[9] (net: design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/RAM_COMPONENT/RAM_reg_0[5]) which is driven by a register (design_1_i/INTEGRATED_VGA_COMPO_0/U0/INTEGRATED_VGA_COMPONENT_SV_2_VHDL/FIFO_COMP/FIFO_CONTROLLER_COMPONENT/RD_ADDR_REG_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 34 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 22 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 65 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:27 ; elapsed = 00:00:12 . Memory (MB): peak = 3574.418 ; gain = 78.328 ; free physical = 4011 ; free virtual = 7399
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 10 10:16:02 2025...

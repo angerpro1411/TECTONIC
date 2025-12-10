@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="obj_detect_app" location="/home/dell3561-49/Obj_Detect_TCL/workspace/obj_detect_app" platform="/home/dell3561-49/Obj_Detect_TCL/workspace/Obj_Detect_platform/export/Obj_Detect_platform/Obj_Detect_platform.xpfm" platformUID="xilinx:zedboard::0.0(custom)" systemProject="obj_detect_app_system" sysConfig="Obj_Detect_platform" runtime="C/C++" cpu="ps7_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="07270461ae7a699776d60d37454137cb">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.808362393" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.149298929" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

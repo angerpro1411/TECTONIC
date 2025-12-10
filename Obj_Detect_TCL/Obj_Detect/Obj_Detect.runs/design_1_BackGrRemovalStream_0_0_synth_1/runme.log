@@ -1,0 +1,672 @@
+
+*** Running vivado
+    with args -log design_1_BackGrRemovalStream_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_BackGrRemovalStream_0_0.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_BackGrRemovalStream_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1335.789 ; gain = 0.023 ; free physical = 5412 ; free virtual = 8623
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/AXIS_CONC8to24'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/Object_detect'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/ContourDetection'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/BackGrRe_NoCtrl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/AXIS_SLICE24to8'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dell3561-49/Obj_Detect_TCL/ip_repo/VGA_STREAM_320x240'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_BackGrRemovalStream_0_0
+Command: synth_design -top design_1_BackGrRemovalStream_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 765387
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2101.809 ; gain = 379.770 ; free physical = 2095 ; free virtual = 5306
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_BackGrRemovalStream_0_0' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_BackGrRemovalStream_0_0/synth/design_1_BackGrRemovalStream_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_Loop_row_loop_proc1' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb.v:7]
+INFO: [Synth 8-3876] $readmem data file './BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb.dat' is read successfully [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb.v:7]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud.v:7]
+INFO: [Synth 8-3876] $readmem data file './BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud.dat' is read successfully [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud.v:7]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_sdiv_16ns_9ns_16_20_1' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:74]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_sdiv_16ns_9ns_16_20_1' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:74]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_flow_control_loop_pipe' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_flow_control_loop_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_flow_control_loop_pipe' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_flow_control_loop_pipe.v:11]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_regslice_both' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_regslice_both' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_regslice_both.v:11]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_regslice_both__parameterized0' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_regslice_both__parameterized0' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_regslice_both.v:11]
+INFO: [Synth 8-6157] synthesizing module 'BackGrRemovalStream_regslice_both__parameterized1' [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_regslice_both__parameterized1' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_regslice_both.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream_Loop_row_loop_proc1' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_Loop_row_loop_proc1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'BackGrRemovalStream' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_BackGrRemovalStream_0_0' (0#1) [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_BackGrRemovalStream_0_0/synth/design_1_BackGrRemovalStream_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element loop[15].divisor_tmp_reg[16] was removed.  [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:57]
+WARNING: [Synth 8-6014] Unused sequential element remd_reg was removed.  [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:146]
+WARNING: [Synth 8-7129] Port ap_done_int in module BackGrRemovalStream_flow_control_loop_pipe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2202.715 ; gain = 480.676 ; free physical = 1680 ; free virtual = 4892
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2220.527 ; gain = 498.488 ; free physical = 1648 ; free virtual = 4860
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2220.527 ; gain = 498.488 ; free physical = 1648 ; free virtual = 4860
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2220.527 ; gain = 0.000 ; free physical = 1594 ; free virtual = 4806
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_BackGrRemovalStream_0_0/constraints/BackGrRemovalStream_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ip/design_1_BackGrRemovalStream_0_0/constraints/BackGrRemovalStream_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/design_1_BackGrRemovalStream_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/design_1_BackGrRemovalStream_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2356.277 ; gain = 0.000 ; free physical = 1340 ; free virtual = 4554
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2356.277 ; gain = 0.000 ; free physical = 1340 ; free virtual = 4554
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 423 ; free virtual = 3639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 423 ; free virtual = 3639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/design_1_BackGrRemovalStream_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 423 ; free virtual = 3639
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[14].remd_tmp_reg[15]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[13].remd_tmp_reg[14]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[12].remd_tmp_reg[13]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[11].remd_tmp_reg[12]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[10].remd_tmp_reg[11]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[9].remd_tmp_reg[10]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[8].remd_tmp_reg[9]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[7].remd_tmp_reg[8]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[6].remd_tmp_reg[7]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[5].remd_tmp_reg[6]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[4].remd_tmp_reg[5]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[3].remd_tmp_reg[4]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[2].remd_tmp_reg[3]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[1].remd_tmp_reg[2]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[0].remd_tmp_reg[1]' and it is trimmed from '16' to '15' bits. [/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.gen/sources_1/bd/design_1/ipshared/dbd9/hdl/verilog/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1.v:56]
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter10_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter11_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter12_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter13_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter14_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter15_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter16_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter17_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter18_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter19_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter1_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter20_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter21_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter22_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter23_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter24_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter2_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter3_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter4_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter5_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter6_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter7_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter8_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter9_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter2_fsm_state0 |                               01 |                               01
+  ap_ST_iter2_fsm_state3 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter2_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter3_fsm_state0 |                               01 |                               01
+  ap_ST_iter3_fsm_state4 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter3_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter4_fsm_state0 |                               01 |                               01
+  ap_ST_iter4_fsm_state5 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter4_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter5_fsm_state0 |                               01 |                               01
+  ap_ST_iter5_fsm_state6 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter5_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter6_fsm_state0 |                               01 |                               01
+  ap_ST_iter6_fsm_state7 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter6_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter7_fsm_state0 |                               01 |                               01
+  ap_ST_iter7_fsm_state8 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter7_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter8_fsm_state0 |                               01 |                               01
+  ap_ST_iter8_fsm_state9 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter8_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter9_fsm_state0 |                               01 |                               01
+ ap_ST_iter9_fsm_state10 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter9_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter10_fsm_state0 |                               01 |                               01
+ap_ST_iter10_fsm_state11 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter10_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter11_fsm_state0 |                               01 |                               01
+ap_ST_iter11_fsm_state12 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter11_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter12_fsm_state0 |                               01 |                               01
+ap_ST_iter12_fsm_state13 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter12_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter13_fsm_state0 |                               01 |                               01
+ap_ST_iter13_fsm_state14 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter13_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter14_fsm_state0 |                               01 |                               01
+ap_ST_iter14_fsm_state15 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter14_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter15_fsm_state0 |                               01 |                               01
+ap_ST_iter15_fsm_state16 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter15_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter16_fsm_state0 |                               01 |                               01
+ap_ST_iter16_fsm_state17 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter16_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter17_fsm_state0 |                               01 |                               01
+ap_ST_iter17_fsm_state18 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter17_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter18_fsm_state0 |                               01 |                               01
+ap_ST_iter18_fsm_state19 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter18_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter19_fsm_state0 |                               01 |                               01
+ap_ST_iter19_fsm_state20 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter19_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter20_fsm_state0 |                               01 |                               01
+ap_ST_iter20_fsm_state21 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter20_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter21_fsm_state0 |                               01 |                               01
+ap_ST_iter21_fsm_state22 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter21_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter22_fsm_state0 |                               01 |                               01
+ap_ST_iter22_fsm_state23 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter22_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter23_fsm_state0 |                               01 |                               01
+ap_ST_iter23_fsm_state24 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter23_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ ap_ST_iter24_fsm_state0 |                               01 |                               01
+ap_ST_iter24_fsm_state25 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter24_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter1_fsm_state0 |                               01 |                               01
+  ap_ST_iter1_fsm_state2 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter1_fsm_reg' in module 'BackGrRemovalStream_Loop_row_loop_proc1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 345 ; free virtual = 3539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_keep_V_U' (BackGrRemovalStream_regslice_both__parameterized0) to 'inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_strb_V_U'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_user_V_U' (BackGrRemovalStream_regslice_both__parameterized1) to 'inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_id_V_U'
+INFO: [Synth 8-223] decloning instance 'inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_user_V_U' (BackGrRemovalStream_regslice_both__parameterized1) to 'inst/Loop_row_loop_proc1_U0/regslice_both_output_stream_V_dest_V_U'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   17 Bit       Adders := 48    
+	   2 Input   17 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 6     
+	   4 Input   16 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 15    
+	   3 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 6     
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   3 Input    4 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 4     
+	   4 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 7     
++---Registers : 
+	               24 Bit    Registers := 4     
+	               17 Bit    Registers := 25    
+	               16 Bit    Registers := 66    
+	               15 Bit    Registers := 45    
+	                9 Bit    Registers := 74    
+	                8 Bit    Registers := 84    
+	                4 Bit    Registers := 35    
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 64    
+	                1 Bit    Registers := 250   
++---RAMs : 
+	               2K Bit	(320 X 8 bit)          RAMs := 10    
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   17 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 9     
+	   2 Input   15 Bit        Muxes := 45    
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 10    
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 85    
+	   4 Input    2 Bit        Muxes := 11    
+	   3 Input    2 Bit        Muxes := 26    
+	   2 Input    1 Bit        Muxes := 34    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port reset in module BackGrRemovalStream_sdiv_16ns_9ns_16_20_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 306 ; free virtual = 3323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                                                                                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_8_U/ram_reg          | 320 x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_7_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_6_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_5_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_4_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_3_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_2_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_1_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_U/ram_reg            | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_U/ram_reg | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+--------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 348 ; free virtual = 3315
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 361 ; free virtual = 3328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+--------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                                                                                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_8_U/ram_reg          | 320 x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_7_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_6_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_5_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_4_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_3_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_2_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_1_U/ram_reg          | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_U/ram_reg            | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | Loop_row_loop_proc1_U0/p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_U/ram_reg | 320 x 8(READ_FIRST)    | W |   | 320 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+--------------------------------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_8_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_7_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_6_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_5_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_4_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_3_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_2_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_1_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Loop_row_loop_proc1_U0/p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 341 ; free virtual = 3329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 352 ; free virtual = 3340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 352 ; free virtual = 3340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 356 ; free virtual = 3344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 356 ; free virtual = 3345
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 356 ; free virtual = 3344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 356 ; free virtual = 3344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name         | RTL Name                                                                                                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[1].dividend_tmp_reg[2][15]   | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[2].dividend_tmp_reg[3][15]   | 4      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[3].dividend_tmp_reg[4][15]   | 5      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[4].dividend_tmp_reg[5][15]   | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[5].dividend_tmp_reg[6][15]   | 7      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[6].dividend_tmp_reg[7][15]   | 8      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[7].dividend_tmp_reg[8][15]   | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[8].dividend_tmp_reg[9][15]   | 10     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[9].dividend_tmp_reg[10][15]  | 11     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[10].dividend_tmp_reg[11][15] | 12     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[11].dividend_tmp_reg[12][15] | 13     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[12].dividend_tmp_reg[13][15] | 14     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[13].dividend_tmp_reg[14][15] | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[14].dividend_tmp_reg[15][15] | 16     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][14] | 15     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][13] | 14     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][12] | 13     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][10] | 11     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][9]  | 10     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][8]  | 9      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U1/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].sign_tmp_reg[16][1]      | 17     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[1].dividend_tmp_reg[2][15]   | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[2].dividend_tmp_reg[3][15]   | 4      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[3].dividend_tmp_reg[4][15]   | 5      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[4].dividend_tmp_reg[5][15]   | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[5].dividend_tmp_reg[6][15]   | 7      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[6].dividend_tmp_reg[7][15]   | 8      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[7].dividend_tmp_reg[8][15]   | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[8].dividend_tmp_reg[9][15]   | 10     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[9].dividend_tmp_reg[10][15]  | 11     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[10].dividend_tmp_reg[11][15] | 12     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[11].dividend_tmp_reg[12][15] | 13     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[12].dividend_tmp_reg[13][15] | 14     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[13].dividend_tmp_reg[14][15] | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[14].dividend_tmp_reg[15][15] | 16     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][14] | 15     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][13] | 14     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][12] | 13     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][10] | 11     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][9]  | 10     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][8]  | 9      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U2/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].sign_tmp_reg[16][1]      | 17     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[1].dividend_tmp_reg[2][15]   | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[2].dividend_tmp_reg[3][15]   | 4      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[3].dividend_tmp_reg[4][15]   | 5      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[4].dividend_tmp_reg[5][15]   | 6      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[5].dividend_tmp_reg[6][15]   | 7      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[6].dividend_tmp_reg[7][15]   | 8      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[7].dividend_tmp_reg[8][15]   | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[8].dividend_tmp_reg[9][15]   | 10     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[9].dividend_tmp_reg[10][15]  | 11     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[10].dividend_tmp_reg[11][15] | 12     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[11].dividend_tmp_reg[12][15] | 13     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[12].dividend_tmp_reg[13][15] | 14     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[13].dividend_tmp_reg[14][15] | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[14].dividend_tmp_reg[15][15] | 16     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][14] | 15     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][13] | 14     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][12] | 13     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][10] | 11     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][9]  | 10     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].dividend_tmp_reg[16][8]  | 9      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|BackGrRemovalStream | Loop_row_loop_proc1_U0/sdiv_16ns_9ns_16_20_1_U3/BackGrRemovalStream_sdiv_16ns_9ns_16_20_1_divider_u/loop[15].sign_tmp_reg[16][1]      | 17     | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------------+---------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   264|
+|2     |LUT1     |   362|
+|3     |LUT2     |   497|
+|4     |LUT3     |   725|
+|5     |LUT4     |    53|
+|6     |LUT5     |    93|
+|7     |LUT6     |   141|
+|8     |RAMB18E1 |    10|
+|10    |SRL16E   |    87|
+|11    |FDRE     |  2257|
+|12    |FDSE     |    48|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 356 ; free virtual = 3344
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2356.277 ; gain = 498.488 ; free physical = 356 ; free virtual = 3344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2356.277 ; gain = 634.238 ; free physical = 356 ; free virtual = 3344
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2356.277 ; gain = 0.000 ; free physical = 620 ; free virtual = 3609
+INFO: [Netlist 29-17] Analyzing 274 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2356.277 ; gain = 0.000 ; free physical = 601 ; free virtual = 3590
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 24bc1d7f
+INFO: [Common 17-83] Releasing license: Synthesis
+109 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 2356.277 ; gain = 975.801 ; free physical = 602 ; free virtual = 3592
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1695.854; main = 1403.271; forked = 297.769
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3289.496; main = 2356.281; forked = 965.230
+INFO: [Common 17-1381] The checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/design_1_BackGrRemovalStream_0_0_synth_1/design_1_BackGrRemovalStream_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_BackGrRemovalStream_0_0, cache-ID = 5df2ec2f3f73145a
+INFO: [Coretcl 2-1174] Renamed 22 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/dell3561-49/Obj_Detect_TCL/Obj_Detect/Obj_Detect.runs/design_1_BackGrRemovalStream_0_0_synth_1/design_1_BackGrRemovalStream_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_BackGrRemovalStream_0_0_utilization_synth.rpt -pb design_1_BackGrRemovalStream_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 10 10:11:04 2025...
