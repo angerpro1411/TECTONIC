@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "contour_approximation.h": "c",
+        "string.h": "c"
+    }
+}

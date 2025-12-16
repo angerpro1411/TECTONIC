@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/contour_approximation.c_pre.c.tb.c

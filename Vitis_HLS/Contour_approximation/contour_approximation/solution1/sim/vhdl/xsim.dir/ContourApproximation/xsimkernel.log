@@ -1,7 +1,0 @@
-Running: xsim.dir/ContourApproximation/xsimk -simmode gui -wdb ContourApproximation.wdb -simrunnum 0 -socket 52213
-Design successfully loaded
-Design Loading Memory Usage: 65068 KB (Peak: 65260 KB)
-Design Loading CPU Usage: 40 ms
-Simulation completed
-Simulation Memory Usage: 146480 KB (Peak: 204336 KB)
-Simulation CPU Usage: 3110 ms

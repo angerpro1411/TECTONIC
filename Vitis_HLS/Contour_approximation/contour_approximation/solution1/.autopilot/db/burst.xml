@@ -1,5 +1,0 @@
-<VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:158:5" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:158:5" LoopName="CHECK_DIFFER_LOOP" ParentFunc="ContourApproximation"/>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:126:2" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:126:2" LoopName="WRITE_BACK" ParentFunc="ContourApproximation"/>
-</VitisHLS:BurstInfo>
-
