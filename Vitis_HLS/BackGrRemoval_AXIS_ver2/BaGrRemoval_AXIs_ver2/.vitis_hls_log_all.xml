@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-1995] There were 172,438 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/BaGrRemoval_AXIs_ver2/solution1/syn/report/csynth_design_size.rpt" projectName="BaGrRemoval_AXIs_ver2" solutionName="solution1" date="2025-10-22T16:53:13.385+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1995] There were 170,897 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/BaGrRemoval_AXIs_ver2/solution1/syn/report/csynth_design_size.rpt" projectName="BaGrRemoval_AXIs_ver2" solutionName="solution1" date="2025-10-22T16:53:13.211+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (BackGrRemoval.cpp:107:9)" projectName="BaGrRemoval_AXIs_ver2" solutionName="solution1" date="2025-10-22T16:29:01.772+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (BackGrRemoval.cpp:34:9)" projectName="BaGrRemoval_AXIs_ver2" solutionName="solution1" date="2025-10-22T16:28:59.518+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (BackGrRemoval.cpp:29:9)" projectName="BaGrRemoval_AXIs_ver2" solutionName="solution1" date="2025-10-22T16:28:59.514+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

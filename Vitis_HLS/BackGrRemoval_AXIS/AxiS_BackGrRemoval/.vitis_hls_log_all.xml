@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:49:24.520+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:49:24.515+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:38:41.645+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:38:41.639+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:37:41.104+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:37:41.100+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:37:13.975+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:33:32.535+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:33:32.530+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:32:33.792+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:32:33.788+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:19:13.529+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:19:13.523+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:10:58.860+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:10:58.854+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T15:08:59.757+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T14:57:11.213+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T14:55:11.852+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T10:44:37.714+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-22T10:39:28.111+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T18:02:31.887+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T18:01:27.657+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T18:01:02.420+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T17:57:23.817+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T17:47:35.540+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:58:13.839+0200"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:58:13.836+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:57:07.358+0200"/>
+        <logs message="Error: cannot open input.bmp&#xA;@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:57:07.354+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:56:48.542+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:23:10.505+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:22:28.256+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:21:01.897+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:20:18.688+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:19:13.948+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:18:43.742+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:13:34.690+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T16:13:15.220+0200"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_98' is power-on initialization." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T15:11:16.317+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_90' is power-on initialization." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T15:11:16.315+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_91' is power-on initialization." projectName="AxiS_BackGrRemoval" solutionName="solution1" date="2025-10-21T15:11:16.313+0200" type="Warning"/>
+      </synLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

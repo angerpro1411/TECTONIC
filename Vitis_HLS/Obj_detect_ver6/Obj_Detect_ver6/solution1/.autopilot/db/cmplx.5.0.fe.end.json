@@ -1,0 +1,335 @@
+{
+    "1": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_28_2",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "hls_object_green_classification_Pipeline_pass_4",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "101",
+        "total_instructions": "101",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "G": "10",
+            "L": "2"
+        },
+        "stores": {
+            "G": "1",
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_26_1",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "75",
+        "total_instructions": "75",
+        "calls": "",
+        "basicblocks": "14",
+        "loads": {
+            "G": "6",
+            "L": "3"
+        },
+        "stores": {
+            "G": "5",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "hls_object_green_classification_Pipeline_pass5_out_pass5_in",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "118",
+        "total_instructions": "118",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "15",
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "hls_object_green_classification_Pipeline_PASS_3_5_1",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "hls_object_green_classification_Pipeline_Pass1_5_inner0",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "268",
+        "total_instructions": "268",
+        "calls": "",
+        "basicblocks": "20",
+        "loads": {
+            "G": "72",
+            "L": "1"
+        },
+        "stores": {
+            "G": "9",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "hls_object_green_classification_Pipeline_InitLoop",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "7",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_28_22",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "46",
+        "total_instructions": "46",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "G": "2",
+            "L": "3"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_276_5",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "G": "3",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_311_6",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "3",
+            "L": "1"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "hls_object_green_classification",
+        "file": "obj_detect.cpp",
+        "fileloc": "45",
+        "instructions": "442",
+        "total_instructions": "1369",
+        "calls": "8 3 1 13 9 7 10 4 16 15 6 14 2 11 5 12",
+        "basicblocks": "62",
+        "loads": {
+            "G": "13",
+            "L": "26"
+        },
+        "stores": {
+            "G": "26",
+            "L": "20"
+        },
+        "loops": {
+            "L": "4"
+        }
+    },
+    "13": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_26_11",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "hls_object_green_classification_Pipeline_PASS_3_5_2_in",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "11",
+        "loads": {
+            "G": "5",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_28_24",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "G": "1",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "hls_object_green_classification_Pipeline_VITIS_LOOP_26_13",
+        "file": "obj_detect.cpp",
+        "fileloc": "0",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

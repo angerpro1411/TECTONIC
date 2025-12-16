@@ -1,0 +1,7 @@
+Running: xsim.dir/BackGrRemovalStream/xsimk -simmode gui -wdb BackGrRemovalStream.wdb -simrunnum 0 -socket 60309
+Design successfully loaded
+Design Loading Memory Usage: 25016 KB (Peak: 25016 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 118988 KB (Peak: 164284 KB)
+Simulation CPU Usage: 4040 ms

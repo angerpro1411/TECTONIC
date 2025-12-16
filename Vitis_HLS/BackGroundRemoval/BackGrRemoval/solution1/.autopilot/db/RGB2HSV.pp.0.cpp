@@ -5748,6 +5748,7 @@ u8 Minof3(u8 b, u8 g, u8 r){
 }
 
 void findHSV(PixelBGR* in,u8* out_h,u8* out_s,u8* out_v){
+#pragma HLS INLINE off
 #pragma HLS ARRAY_PARTITION variable=out_s cyclic factor=8 dim=1
  fx_t tmp = 0.0;
 

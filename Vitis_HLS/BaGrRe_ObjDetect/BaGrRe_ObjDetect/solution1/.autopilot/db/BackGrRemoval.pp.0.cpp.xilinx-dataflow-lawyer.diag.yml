@@ -1,0 +1,12 @@
+---
+MainSourceFile:  /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-8] Static scalars and arrays declared inside a dataflow region will be treated like local variables'
+    FileOffset:      '19:12'
+    FilePath:        BackGrRemoval.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '16:9'
+    FilePath:        BackGrRemoval.cpp
+...

@@ -1,0 +1,49 @@
+{
+  "0": {
+    "basicblocks": 314,
+    "calls": "2 1",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 54,
+    "instructions": 1322,
+    "loads": {
+      "G": 252,
+      "L": 16
+    },
+    "name": "BackGrRemoval_stream_v2",
+    "stores": {
+      "G": 133,
+      "L": 10
+    },
+    "total_instructions": 1352
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 10,
+    "instructions": 15,
+    "loads": {
+      "L": 3
+    },
+    "name": "pack_axi_pixel",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 15
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 21,
+    "instructions": 15,
+    "loads": {
+      "L": 1
+    },
+    "name": "unpack_axi_pixel",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 15
+  }
+}

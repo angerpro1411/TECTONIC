@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vitis HLS Report for 'BackGrRemovalStream'
+================================================================
+* Date:           Wed Oct 22 18:21:26 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        BaGr_Removal_AXIs_ver3
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.074 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    76825|    76825|  0.768 ms|  0.768 ms|  76826|  76826|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.00>
+ST_2 : Operation 5 [1/1] (1.00ns)   --->   "%threshold_read = read i8 @_ssdm_op_Read.s_axilite.i8, i8 %threshold" [BackGrRemoval.cpp:124]   --->   Operation 5 'read' 'threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln124 = call void @Loop_row_loop_proc1, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, i8 %threshold_read, i24 %input_stream_V_data_V, i3 %input_stream_V_keep_V, i3 %input_stream_V_strb_V, i1 %input_stream_V_user_V, i1 %input_stream_V_last_V, i1 %input_stream_V_id_V, i1 %input_stream_V_dest_V, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_8, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_7, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_6, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_5, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_4, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_3, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_2, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_1, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line, i8 %p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E" [BackGrRemoval.cpp:124]   --->   Operation 6 'call' 'call_ln124' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 7 [1/2] (0.00ns)   --->   "%call_ln124 = call void @Loop_row_loop_proc1, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, i8 %threshold_read, i24 %input_stream_V_data_V, i3 %input_stream_V_keep_V, i3 %input_stream_V_strb_V, i1 %input_stream_V_user_V, i1 %input_stream_V_last_V, i1 %input_stream_V_id_V, i1 %input_stream_V_dest_V, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_8, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_7, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_6, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_5, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_4, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_3, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_2, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_1, i8 %BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line, i8 %p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E" [BackGrRemoval.cpp:124]   --->   Operation 7 'call' 'call_ln124' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 8 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln130 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_9" [BackGrRemoval.cpp:130]   --->   Operation 8 'specdataflowpipeline' 'specdataflowpipeline_ln130' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%spectopmodule_ln122 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_5" [BackGrRemoval.cpp:122]   --->   Operation 9 'spectopmodule' 'spectopmodule_ln122' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %input_stream_V_data_V, i3 %input_stream_V_keep_V, i3 %input_stream_V_strb_V, i1 %input_stream_V_user_V, i1 %input_stream_V_last_V, i1 %input_stream_V_id_V, i1 %input_stream_V_dest_V, void @empty_4, i32 1, i32 1, void @empty_8, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %input_stream_V_data_V"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %input_stream_V_keep_V"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %input_stream_V_strb_V"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_stream_V_user_V"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_stream_V_last_V"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_stream_V_id_V"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_stream_V_dest_V"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, void @empty_4, i32 1, i32 1, void @empty_8, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %output_stream_V_data_V"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %output_stream_V_keep_V"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %output_stream_V_strb_V"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %output_stream_V_user_V"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %output_stream_V_last_V"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %output_stream_V_id_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %output_stream_V_dest_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %threshold"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %threshold, void @empty, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_0, void @empty_1, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %threshold, void @empty_2, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_0, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln141 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, void @empty_3" [BackGrRemoval.cpp:141]   --->   Operation 30 'specaxissidechannel' 'specaxissidechannel_ln141' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln141 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %input_stream_V_data_V, i3 %input_stream_V_keep_V, i3 %input_stream_V_strb_V, i1 %input_stream_V_user_V, i1 %input_stream_V_last_V, i1 %input_stream_V_id_V, i1 %input_stream_V_dest_V, void @empty_6" [BackGrRemoval.cpp:141]   --->   Operation 31 'specaxissidechannel' 'specaxissidechannel_ln141' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln211 = ret" [BackGrRemoval.cpp:211]   --->   Operation 32 'ret' 'ret_ln211' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('threshold_read', BackGrRemoval.cpp:124) on port 'threshold' (BackGrRemoval.cpp:124) [50]  (1.000 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

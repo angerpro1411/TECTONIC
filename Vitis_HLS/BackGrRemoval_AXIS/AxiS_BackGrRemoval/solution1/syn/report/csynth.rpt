@@ -1,0 +1,297 @@
+
+
+================================================================
+== Synthesis Summary Report of 'BackGrRemoval_stream_v2'
+================================================================
++ General Information: 
+    * Date:           Tue Oct 21 15:11:16 2025
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        AxiS_BackGrRemoval
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
+    |                       Modules                       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |        |        |             |             |     |
+    |                       & Loops                       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |      FF     |     LUT     | URAM|
+    +-----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
+    |+ BackGrRemoval_stream_v2                            |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  8 (2%)|  3 (1%)|  12251 (11%)|  11365 (21%)|    -|
+    | + BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  8 (2%)|       -|    9962 (9%)|  10928 (20%)|    -|
+    |  o VITIS_LOOP_84_1                                  |      II|   7.30|        -|       -|        59|        4|     -|       yes|       -|       -|            -|            -|    -|
+    +-----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | threshold | 0x10   | 32    | W      | Data signal of threshold         |                                                                      |
+| s_axi_control | rows      | 0x18   | 32    | W      | Data signal of rows              |                                                                      |
+| s_axi_control | cols      | 0x20   | 32    | W      | Data signal of cols              |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface  | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| in_stream  | in        | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| out_stream | out       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------------+
+| Argument   | Direction | Datatype                                    |
++------------+-----------+---------------------------------------------+
+| in_stream  | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| threshold  | in        | ap_uint<8>                                  |
+| rows       | in        | int                                         |
+| cols       | in        | int                                         |
++------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++------------+---------------+-----------+-------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Info                             |
++------------+---------------+-----------+-------------------------------------+
+| in_stream  | in_stream     | interface |                                     |
+| out_stream | out_stream    | interface |                                     |
+| threshold  | s_axi_control | register  | name=threshold offset=0x10 range=32 |
+| rows       | s_axi_control | register  | name=rows offset=0x18 range=32      |
+| cols       | s_axi_control | register  | name=cols offset=0x20 range=32      |
++------------+---------------+-----------+-------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------+-----+--------+---------------+-----+--------+---------+
+| Name                                                | DSP | Pragma | Variable      | Op  | Impl   | Latency |
++-----------------------------------------------------+-----+--------+---------------+-----+--------+---------+
+| + BackGrRemoval_stream_v2                           | 3   |        |               |     |        |         |
+|   mul_32s_32s_32_2_1_U246                           | 3   |        | total         | mul | auto   | 1       |
+|   sub_fu_1070_p2                                    | -   |        | sub           | add | fabric | 0       |
+|   sub110_fu_1076_p2                                 | -   |        | sub110        | add | fabric | 0       |
+|   sub81_fu_1082_p2                                  | -   |        | sub81         | add | fabric | 0       |
+|  + BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1 | 0   |        |               |     |        |         |
+|    pix_2_fu_3459_p2                                 | -   |        | pix_2         | add | fabric | 0       |
+|    diff_fu_3859_p2                                  | -   |        | diff          | sub | fabric | 0       |
+|    sub_ln46_fu_3887_p2                              | -   |        | sub_ln46      | sub | fabric | 0       |
+|    grp_fu_4015_p0                                   | -   |        | sub_ln46_1    | sub | fabric | 0       |
+|    hue_2_fu_5685_p2                                 | -   |        | hue_2         | add | fabric | 0       |
+|    sub_ln44_fu_3896_p2                              | -   |        | sub_ln44      | sub | fabric | 0       |
+|    grp_fu_4052_p0                                   | -   |        | sub_ln44_1    | sub | fabric | 0       |
+|    hue_1_fu_5694_p2                                 | -   |        | hue_1         | add | fabric | 0       |
+|    sub_ln42_fu_3908_p2                              | -   |        | sub_ln42      | sub | fabric | 0       |
+|    grp_fu_4089_p0                                   | -   |        | sub_ln42_1    | sub | fabric | 0       |
+|    add_ln48_fu_6041_p2                              | -   |        | add_ln48      | add | fabric | 0       |
+|    sub_ln49_fu_6067_p2                              | -   |        | sub_ln49      | sub | fabric | 0       |
+|    sub_ln49_1_fu_6083_p2                            | -   |        | sub_ln49_1    | sub | fabric | 0       |
+|    add_ln111_fu_5060_p2                             | -   |        | add_ln111     | add | fabric | 0       |
+|    add_ln139_fu_3524_p2                             | -   |        | add_ln139     | add | fabric | 0       |
+|    count_4_fu_3728_p2                               | -   |        | count_4       | add | fabric | 0       |
+|    add_ln139_2_fu_3747_p2                           | -   |        | add_ln139_2   | add | fabric | 0       |
+|    count_7_fu_3766_p2                               | -   |        | count_7       | add | fabric | 0       |
+|    add_ln139_4_fu_3924_p2                           | -   |        | add_ln139_4   | add | fabric | 0       |
+|    count_10_fu_3947_p2                              | -   |        | count_10      | add | fabric | 0       |
+|    add_ln139_6_fu_4105_p2                           | -   |        | add_ln139_6   | add | fabric | 0       |
+|    count_13_fu_4121_p2                              | -   |        | count_13      | add | fabric | 0       |
+|    add_ln139_8_fu_4135_p2                           | -   |        | add_ln139_8   | add | fabric | 0       |
+|    count_16_fu_4167_p2                              | -   |        | count_16      | add | fabric | 0       |
+|    add_ln139_10_fu_4186_p2                          | -   |        | add_ln139_10  | add | fabric | 0       |
+|    count_19_fu_4221_p2                              | -   |        | count_19      | add | fabric | 0       |
+|    add_ln139_12_fu_4237_p2                          | -   |        | add_ln139_12  | add | fabric | 0       |
+|    count_22_fu_4260_p2                              | -   |        | count_22      | add | fabric | 0       |
+|    add_ln139_14_fu_4307_p2                          | -   |        | add_ln139_14  | add | fabric | 0       |
+|    count_25_fu_4326_p2                              | -   |        | count_25      | add | fabric | 0       |
+|    add_ln139_16_fu_4361_p2                          | -   |        | add_ln139_16  | add | fabric | 0       |
+|    count_28_fu_4378_p2                              | -   |        | count_28      | add | fabric | 0       |
+|    add_ln139_18_fu_4410_p2                          | -   |        | add_ln139_18  | add | fabric | 0       |
+|    count_31_fu_4426_p2                              | -   |        | count_31      | add | fabric | 0       |
+|    add_ln139_20_fu_4472_p2                          | -   |        | add_ln139_20  | add | fabric | 0       |
+|    count_34_fu_4489_p2                              | -   |        | count_34      | add | fabric | 0       |
+|    add_ln139_22_fu_4519_p2                          | -   |        | add_ln139_22  | add | fabric | 0       |
+|    count_37_fu_4536_p2                              | -   |        | count_37      | add | fabric | 0       |
+|    add_ln139_24_fu_4571_p2                          | -   |        | add_ln139_24  | add | fabric | 0       |
+|    count_40_fu_4588_p2                              | -   |        | count_40      | add | fabric | 0       |
+|    add_ln139_26_fu_4638_p2                          | -   |        | add_ln139_26  | add | fabric | 0       |
+|    count_43_fu_4655_p2                              | -   |        | count_43      | add | fabric | 0       |
+|    add_ln139_28_fu_4690_p2                          | -   |        | add_ln139_28  | add | fabric | 0       |
+|    count_46_fu_4711_p2                              | -   |        | count_46      | add | fabric | 0       |
+|    add_ln139_30_fu_4743_p2                          | -   |        | add_ln139_30  | add | fabric | 0       |
+|    count_49_fu_4759_p2                              | -   |        | count_49      | add | fabric | 0       |
+|    add_ln139_32_fu_4799_p2                          | -   |        | add_ln139_32  | add | fabric | 0       |
+|    count_52_fu_4816_p2                              | -   |        | count_52      | add | fabric | 0       |
+|    add_ln139_34_fu_4846_p2                          | -   |        | add_ln139_34  | add | fabric | 0       |
+|    count_55_fu_4863_p2                              | -   |        | count_55      | add | fabric | 0       |
+|    add_ln139_36_fu_4898_p2                          | -   |        | add_ln139_36  | add | fabric | 0       |
+|    count_58_fu_4915_p2                              | -   |        | count_58      | add | fabric | 0       |
+|    add_ln139_38_fu_4969_p2                          | -   |        | add_ln139_38  | add | fabric | 0       |
+|    count_61_fu_4986_p2                              | -   |        | count_61      | add | fabric | 0       |
+|    add_ln139_40_fu_5018_p2                          | -   |        | add_ln139_40  | add | fabric | 0       |
+|    count_64_fu_5034_p2                              | -   |        | count_64      | add | fabric | 0       |
+|    add_ln139_42_fu_5076_p2                          | -   |        | add_ln139_42  | add | fabric | 0       |
+|    count_67_fu_5093_p2                              | -   |        | count_67      | add | fabric | 0       |
+|    add_ln139_44_fu_5123_p2                          | -   |        | add_ln139_44  | add | fabric | 0       |
+|    count_70_fu_5140_p2                              | -   |        | count_70      | add | fabric | 0       |
+|    add_ln139_46_fu_5349_p2                          | -   |        | add_ln139_46  | add | fabric | 0       |
+|    count_73_fu_5366_p2                              | -   |        | count_73      | add | fabric | 0       |
+|    add_ln139_48_fu_5707_p2                          | -   |        | add_ln139_48  | add | fabric | 0       |
+|    count_76_fu_5723_p2                              | -   |        | count_76      | add | fabric | 0       |
+|    add_ln139_50_fu_6099_p2                          | -   |        | add_ln139_50  | add | fabric | 0       |
+|    count_79_fu_6110_p2                              | -   |        | count_79      | add | fabric | 0       |
+|    add_ln139_52_fu_6129_p2                          | -   |        | add_ln139_52  | add | fabric | 0       |
+|    count_82_fu_6140_p2                              | -   |        | count_82      | add | fabric | 0       |
+|    add_ln139_54_fu_6163_p2                          | -   |        | add_ln139_54  | add | fabric | 0       |
+|    count_85_fu_6174_p2                              | -   |        | count_85      | add | fabric | 0       |
+|    add_ln139_56_fu_6187_p2                          | -   |        | add_ln139_56  | add | fabric | 0       |
+|    count_88_fu_6198_p2                              | -   |        | count_88      | add | fabric | 0       |
+|    add_ln139_58_fu_6211_p2                          | -   |        | add_ln139_58  | add | fabric | 0       |
+|    count_91_fu_6222_p2                              | -   |        | count_91      | add | fabric | 0       |
+|    add_ln139_60_fu_6235_p2                          | -   |        | add_ln139_60  | add | fabric | 0       |
+|    count_94_fu_6250_p2                              | -   |        | count_94      | add | fabric | 0       |
+|    add_ln139_62_fu_6263_p2                          | -   |        | add_ln139_62  | add | fabric | 0       |
+|    count_97_fu_6274_p2                              | -   |        | count_97      | add | fabric | 0       |
+|    add_ln139_64_fu_6287_p2                          | -   |        | add_ln139_64  | add | fabric | 0       |
+|    count_100_fu_6298_p2                             | -   |        | count_100     | add | fabric | 0       |
+|    add_ln139_66_fu_6311_p2                          | -   |        | add_ln139_66  | add | fabric | 0       |
+|    count_103_fu_6322_p2                             | -   |        | count_103     | add | fabric | 0       |
+|    add_ln139_68_fu_6335_p2                          | -   |        | add_ln139_68  | add | fabric | 0       |
+|    count_106_fu_6346_p2                             | -   |        | count_106     | add | fabric | 0       |
+|    add_ln139_70_fu_6359_p2                          | -   |        | add_ln139_70  | add | fabric | 0       |
+|    count_109_fu_6370_p2                             | -   |        | count_109     | add | fabric | 0       |
+|    add_ln139_72_fu_6383_p2                          | -   |        | add_ln139_72  | add | fabric | 0       |
+|    count_112_fu_6394_p2                             | -   |        | count_112     | add | fabric | 0       |
+|    add_ln139_74_fu_6407_p2                          | -   |        | add_ln139_74  | add | fabric | 0       |
+|    count_115_fu_6418_p2                             | -   |        | count_115     | add | fabric | 0       |
+|    add_ln139_76_fu_6431_p2                          | -   |        | add_ln139_76  | add | fabric | 0       |
+|    count_118_fu_6442_p2                             | -   |        | count_118     | add | fabric | 0       |
+|    add_ln139_78_fu_6455_p2                          | -   |        | add_ln139_78  | add | fabric | 0       |
+|    count_121_fu_6466_p2                             | -   |        | count_121     | add | fabric | 0       |
+|    add_ln139_80_fu_6479_p2                          | -   |        | add_ln139_80  | add | fabric | 0       |
+|    count_124_fu_6490_p2                             | -   |        | count_124     | add | fabric | 0       |
+|    add_ln139_82_fu_6503_p2                          | -   |        | add_ln139_82  | add | fabric | 0       |
+|    count_127_fu_6514_p2                             | -   |        | count_127     | add | fabric | 0       |
+|    add_ln139_84_fu_6527_p2                          | -   |        | add_ln139_84  | add | fabric | 0       |
+|    count_130_fu_6538_p2                             | -   |        | count_130     | add | fabric | 0       |
+|    add_ln139_86_fu_6551_p2                          | -   |        | add_ln139_86  | add | fabric | 0       |
+|    count_133_fu_6562_p2                             | -   |        | count_133     | add | fabric | 0       |
+|    add_ln139_88_fu_6575_p2                          | -   |        | add_ln139_88  | add | fabric | 0       |
+|    count_136_fu_6586_p2                             | -   |        | count_136     | add | fabric | 0       |
+|    add_ln139_90_fu_6599_p2                          | -   |        | add_ln139_90  | add | fabric | 0       |
+|    count_139_fu_6610_p2                             | -   |        | count_139     | add | fabric | 0       |
+|    add_ln139_92_fu_6623_p2                          | -   |        | add_ln139_92  | add | fabric | 0       |
+|    count_142_fu_6634_p2                             | -   |        | count_142     | add | fabric | 0       |
+|    add_ln139_94_fu_6647_p2                          | -   |        | add_ln139_94  | add | fabric | 0       |
+|    count_145_fu_6658_p2                             | -   |        | count_145     | add | fabric | 0       |
+|    add_ln139_96_fu_6671_p2                          | -   |        | add_ln139_96  | add | fabric | 0       |
+|    count_148_fu_6682_p2                             | -   |        | count_148     | add | fabric | 0       |
+|    add_ln139_98_fu_6695_p2                          | -   |        | add_ln139_98  | add | fabric | 0       |
+|    count_151_fu_6706_p2                             | -   |        | count_151     | add | fabric | 0       |
+|    add_ln139_100_fu_6719_p2                         | -   |        | add_ln139_100 | add | fabric | 0       |
+|    count_154_fu_6730_p2                             | -   |        | count_154     | add | fabric | 0       |
+|    add_ln139_102_fu_6743_p2                         | -   |        | add_ln139_102 | add | fabric | 0       |
+|    count_157_fu_6754_p2                             | -   |        | count_157     | add | fabric | 0       |
+|    add_ln139_104_fu_6767_p2                         | -   |        | add_ln139_104 | add | fabric | 0       |
+|    count_160_fu_6778_p2                             | -   |        | count_160     | add | fabric | 0       |
+|    add_ln139_106_fu_6791_p2                         | -   |        | add_ln139_106 | add | fabric | 0       |
+|    count_163_fu_6802_p2                             | -   |        | count_163     | add | fabric | 0       |
+|    add_ln139_108_fu_6815_p2                         | -   |        | add_ln139_108 | add | fabric | 0       |
+|    count_166_fu_6826_p2                             | -   |        | count_166     | add | fabric | 0       |
+|    add_ln139_110_fu_6839_p2                         | -   |        | add_ln139_110 | add | fabric | 0       |
+|    count_169_fu_6850_p2                             | -   |        | count_169     | add | fabric | 0       |
+|    add_ln139_112_fu_6863_p2                         | -   |        | add_ln139_112 | add | fabric | 0       |
+|    count_172_fu_6874_p2                             | -   |        | count_172     | add | fabric | 0       |
+|    add_ln139_114_fu_6887_p2                         | -   |        | add_ln139_114 | add | fabric | 0       |
+|    count_175_fu_6898_p2                             | -   |        | count_175     | add | fabric | 0       |
+|    add_ln139_116_fu_6911_p2                         | -   |        | add_ln139_116 | add | fabric | 0       |
+|    count_178_fu_6922_p2                             | -   |        | count_178     | add | fabric | 0       |
+|    add_ln139_118_fu_6935_p2                         | -   |        | add_ln139_118 | add | fabric | 0       |
+|    col_1_fu_3543_p2                                 | -   |        | col_1         | add | fabric | 0       |
+|    add_ln164_fu_3772_p2                             | -   |        | add_ln164     | add | fabric | 0       |
++-----------------------------------------------------+-----+--------+---------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------------------------------------------------+------+------+--------+--------------------------------------------------------------------------+---------+------+---------+
+| Name                                                                          | BRAM | URAM | Pragma | Variable                                                                 | Storage | Impl | Latency |
++-------------------------------------------------------------------------------+------+------+--------+--------------------------------------------------------------------------+---------+------+---------+
+| + BackGrRemoval_stream_v2                                                     | 8    | 0    |        |                                                                          |         |      |         |
+|  + BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1                           | 8    | 0    |        |                                                                          |         |      |         |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_7_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_7 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_6_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_6 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_5_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_5 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_4_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_4 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_3_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_3 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_2_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_2 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_1_U | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_1 | ram_1p  | bram | 1       |
+|    BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf_U   | 1    | -    | pragma | BackGrRemoval_stream_v2_stream_stream_axis_0_ap_uint_8_int_int_linebuf   | ram_1p  | bram | 1       |
++-------------------------------------------------------------------------------+------+------+--------+--------------------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+-----------------------------------+----------------------------------------------------------+----------------------------------------------------------------------------+
+| Type     | Options                           | Location                                                 | Messages                                                                   |
++----------+-----------------------------------+----------------------------------------------------------+----------------------------------------------------------------------------+
+| resource | variable=linebuf core=RAM_1P_BRAM | BackGrRemoval.cpp:68 in backgrremoval_stream_v2, linebuf | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
++----------+-----------------------------------+----------------------------------------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-----------------------------------------+-------------------------------------------------------------+
+| Type            | Options                                 | Location                                                    |
++-----------------+-----------------------------------------+-------------------------------------------------------------+
+| inline          |                                         | BackGrRemoval.cpp:29 in rgb_to_h_scaled                     |
+| interface       | axis port=in_stream                     | BackGrRemoval.cpp:55 in backgrremoval_stream_v2, in_stream  |
+| interface       | axis port=out_stream                    | BackGrRemoval.cpp:56 in backgrremoval_stream_v2, out_stream |
+| interface       | s_axilite port=threshold bundle=control | BackGrRemoval.cpp:57 in backgrremoval_stream_v2, threshold  |
+| interface       | s_axilite port=rows bundle=control      | BackGrRemoval.cpp:58 in backgrremoval_stream_v2, rows       |
+| interface       | s_axilite port=cols bundle=control      | BackGrRemoval.cpp:59 in backgrremoval_stream_v2, cols       |
+| interface       | s_axilite port=return bundle=control    | BackGrRemoval.cpp:60 in backgrremoval_stream_v2, return     |
+| array_partition | variable=linebuf cyclic factor=8 dim=1  | BackGrRemoval.cpp:69 in backgrremoval_stream_v2, linebuf    |
+| array_partition | variable=row_shift complete dim=0       | BackGrRemoval.cpp:74 in backgrremoval_stream_v2, row_shift  |
+| pipeline        | II=1                                    | BackGrRemoval.cpp:85 in backgrremoval_stream_v2             |
+| unroll          | factor=2                                | BackGrRemoval.cpp:96 in backgrremoval_stream_v2             |
+| unroll          | factor=2                                | BackGrRemoval.cpp:98 in backgrremoval_stream_v2             |
+| unroll          | factor=2                                | BackGrRemoval.cpp:108 in backgrremoval_stream_v2            |
+| unroll          | factor=2                                | BackGrRemoval.cpp:118 in backgrremoval_stream_v2            |
+| unroll          | factor=2                                | BackGrRemoval.cpp:135 in backgrremoval_stream_v2            |
+| unroll          | factor=2                                | BackGrRemoval.cpp:137 in backgrremoval_stream_v2            |
++-----------------+-----------------------------------------+-------------------------------------------------------------+
+
+

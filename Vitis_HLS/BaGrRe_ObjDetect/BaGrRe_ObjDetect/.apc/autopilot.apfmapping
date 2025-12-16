@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="BaGr_ObjDetect.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGr_ObjDetect.cpp"/>
+    <originFiles name="BackGrRemoval.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BackGrRemoval.cpp"/>
+    <originFiles name="BackGrRemoval.h" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BackGrRemoval.h"/>
+    <originFiles name="RGB2HSV.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/RGB2HSV.cpp"/>
+    <originFiles name="RGB2HSV.h" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/RGB2HSV.h"/>
+    <originFiles name="obj_detect.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/obj_detect.cpp"/>
+    <originFiles name="parameters.h" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/parameters.h"/>
+  </source>
+  <testbench>
+    <originFiles name="10_320x240.bmp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/10_320x240.bmp"/>
+    <originFiles name="13_320x240.bmp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/13_320x240.bmp"/>
+    <originFiles name="tb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

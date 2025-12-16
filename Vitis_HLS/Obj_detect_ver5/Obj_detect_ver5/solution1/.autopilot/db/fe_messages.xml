@@ -1,0 +1,156 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:340:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="is_green_rgb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:347:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="uf_find" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:361:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="uf_union" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5/Obj_detect_ver5/solution1/csynth.tcl:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hls_object_green_classification" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:376:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:377:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:379:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=obj_x bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:380:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=obj_y bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:381:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=obj_is_green bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:382:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=object_count bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:384:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:395:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=imgR type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:396:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=imgG type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:397:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=imgB type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:401:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=edge_mask type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:405:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=label_map type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=parent type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:418:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=min_x type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:419:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=max_x type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:420:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=min_y type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:421:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=max_y type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:422:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=center_is_green type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:427:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:437:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=linebuf complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:439:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=window complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:462:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:504:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:508:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:527:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=3" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:539:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=3" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:552:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=is_external type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:556:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:564:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:579:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:593:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:604:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="obj_detect.cpp:627:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_object_green_classification" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="obj_detect.cpp:362:19" msg_body="Inlining function 'uf_find(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;)' into 'uf_union(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)'">
+        <args Callee="uf_find(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;)" Callee-DebugLoc="File obj_detect.cpp Line 345 Column 0" Caller="uf_union(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File obj_detect.cpp Line 359 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="obj_detect.cpp:363:19" msg_body="Inlining function 'uf_find(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;)' into 'uf_union(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)'">
+        <args Callee="uf_find(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;)" Callee-DebugLoc="File obj_detect.cpp Line 345 Column 0" Caller="uf_union(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Caller-DebugLoc="File obj_detect.cpp Line 359 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="obj_detect.cpp:583:31" msg_body="Inlining function 'is_green_rgb(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)' into 'hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="is_green_rgb(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)" Callee-DebugLoc="File obj_detect.cpp Line 339 Column 0" Caller="hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File obj_detect.cpp Line 374 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="obj_detect.cpp:521:29" msg_body="Inlining function 'uf_find(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;)' into 'hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="uf_find(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;)" Callee-DebugLoc="File obj_detect.cpp Line 345 Column 0" Caller="hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File obj_detect.cpp Line 374 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="obj_detect.cpp:492:42" msg_body="Inlining function 'uf_union(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)' into 'hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="uf_union(ap_uint&lt;16&gt;*, ap_uint&lt;16&gt;, ap_uint&lt;16&gt;)" Callee-DebugLoc="File obj_detect.cpp Line 359 Column 0" Caller="hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File obj_detect.cpp Line 374 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="obj_detect.cpp:506:25" msg_body="Loop 'Pass1_5_inner1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Pass1_5_inner1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="obj_detect.cpp:507:26" msg_body="Loop 'Pass1_5_inner2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Pass1_5_inner2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="obj_detect.cpp:374:0" msg_body="Unrolling loop 'Pass1_5_inner1' (obj_detect.cpp:506:25) in function 'hls_object_green_classification' completely with a factor of 3">
+        <args Factor="3" LoopLoc="obj_detect.cpp:506:25" LoopName="Pass1_5_inner1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="obj_detect.cpp:374:0" msg_body="Unrolling loop 'Pass1_5_inner2' (obj_detect.cpp:507:26) in function 'hls_object_green_classification' completely with a factor of 3">
+        <args Factor="3" LoopLoc="obj_detect.cpp:507:26" LoopName="Pass1_5_inner2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="obj_detect.cpp:374:0" msg_body="Unrolling loop 'Shift_window' (obj_detect.cpp:460:17) in function 'hls_object_green_classification' completely with a factor of 3">
+        <args Factor="3" LoopLoc="obj_detect.cpp:460:17" LoopName="Shift_window"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="obj_detect.cpp:435:0" msg_body="Applying array_partition to '_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE7linebuf': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE7linebuf"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="obj_detect.cpp:504:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)::edge_mask' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)::edge_mask" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="obj_detect.cpp:504:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=2' for array 'hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)::edge_mask' due to pipeline pragma">
+        <args Dim="2" Factor="3" Mode="cyclic" Name="hls_object_green_classification(hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, short*, short*, ap_uint&lt;1&gt;*, ap_uint&lt;16&gt;&amp;)::edge_mask" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="obj_detect.cpp:399:0" msg_body="Applying array_partition to '_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 3 on dimension 2.">
+        <args Dim="islist 1 2" Factor="islist 3 3" Mode="islist Cyclic Cyclic" UOName="_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

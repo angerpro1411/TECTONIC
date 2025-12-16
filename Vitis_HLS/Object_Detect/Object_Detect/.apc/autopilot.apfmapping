@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="obj_detect.cpp" path="/home/dell3561-49/Vitis_HLS_folder/Object_Detect/obj_detect.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="output.bmp" path="/home/dell3561-49/Vitis_HLS_folder/Object_Detect/output.bmp"/>
+    <originFiles name="tb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/Object_Detect/tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

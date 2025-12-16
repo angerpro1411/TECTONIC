@@ -1,0 +1,110 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-60-generic) on Wed Jul 02 18:04:23 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/NewMeanShift'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project MeanShiftFilter 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter'.
+INFO: [HLS 200-1510] Running: set_top MeanShiftFiltering 
+INFO: [HLS 200-1510] Running: add_files ../MeanShiftFilter/MeanShiftFilter.cpp 
+INFO: [HLS 200-10] Adding design file '../MeanShiftFilter/MeanShiftFilter.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../MeanShiftFilter/MeanShiftFilter.h 
+INFO: [HLS 200-10] Adding design file '../MeanShiftFilter/MeanShiftFilter.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../MeanShiftFilter/MeanShifFilter_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file '../MeanShiftFilter/MeanShifFilter_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb pepper.bmp 
+INFO: [HLS 200-10] Adding test bench file 'pepper.bmp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.5ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.5 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 189.543 MB.
+INFO: [HLS 200-10] Analyzing design file '../MeanShiftFilter/MeanShiftFilter.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.05 seconds. CPU system time: 0.27 seconds. Elapsed time: 3.32 seconds; current allocated memory: 190.027 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 12,013 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,428 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 309 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 294 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_27_1' is marked as complete unroll implied by the pipeline pragma (../MeanShiftFilter/MeanShiftFilter.cpp:27:34)
+INFO: [HLS 214-291] Loop 'y_window' is marked as complete unroll implied by the pipeline pragma (../MeanShiftFilter/MeanShiftFilter.cpp:33:21)
+INFO: [HLS 214-291] Loop 'x_window' is marked as complete unroll implied by the pipeline pragma (../MeanShiftFilter/MeanShiftFilter.cpp:35:22)
+INFO: [HLS 214-241] Aggregating scalar variable 'out' with compact=bit mode in 24-bits (../MeanShiftFilter/MeanShiftFilter.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'in' with compact=bit mode in 24-bits (../MeanShiftFilter/MeanShiftFilter.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.93 seconds. CPU system time: 0.19 seconds. Elapsed time: 6.79 seconds; current allocated memory: 192.246 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 192.246 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 192.934 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-120] ../MeanShiftFilter/MeanShiftFilter.cpp:54: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 193.133 MB.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_loop' (../MeanShiftFilter/MeanShiftFilter.cpp:17) in function 'MeanShiftFiltering' for pipelining.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_27_1' (../MeanShiftFilter/MeanShiftFilter.cpp:27) in function 'MeanShiftFiltering' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'y_window' (../MeanShiftFilter/MeanShiftFilter.cpp:33) in function 'MeanShiftFiltering' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'x_window' (../MeanShiftFilter/MeanShiftFilter.cpp:35) in function 'MeanShiftFiltering' completely: variable loop bound.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../MeanShiftFilter/MeanShiftFilter.cpp:8:14) to (../MeanShiftFilter/MeanShiftFilter.cpp:35:22) in function 'MeanShiftFiltering'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../MeanShiftFilter/MeanShiftFilter.cpp:10:32) to (../MeanShiftFilter/MeanShiftFilter.cpp:17:4) in function 'MeanShiftFiltering'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 216.496 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'Col_loop' (../MeanShiftFilter/MeanShiftFilter.cpp:17:4) in function 'MeanShiftFiltering' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'Row_loop' (../MeanShiftFilter/MeanShiftFilter.cpp:15:3) in function 'MeanShiftFiltering'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 207.148 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'MeanShiftFiltering' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MeanShiftFiltering' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln70) to 3 in order to utilize available DSP registers.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'Row_loop_Col_loop': contains subloop(s) that are not unrolled or flattened.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.39 seconds; current allocated memory: 210.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 210.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MeanShiftFiltering' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/in_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/out_r' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/ImageWidth' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/ImageHeight' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/sd' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/cd' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MeanShiftFiltering/max_iter' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'MeanShiftFiltering' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_24ns_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_24s_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_17s_24ns_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_17s_24s_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_16s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_17s_17s_24_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_8ns_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32s_32ns_16_36_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MeanShiftFiltering'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 211.078 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 218.441 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 227.695 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for MeanShiftFiltering.
+INFO: [VLOG 209-307] Generating Verilog RTL for MeanShiftFiltering.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.51 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.42 seconds. CPU system time: 0.53 seconds. Elapsed time: 11.61 seconds; current allocated memory: 38.270 MB.
+INFO: [HLS 200-112] Total CPU user time: 7.31 seconds. Total CPU system time: 0.66 seconds. Total elapsed time: 12.49 seconds; peak allocated memory: 227.812 MB.

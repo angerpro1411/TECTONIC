@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../main_tb.cpp in debug mode
+../../../../main_tb.cpp: In function ‘int main()’:
+../../../../main_tb.cpp:67:21: error: cannot convert ‘unsigned char (*)[640][3]’ to ‘unsigned char (*)[320][3]’
+     objectDetection(test_image, results, num_objects);
+                     ^~~~~~~~~~
+In file included from ../../../../main_tb.cpp:3:
+../../../../object_detection.h:18:36: note:   initializing argument 1 of ‘void objectDetection(unsigned char (*)[320][3], DetectionResult*, int&)’
+ void objectDetection(unsigned char input_image[240][320][3],
+                      ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [csim.mk:79: obj/main_tb.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

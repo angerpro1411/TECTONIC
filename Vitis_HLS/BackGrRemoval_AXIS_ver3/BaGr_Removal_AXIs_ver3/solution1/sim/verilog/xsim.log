@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Oct 23 10:51:56 2025
+# Process ID: 106545
+# Current directory: /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/BackGrRemovalStream/xsim_script.tcl}
+# Log file: /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/sim/verilog/xsim.log
+# Journal file: /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/sim/verilog/xsim.jou
+# Running On: dell3561-49, OS: Linux, CPU Frequency: 800.000 MHz, CPU Physical cores: 6, Host memory: 16483 MB
+#-----------------------------------------------------------
+source xsim.dir/BackGrRemovalStream/xsim_script.tcl
+# xsim {BackGrRemovalStream} -autoloadwcfg -tclbatch {BackGrRemovalStream.tcl}
+Time resolution is 1 ps
+source BackGrRemovalStream.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "768685000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 768745 ns : File "/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/sim/verilog/BackGrRemovalStream.autotb.v" Line 455
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 23 10:52:03 2025...

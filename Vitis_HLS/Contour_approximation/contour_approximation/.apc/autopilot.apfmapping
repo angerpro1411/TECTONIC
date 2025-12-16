@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="contour_approximation.c" path="/home/dell3561-49/C_PROGRAM/3.ContourApproximation/contour_approximation.c"/>
+    <originFiles name="contour_approximation.h" path="/home/dell3561-49/C_PROGRAM/3.ContourApproximation/contour_approximation.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_contour.c" path="/home/dell3561-49/C_PROGRAM/3.ContourApproximation/tb_contour.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

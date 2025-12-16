@@ -1,4 +1,4 @@
-1 warning and 1 error generated.
+2 warnings and 2 errors generated.
 Error while processing /home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp.
-clang-tidy applied 7 of 7 suggested fixes.
-Suppressed 1 warnings (1 with check filters).
+clang-tidy applied 6 of 6 suggested fixes.
+Suppressed 2 warnings (2 with check filters).

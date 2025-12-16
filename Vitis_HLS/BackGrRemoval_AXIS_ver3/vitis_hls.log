@@ -1,0 +1,53 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-88-generic) on Mon Dec 15 18:17:56 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project BaGr_Removal_AXIs_ver3 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3'.
+INFO: [HLS 200-1510] Running: set_top BackGrRemovalStream 
+INFO: [HLS 200-1510] Running: add_files BackGrRemoval.cpp 
+INFO: [HLS 200-10] Adding design file 'BackGrRemoval.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files BackGrRemoval.h 
+INFO: [HLS 200-10] Adding design file 'BackGrRemoval.h' to the project
+INFO: [HLS 200-1510] Running: add_files RGB2HSV.cpp 
+INFO: [HLS 200-10] Adding design file 'RGB2HSV.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files RGB2HSV.h 
+INFO: [HLS 200-10] Adding design file 'RGB2HSV.h' to the project
+INFO: [HLS 200-1510] Running: add_files parameters.h 
+INFO: [HLS 200-10] Adding design file 'parameters.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 10_320x240.bmp 
+INFO: [HLS 200-10] Adding test bench file '10_320x240.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 13_320x240.bmp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '13_320x240.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3 -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./BaGr_Removal_AXIs_ver3/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name BackGrRemovalStream BackGrRemovalStream 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb.cpp in debug mode
+   Generating csim.exe
+✅ Background removal completed. Output saved as: output_BackGrRemoval.bmp
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 76800
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2.11 seconds. CPU system time: 0.2 seconds. Elapsed time: 2.39 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 3.16 seconds. Total CPU system time: 0.34 seconds. Total elapsed time: 3.46 seconds; peak allocated memory: 189.922 MB.

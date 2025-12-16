@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-21T11:22:26.714+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-21T10:53:22.500+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:03.269+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_537_3_VITIS_LOOP_538_4' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:02.710+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_525_1_VITIS_LOOP_526_2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:02.645+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_351_2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:02.598+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'Pass1_5_inner0' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:02.329+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_351_2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:02.277+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_351_2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:04:02.204+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln351', obj_detect.cpp:351->obj_detect.cpp:521)) in the first pipeline iteration (II = 1 cycles).&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-878.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:59.694+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln349', obj_detect.cpp:349->obj_detect.cpp:521)) in the first pipeline iteration (II = 1 cycles).&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-878.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:59.638+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln351', obj_detect.cpp:351->obj_detect.cpp:363->obj_detect.cpp:492)) in the first pipeline iteration (II = 1 cycles).&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-878.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:59.198+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln349', obj_detect.cpp:349->obj_detect.cpp:363->obj_detect.cpp:492)) in the first pipeline iteration (II = 1 cycles).&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-878.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:59.145+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln351', obj_detect.cpp:351->obj_detect.cpp:362->obj_detect.cpp:492)) in the first pipeline iteration (II = 1 cycles).&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-878.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:59.087+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln349', obj_detect.cpp:349->obj_detect.cpp:362->obj_detect.cpp:492)) in the first pipeline iteration (II = 1 cycles).&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-878.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:59.036+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'PASS_3_5_2_out' (obj_detect.cpp:561:18) in function 'hls_object_green_classification' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.618+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'PASS2' (obj_detect.cpp:518:9) in function 'hls_object_green_classification' more than one sub loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.615+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'PASS_1' (obj_detect.cpp:445:10) in function 'hls_object_green_classification' more than one sub loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html" projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.613+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 63) &lt; AVE (= 32767)) for loop 'VITIS_LOOP_626_6' (obj_detect.cpp:626:28) in function 'hls_object_green_classification'." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.610+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 63 for loop 'VITIS_LOOP_626_6' (obj_detect.cpp:626:28) in function 'hls_object_green_classification'." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.603+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'PASS_3_5_2_out' (obj_detect.cpp:561:26) in function 'hls_object_green_classification'." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.532+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'PASS_3_5_2_in' (obj_detect.cpp:563:30) in function 'hls_object_green_classification'." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.386+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'PASS_3_5_1' (obj_detect.cpp:555:22) in function 'hls_object_green_classification'." projectName="Obj_detect_ver5" solutionName="solution1" date="2025-11-17T11:03:58.384+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

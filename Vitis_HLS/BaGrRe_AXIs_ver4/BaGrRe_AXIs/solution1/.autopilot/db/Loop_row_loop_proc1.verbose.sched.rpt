@@ -1,0 +1,674 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_row_loop_proc1'
+================================================================
+* Date:           Wed Oct 29 16:03:32 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        BaGrRe_AXIs
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.074 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    76825|    76825|  0.768 ms|  0.768 ms|  76825|  76825|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- row_loop_col_loop  |    76823|    76823|        25|          1|          1|  76800|  yes(flp)|
+        +---------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 1
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 25
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 25, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.07>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%x = alloca i32 1"   --->   Operation 28 'alloca' 'x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%y_1 = alloca i32 1"   --->   Operation 29 'alloca' 'y_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 30 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, void @empty_6"   --->   Operation 31 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i24 %input_stream_V_data_V, i3 %input_stream_V_keep_V, i3 %input_stream_V_strb_V, i1 %input_stream_V_user_V, i1 %input_stream_V_last_V, i1 %input_stream_V_id_V, i1 %input_stream_V_dest_V, void @empty_3"   --->   Operation 32 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %output_stream_V_dest_V, i1 %output_stream_V_id_V, i1 %output_stream_V_last_V, i1 %output_stream_V_user_V, i3 %output_stream_V_strb_V, i3 %output_stream_V_keep_V, i24 %output_stream_V_data_V, void @empty, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %input_stream_V_dest_V, i1 %input_stream_V_id_V, i1 %input_stream_V_last_V, i1 %input_stream_V_user_V, i3 %input_stream_V_strb_V, i3 %input_stream_V_keep_V, i24 %input_stream_V_data_V, void @empty, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (1.58ns)   --->   "%store_ln0 = store i17 0, i17 %indvar_flatten"   --->   Operation 35 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body12.i.i"   --->   Operation 38 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i17 %indvar_flatten" [BackGrRemoval.cpp:23]   --->   Operation 39 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (2.10ns)   --->   "%icmp_ln23 = icmp_eq  i17 %indvar_flatten_load, i17 76800" [BackGrRemoval.cpp:23]   --->   Operation 40 'icmp' 'icmp_ln23' <Predicate = true> <Delay = 2.10> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (2.10ns)   --->   "%add_ln23 = add i17 %indvar_flatten_load, i17 1" [BackGrRemoval.cpp:23]   --->   Operation 41 'add' 'add_ln23' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln23 = br i1 %icmp_ln23, void %for.inc155.i.i, void %BackGrRemovalStream_for.cond.i.exit.exitStub" [BackGrRemoval.cpp:23]   --->   Operation 42 'br' 'br_ln23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%empty = read i34 @_ssdm_op_Read.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %input_stream_V_data_V, i3 %input_stream_V_keep_V, i3 %input_stream_V_strb_V, i1 %input_stream_V_user_V, i1 %input_stream_V_last_V, i1 %input_stream_V_id_V, i1 %input_stream_V_dest_V" [BackGrRemoval.cpp:27]   --->   Operation 43 'read' 'empty' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%pixel_in_data_V = extractvalue i34 %empty" [BackGrRemoval.cpp:27]   --->   Operation 44 'extractvalue' 'pixel_in_data_V' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%px_r = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %pixel_in_data_V, i32 16, i32 23" [BackGrRemoval.cpp:29]   --->   Operation 45 'partselect' 'px_r' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%px_g = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %pixel_in_data_V, i32 8, i32 15" [BackGrRemoval.cpp:30]   --->   Operation 46 'partselect' 'px_g' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%px_b = trunc i24 %pixel_in_data_V" [BackGrRemoval.cpp:31]   --->   Operation 47 'trunc' 'px_b' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (1.91ns)   --->   "%icmp_ln9 = icmp_ult  i8 %px_g, i8 %px_b" [RGB2HSV.cpp:9->BackGrRemoval.cpp:36]   --->   Operation 48 'icmp' 'icmp_ln9' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node max_1)   --->   "%xor_ln9 = xor i1 %icmp_ln9, i1 1" [RGB2HSV.cpp:9->BackGrRemoval.cpp:36]   --->   Operation 49 'xor' 'xor_ln9' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (1.24ns) (out node of the LUT)   --->   "%max_1 = select i1 %xor_ln9, i8 %px_g, i8 %px_b" [RGB2HSV.cpp:9->BackGrRemoval.cpp:36]   --->   Operation 50 'select' 'max_1' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (1.91ns)   --->   "%icmp_ln10 = icmp_ult  i8 %px_r, i8 %max_1" [RGB2HSV.cpp:10->BackGrRemoval.cpp:36]   --->   Operation 51 'icmp' 'icmp_ln10' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (1.91ns)   --->   "%icmp_ln17 = icmp_ult  i8 %px_b, i8 %px_g" [RGB2HSV.cpp:17->BackGrRemoval.cpp:37]   --->   Operation 52 'icmp' 'icmp_ln17' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node min_1)   --->   "%xor_ln17 = xor i1 %icmp_ln17, i1 1" [RGB2HSV.cpp:17->BackGrRemoval.cpp:37]   --->   Operation 53 'xor' 'xor_ln17' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (1.24ns) (out node of the LUT)   --->   "%min_1 = select i1 %xor_ln17, i8 %px_g, i8 %px_b" [RGB2HSV.cpp:17->BackGrRemoval.cpp:37]   --->   Operation 54 'select' 'min_1' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (1.91ns)   --->   "%icmp_ln18 = icmp_ult  i8 %min_1, i8 %px_r" [RGB2HSV.cpp:18->BackGrRemoval.cpp:37]   --->   Operation 55 'icmp' 'icmp_ln18' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (1.58ns)   --->   "%store_ln24 = store i17 %add_ln23, i17 %indvar_flatten" [BackGrRemoval.cpp:24]   --->   Operation 56 'store' 'store_ln24' <Predicate = (!icmp_ln23)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 7.06>
+ST_2 : Operation 37 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 0, i9 %x"   --->   Operation 37 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%x_load = load i9 %x" [BackGrRemoval.cpp:24]   --->   Operation 57 'load' 'x_load' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (1.82ns)   --->   "%icmp_ln24 = icmp_eq  i9 %x_load, i9 320" [BackGrRemoval.cpp:24]   --->   Operation 58 'icmp' 'icmp_ln24' <Predicate = (!icmp_ln23)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.96ns)   --->   "%select_ln23 = select i1 %icmp_ln24, i9 0, i9 %x_load" [BackGrRemoval.cpp:23]   --->   Operation 59 'select' 'select_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln24 = zext i9 %select_ln23" [BackGrRemoval.cpp:24]   --->   Operation 60 'zext' 'zext_ln24' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (1.24ns)   --->   "%max_3 = select i1 %icmp_ln10, i8 %max_1, i8 %px_r" [RGB2HSV.cpp:10->BackGrRemoval.cpp:36]   --->   Operation 61 'select' 'max_3' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node min_3)   --->   "%xor_ln18 = xor i1 %icmp_ln18, i1 1" [RGB2HSV.cpp:18->BackGrRemoval.cpp:37]   --->   Operation 62 'xor' 'xor_ln18' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (1.24ns) (out node of the LUT)   --->   "%min_3 = select i1 %xor_ln18, i8 %px_r, i8 %min_1" [RGB2HSV.cpp:18->BackGrRemoval.cpp:37]   --->   Operation 63 'select' 'min_3' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (1.91ns)   --->   "%diff = sub i8 %max_3, i8 %min_3" [BackGrRemoval.cpp:38]   --->   Operation 64 'sub' 'diff' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (1.91ns)   --->   "%icmp_ln41 = icmp_eq  i8 %max_3, i8 %min_3" [BackGrRemoval.cpp:41]   --->   Operation 65 'icmp' 'icmp_ln41' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (1.82ns)   --->   "%br_ln41 = br i1 %icmp_ln41, void %if.else.i.i, void %if.end75.i.i_ifconv" [BackGrRemoval.cpp:41]   --->   Operation 66 'br' 'br_ln41' <Predicate = (!icmp_ln23)> <Delay = 1.82>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i7 @_ssdm_op_PartSelect.i7.i8.i32.i32, i8 %diff, i32 1, i32 7" [BackGrRemoval.cpp:43]   --->   Operation 67 'partselect' 'lshr_ln' <Predicate = (!icmp_ln23 & !icmp_ln41)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln42 = br i1 %icmp_ln10, void %if.then35.i.i, void %if.else45.i.i" [BackGrRemoval.cpp:42]   --->   Operation 68 'br' 'br_ln42' <Predicate = (!icmp_ln23 & !icmp_ln41)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln42_1 = zext i8 %px_b" [BackGrRemoval.cpp:42]   --->   Operation 69 'zext' 'zext_ln42_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln42 = zext i8 %px_g" [BackGrRemoval.cpp:42]   --->   Operation 70 'zext' 'zext_ln42' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (1.91ns)   --->   "%sub_ln42 = sub i9 %zext_ln42, i9 %zext_ln42_1" [BackGrRemoval.cpp:42]   --->   Operation 71 'sub' 'sub_ln42' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i9.i6, i9 %sub_ln42, i6 0" [BackGrRemoval.cpp:42]   --->   Operation 72 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%sext_ln42 = sext i15 %shl_ln" [BackGrRemoval.cpp:42]   --->   Operation 73 'sext' 'sext_ln42' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%shl_ln42_1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %sub_ln42, i2 0" [BackGrRemoval.cpp:42]   --->   Operation 74 'bitconcatenate' 'shl_ln42_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln42_1 = sext i11 %shl_ln42_1" [BackGrRemoval.cpp:42]   --->   Operation 75 'sext' 'sext_ln42_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln42_1 = sub i16 %sext_ln42, i16 %sext_ln42_1" [BackGrRemoval.cpp:42]   --->   Operation 76 'sub' 'sub_ln42_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln42_2 = zext i7 %lshr_ln" [BackGrRemoval.cpp:42]   --->   Operation 77 'zext' 'zext_ln42_2' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%add_ln42 = add i16 %sub_ln42_1, i16 %zext_ln42_2" [BackGrRemoval.cpp:42]   --->   Operation 78 'add' 'add_ln42' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 79 [1/1] (1.91ns)   --->   "%icmp_ln43 = icmp_eq  i8 %max_3, i8 %px_g" [BackGrRemoval.cpp:43]   --->   Operation 79 'icmp' 'icmp_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %if.else61.i.i, void %if.then48.i.i" [BackGrRemoval.cpp:43]   --->   Operation 80 'br' 'br_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln44_1 = zext i8 %px_g" [BackGrRemoval.cpp:44]   --->   Operation 81 'zext' 'zext_ln44_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i8 %px_r" [BackGrRemoval.cpp:44]   --->   Operation 82 'zext' 'zext_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (1.91ns)   --->   "%sub_ln44 = sub i9 %zext_ln44, i9 %zext_ln44_1" [BackGrRemoval.cpp:44]   --->   Operation 83 'sub' 'sub_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i9.i6, i9 %sub_ln44, i6 0" [BackGrRemoval.cpp:44]   --->   Operation 84 'bitconcatenate' 'shl_ln2' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%sext_ln44 = sext i15 %shl_ln2" [BackGrRemoval.cpp:44]   --->   Operation 85 'sext' 'sext_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%shl_ln44_1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %sub_ln44, i2 0" [BackGrRemoval.cpp:44]   --->   Operation 86 'bitconcatenate' 'shl_ln44_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%sext_ln44_1 = sext i11 %shl_ln44_1" [BackGrRemoval.cpp:44]   --->   Operation 87 'sext' 'sext_ln44_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln44_1 = sub i16 %sext_ln44, i16 %sext_ln44_1" [BackGrRemoval.cpp:44]   --->   Operation 88 'sub' 'sub_ln44_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%zext_ln44_2 = zext i7 %lshr_ln" [BackGrRemoval.cpp:44]   --->   Operation 89 'zext' 'zext_ln44_2' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%add_ln44 = add i16 %sub_ln44_1, i16 %zext_ln44_2" [BackGrRemoval.cpp:44]   --->   Operation 90 'add' 'add_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i8 %px_r" [BackGrRemoval.cpp:43]   --->   Operation 91 'zext' 'zext_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln43_1 = zext i8 %px_b" [BackGrRemoval.cpp:43]   --->   Operation 92 'zext' 'zext_ln43_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (1.91ns)   --->   "%sub_ln43 = sub i9 %zext_ln43_1, i9 %zext_ln43" [BackGrRemoval.cpp:43]   --->   Operation 93 'sub' 'sub_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i9.i6, i9 %sub_ln43, i6 0" [BackGrRemoval.cpp:43]   --->   Operation 94 'bitconcatenate' 'shl_ln1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%sext_ln43 = sext i15 %shl_ln1" [BackGrRemoval.cpp:43]   --->   Operation 95 'sext' 'sext_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%shl_ln43_1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %sub_ln43, i2 0" [BackGrRemoval.cpp:43]   --->   Operation 96 'bitconcatenate' 'shl_ln43_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%sext_ln43_1 = sext i11 %shl_ln43_1" [BackGrRemoval.cpp:43]   --->   Operation 97 'sext' 'sext_ln43_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln43_1 = sub i16 %sext_ln43, i16 %sext_ln43_1" [BackGrRemoval.cpp:43]   --->   Operation 98 'sub' 'sub_ln43_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln43_2 = zext i7 %lshr_ln" [BackGrRemoval.cpp:43]   --->   Operation 99 'zext' 'zext_ln43_2' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%add_ln43 = add i16 %sub_ln43_1, i16 %zext_ln43_2" [BackGrRemoval.cpp:43]   --->   Operation 100 'add' 'add_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_8_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_8, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 101 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_8_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_7_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_7, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 102 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_7_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_6_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_6, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 103 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_6_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_5_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_5, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 104 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_5_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_4_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_4, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 105 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_4_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_3_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_3, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 106 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_3_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_2_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_2, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 107 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_2_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_1_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_1, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 108 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_1_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_addr = getelementptr i8 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 109 'getelementptr' 'BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_addr' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_1 = getelementptr i8 %p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E, i64 0, i64 %zext_ln24" [BackGrRemoval.cpp:53]   --->   Operation 110 'getelementptr' 'p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_1' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 111 [2/2] (3.25ns)   --->   "%h_neighbor_1 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_7_addr" [BackGrRemoval.cpp:53]   --->   Operation 111 'load' 'h_neighbor_1' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 112 [2/2] (3.25ns)   --->   "%h_neighbor_2 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_6_addr" [BackGrRemoval.cpp:53]   --->   Operation 112 'load' 'h_neighbor_2' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 113 [2/2] (3.25ns)   --->   "%h_neighbor_3 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_5_addr" [BackGrRemoval.cpp:53]   --->   Operation 113 'load' 'h_neighbor_3' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 114 [2/2] (3.25ns)   --->   "%h_neighbor_4 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_4_addr" [BackGrRemoval.cpp:53]   --->   Operation 114 'load' 'h_neighbor_4' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 115 [2/2] (3.25ns)   --->   "%h_neighbor_5 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_3_addr" [BackGrRemoval.cpp:53]   --->   Operation 115 'load' 'h_neighbor_5' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 116 [2/2] (3.25ns)   --->   "%h_neighbor_6 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_2_addr" [BackGrRemoval.cpp:53]   --->   Operation 116 'load' 'h_neighbor_6' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 117 [2/2] (3.25ns)   --->   "%h_neighbor_7 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_1_addr" [BackGrRemoval.cpp:53]   --->   Operation 117 'load' 'h_neighbor_7' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 118 [2/2] (3.25ns)   --->   "%h_neighbor_8 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_addr" [BackGrRemoval.cpp:53]   --->   Operation 118 'load' 'h_neighbor_8' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 119 [2/2] (3.25ns)   --->   "%h_neighbor_9 = load i9 %p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_1" [BackGrRemoval.cpp:53]   --->   Operation 119 'load' 'h_neighbor_9' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_2 : Operation 120 [1/1] (1.82ns)   --->   "%icmp_ln86 = icmp_eq  i9 %select_ln23, i9 319" [BackGrRemoval.cpp:86]   --->   Operation 120 'icmp' 'icmp_ln86' <Predicate = (!icmp_ln23)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 121 [1/1] (1.82ns)   --->   "%add_ln24 = add i9 %select_ln23, i9 1" [BackGrRemoval.cpp:24]   --->   Operation 121 'add' 'add_ln24' <Predicate = (!icmp_ln23)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 122 [1/1] (1.58ns)   --->   "%store_ln24 = store i9 %add_ln24, i9 %x" [BackGrRemoval.cpp:24]   --->   Operation 122 'store' 'store_ln24' <Predicate = (!icmp_ln23)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 6.50>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%zext_ln42_3 = zext i8 %diff" [BackGrRemoval.cpp:42]   --->   Operation 123 'zext' 'zext_ln42_3' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_3 : Operation 124 [20/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 124 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%zext_ln44_3 = zext i8 %diff" [BackGrRemoval.cpp:44]   --->   Operation 125 'zext' 'zext_ln44_3' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 126 [20/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 126 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%zext_ln43_3 = zext i8 %diff" [BackGrRemoval.cpp:43]   --->   Operation 127 'zext' 'zext_ln43_3' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_3 : Operation 128 [20/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 128 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 129 [2/2] (3.25ns)   --->   "%h_neighbor = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_8_addr" [BackGrRemoval.cpp:53]   --->   Operation 129 'load' 'h_neighbor' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 130 [1/2] (3.25ns)   --->   "%h_neighbor_1 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_7_addr" [BackGrRemoval.cpp:53]   --->   Operation 130 'load' 'h_neighbor_1' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 131 [1/2] (3.25ns)   --->   "%h_neighbor_2 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_6_addr" [BackGrRemoval.cpp:53]   --->   Operation 131 'load' 'h_neighbor_2' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 132 [1/2] (3.25ns)   --->   "%h_neighbor_3 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_5_addr" [BackGrRemoval.cpp:53]   --->   Operation 132 'load' 'h_neighbor_3' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 133 [1/2] (3.25ns)   --->   "%h_neighbor_4 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_4_addr" [BackGrRemoval.cpp:53]   --->   Operation 133 'load' 'h_neighbor_4' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 134 [1/2] (3.25ns)   --->   "%h_neighbor_5 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_3_addr" [BackGrRemoval.cpp:53]   --->   Operation 134 'load' 'h_neighbor_5' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 135 [1/2] (3.25ns)   --->   "%h_neighbor_6 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_2_addr" [BackGrRemoval.cpp:53]   --->   Operation 135 'load' 'h_neighbor_6' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 136 [1/2] (3.25ns)   --->   "%h_neighbor_7 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_1_addr" [BackGrRemoval.cpp:53]   --->   Operation 136 'load' 'h_neighbor_7' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 137 [1/2] (3.25ns)   --->   "%h_neighbor_8 = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_addr" [BackGrRemoval.cpp:53]   --->   Operation 137 'load' 'h_neighbor_8' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 138 [1/2] (3.25ns)   --->   "%h_neighbor_9 = load i9 %p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_1" [BackGrRemoval.cpp:53]   --->   Operation 138 'load' 'h_neighbor_9' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 139 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_1, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_8_addr" [BackGrRemoval.cpp:53]   --->   Operation 139 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 140 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_2, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_7_addr" [BackGrRemoval.cpp:53]   --->   Operation 140 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 141 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_3, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_6_addr" [BackGrRemoval.cpp:53]   --->   Operation 141 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 142 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_4, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_5_addr" [BackGrRemoval.cpp:53]   --->   Operation 142 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 143 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_5, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_4_addr" [BackGrRemoval.cpp:53]   --->   Operation 143 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 144 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_6, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_3_addr" [BackGrRemoval.cpp:53]   --->   Operation 144 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 145 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_7, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_2_addr" [BackGrRemoval.cpp:53]   --->   Operation 145 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 146 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_8, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_1_addr" [BackGrRemoval.cpp:53]   --->   Operation 146 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 147 [1/1] (3.25ns)   --->   "%store_ln53 = store i8 %h_neighbor_9, i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_addr" [BackGrRemoval.cpp:53]   --->   Operation 147 'store' 'store_ln53' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_3 : Operation 148 [1/1] (1.91ns)   --->   "%icmp_ln68 = icmp_ult  i8 %h_neighbor_1, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 148 'icmp' 'icmp_ln68' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 149 [1/1] (1.91ns)   --->   "%icmp_ln68_1 = icmp_ult  i8 %h_neighbor_2, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 149 'icmp' 'icmp_ln68_1' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 150 [1/1] (1.91ns)   --->   "%icmp_ln68_2 = icmp_ult  i8 %h_neighbor_3, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 150 'icmp' 'icmp_ln68_2' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 151 [1/1] (1.91ns)   --->   "%icmp_ln68_3 = icmp_ult  i8 %h_neighbor_4, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 151 'icmp' 'icmp_ln68_3' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 152 [1/1] (1.91ns)   --->   "%icmp_ln68_4 = icmp_ult  i8 %h_neighbor_5, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 152 'icmp' 'icmp_ln68_4' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 153 [1/1] (1.91ns)   --->   "%icmp_ln68_5 = icmp_ult  i8 %h_neighbor_6, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 153 'icmp' 'icmp_ln68_5' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 154 [1/1] (1.91ns)   --->   "%icmp_ln68_6 = icmp_ult  i8 %h_neighbor_7, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 154 'icmp' 'icmp_ln68_6' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 155 [1/1] (1.91ns)   --->   "%icmp_ln68_7 = icmp_ult  i8 %h_neighbor_8, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 155 'icmp' 'icmp_ln68_7' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 156 [1/1] (1.91ns)   --->   "%icmp_ln68_8 = icmp_ult  i8 %h_neighbor_9, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 156 'icmp' 'icmp_ln68_8' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.64>
+ST_4 : Operation 36 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %y_1"   --->   Operation 36 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "%y_3 = load i8 %y_1"   --->   Operation 157 'load' 'y_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln23 = zext i8 %y_3" [BackGrRemoval.cpp:23]   --->   Operation 158 'zext' 'zext_ln23' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 159 [1/1] (1.91ns)   --->   "%cmp_i_i31_i_i = icmp_eq  i8 %y_3, i8 239"   --->   Operation 159 'icmp' 'cmp_i_i31_i_i' <Predicate = (!icmp_ln24)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 160 [1/1] (1.91ns)   --->   "%yy = add i9 %zext_ln23, i9 507" [BackGrRemoval.cpp:23]   --->   Operation 160 'add' 'yy' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 161 [1/1] (1.82ns)   --->   "%empty_50 = icmp_ugt  i9 %yy, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 161 'icmp' 'empty_50' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 162 [1/1] (1.91ns)   --->   "%yy_1 = add i9 %zext_ln23, i9 508" [BackGrRemoval.cpp:23]   --->   Operation 162 'add' 'yy_1' <Predicate = (!icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 163 [1/1] (1.82ns)   --->   "%empty_51 = icmp_ugt  i9 %yy_1, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 163 'icmp' 'empty_51' <Predicate = (!icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 164 [1/1] (1.91ns)   --->   "%yy_2 = add i9 %zext_ln23, i9 509" [BackGrRemoval.cpp:23]   --->   Operation 164 'add' 'yy_2' <Predicate = (!icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 165 [1/1] (1.82ns)   --->   "%empty_52 = icmp_ugt  i9 %yy_2, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 165 'icmp' 'empty_52' <Predicate = (!icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 166 [1/1] (1.91ns)   --->   "%yy_3 = add i9 %zext_ln23, i9 510" [BackGrRemoval.cpp:23]   --->   Operation 166 'add' 'yy_3' <Predicate = (!icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 167 [1/1] (1.82ns)   --->   "%empty_53 = icmp_ugt  i9 %yy_3, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 167 'icmp' 'empty_53' <Predicate = (!icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 168 [1/1] (1.91ns)   --->   "%yy_4 = add i9 %zext_ln23, i9 511" [BackGrRemoval.cpp:23]   --->   Operation 168 'add' 'yy_4' <Predicate = (!icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 169 [1/1] (1.82ns)   --->   "%empty_54 = icmp_ugt  i9 %yy_4, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 169 'icmp' 'empty_54' <Predicate = (!icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 170 [1/1] (1.91ns)   --->   "%y = add i8 %y_3, i8 1"   --->   Operation 170 'add' 'y' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 171 [1/1] (1.91ns)   --->   "%empty_55 = icmp_ugt  i8 %y, i8 239"   --->   Operation 171 'icmp' 'empty_55' <Predicate = (!icmp_ln24)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 172 [1/1] (1.91ns)   --->   "%yy_7 = add i8 %y_3, i8 2"   --->   Operation 172 'add' 'yy_7' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 173 [1/1] (1.91ns)   --->   "%empty_56 = icmp_ugt  i8 %yy_7, i8 239"   --->   Operation 173 'icmp' 'empty_56' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 174 [1/1] (1.91ns)   --->   "%yy_8 = add i8 %y_3, i8 3"   --->   Operation 174 'add' 'yy_8' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 175 [1/1] (1.91ns)   --->   "%empty_57 = icmp_ugt  i8 %yy_8, i8 239"   --->   Operation 175 'icmp' 'empty_57' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 176 [1/1] (1.91ns)   --->   "%yy_9 = add i8 %y_3, i8 4"   --->   Operation 176 'add' 'yy_9' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 177 [1/1] (1.91ns)   --->   "%empty_58 = icmp_ugt  i8 %yy_9, i8 239"   --->   Operation 177 'icmp' 'empty_58' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 178 [1/1] (1.91ns)   --->   "%yy_10 = add i8 %y_3, i8 5"   --->   Operation 178 'add' 'yy_10' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 179 [1/1] (1.91ns)   --->   "%empty_59 = icmp_ugt  i8 %yy_10, i8 239"   --->   Operation 179 'icmp' 'empty_59' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 180 [1/1] (0.99ns)   --->   "%total = select i1 %empty_50, i2 1, i2 2" [BackGrRemoval.cpp:23]   --->   Operation 180 'select' 'total' <Predicate = (!icmp_ln24)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 181 [1/1] (0.00ns)   --->   "%zext_ln23_1 = zext i8 %y" [BackGrRemoval.cpp:23]   --->   Operation 181 'zext' 'zext_ln23_1' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_4 : Operation 182 [1/1] (1.91ns)   --->   "%cmp_i_i31_i_i_mid1 = icmp_eq  i8 %y, i8 239"   --->   Operation 182 'icmp' 'cmp_i_i31_i_i_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 183 [1/1] (0.99ns)   --->   "%select_ln23_1 = select i1 %icmp_ln24, i1 %cmp_i_i31_i_i_mid1, i1 %cmp_i_i31_i_i" [BackGrRemoval.cpp:23]   --->   Operation 183 'select' 'select_ln23_1' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 184 [1/1] (1.91ns)   --->   "%yy_mid1 = add i9 %zext_ln23_1, i9 507" [BackGrRemoval.cpp:23]   --->   Operation 184 'add' 'yy_mid1' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 185 [1/1] (1.82ns)   --->   "%p_mid1 = icmp_ugt  i9 %yy_mid1, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 185 'icmp' 'p_mid1' <Predicate = (!icmp_ln23)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 186 [1/1] (1.91ns)   --->   "%yy_1_mid1 = add i9 %zext_ln23_1, i9 508" [BackGrRemoval.cpp:23]   --->   Operation 186 'add' 'yy_1_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 187 [1/1] (1.82ns)   --->   "%p_mid111 = icmp_ugt  i9 %yy_1_mid1, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 187 'icmp' 'p_mid111' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 188 [1/1] (0.99ns)   --->   "%select_ln23_2 = select i1 %icmp_ln24, i1 %p_mid111, i1 %empty_51" [BackGrRemoval.cpp:23]   --->   Operation 188 'select' 'select_ln23_2' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 189 [1/1] (1.91ns)   --->   "%yy_2_mid1 = add i9 %zext_ln23_1, i9 509" [BackGrRemoval.cpp:23]   --->   Operation 189 'add' 'yy_2_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 190 [1/1] (1.82ns)   --->   "%p_mid113 = icmp_ugt  i9 %yy_2_mid1, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 190 'icmp' 'p_mid113' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 191 [1/1] (0.99ns)   --->   "%select_ln23_3 = select i1 %icmp_ln24, i1 %p_mid113, i1 %empty_52" [BackGrRemoval.cpp:23]   --->   Operation 191 'select' 'select_ln23_3' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 192 [1/1] (1.91ns)   --->   "%yy_3_mid1 = add i9 %zext_ln23_1, i9 510" [BackGrRemoval.cpp:23]   --->   Operation 192 'add' 'yy_3_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 193 [1/1] (1.82ns)   --->   "%p_mid115 = icmp_ugt  i9 %yy_3_mid1, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 193 'icmp' 'p_mid115' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 194 [1/1] (0.99ns)   --->   "%select_ln23_4 = select i1 %icmp_ln24, i1 %p_mid115, i1 %empty_53" [BackGrRemoval.cpp:23]   --->   Operation 194 'select' 'select_ln23_4' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 195 [1/1] (1.91ns)   --->   "%yy_4_mid1 = add i9 %zext_ln23_1, i9 511" [BackGrRemoval.cpp:23]   --->   Operation 195 'add' 'yy_4_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 196 [1/1] (1.82ns)   --->   "%p_mid117 = icmp_ugt  i9 %yy_4_mid1, i9 239" [BackGrRemoval.cpp:23]   --->   Operation 196 'icmp' 'p_mid117' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 197 [1/1] (0.99ns)   --->   "%select_ln23_5 = select i1 %icmp_ln24, i1 %p_mid117, i1 %empty_54" [BackGrRemoval.cpp:23]   --->   Operation 197 'select' 'select_ln23_5' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 198 [1/1] (0.99ns)   --->   "%select_ln23_6 = select i1 %icmp_ln24, i1 %empty_56, i1 %empty_55" [BackGrRemoval.cpp:23]   --->   Operation 198 'select' 'select_ln23_6' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 199 [1/1] (0.99ns)   --->   "%select_ln23_7 = select i1 %icmp_ln24, i1 %empty_57, i1 %empty_56" [BackGrRemoval.cpp:23]   --->   Operation 199 'select' 'select_ln23_7' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 200 [1/1] (0.99ns)   --->   "%select_ln23_8 = select i1 %icmp_ln24, i1 %empty_58, i1 %empty_57" [BackGrRemoval.cpp:23]   --->   Operation 200 'select' 'select_ln23_8' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 201 [1/1] (0.99ns)   --->   "%select_ln23_9 = select i1 %icmp_ln24, i1 %empty_59, i1 %empty_58" [BackGrRemoval.cpp:23]   --->   Operation 201 'select' 'select_ln23_9' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 202 [1/1] (1.91ns)   --->   "%yy_10_mid1 = add i8 %y_3, i8 6"   --->   Operation 202 'add' 'yy_10_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 203 [1/1] (1.91ns)   --->   "%p_mid127 = icmp_ugt  i8 %yy_10_mid1, i8 239"   --->   Operation 203 'icmp' 'p_mid127' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 204 [1/1] (0.99ns)   --->   "%select_ln23_10 = select i1 %icmp_ln24, i1 %p_mid127, i1 %empty_59" [BackGrRemoval.cpp:23]   --->   Operation 204 'select' 'select_ln23_10' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 205 [1/1] (0.00ns) (grouped into LUT with out node xor_ln23)   --->   "%select_ln23_11 = select i1 %icmp_ln24, i1 %p_mid1, i1 %empty_50" [BackGrRemoval.cpp:23]   --->   Operation 205 'select' 'select_ln23_11' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 206 [1/1] (0.99ns) (out node of the LUT)   --->   "%xor_ln23 = xor i1 %select_ln23_11, i1 1" [BackGrRemoval.cpp:23]   --->   Operation 206 'xor' 'xor_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 207 [1/1] (0.00ns) (grouped into LUT with out node select_ln23_12)   --->   "%total_1_mid1 = select i1 %p_mid1, i2 1, i2 2" [BackGrRemoval.cpp:23]   --->   Operation 207 'select' 'total_1_mid1' <Predicate = (!icmp_ln23 & icmp_ln24)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 208 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln23_12 = select i1 %icmp_ln24, i2 %total_1_mid1, i2 %total" [BackGrRemoval.cpp:23]   --->   Operation 208 'select' 'select_ln23_12' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 209 [1/1] (1.24ns)   --->   "%select_ln23_13 = select i1 %icmp_ln24, i8 %y, i8 %y_3" [BackGrRemoval.cpp:23]   --->   Operation 209 'select' 'select_ln23_13' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 210 [19/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 210 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 211 [19/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 211 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 212 [19/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 212 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 213 [1/2] (3.25ns)   --->   "%h_neighbor = load i9 %BackGrRemovalStream_stream_stream_axis_ap_uint_1ul_1ul_1ul_0_h_line_8_addr" [BackGrRemoval.cpp:53]   --->   Operation 213 'load' 'h_neighbor' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_4 : Operation 214 [1/1] (1.91ns)   --->   "%count = icmp_ult  i8 %h_neighbor, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 214 'icmp' 'count' <Predicate = (!icmp_ln23)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 215 [1/1] (0.97ns)   --->   "%pixel_out_last = and i1 %select_ln23_1, i1 %icmp_ln86" [BackGrRemoval.cpp:86]   --->   Operation 215 'and' 'pixel_out_last' <Predicate = (!icmp_ln23)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 216 [1/1] (1.58ns)   --->   "%store_ln24 = store i8 %select_ln23_13, i8 %y_1" [BackGrRemoval.cpp:24]   --->   Operation 216 'store' 'store_ln24' <Predicate = (!icmp_ln23)> <Delay = 1.58>
+
+State 5 <SV = 4> <Delay = 7.07>
+ST_5 : Operation 217 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @row_loop_col_loop_str"   --->   Operation 217 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_5 : Operation 218 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 76800, i64 76800, i64 76800"   --->   Operation 218 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_5 : Operation 219 [1/1] (0.00ns)   --->   "%zext_ln23_2 = zext i1 %xor_ln23" [BackGrRemoval.cpp:23]   --->   Operation 219 'zext' 'zext_ln23_2' <Predicate = (!icmp_ln23 & select_ln23_2)> <Delay = 0.00>
+ST_5 : Operation 220 [1/1] (0.00ns)   --->   "%specpipeline_ln25 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_5" [BackGrRemoval.cpp:25]   --->   Operation 220 'specpipeline' 'specpipeline_ln25' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_5 : Operation 221 [1/1] (0.00ns)   --->   "%specloopname_ln24 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [BackGrRemoval.cpp:24]   --->   Operation 221 'specloopname' 'specloopname_ln24' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_5 : Operation 222 [18/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 222 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 223 [18/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 223 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 224 [18/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 224 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 225 [1/1] (0.97ns)   --->   "%count_1 = and i1 %count, i1 %xor_ln23" [BackGrRemoval.cpp:64]   --->   Operation 225 'and' 'count_1' <Predicate = (!icmp_ln23)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 226 [1/1] (0.00ns)   --->   "%zext_ln59 = zext i1 %count_1" [BackGrRemoval.cpp:59]   --->   Operation 226 'zext' 'zext_ln59' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_5 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node count_4)   --->   "%count_2 = select i1 %count_1, i2 2, i2 1" [BackGrRemoval.cpp:68]   --->   Operation 227 'select' 'count_2' <Predicate = (!icmp_ln23 & !select_ln23_2 & icmp_ln68)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node count_4)   --->   "%count_3 = select i1 %icmp_ln68, i2 %count_2, i2 %zext_ln59" [BackGrRemoval.cpp:68]   --->   Operation 228 'select' 'count_3' <Predicate = (!icmp_ln23 & !select_ln23_2)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 229 [1/1] (0.99ns) (out node of the LUT)   --->   "%count_4 = select i1 %select_ln23_2, i2 %zext_ln59, i2 %count_3" [BackGrRemoval.cpp:23]   --->   Operation 229 'select' 'count_4' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 230 [1/1] (0.99ns)   --->   "%total_1 = select i1 %select_ln23_2, i2 %zext_ln23_2, i2 %select_ln23_12" [BackGrRemoval.cpp:23]   --->   Operation 230 'select' 'total_1' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 231 [1/1] (1.56ns)   --->   "%total_2 = add i2 %total_1, i2 1" [BackGrRemoval.cpp:67]   --->   Operation 231 'add' 'total_2' <Predicate = (!icmp_ln23 & !select_ln23_3)> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 232 [1/1] (1.56ns)   --->   "%count_5 = add i2 %count_4, i2 1" [BackGrRemoval.cpp:68]   --->   Operation 232 'add' 'count_5' <Predicate = (!icmp_ln23 & !select_ln23_3 & icmp_ln68_1)> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node count_7)   --->   "%count_6 = select i1 %icmp_ln68_1, i2 %count_5, i2 %count_4" [BackGrRemoval.cpp:68]   --->   Operation 233 'select' 'count_6' <Predicate = (!icmp_ln23 & !select_ln23_3)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 234 [1/1] (0.99ns) (out node of the LUT)   --->   "%count_7 = select i1 %select_ln23_3, i2 %count_4, i2 %count_6" [BackGrRemoval.cpp:23]   --->   Operation 234 'select' 'count_7' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 235 [1/1] (0.99ns)   --->   "%total_3 = select i1 %select_ln23_3, i2 %total_1, i2 %total_2" [BackGrRemoval.cpp:23]   --->   Operation 235 'select' 'total_3' <Predicate = (!icmp_ln23)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 236 [1/1] (0.00ns)   --->   "%zext_ln59_2 = zext i2 %count_7" [BackGrRemoval.cpp:59]   --->   Operation 236 'zext' 'zext_ln59_2' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_5 : Operation 237 [1/1] (1.56ns)   --->   "%count_8 = add i3 %zext_ln59_2, i3 1" [BackGrRemoval.cpp:68]   --->   Operation 237 'add' 'count_8' <Predicate = (!icmp_ln23 & !select_ln23_4 & icmp_ln68_2)> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 238 [1/1] (0.00ns) (grouped into LUT with out node count_10)   --->   "%count_9 = select i1 %icmp_ln68_2, i3 %count_8, i3 %zext_ln59_2" [BackGrRemoval.cpp:68]   --->   Operation 238 'select' 'count_9' <Predicate = (!icmp_ln23 & !select_ln23_4)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 239 [1/1] (0.98ns) (out node of the LUT)   --->   "%count_10 = select i1 %select_ln23_4, i3 %zext_ln59_2, i3 %count_9" [BackGrRemoval.cpp:23]   --->   Operation 239 'select' 'count_10' <Predicate = (!icmp_ln23)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 5.84>
+ST_6 : Operation 240 [17/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 240 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 241 [17/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 241 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 242 [17/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 242 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 243 [1/1] (0.00ns)   --->   "%zext_ln59_1 = zext i2 %total_3" [BackGrRemoval.cpp:59]   --->   Operation 243 'zext' 'zext_ln59_1' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_6 : Operation 244 [1/1] (1.56ns)   --->   "%total_4 = add i3 %zext_ln59_1, i3 1" [BackGrRemoval.cpp:67]   --->   Operation 244 'add' 'total_4' <Predicate = (!icmp_ln23 & !select_ln23_4)> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 245 [1/1] (0.98ns)   --->   "%total_5 = select i1 %select_ln23_4, i3 %zext_ln59_1, i3 %total_4" [BackGrRemoval.cpp:23]   --->   Operation 245 'select' 'total_5' <Predicate = (!icmp_ln23)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 246 [1/1] (1.65ns)   --->   "%total_6 = add i3 %total_5, i3 1" [BackGrRemoval.cpp:67]   --->   Operation 246 'add' 'total_6' <Predicate = (!icmp_ln23 & !select_ln23_5)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 247 [1/1] (1.65ns)   --->   "%count_11 = add i3 %count_10, i3 1" [BackGrRemoval.cpp:68]   --->   Operation 247 'add' 'count_11' <Predicate = (!icmp_ln23 & !select_ln23_5 & icmp_ln68_3)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 248 [1/1] (0.00ns) (grouped into LUT with out node count_13)   --->   "%count_12 = select i1 %icmp_ln68_3, i3 %count_11, i3 %count_10" [BackGrRemoval.cpp:68]   --->   Operation 248 'select' 'count_12' <Predicate = (!icmp_ln23 & !select_ln23_5)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 249 [1/1] (0.98ns) (out node of the LUT)   --->   "%count_13 = select i1 %select_ln23_5, i3 %count_10, i3 %count_12" [BackGrRemoval.cpp:23]   --->   Operation 249 'select' 'count_13' <Predicate = (!icmp_ln23)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 250 [1/1] (0.00ns) (grouped into LUT with out node total_8)   --->   "%total_7 = select i1 %select_ln23_5, i3 %total_5, i3 %total_6" [BackGrRemoval.cpp:23]   --->   Operation 250 'select' 'total_7' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 251 [1/1] (1.65ns)   --->   "%count_14 = add i3 %count_13, i3 1" [BackGrRemoval.cpp:68]   --->   Operation 251 'add' 'count_14' <Predicate = (!icmp_ln23 & icmp_ln68_4)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 252 [1/1] (0.98ns)   --->   "%count_15 = select i1 %icmp_ln68_4, i3 %count_14, i3 %count_13" [BackGrRemoval.cpp:68]   --->   Operation 252 'select' 'count_15' <Predicate = (!icmp_ln23)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 253 [1/1] (0.00ns) (grouped into LUT with out node total_8)   --->   "%total_11_v_cast_cast = select i1 %select_ln23_6, i3 1, i3 2" [BackGrRemoval.cpp:23]   --->   Operation 253 'select' 'total_11_v_cast_cast' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 254 [1/1] (1.65ns) (out node of the LUT)   --->   "%total_8 = add i3 %total_7, i3 %total_11_v_cast_cast" [BackGrRemoval.cpp:23]   --->   Operation 254 'add' 'total_8' <Predicate = (!icmp_ln23)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 5.43>
+ST_7 : Operation 255 [16/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 255 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 256 [16/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 256 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 257 [16/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 257 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 258 [1/1] (1.65ns)   --->   "%count_16 = add i3 %count_15, i3 1" [BackGrRemoval.cpp:68]   --->   Operation 258 'add' 'count_16' <Predicate = (!icmp_ln23 & !select_ln23_6 & icmp_ln68_5)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 259 [1/1] (0.00ns) (grouped into LUT with out node count_18)   --->   "%count_17 = select i1 %icmp_ln68_5, i3 %count_16, i3 %count_15" [BackGrRemoval.cpp:68]   --->   Operation 259 'select' 'count_17' <Predicate = (!icmp_ln23 & !select_ln23_6)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 260 [1/1] (0.98ns) (out node of the LUT)   --->   "%count_18 = select i1 %select_ln23_6, i3 %count_15, i3 %count_17" [BackGrRemoval.cpp:23]   --->   Operation 260 'select' 'count_18' <Predicate = (!icmp_ln23)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 261 [1/1] (0.00ns)   --->   "%zext_ln59_3 = zext i3 %total_8" [BackGrRemoval.cpp:59]   --->   Operation 261 'zext' 'zext_ln59_3' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_7 : Operation 262 [1/1] (0.00ns)   --->   "%zext_ln59_4 = zext i3 %count_18" [BackGrRemoval.cpp:59]   --->   Operation 262 'zext' 'zext_ln59_4' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_7 : Operation 263 [1/1] (1.65ns)   --->   "%total_9 = add i4 %zext_ln59_3, i4 1" [BackGrRemoval.cpp:67]   --->   Operation 263 'add' 'total_9' <Predicate = (!icmp_ln23 & !select_ln23_7)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 264 [1/1] (1.65ns)   --->   "%count_19 = add i4 %zext_ln59_4, i4 1" [BackGrRemoval.cpp:68]   --->   Operation 264 'add' 'count_19' <Predicate = (!icmp_ln23 & !select_ln23_7 & icmp_ln68_6)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 265 [1/1] (0.00ns) (grouped into LUT with out node count_21)   --->   "%count_20 = select i1 %icmp_ln68_6, i4 %count_19, i4 %zext_ln59_4" [BackGrRemoval.cpp:68]   --->   Operation 265 'select' 'count_20' <Predicate = (!icmp_ln23 & !select_ln23_7)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 266 [1/1] (1.02ns) (out node of the LUT)   --->   "%count_21 = select i1 %select_ln23_7, i4 %zext_ln59_4, i4 %count_20" [BackGrRemoval.cpp:23]   --->   Operation 266 'select' 'count_21' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 267 [1/1] (1.02ns)   --->   "%total_10 = select i1 %select_ln23_7, i4 %zext_ln59_3, i4 %total_9" [BackGrRemoval.cpp:23]   --->   Operation 267 'select' 'total_10' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 268 [1/1] (1.73ns)   --->   "%total_11 = add i4 %total_10, i4 1" [BackGrRemoval.cpp:67]   --->   Operation 268 'add' 'total_11' <Predicate = (!icmp_ln23 & !select_ln23_8)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 269 [1/1] (1.02ns)   --->   "%total_12 = select i1 %select_ln23_8, i4 %total_10, i4 %total_11" [BackGrRemoval.cpp:23]   --->   Operation 269 'select' 'total_12' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 5.51>
+ST_8 : Operation 270 [15/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 270 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 271 [15/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 271 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 272 [15/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 272 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 273 [1/1] (1.73ns)   --->   "%count_22 = add i4 %count_21, i4 1" [BackGrRemoval.cpp:68]   --->   Operation 273 'add' 'count_22' <Predicate = (!icmp_ln23 & !select_ln23_8 & icmp_ln68_7)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 274 [1/1] (0.00ns) (grouped into LUT with out node count_24)   --->   "%count_23 = select i1 %icmp_ln68_7, i4 %count_22, i4 %count_21" [BackGrRemoval.cpp:68]   --->   Operation 274 'select' 'count_23' <Predicate = (!icmp_ln23 & !select_ln23_8)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 275 [1/1] (1.02ns) (out node of the LUT)   --->   "%count_24 = select i1 %select_ln23_8, i4 %count_21, i4 %count_23" [BackGrRemoval.cpp:23]   --->   Operation 275 'select' 'count_24' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 276 [1/1] (1.73ns)   --->   "%total_13 = add i4 %total_12, i4 1" [BackGrRemoval.cpp:67]   --->   Operation 276 'add' 'total_13' <Predicate = (!icmp_ln23 & !select_ln23_9)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 277 [1/1] (1.73ns)   --->   "%count_25 = add i4 %count_24, i4 1" [BackGrRemoval.cpp:68]   --->   Operation 277 'add' 'count_25' <Predicate = (!icmp_ln23 & !select_ln23_9 & icmp_ln68_8)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 278 [1/1] (0.00ns) (grouped into LUT with out node count_27)   --->   "%count_26 = select i1 %icmp_ln68_8, i4 %count_25, i4 %count_24" [BackGrRemoval.cpp:68]   --->   Operation 278 'select' 'count_26' <Predicate = (!icmp_ln23 & !select_ln23_9)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 279 [1/1] (1.02ns) (out node of the LUT)   --->   "%count_27 = select i1 %select_ln23_9, i4 %count_24, i4 %count_26" [BackGrRemoval.cpp:23]   --->   Operation 279 'select' 'count_27' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 280 [1/1] (1.02ns)   --->   "%total_14 = select i1 %select_ln23_9, i4 %total_12, i4 %total_13" [BackGrRemoval.cpp:23]   --->   Operation 280 'select' 'total_14' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.86>
+ST_9 : Operation 281 [14/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 281 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 282 [14/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 282 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 283 [14/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 283 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.86>
+ST_10 : Operation 284 [13/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 284 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 285 [13/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 285 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 286 [13/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 286 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.86>
+ST_11 : Operation 287 [12/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 287 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 288 [12/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 288 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 289 [12/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 289 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.86>
+ST_12 : Operation 290 [11/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 290 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 291 [11/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 291 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 292 [11/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 292 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 3.86>
+ST_13 : Operation 293 [10/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 293 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 294 [10/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 294 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 295 [10/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 295 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.86>
+ST_14 : Operation 296 [9/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 296 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 297 [9/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 297 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 298 [9/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 298 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 3.86>
+ST_15 : Operation 299 [8/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 299 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 300 [8/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 300 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 301 [8/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 301 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.86>
+ST_16 : Operation 302 [7/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 302 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 303 [7/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 303 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 304 [7/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 304 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 3.86>
+ST_17 : Operation 305 [6/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 305 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 306 [6/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 306 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 307 [6/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 307 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 3.86>
+ST_18 : Operation 308 [5/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 308 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 309 [5/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 309 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 310 [5/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 310 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 3.86>
+ST_19 : Operation 311 [4/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 311 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 312 [4/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 312 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 313 [4/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 313 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 3.86>
+ST_20 : Operation 314 [3/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 314 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 315 [3/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 315 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 316 [3/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 316 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 3.86>
+ST_21 : Operation 317 [2/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 317 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 318 [2/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 318 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 319 [2/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 319 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 5.94>
+ST_22 : Operation 320 [1/20] (3.86ns)   --->   "%tmp = sdiv i16 %add_ln42, i16 %zext_ln42_3" [BackGrRemoval.cpp:42]   --->   Operation 320 'sdiv' 'tmp' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 321 [1/1] (0.00ns)   --->   "%sext_ln39 = sext i16 %tmp" [BackGrRemoval.cpp:39]   --->   Operation 321 'sext' 'sext_ln39' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 0.00>
+ST_22 : Operation 322 [1/1] (1.82ns)   --->   "%br_ln42 = br void %if.end75.i.i_ifconv" [BackGrRemoval.cpp:42]   --->   Operation 322 'br' 'br_ln42' <Predicate = (!icmp_ln23 & !icmp_ln41 & !icmp_ln10)> <Delay = 1.82>
+ST_22 : Operation 323 [1/20] (3.86ns)   --->   "%sdiv_ln44 = sdiv i16 %add_ln44, i16 %zext_ln44_3" [BackGrRemoval.cpp:44]   --->   Operation 323 'sdiv' 'sdiv_ln44' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 324 [1/1] (0.00ns)   --->   "%sext_ln44_2 = sext i16 %sdiv_ln44" [BackGrRemoval.cpp:44]   --->   Operation 324 'sext' 'sext_ln44_2' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 0.00>
+ST_22 : Operation 325 [1/1] (2.07ns)   --->   "%tmp_2 = add i17 %sext_ln44_2, i17 240" [BackGrRemoval.cpp:44]   --->   Operation 325 'add' 'tmp_2' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 326 [1/20] (3.86ns)   --->   "%sdiv_ln43 = sdiv i16 %add_ln43, i16 %zext_ln43_3" [BackGrRemoval.cpp:43]   --->   Operation 326 'sdiv' 'sdiv_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 3.86> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 19> <II = 1> <Delay = 3.86> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 327 [1/1] (0.00ns)   --->   "%sext_ln43_2 = sext i16 %sdiv_ln43" [BackGrRemoval.cpp:43]   --->   Operation 327 'sext' 'sext_ln43_2' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 0.00>
+ST_22 : Operation 328 [1/1] (2.07ns)   --->   "%tmp_1 = add i17 %sext_ln43_2, i17 120" [BackGrRemoval.cpp:43]   --->   Operation 328 'add' 'tmp_1' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.81>
+ST_23 : Operation 329 [1/1] (1.82ns)   --->   "%br_ln0 = br void %if.end75.i.i_ifconv"   --->   Operation 329 'br' 'br_ln0' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & !icmp_ln43)> <Delay = 1.82>
+ST_23 : Operation 330 [1/1] (1.82ns)   --->   "%br_ln43 = br void %if.end75.i.i_ifconv" [BackGrRemoval.cpp:43]   --->   Operation 330 'br' 'br_ln43' <Predicate = (!icmp_ln23 & !icmp_ln41 & icmp_ln10 & icmp_ln43)> <Delay = 1.82>
+ST_23 : Operation 331 [1/1] (0.00ns)   --->   "%tmp_3 = phi i17 %sext_ln39, void %if.then35.i.i, i17 %tmp_1, void %if.then48.i.i, i17 %tmp_2, void %if.else61.i.i, i17 0, void %for.inc155.i.i"   --->   Operation 331 'phi' 'tmp_3' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_23 : Operation 332 [1/1] (0.00ns)   --->   "%trunc_ln39 = trunc i17 %tmp_3" [BackGrRemoval.cpp:39]   --->   Operation 332 'trunc' 'trunc_ln39' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_23 : Operation 333 [1/1] (0.00ns)   --->   "%tmp_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %tmp_3, i32 16" [BackGrRemoval.cpp:46]   --->   Operation 333 'bitselect' 'tmp_6' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_23 : Operation 334 [1/1] (1.82ns)   --->   "%add_ln46 = add i9 %trunc_ln39, i9 360" [BackGrRemoval.cpp:46]   --->   Operation 334 'add' 'add_ln46' <Predicate = (!icmp_ln23)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 335 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i9.i32.i32, i9 %add_ln46, i32 1, i32 8" [BackGrRemoval.cpp:47]   --->   Operation 335 'partselect' 'tmp_4' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_23 : Operation 336 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i8 @_ssdm_op_PartSelect.i8.i17.i32.i32, i17 %tmp_3, i32 1, i32 8" [BackGrRemoval.cpp:47]   --->   Operation 336 'partselect' 'tmp_5' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_23 : Operation 337 [1/1] (1.24ns)   --->   "%h_neighbor_10 = select i1 %tmp_6, i8 %tmp_4, i8 %tmp_5" [BackGrRemoval.cpp:46]   --->   Operation 337 'select' 'h_neighbor_10' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 338 [1/1] (1.91ns)   --->   "%icmp_ln68_9 = icmp_ult  i8 %h_neighbor_10, i8 60" [BackGrRemoval.cpp:68]   --->   Operation 338 'icmp' 'icmp_ln68_9' <Predicate = (!icmp_ln23 & !select_ln23_10)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 339 [1/1] (1.73ns)   --->   "%count_28 = add i4 %count_27, i4 1" [BackGrRemoval.cpp:68]   --->   Operation 339 'add' 'count_28' <Predicate = (!icmp_ln23 & !select_ln23_10)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 6.01>
+ST_24 : Operation 340 [1/1] (3.25ns)   --->   "%store_ln55 = store i8 %h_neighbor_10, i9 %p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_1" [BackGrRemoval.cpp:55]   --->   Operation 340 'store' 'store_ln55' <Predicate = (!icmp_ln23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_24 : Operation 341 [1/1] (1.73ns)   --->   "%total_15 = add i4 %total_14, i4 1" [BackGrRemoval.cpp:67]   --->   Operation 341 'add' 'total_15' <Predicate = (!icmp_ln23 & !select_ln23_10)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 342 [1/1] (0.00ns) (grouped into LUT with out node count_30)   --->   "%count_29 = select i1 %icmp_ln68_9, i4 %count_28, i4 %count_27" [BackGrRemoval.cpp:68]   --->   Operation 342 'select' 'count_29' <Predicate = (!icmp_ln23 & !select_ln23_10)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 343 [1/1] (1.02ns) (out node of the LUT)   --->   "%count_30 = select i1 %select_ln23_10, i4 %count_27, i4 %count_29" [BackGrRemoval.cpp:23]   --->   Operation 343 'select' 'count_30' <Predicate = (!icmp_ln23)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 344 [1/1] (0.00ns)   --->   "%shl_ln3 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %count_30, i3 0" [BackGrRemoval.cpp:72]   --->   Operation 344 'bitconcatenate' 'shl_ln3' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_24 : Operation 345 [1/1] (0.00ns)   --->   "%shl_ln72_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i4.i1, i4 %count_30, i1 0" [BackGrRemoval.cpp:72]   --->   Operation 345 'bitconcatenate' 'shl_ln72_1' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_24 : Operation 346 [1/1] (0.00ns)   --->   "%zext_ln72 = zext i5 %shl_ln72_1" [BackGrRemoval.cpp:72]   --->   Operation 346 'zext' 'zext_ln72' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_24 : Operation 347 [1/1] (1.87ns)   --->   "%add_ln72 = add i7 %shl_ln3, i7 %zext_ln72" [BackGrRemoval.cpp:72]   --->   Operation 347 'add' 'add_ln72' <Predicate = (!icmp_ln23)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 348 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln72)   --->   "%empty_60 = select i1 %select_ln23_10, i4 %total_14, i4 %total_15" [BackGrRemoval.cpp:23]   --->   Operation 348 'select' 'empty_60' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 349 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln72)   --->   "%shl_ln72_2 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %empty_60, i3 0" [BackGrRemoval.cpp:72]   --->   Operation 349 'bitconcatenate' 'shl_ln72_2' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_24 : Operation 350 [1/1] (1.87ns) (out node of the LUT)   --->   "%icmp_ln72 = icmp_ult  i7 %add_ln72, i7 %shl_ln72_2" [BackGrRemoval.cpp:72]   --->   Operation 350 'icmp' 'icmp_ln72' <Predicate = (!icmp_ln23)> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 351 [1/1] (1.24ns)   --->   "%out_px_g_1 = select i1 %icmp_ln72, i8 %px_g, i8 255" [BackGrRemoval.cpp:72]   --->   Operation 351 'select' 'out_px_g_1' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 352 [1/1] (1.24ns)   --->   "%out_px_r_1 = select i1 %icmp_ln72, i8 %px_r, i8 255" [BackGrRemoval.cpp:72]   --->   Operation 352 'select' 'out_px_r_1' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 353 [1/1] (1.24ns)   --->   "%out_px_b_1 = select i1 %icmp_ln72, i8 %px_b, i8 255" [BackGrRemoval.cpp:72]   --->   Operation 353 'select' 'out_px_b_1' <Predicate = (!icmp_ln23)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 354 [1/1] (0.00ns)   --->   "%pixel_out_data = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i8.i8.i8, i8 %out_px_r_1, i8 %out_px_g_1, i8 %out_px_b_1" [BackGrRemoval.cpp:82]   --->   Operation 354 'bitconcatenate' 'pixel_out_data' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_24 : Operation 355 [2/2] (0.00ns)   --->   "%write_ln89 = write void @_ssdm_op_Write.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, i24 %pixel_out_data, i3 7, i3 7, i1 0, i1 %pixel_out_last, i1 0, i1 0" [BackGrRemoval.cpp:89]   --->   Operation 355 'write' 'write_ln89' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 356 [1/2] (0.00ns)   --->   "%write_ln89 = write void @_ssdm_op_Write.axis.volatile.i24P0A.i3P0A.i3P0A.i1P0A.i1P0A.i1P0A.i1P0A, i24 %output_stream_V_data_V, i3 %output_stream_V_keep_V, i3 %output_stream_V_strb_V, i1 %output_stream_V_user_V, i1 %output_stream_V_last_V, i1 %output_stream_V_id_V, i1 %output_stream_V_dest_V, i24 %pixel_out_data, i3 7, i3 7, i1 0, i1 %pixel_out_last, i1 0, i1 0" [BackGrRemoval.cpp:89]   --->   Operation 356 'write' 'write_ln89' <Predicate = (!icmp_ln23)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_25 : Operation 357 [1/1] (0.00ns)   --->   "%br_ln24 = br void %for.body12.i.i" [BackGrRemoval.cpp:24]   --->   Operation 357 'br' 'br_ln24' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_25 : Operation 358 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 358 'ret' 'ret_ln0' <Predicate = (icmp_ln23)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.078ns
+The critical path consists of the following:
+	axis read operation ('empty', BackGrRemoval.cpp:27) on port 'input_stream_V_data_V' (BackGrRemoval.cpp:27) [104]  (0.000 ns)
+	'icmp' operation ('icmp_ln9', RGB2HSV.cpp:9->BackGrRemoval.cpp:36) [109]  (1.915 ns)
+	'xor' operation ('xor_ln9', RGB2HSV.cpp:9->BackGrRemoval.cpp:36) [110]  (0.000 ns)
+	'select' operation ('max', RGB2HSV.cpp:9->BackGrRemoval.cpp:36) [111]  (1.248 ns)
+	'icmp' operation ('icmp_ln10', RGB2HSV.cpp:10->BackGrRemoval.cpp:36) [112]  (1.915 ns)
+
+ <State 2>: 7.066ns
+The critical path consists of the following:
+	'select' operation ('max', RGB2HSV.cpp:10->BackGrRemoval.cpp:36) [113]  (1.248 ns)
+	'sub' operation ('diff', BackGrRemoval.cpp:38) [120]  (1.915 ns)
+	'add' operation ('add_ln44', BackGrRemoval.cpp:44) [154]  (3.903 ns)
+
+ <State 3>: 6.508ns
+The critical path consists of the following:
+	'load' operation ('h_neighbor', BackGrRemoval.cpp:53) on array 'BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_7' [195]  (3.254 ns)
+	'store' operation ('store_ln53', BackGrRemoval.cpp:53) of variable 'h_neighbor', BackGrRemoval.cpp:53 on array 'BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_8' [204]  (3.254 ns)
+
+ <State 4>: 6.646ns
+The critical path consists of the following:
+	'load' operation ('y') on local variable 'y' [37]  (0.000 ns)
+	'add' operation ('y') [51]  (1.915 ns)
+	'add' operation ('yy_1_mid1', BackGrRemoval.cpp:23) [76]  (1.915 ns)
+	'icmp' operation ('p_mid111', BackGrRemoval.cpp:23) [77]  (1.823 ns)
+	'select' operation ('select_ln23_2', BackGrRemoval.cpp:23) [78]  (0.993 ns)
+
+ <State 5>: 7.074ns
+The critical path consists of the following:
+	'and' operation ('count', BackGrRemoval.cpp:64) [215]  (0.978 ns)
+	'select' operation ('count', BackGrRemoval.cpp:23) [220]  (0.993 ns)
+	'add' operation ('count', BackGrRemoval.cpp:68) [224]  (1.565 ns)
+	'select' operation ('count', BackGrRemoval.cpp:68) [225]  (0.000 ns)
+	'select' operation ('count', BackGrRemoval.cpp:23) [226]  (0.993 ns)
+	'add' operation ('count', BackGrRemoval.cpp:68) [232]  (1.565 ns)
+	'select' operation ('count', BackGrRemoval.cpp:68) [233]  (0.000 ns)
+	'select' operation ('count', BackGrRemoval.cpp:23) [234]  (0.980 ns)
+
+ <State 6>: 5.845ns
+The critical path consists of the following:
+	'add' operation ('total', BackGrRemoval.cpp:67) [230]  (1.565 ns)
+	'select' operation ('total', BackGrRemoval.cpp:23) [235]  (0.980 ns)
+	'add' operation ('total', BackGrRemoval.cpp:67) [236]  (1.650 ns)
+	'select' operation ('total', BackGrRemoval.cpp:23) [241]  (0.000 ns)
+	'add' operation ('total', BackGrRemoval.cpp:23) [250]  (1.650 ns)
+
+ <State 7>: 5.433ns
+The critical path consists of the following:
+	'add' operation ('total', BackGrRemoval.cpp:67) [253]  (1.650 ns)
+	'select' operation ('total', BackGrRemoval.cpp:23) [258]  (1.024 ns)
+	'add' operation ('total', BackGrRemoval.cpp:67) [259]  (1.735 ns)
+	'select' operation ('total', BackGrRemoval.cpp:23) [264]  (1.024 ns)
+
+ <State 8>: 5.518ns
+The critical path consists of the following:
+	'add' operation ('count', BackGrRemoval.cpp:68) [261]  (1.735 ns)
+	'select' operation ('count', BackGrRemoval.cpp:68) [262]  (0.000 ns)
+	'select' operation ('count', BackGrRemoval.cpp:23) [263]  (1.024 ns)
+	'add' operation ('count', BackGrRemoval.cpp:68) [267]  (1.735 ns)
+	'select' operation ('count', BackGrRemoval.cpp:68) [268]  (0.000 ns)
+	'select' operation ('count', BackGrRemoval.cpp:23) [269]  (1.024 ns)
+
+ <State 9>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 10>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 11>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 12>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 13>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 14>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 15>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 16>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 17>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 18>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 19>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 20>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 21>: 3.868ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp', BackGrRemoval.cpp:42) [138]  (3.868 ns)
+
+ <State 22>: 5.945ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln44', BackGrRemoval.cpp:44) [156]  (3.868 ns)
+	'add' operation ('tmp', BackGrRemoval.cpp:44) [158]  (2.077 ns)
+
+ <State 23>: 6.813ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('tmp') with incoming values : ('sext_ln39', BackGrRemoval.cpp:39) ('tmp', BackGrRemoval.cpp:44) ('tmp', BackGrRemoval.cpp:43) [177]  (1.827 ns)
+	'phi' operation ('tmp') with incoming values : ('sext_ln39', BackGrRemoval.cpp:39) ('tmp', BackGrRemoval.cpp:44) ('tmp', BackGrRemoval.cpp:43) [177]  (0.000 ns)
+	'add' operation ('add_ln46', BackGrRemoval.cpp:46) [180]  (1.823 ns)
+	'select' operation ('h_neighbor', BackGrRemoval.cpp:46) [183]  (1.248 ns)
+	'icmp' operation ('icmp_ln68_9', BackGrRemoval.cpp:68) [272]  (1.915 ns)
+
+ <State 24>: 6.012ns
+The critical path consists of the following:
+	'select' operation ('count', BackGrRemoval.cpp:68) [274]  (0.000 ns)
+	'select' operation ('count', BackGrRemoval.cpp:23) [275]  (1.024 ns)
+	'add' operation ('add_ln72', BackGrRemoval.cpp:72) [279]  (1.870 ns)
+	'icmp' operation ('icmp_ln72', BackGrRemoval.cpp:72) [282]  (1.870 ns)
+	'select' operation ('out_px.g', BackGrRemoval.cpp:72) [283]  (1.248 ns)
+
+ <State 25>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

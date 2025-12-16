@@ -1,0 +1,50 @@
+set SynModuleInfo {
+  {SRCNAME hls_object_green_classification_Pipeline_InitLoop MODELNAME hls_object_green_classification_Pipeline_InitLoop RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_InitLoop
+    SUBMODULES {
+      {MODELNAME hls_object_green_classification_flow_control_loop_pipe_sequential_init RTLNAME hls_object_green_classification_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME hls_object_green_classification_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME hls_object_green_classification_Pipeline_Pass1_5_inner0 MODELNAME hls_object_green_classification_Pipeline_Pass1_5_inner0 RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_Pass1_5_inner0
+    SUBMODULES {
+      {MODELNAME hls_object_green_classification_urem_9ns_3ns_2_13_1 RTLNAME hls_object_green_classification_urem_9ns_3ns_2_13_1 BINDTYPE op TYPE urem IMPL auto LATENCY 12 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mul_9ns_11ns_19_1_1 RTLNAME hls_object_green_classification_mul_9ns_11ns_19_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mux_3_2_1_1_1 RTLNAME hls_object_green_classification_mux_3_2_1_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner MODELNAME hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner}
+  {SRCNAME hls_object_green_classification_Pipeline_PASS_3_5_1 MODELNAME hls_object_green_classification_Pipeline_PASS_3_5_1 RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_PASS_3_5_1}
+  {SRCNAME hls_object_green_classification_Pipeline_PASS_3_5_2_in MODELNAME hls_object_green_classification_Pipeline_PASS_3_5_2_in RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_PASS_3_5_2_in}
+  {SRCNAME hls_object_green_classification_Pipeline_pass_4 MODELNAME hls_object_green_classification_Pipeline_pass_4 RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_pass_4}
+  {SRCNAME hls_object_green_classification_Pipeline_pass5_out_pass5_in MODELNAME hls_object_green_classification_Pipeline_pass5_out_pass5_in RTLNAME hls_object_green_classification_hls_object_green_classification_Pipeline_pass5_out_pass5_in
+    SUBMODULES {
+      {MODELNAME hls_object_green_classification_urem_8ns_3ns_2_12_1 RTLNAME hls_object_green_classification_urem_8ns_3ns_2_12_1 BINDTYPE op TYPE urem IMPL auto LATENCY 11 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mul_8ns_10ns_17_1_1 RTLNAME hls_object_green_classification_mul_8ns_10ns_17_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1 RTLNAME hls_object_green_classification_mac_muladd_7ns_7ns_8ns_14_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME hls_object_green_classification MODELNAME hls_object_green_classification RTLNAME hls_object_green_classification IS_TOP 1
+    SUBMODULES {
+      {MODELNAME hls_object_green_classification_mul_32ns_34ns_65_2_1 RTLNAME hls_object_green_classification_mul_32ns_34ns_65_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mul_41ns_43ns_56_3_1 RTLNAME hls_object_green_classification_mul_41ns_43ns_56_3_1 BINDTYPE op TYPE mul IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_urem_32ns_3ns_2_36_1 RTLNAME hls_object_green_classification_urem_32ns_3ns_2_36_1 BINDTYPE op TYPE urem IMPL auto LATENCY 35 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mux_2_1_8_1_1 RTLNAME hls_object_green_classification_mux_2_1_8_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mul_11s_11s_21_1_1 RTLNAME hls_object_green_classification_mul_11s_11s_21_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_urem_8ns_3ns_2_12_seq_1 RTLNAME hls_object_green_classification_urem_8ns_3ns_2_12_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 11 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mul_7ns_8ns_14_1_1 RTLNAME hls_object_green_classification_mul_7ns_8ns_14_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mac_muladd_8ns_6ns_40ns_41_4_1 RTLNAME hls_object_green_classification_mac_muladd_8ns_6ns_40ns_41_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mac_muladd_8ns_4ns_41ns_41_4_1 RTLNAME hls_object_green_classification_mac_muladd_8ns_4ns_41ns_41_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mac_muladd_14s_7ns_14ns_14_4_1 RTLNAME hls_object_green_classification_mac_muladd_14s_7ns_14ns_14_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_mac_muladd_11s_11s_21s_21_4_1 RTLNAME hls_object_green_classification_mac_muladd_11s_11s_21s_21_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_parent_RAM_2P_BRAM_1R1W RTLNAME hls_object_green_classification_parent_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_min_x_RAM_2P_BRAM_1R1W RTLNAME hls_object_green_classification_min_x_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_min_y_RAM_2P_BRAM_1R1W RTLNAME hls_object_green_classification_min_y_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W RTLNAME hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W RTLNAME hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_Rbkb RTLNAME hls_object_green_classification_hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_Rbkb BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe RTLNAME hls_object_green_classification_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_label_map_RAM_2P_BRAM_1R1W RTLNAME hls_object_green_classification_label_map_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME hls_object_green_classification_CTRL_s_axi RTLNAME hls_object_green_classification_CTRL_s_axi BINDTYPE interface TYPE interface_s_axilite}
+      {MODELNAME hls_object_green_classification_regslice_both RTLNAME hls_object_green_classification_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME hls_object_green_classification_regslice_both_U}
+    }
+  }
+}

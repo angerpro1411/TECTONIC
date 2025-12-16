@@ -48,25 +48,21 @@ Diagnostics:
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_T2P_BRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      84
+    FileOffset:      176
+    FilePath:        BackGrRemoval.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_T2P_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      178
     FilePath:        BackGrRemoval.cpp
     Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_110_1:  '
-    FileOffset:      110
+    Message:         'Added loop label VITIS_LOOP_220_1:  '
+    FileOffset:      220
     FilePath:        BackGrRemoval.cpp
     Replacements:    
       - FilePath:        /home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp
-        Offset:          936035
+        Offset:          936932
         Length:          0
-        ReplacementText: 'VITIS_LOOP_110_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_124_2:  '
-    FileOffset:      124
-    FilePath:        BackGrRemoval.cpp
-    Replacements:    
-      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp
-        Offset:          936583
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_124_2: '
+        ReplacementText: 'VITIS_LOOP_220_1: '
 ...

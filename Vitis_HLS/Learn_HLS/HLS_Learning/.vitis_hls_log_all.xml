@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'find' (loop 'VITIS_LOOP_13_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('IN_VEC_read_3', main.cpp:17) on port 'IN_VEC' (main.cpp:17) and fifo read operation ('IN_VEC_read', main.cpp:17) on port 'IN_VEC' (main.cpp:17).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="HLS_Learning" solutionName="solution2" date="2024-12-10T15:21:43.381+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'find' (loop 'VITIS_LOOP_13_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('IN_VEC_read_2', main.cpp:17) on port 'IN_VEC' (main.cpp:17) and fifo read operation ('IN_VEC_read', main.cpp:17) on port 'IN_VEC' (main.cpp:17).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="HLS_Learning" solutionName="solution2" date="2024-12-10T15:21:43.376+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'find' (loop 'VITIS_LOOP_13_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('IN_VEC_read_1', main.cpp:17) on port 'IN_VEC' (main.cpp:17) and fifo read operation ('IN_VEC_read', main.cpp:17) on port 'IN_VEC' (main.cpp:17).&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html" projectName="HLS_Learning" solutionName="solution2" date="2024-12-10T15:21:43.372+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'OUT_VEC' (main.cpp:5:0)&#xA;Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-142.html" projectName="HLS_Learning" solutionName="solution2" date="2024-12-10T15:21:43.270+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'IN_VEC' (main.cpp:5:0)&#xA;Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-142.html" projectName="HLS_Learning" solutionName="solution2" date="2024-12-10T15:21:43.267+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

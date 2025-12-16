@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_object_green_classification_Pipeline_VITIS_LOOP_25_11'
+================================================================
+* Date:           Wed Nov 12 17:49:01 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Obj_detect_ver4
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.919 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_25_1  |        ?|        ?|         2|          2|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     23|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     41|    -|
+|Register         |        -|    -|      44|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      44|     64|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |icmp_ln25_fu_92_p2  |      icmp|   0|  0|  23|          16|          16|
+    +--------------------+----------+----+---+----+------------+------------+
+    |Total               |          |   0|  0|  23|          16|          16|
+    +--------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  14|          3|    1|          3|
+    |ap_done_int            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_rb_1  |   9|          2|   16|         32|
+    |root_fu_38             |   9|          2|   16|         32|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  41|          9|   34|         69|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |   2|   0|    2|          0|
+    |ap_done_reg         |   1|   0|    1|          0|
+    |rb_1_reg_109        |  16|   0|   16|          0|
+    |root_fu_38          |  16|   0|   16|          0|
+    |trunc_ln25_reg_115  |   9|   0|    9|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               |  44|   0|   44|          0|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_25_11|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_25_11|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_25_11|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_25_11|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_25_11|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_25_11|  return value|
+|cur_10                  |   in|   16|     ap_none|                                                     cur_10|        scalar|
+|rb_1_out                |  out|   16|      ap_vld|                                                   rb_1_out|       pointer|
+|rb_1_out_ap_vld         |  out|    1|      ap_vld|                                                   rb_1_out|       pointer|
+|zext_ln25_2_out         |  out|    9|      ap_vld|                                            zext_ln25_2_out|       pointer|
+|zext_ln25_2_out_ap_vld  |  out|    1|      ap_vld|                                            zext_ln25_2_out|       pointer|
+|parent_address0         |  out|    9|   ap_memory|                                                     parent|         array|
+|parent_ce0              |  out|    1|   ap_memory|                                                     parent|         array|
+|parent_q0               |   in|   16|   ap_memory|                                                     parent|         array|
++------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

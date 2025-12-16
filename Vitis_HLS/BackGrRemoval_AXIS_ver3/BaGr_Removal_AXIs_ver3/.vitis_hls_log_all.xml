@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:27.016+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'row_loop_col_loop' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:26.423+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 240 for loop 'row_loop' (BackGrRemoval.cpp:143:28) in function 'BackGrRemovalStream'." projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:25.550+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 320 for loop 'col_loop' (BackGrRemoval.cpp:146:2) in function 'BackGrRemovalStream'." projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:25.520+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file BackGrRemoval.cpp&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-471.html" projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:15.696+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (BackGrRemoval.cpp:130:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-114.html" projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:15.263+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (BackGrRemoval.cpp:133:12)&#xA;Resolution: For help on HLS 214-111 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-111.html" projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-22T18:21:15.258+0200" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="BaGr_Removal_AXIs_ver3" solutionName="solution1" date="2025-10-23T10:51:52.530+0200" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

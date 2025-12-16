@@ -1,0 +1,22 @@
+---
+MainSourceFile:  /home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_1:  '
+    FileOffset:      28
+    FilePath:        MeanShiftFilter.c
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c
+        Offset:          7939
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_2:  '
+    FileOffset:      29
+    FilePath:        MeanShiftFilter.c
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c
+        Offset:          7992
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_2: '
+...

@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 181,
+    "calls": "",
+    "file": "obj_detect.cpp",
+    "fileloc": 59,
+    "instructions": 1214,
+    "loads": {
+      "G": 136,
+      "L": 7
+    },
+    "name": "hls_object_green_classification",
+    "stores": {
+      "G": 52,
+      "L": 21,
+      "T": 4
+    },
+    "total_instructions": 1214
+  }
+}

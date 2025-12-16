@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "sobel_rgb_green_outline_fixed",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "sobel_rgb_green_outline_fixed"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/ContourDetec_ver2/ContourDetect_ver2/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

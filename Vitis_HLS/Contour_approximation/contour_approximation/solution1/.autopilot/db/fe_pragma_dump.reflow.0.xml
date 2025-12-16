@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c" line="127" pragmaType="pipeline" parentfunction="ContourApproximation" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c" line="84" pragmaType="unroll" parentfunction="ContourApproximation" factor="-1" skip_exit_check="0"/>
+<pragma file="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c" line="60" pragmaType="array_partition" parentfunction="ContourApproximation" dim="1" factor="0" mode="complete" dynamic="0" variable="new_p"/>
+<pragma file="../../C_PROGRAM/3.ContourApproximation/contour_approximation.c" line="159" pragmaType="pipeline" parentfunction="PointNbReduction" off="0" ii="-1" rewind="0" style=""/>
+</pragmas>

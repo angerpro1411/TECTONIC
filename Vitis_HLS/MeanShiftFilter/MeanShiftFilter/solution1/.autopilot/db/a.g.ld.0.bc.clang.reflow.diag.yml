@@ -1,0 +1,381 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 14, Column: 23 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        height_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 15, Column: 26 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        width_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 23, Column: 33 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        do_while_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 28, Column: 38 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 29, Column: 42 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_29_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 65, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IhL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXntsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 312, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 65, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 65, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IhL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXntsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::mantissa() const'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 369, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 65, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 65, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IhL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXntsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 345, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 65, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 116, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IhfET_T0_b
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 65, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'unsigned char generic_cast_IEEE754<unsigned char, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                   Line: 63, Column: 0 }
+Function:        __hls_fptoui_float_i8
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'unsigned char generic_cast_IEEE754<unsigned char, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          __hls_fptoui_float_i8
+    DebugLoc:        { File: /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnUnsupportedArrayTransform
+DebugLoc:        { File: MeanShiftFilter.c, Line: 7, Column: 9 }
+Function:        apatb_MeanShiftFiltering_ir
+Args:            
+  - String:          'Ignored unsupported '
+  - PragmaName:      array_partition
+  - String:          ' pragma on variable '''
+  - Name:            out
+  - String:          '''. '
+  - String:          This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnUnsupportedArrayTransform
+DebugLoc:        { File: MeanShiftFilter.c, Line: 6, Column: 9 }
+Function:        apatb_MeanShiftFiltering_ir
+Args:            
+  - String:          'Ignored unsupported '
+  - PragmaName:      array_partition
+  - String:          ' pragma on variable '''
+  - Name:            in
+  - String:          '''. '
+  - String:          This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension.
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: MeanShiftFilter.c, Line: 4, Column: 0 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            out
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '24'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: MeanShiftFilter.c, Line: 4, Column: 0 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            in
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '24'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: MeanShiftFilter.c, Line: 23, Column: 33 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        do_while_loop
+  - String:          ' '
+  - LoopLoc:         'MeanShiftFilter.c:23:33'
+  - String:          ' '
+  - Function:        MeanShiftFiltering
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 4, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: MeanShiftFilter.c, Line: 42, Column: 63 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 42, Column: 63 }
+  - OrigDirection:   read
+  - OrigID:          if.end48.load.3
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        MeanShiftFiltering
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 4, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: MeanShiftFilter.c, Line: 16, Column: 48 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 16, Column: 48 }
+  - OrigDirection:   read
+  - OrigID:          do_while_loop.load.6
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        MeanShiftFiltering
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 4, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: MeanShiftFilter.c, Line: 80, Column: 40 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 80, Column: 40 }
+  - OrigDirection:   write
+  - OrigID:          for.inc143.store.23
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        MeanShiftFiltering
+    DebugLoc:        { File: MeanShiftFilter.c, Line: 4, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 14, Column: 23 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        height_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 15, Column: 26 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        width_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 23, Column: 33 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        do_while_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 28, Column: 38 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 29, Column: 42 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_29_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 14, Column: 23 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        height_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 15, Column: 26 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        width_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 23, Column: 33 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        do_while_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 28, Column: 38 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: MeanShiftFilter.c, Line: 29, Column: 42 }
+Function:        MeanShiftFiltering
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_29_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...

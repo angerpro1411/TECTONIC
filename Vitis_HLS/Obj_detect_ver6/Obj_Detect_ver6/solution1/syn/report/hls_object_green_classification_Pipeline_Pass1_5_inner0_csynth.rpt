@@ -1,0 +1,344 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_object_green_classification_Pipeline_Pass1_5_inner0'
+================================================================
+* Date:           Mon Dec 15 18:24:30 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Obj_Detect_ver6
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.669 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      334|      334|  3.340 us|  3.340 us|  334|  334|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Pass1_5_inner0  |      332|      332|        16|          1|          1|   318|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    206|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    3|     238|    626|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    477|    -|
+|Register         |        -|    -|     619|    128|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    3|     857|   1437|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+---------------------+---------+----+-----+-----+-----+
+    |         Instance        |        Module       | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------+---------------------+---------+----+-----+-----+-----+
+    |mul_9ns_11ns_19_1_1_U22  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    6|    0|
+    |mul_9ns_11ns_19_1_1_U23  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    6|    0|
+    |mul_9ns_11ns_19_1_1_U24  |mul_9ns_11ns_19_1_1  |        0|   1|    0|    6|    0|
+    |mux_3_2_1_1_1_U25        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U26        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U27        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U28        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U29        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U30        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U31        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U32        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U33        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U34        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U35        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U36        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U37        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U38        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U39        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U40        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U41        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U42        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U43        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U44        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U45        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U46        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U47        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U48        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U49        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U50        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U51        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U52        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U53        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U54        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U55        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |mux_3_2_1_1_1_U56        |mux_3_2_1_1_1        |        0|   0|    0|   14|    0|
+    |urem_9ns_3ns_2_13_1_U21  |urem_9ns_3ns_2_13_1  |        0|   0|  238|  160|    0|
+    +-------------------------+---------------------+---------+----+-----+-----+-----+
+    |Total                    |                     |        0|   3|  238|  626|    0|
+    +-------------------------+---------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln190_1_fu_803_p2   |         +|   0|  0|  14|           9|           1|
+    |add_ln190_2_fu_883_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_3_fu_901_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_4_fu_919_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_5_fu_940_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_6_fu_958_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_7_fu_979_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_8_fu_997_p2   |         +|   0|  0|  17|          14|          14|
+    |add_ln190_9_fu_1015_p2  |         +|   0|  0|  17|          14|          14|
+    |add_ln190_fu_852_p2     |         +|   0|  0|  14|           9|           2|
+    |ap_condition_1096       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_1100       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_1106       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_1112       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_539        |       and|   0|  0|   2|           1|           1|
+    |icmp_ln184_fu_791_p2    |      icmp|   0|  0|  14|           9|           9|
+    |dilated_1_fu_1419_p2    |        or|   0|  0|   2|           1|           1|
+    |or_ln190_1_fu_1389_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln190_2_fu_1393_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln190_3_fu_1399_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln190_4_fu_1403_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln190_5_fu_1407_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln190_6_fu_1413_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln190_fu_1385_p2     |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 206|         153|         139|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                             Name                                             | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                                                                   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter15                                                                      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_x_2                                                                          |   9|          2|    9|         18|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_address0  |  48|          9|   14|        126|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_address0    |  48|          9|   14|        126|
+    |store_forwarded_reg_773                                                                       |   9|          2|    1|          2|
+    |x_fu_82                                                                                       |   9|          2|    9|         18|
+    +----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                                         | 477|         91|  147|       1176|
+    +----------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                     Name                                                     | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln190_1_reg_1489                                                                                          |   9|   0|    9|          0|
+    |add_ln190_reg_1504                                                                                            |   9|   0|    9|          0|
+    |ap_CS_fsm                                                                                                     |   1|   0|    1|          0|
+    |ap_done_reg                                                                                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10                                                                                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11                                                                                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12                                                                                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13                                                                                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14                                                                                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15                                                                                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8                                                                                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9                                                                                       |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter10_reg                                                                             |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter11_reg                                                                             |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter12_reg                                                                             |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter13_reg                                                                             |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter14_reg                                                                             |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg                                                                              |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg                                                                              |   1|   0|    1|          0|
+    |dilated_reg_1911                                                                                              |   1|   0|    1|          0|
+    |icmp_ln184_reg_1485                                                                                           |   1|   0|    1|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_28_reg_1547_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_31_reg_1563                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_31_reg_1563_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_34_reg_1579                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_34_reg_1579_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_37_reg_1595                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_37_reg_1595_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_40_reg_1611                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_40_reg_1611_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_43_reg_1627                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_43_reg_1627_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_46_reg_1643                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_46_reg_1643_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_49_reg_1659                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_49_reg_1659_pp0_iter14_reg  |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_52_reg_1675                 |  14|   0|   14|          0|
+    |p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_52_reg_1675_pp0_iter14_reg  |  14|   0|   14|          0|
+    |store_forwarded_reg_773                                                                                       |   1|   0|    1|          0|
+    |tmp_10_reg_1921                                                                                               |   1|   0|    1|          0|
+    |tmp_14_reg_1926                                                                                               |   1|   0|    1|          0|
+    |tmp_18_reg_1931                                                                                               |   1|   0|    1|          0|
+    |tmp_22_reg_1936                                                                                               |   1|   0|    1|          0|
+    |tmp_26_reg_1941                                                                                               |   1|   0|    1|          0|
+    |tmp_30_reg_1946                                                                                               |   1|   0|    1|          0|
+    |tmp_32_reg_1499                                                                                               |   8|   0|    8|          0|
+    |tmp_32_reg_1499_pp0_iter12_reg                                                                                |   8|   0|    8|          0|
+    |tmp_33_reg_1537                                                                                               |   8|   0|    8|          0|
+    |tmp_34_reg_1494                                                                                               |   8|   0|    8|          0|
+    |tmp_9_reg_1916                                                                                                |   1|   0|    1|          0|
+    |trunc_ln186_reg_1509                                                                                          |   2|   0|    2|          0|
+    |x_2_reg_1478                                                                                                  |   9|   0|    9|          0|
+    |x_fu_82                                                                                                       |   9|   0|    9|          0|
+    |icmp_ln184_reg_1485                                                                                           |  64|  32|    1|          0|
+    |tmp_34_reg_1494                                                                                               |  64|  32|    8|          0|
+    |trunc_ln186_reg_1509                                                                                          |  64|  32|    2|          0|
+    |x_2_reg_1478                                                                                                  |  64|  32|    9|          0|
+    +--------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                         | 619| 128|  383|          0|
+    +--------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------------+--------------+
+|                                           RTL Ports                                          | Dir | Bits|  Protocol  |                                    Source Object                                    |    C Type    |
++----------------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------------+--------------+
+|ap_clk                                                                                        |   in|    1|  ap_ctrl_hs|                              hls_object_green_classification_Pipeline_Pass1_5_inner0|  return value|
+|ap_rst                                                                                        |   in|    1|  ap_ctrl_hs|                              hls_object_green_classification_Pipeline_Pass1_5_inner0|  return value|
+|ap_start                                                                                      |   in|    1|  ap_ctrl_hs|                              hls_object_green_classification_Pipeline_Pass1_5_inner0|  return value|
+|ap_done                                                                                       |  out|    1|  ap_ctrl_hs|                              hls_object_green_classification_Pipeline_Pass1_5_inner0|  return value|
+|ap_idle                                                                                       |  out|    1|  ap_ctrl_hs|                              hls_object_green_classification_Pipeline_Pass1_5_inner0|  return value|
+|ap_ready                                                                                      |  out|    1|  ap_ctrl_hs|                              hls_object_green_classification_Pipeline_Pass1_5_inner0|  return value|
+|tmp                                                                                           |   in|    1|     ap_none|                                                                                  tmp|        scalar|
+|mul_ln190                                                                                     |   in|   14|     ap_none|                                                                            mul_ln190|        scalar|
+|empty                                                                                         |   in|   14|     ap_none|                                                                                empty|        scalar|
+|mul_ln190_1                                                                                   |   in|   14|     ap_none|                                                                          mul_ln190_1|        scalar|
+|trunc_ln3                                                                                     |   in|    2|     ap_none|                                                                            trunc_ln3|        scalar|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_address0  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_ce0       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_q0        |   in|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_address1  |  out|   14|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_ce1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_we1       |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_d1        |  out|    1|   ap_memory|  p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_address0    |  out|   14|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_ce0         |  out|    1|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_q0          |   in|    1|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_address1    |  out|   14|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_ce1         |  out|    1|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_we1         |  out|    1|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
+|p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_d1          |  out|    1|   ap_memory|    p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm|         array|
++----------------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------------+--------------+
+

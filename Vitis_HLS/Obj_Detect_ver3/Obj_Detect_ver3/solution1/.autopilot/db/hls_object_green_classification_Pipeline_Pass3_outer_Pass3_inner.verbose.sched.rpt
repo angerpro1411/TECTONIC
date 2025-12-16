@@ -1,0 +1,248 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner'
+================================================================
+* Date:           Wed Nov 12 16:31:51 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Obj_Detect_ver3
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.423 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   153604|   153604|  1.536 ms|  1.536 ms|  153604|  153604|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                           |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |         Loop Name         |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +---------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- Pass3_outer_Pass3_inner  |   153602|   153602|         5|          2|          2|  76800|       yes|
+        +---------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x = alloca i32 1"   --->   Operation 8 'alloca' 'x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%y = alloca i32 1"   --->   Operation 9 'alloca' 'y' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 10 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %max_y, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %min_y, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i9 %max_x, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i9 %min_x, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %parent, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %label_map, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i17 0, i17 %indvar_flatten"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %y"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 0, i9 %x"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body408"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.20>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i17 %indvar_flatten" [obj_detect.cpp:209]   --->   Operation 21 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (2.10ns)   --->   "%icmp_ln209 = icmp_eq  i17 %indvar_flatten_load, i17 76800" [obj_detect.cpp:209]   --->   Operation 22 'icmp' 'icmp_ln209' <Predicate = true> <Delay = 2.10> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (2.10ns)   --->   "%add_ln209 = add i17 %indvar_flatten_load, i17 1" [obj_detect.cpp:209]   --->   Operation 23 'add' 'add_ln209' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln209 = br i1 %icmp_ln209, void %for.inc458, void %init.end469.exitStub" [obj_detect.cpp:209]   --->   Operation 24 'br' 'br_ln209' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%x_load = load i9 %x" [obj_detect.cpp:210]   --->   Operation 25 'load' 'x_load' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%y_load = load i8 %y" [obj_detect.cpp:209]   --->   Operation 26 'load' 'y_load' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (1.91ns)   --->   "%y_2 = add i8 %y_load, i8 1" [obj_detect.cpp:209]   --->   Operation 27 'add' 'y_2' <Predicate = (!icmp_ln209)> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (1.82ns)   --->   "%icmp_ln210 = icmp_eq  i9 %x_load, i9 320" [obj_detect.cpp:210]   --->   Operation 28 'icmp' 'icmp_ln210' <Predicate = (!icmp_ln209)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.96ns)   --->   "%select_ln209 = select i1 %icmp_ln210, i9 0, i9 %x_load" [obj_detect.cpp:209]   --->   Operation 29 'select' 'select_ln209' <Predicate = (!icmp_ln209)> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (1.24ns)   --->   "%select_ln209_1 = select i1 %icmp_ln210, i8 %y_2, i8 %y_load" [obj_detect.cpp:209]   --->   Operation 30 'select' 'select_ln209_1' <Predicate = (!icmp_ln209)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (1.82ns)   --->   "%x_1 = add i9 %select_ln209, i9 1" [obj_detect.cpp:210]   --->   Operation 31 'add' 'x_1' <Predicate = (!icmp_ln209)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln210 = store i17 %add_ln209, i17 %indvar_flatten" [obj_detect.cpp:210]   --->   Operation 32 'store' 'store_ln210' <Predicate = (!icmp_ln209)> <Delay = 1.58>
+ST_2 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln210 = store i8 %select_ln209_1, i8 %y" [obj_detect.cpp:210]   --->   Operation 33 'store' 'store_ln210' <Predicate = (!icmp_ln209)> <Delay = 1.58>
+ST_2 : Operation 34 [1/1] (1.58ns)   --->   "%store_ln210 = store i9 %x_1, i9 %x" [obj_detect.cpp:210]   --->   Operation 34 'store' 'store_ln210' <Predicate = (!icmp_ln209)> <Delay = 1.58>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln210 = br void %for.body408" [obj_detect.cpp:210]   --->   Operation 35 'br' 'br_ln210' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.18>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i8.i8, i8 %select_ln209_1, i8 0" [obj_detect.cpp:213]   --->   Operation 36 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln213 = zext i16 %tmp_s" [obj_detect.cpp:213]   --->   Operation 37 'zext' 'zext_ln213' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_7 = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i8.i6, i8 %select_ln209_1, i6 0" [obj_detect.cpp:213]   --->   Operation 38 'bitconcatenate' 'tmp_7' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln213_1 = zext i14 %tmp_7" [obj_detect.cpp:213]   --->   Operation 39 'zext' 'zext_ln213_1' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln213 = add i17 %zext_ln213, i17 %zext_ln213_1" [obj_detect.cpp:213]   --->   Operation 40 'add' 'add_ln213' <Predicate = (!icmp_ln209)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.96> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln213_2 = zext i9 %select_ln209" [obj_detect.cpp:213]   --->   Operation 41 'zext' 'zext_ln213_2' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (3.93ns) (root node of TernaryAdder)   --->   "%add_ln213_1 = add i17 %add_ln213, i17 %zext_ln213_2" [obj_detect.cpp:213]   --->   Operation 42 'add' 'add_ln213_1' <Predicate = (!icmp_ln209)> <Delay = 3.93> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.96> <IPBlock> <Opcode : '<invalid operator> ' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln213_3 = zext i17 %add_ln213_1" [obj_detect.cpp:213]   --->   Operation 43 'zext' 'zext_ln213_3' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%label_map_addr = getelementptr i16 %label_map, i64 0, i64 %zext_ln213_3" [obj_detect.cpp:213]   --->   Operation 44 'getelementptr' 'label_map_addr' <Predicate = (!icmp_ln209)> <Delay = 0.00>
+ST_3 : Operation 45 [2/2] (3.25ns)   --->   "%lbl = load i17 %label_map_addr" [obj_detect.cpp:213]   --->   Operation 45 'load' 'lbl' <Predicate = (!icmp_ln209)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 76800> <RAM>
+
+State 4 <SV = 3> <Delay = 6.50>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @Pass3_outer_Pass3_inner_str"   --->   Operation 46 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 76800, i64 76800, i64 76800"   --->   Operation 47 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%specpipeline_ln212 = specpipeline void @_ssdm_op_SpecPipeline, i32 2, i32 0, i32 0, i32 0, void @empty_13" [obj_detect.cpp:212]   --->   Operation 48 'specpipeline' 'specpipeline_ln212' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%specloopname_ln210 = specloopname void @_ssdm_op_SpecLoopName, void @empty_23" [obj_detect.cpp:210]   --->   Operation 49 'specloopname' 'specloopname_ln210' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/2] (3.25ns)   --->   "%lbl = load i17 %label_map_addr" [obj_detect.cpp:213]   --->   Operation 50 'load' 'lbl' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 76800> <RAM>
+ST_4 : Operation 51 [1/1] (2.07ns)   --->   "%icmp_ln214 = icmp_eq  i16 %lbl, i16 0" [obj_detect.cpp:214]   --->   Operation 51 'icmp' 'icmp_ln214' <Predicate = true> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln214 = br i1 %icmp_ln214, void %if.then415, void %for.inc455" [obj_detect.cpp:214]   --->   Operation 52 'br' 'br_ln214' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln215 = zext i16 %lbl" [obj_detect.cpp:215]   --->   Operation 53 'zext' 'zext_ln215' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%parent_addr = getelementptr i16 %parent, i64 0, i64 %zext_ln215" [obj_detect.cpp:215]   --->   Operation 54 'getelementptr' 'parent_addr' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_4 : Operation 55 [2/2] (3.25ns)   --->   "%root = load i9 %parent_addr" [obj_detect.cpp:215]   --->   Operation 55 'load' 'root' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln221 = br void %for.inc455" [obj_detect.cpp:221]   --->   Operation 56 'br' 'br_ln221' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 88 'ret' 'ret_ln0' <Predicate = (icmp_ln209)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 6.50>
+ST_5 : Operation 57 [1/2] (3.25ns)   --->   "%root = load i9 %parent_addr" [obj_detect.cpp:215]   --->   Operation 57 'load' 'root' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_5 : Operation 58 [1/1] (3.25ns)   --->   "%store_ln216 = store i16 %root, i17 %label_map_addr" [obj_detect.cpp:216]   --->   Operation 58 'store' 'store_ln216' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 76800> <RAM>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln217 = zext i16 %root" [obj_detect.cpp:217]   --->   Operation 59 'zext' 'zext_ln217' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%min_x_addr = getelementptr i9 %min_x, i64 0, i64 %zext_ln217" [obj_detect.cpp:217]   --->   Operation 60 'getelementptr' 'min_x_addr' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_5 : Operation 61 [2/2] (3.25ns)   --->   "%min_x_load = load i9 %min_x_addr" [obj_detect.cpp:217]   --->   Operation 61 'load' 'min_x_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 9> <Depth = 512> <RAM>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%max_x_addr = getelementptr i9 %max_x, i64 0, i64 %zext_ln217" [obj_detect.cpp:218]   --->   Operation 62 'getelementptr' 'max_x_addr' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_5 : Operation 63 [2/2] (3.25ns)   --->   "%max_x_load = load i9 %max_x_addr" [obj_detect.cpp:218]   --->   Operation 63 'load' 'max_x_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 9> <Depth = 512> <RAM>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%min_y_addr = getelementptr i8 %min_y, i64 0, i64 %zext_ln217" [obj_detect.cpp:219]   --->   Operation 64 'getelementptr' 'min_y_addr' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_5 : Operation 65 [2/2] (3.25ns)   --->   "%min_y_load = load i9 %min_y_addr" [obj_detect.cpp:219]   --->   Operation 65 'load' 'min_y_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%max_y_addr = getelementptr i8 %max_y, i64 0, i64 %zext_ln217" [obj_detect.cpp:220]   --->   Operation 66 'getelementptr' 'max_y_addr' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_5 : Operation 67 [2/2] (3.25ns)   --->   "%max_y_load = load i9 %max_y_addr" [obj_detect.cpp:220]   --->   Operation 67 'load' 'max_y_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+
+State 6 <SV = 5> <Delay = 8.42>
+ST_6 : Operation 68 [1/2] (3.25ns)   --->   "%min_x_load = load i9 %min_x_addr" [obj_detect.cpp:217]   --->   Operation 68 'load' 'min_x_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 9> <Depth = 512> <RAM>
+ST_6 : Operation 69 [1/1] (1.82ns)   --->   "%icmp_ln217 = icmp_ult  i9 %select_ln209, i9 %min_x_load" [obj_detect.cpp:217]   --->   Operation 69 'icmp' 'icmp_ln217' <Predicate = (!icmp_ln214)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln217 = br i1 %icmp_ln217, void %if.end429, void %if.then425" [obj_detect.cpp:217]   --->   Operation 70 'br' 'br_ln217' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_6 : Operation 71 [1/1] (3.25ns)   --->   "%store_ln217 = store i9 %select_ln209, i9 %min_x_addr" [obj_detect.cpp:217]   --->   Operation 71 'store' 'store_ln217' <Predicate = (!icmp_ln214 & icmp_ln217)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 9> <Depth = 512> <RAM>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln217 = br void %if.end429" [obj_detect.cpp:217]   --->   Operation 72 'br' 'br_ln217' <Predicate = (!icmp_ln214 & icmp_ln217)> <Delay = 0.00>
+ST_6 : Operation 73 [1/2] (3.25ns)   --->   "%max_x_load = load i9 %max_x_addr" [obj_detect.cpp:218]   --->   Operation 73 'load' 'max_x_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 9> <Depth = 512> <RAM>
+ST_6 : Operation 74 [1/1] (1.82ns)   --->   "%icmp_ln218 = icmp_ugt  i9 %select_ln209, i9 %max_x_load" [obj_detect.cpp:218]   --->   Operation 74 'icmp' 'icmp_ln218' <Predicate = (!icmp_ln214)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln218 = br i1 %icmp_ln218, void %if.end437, void %if.then433" [obj_detect.cpp:218]   --->   Operation 75 'br' 'br_ln218' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (3.25ns)   --->   "%store_ln218 = store i9 %select_ln209, i9 %max_x_addr" [obj_detect.cpp:218]   --->   Operation 76 'store' 'store_ln218' <Predicate = (!icmp_ln214 & icmp_ln218)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 9> <Depth = 512> <RAM>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln218 = br void %if.end437" [obj_detect.cpp:218]   --->   Operation 77 'br' 'br_ln218' <Predicate = (!icmp_ln214 & icmp_ln218)> <Delay = 0.00>
+ST_6 : Operation 78 [1/2] (3.25ns)   --->   "%min_y_load = load i9 %min_y_addr" [obj_detect.cpp:219]   --->   Operation 78 'load' 'min_y_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 79 [1/1] (1.91ns)   --->   "%icmp_ln219 = icmp_ult  i8 %select_ln209_1, i8 %min_y_load" [obj_detect.cpp:219]   --->   Operation 79 'icmp' 'icmp_ln219' <Predicate = (!icmp_ln214)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln219 = br i1 %icmp_ln219, void %if.end445, void %if.then441" [obj_detect.cpp:219]   --->   Operation 80 'br' 'br_ln219' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (3.25ns)   --->   "%store_ln219 = store i8 %select_ln209_1, i9 %min_y_addr" [obj_detect.cpp:219]   --->   Operation 81 'store' 'store_ln219' <Predicate = (!icmp_ln214 & icmp_ln219)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%br_ln219 = br void %if.end445" [obj_detect.cpp:219]   --->   Operation 82 'br' 'br_ln219' <Predicate = (!icmp_ln214 & icmp_ln219)> <Delay = 0.00>
+ST_6 : Operation 83 [1/2] (3.25ns)   --->   "%max_y_load = load i9 %max_y_addr" [obj_detect.cpp:220]   --->   Operation 83 'load' 'max_y_load' <Predicate = (!icmp_ln214)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 84 [1/1] (1.91ns)   --->   "%icmp_ln220 = icmp_ugt  i8 %select_ln209_1, i8 %max_y_load" [obj_detect.cpp:220]   --->   Operation 84 'icmp' 'icmp_ln220' <Predicate = (!icmp_ln214)> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln220 = br i1 %icmp_ln220, void %if.end453, void %if.then449" [obj_detect.cpp:220]   --->   Operation 85 'br' 'br_ln220' <Predicate = (!icmp_ln214)> <Delay = 0.00>
+ST_6 : Operation 86 [1/1] (3.25ns)   --->   "%store_ln220 = store i8 %select_ln209_1, i9 %max_y_addr" [obj_detect.cpp:220]   --->   Operation 86 'store' 'store_ln220' <Predicate = (!icmp_ln214 & icmp_ln220)> <Delay = 3.25> <CoreInst = "RAM_2P_BRAM">   --->   Core 91 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 512> <RAM>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln220 = br void %if.end453" [obj_detect.cpp:220]   --->   Operation 87 'br' 'br_ln220' <Predicate = (!icmp_ln214 & icmp_ln220)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.588ns
+The critical path consists of the following:
+	'alloca' operation ('indvar_flatten') [9]  (0.000 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'indvar_flatten' [16]  (1.588 ns)
+
+ <State 2>: 6.202ns
+The critical path consists of the following:
+	'load' operation ('x_load', obj_detect.cpp:210) on local variable 'x' [26]  (0.000 ns)
+	'icmp' operation ('icmp_ln210', obj_detect.cpp:210) [31]  (1.823 ns)
+	'select' operation ('select_ln209', obj_detect.cpp:209) [32]  (0.968 ns)
+	'add' operation ('x', obj_detect.cpp:210) [88]  (1.823 ns)
+	'store' operation ('store_ln210', obj_detect.cpp:210) of variable 'x', obj_detect.cpp:210 on local variable 'x' [91]  (1.588 ns)
+
+ <State 3>: 7.186ns
+The critical path consists of the following:
+	'add' operation ('add_ln213', obj_detect.cpp:213) [38]  (0.000 ns)
+	'add' operation ('add_ln213_1', obj_detect.cpp:213) [40]  (3.932 ns)
+	'getelementptr' operation ('label_map_addr', obj_detect.cpp:213) [42]  (0.000 ns)
+	'load' operation ('lbl', obj_detect.cpp:213) on array 'label_map' [45]  (3.254 ns)
+
+ <State 4>: 6.508ns
+The critical path consists of the following:
+	'load' operation ('lbl', obj_detect.cpp:213) on array 'label_map' [45]  (3.254 ns)
+	'getelementptr' operation ('parent_addr', obj_detect.cpp:215) [50]  (0.000 ns)
+	'load' operation ('root', obj_detect.cpp:215) on array 'parent' [51]  (3.254 ns)
+
+ <State 5>: 6.508ns
+The critical path consists of the following:
+	'load' operation ('root', obj_detect.cpp:215) on array 'parent' [51]  (3.254 ns)
+	'getelementptr' operation ('max_x_addr', obj_detect.cpp:218) [62]  (0.000 ns)
+	'load' operation ('max_x_load', obj_detect.cpp:218) on array 'max_x' [63]  (3.254 ns)
+
+ <State 6>: 8.423ns
+The critical path consists of the following:
+	'load' operation ('min_y_load', obj_detect.cpp:219) on array 'min_y' [71]  (3.254 ns)
+	'icmp' operation ('icmp_ln219', obj_detect.cpp:219) [72]  (1.915 ns)
+	blocking operation 3.254 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

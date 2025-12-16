@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 16,
+    "calls": "",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 54,
+    "instructions": 926,
+    "loads": {
+      "G": 120,
+      "L": 1
+    },
+    "name": "BackGrRemoval_stream_v2",
+    "stores": {
+      "G": 131,
+      "L": 7
+    },
+    "total_instructions": 926
+  }
+}

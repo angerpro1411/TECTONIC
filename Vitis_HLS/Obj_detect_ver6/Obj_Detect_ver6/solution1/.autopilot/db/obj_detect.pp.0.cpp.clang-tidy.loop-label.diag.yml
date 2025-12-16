@@ -1,0 +1,181 @@
+---
+MainSourceFile:  /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          59304
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          286712
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          287176
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          287641
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          570423
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_1:  '
+    FileOffset:      26
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          961579
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_2:  '
+    FileOffset:      28
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          961651
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      72
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      73
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      74
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      78
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      82
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      86
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      95
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      96
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      97
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      98
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + lutram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      102
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_1:  '
+    FileOffset:      206
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          966691
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_2:  '
+    FileOffset:      207
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          966724
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_218_3:  '
+    FileOffset:      218
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          966945
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_218_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_219_4:  '
+    FileOffset:      219
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          966978
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_219_4: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      234
+    FilePath:        obj_detect.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_276_5:  '
+    FileOffset:      276
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          968585
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_276_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_311_6:  '
+    FileOffset:      311
+    FilePath:        obj_detect.cpp
+    Replacements:    
+      - FilePath:        /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/Obj_Detect_ver6/solution1/.autopilot/db/obj_detect.pp.0.cpp
+        Offset:          969372
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_311_6: '
+...

@@ -1,0 +1,1357 @@
+INFO-FLOW: Workspace /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1 opened at Thu Dec 05 15:22:08 CET 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     ap_set_clock -name default -uncertainty 0 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+Execute     set_part xc7z020-clg484-1 
+Execute       create_platform xc7z020-clg484-1 -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2023.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+Command       create_platform done; 0.18 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.24 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -rtl=vhdl 
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+Execute     config_cosim -rtl=vhdl 
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Command   open_solution done; 0.3 sec.
+Execute   set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+Execute     create_platform xc7z020-clg484-1 -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+Execute   set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+Execute   source ./contour_approximation/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./contour_approximation/solution1/directives.tcl
+Execute     set_directive_top -name ContourApproximation ContourApproximation 
+INFO: [HLS 200-1510] Running: set_directive_top -name ContourApproximation ContourApproximation 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 189.629 MB.
+Execute       set_directive_top ContourApproximation -name=ContourApproximation 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file '../../C_PROGRAM/3.ContourApproximation/contour_approximation.c' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c as C
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c -foptimization-record-file=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.c.clang.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.c.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/clang.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c std=gnu99 -target fpga  -directive=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/.systemc_flag -fix-errors /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c std=gnu99 -target fpga  -directive=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/all.directive.json -fix-errors /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c std=gnu99 -target fpga  
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.clang-tidy.loop-label.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.clang-tidy.loop-label.err.log
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.clang.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.pp.0.c.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.16 seconds. CPU system time: 0.19 seconds. Elapsed time: 0.34 seconds; current allocated memory: 189.875 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.g.bc"  
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/contour_approximation.g.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2023.1/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2023.1/lnx64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2023.1/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2023.1/lnx64/lib/libhlsmc++_39.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.33 sec.
+Execute       run_link_or_opt -opt -out /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=ContourApproximation -reflow-float-conversion 
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=ContourApproximation -reflow-float-conversion -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.49 sec.
+Execute       run_link_or_opt -out /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2023.1/lnx64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2023.1/lnx64/lib/libfloatconversion_39.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=ContourApproximation 
+INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=ContourApproximation -mllvm -hls-db-dir -mllvm /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 2> /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 340 Compile/Link /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 340 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 25,588 Unroll/Inline /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 25,588 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 25,824 Performance/Pipeline /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 25,824 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 23,819 Optimizations /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 23,819 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth_design_size.rpt
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+INFO: [HLS 214-186] Unrolling loop 'CHECK_DISTANCE_LOOP' (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:83:9) in function 'ContourApproximation' completely with a factor of 249 (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-178] Inlining function 'isDiffer' into 'PointNbReduction' (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:152:0)
+INFO: [HLS 214-178] Inlining function 'PointNbReduction' into 'ContourApproximation' (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-178] Inlining function 'isDiffer' into 'ContourApproximation' (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-248] Applying array_partition to 'new_p': Complete partitioning on dimension 1. (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_249' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_248' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_247' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_246' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_245' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_244' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_243' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_242' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_241' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_240' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_239' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_238' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_237' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_236' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_235' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_234' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_233' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_232' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_231' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_230' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_229' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_228' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_227' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_226' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_225' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_224' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_223' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_222' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_221' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_220' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_219' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_218' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_217' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_216' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_215' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_214' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_213' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_212' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_211' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_210' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_209' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_208' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_207' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_206' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_205' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_204' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_203' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_202' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_201' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_200' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_199' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_198' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_197' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_196' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_195' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_194' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_193' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_192' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_191' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_190' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_189' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_188' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_187' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_186' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_185' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_184' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_183' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_182' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_181' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_180' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_179' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_178' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_177' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_176' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_175' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_174' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_173' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_172' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_171' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_170' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_169' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_168' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_167' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_166' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_165' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_164' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_163' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_162' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_161' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_160' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_159' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_158' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_157' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_156' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_155' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_154' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_153' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_152' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_151' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_150' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_149' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_148' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_147' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_146' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_145' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_144' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_143' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_142' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_141' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_140' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_139' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_138' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_137' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_136' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_135' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_134' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_133' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_132' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_131' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_130' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_129' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_128' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_127' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_126' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_125' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_124' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_123' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_122' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_121' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_120' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_119' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_118' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_117' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_116' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_115' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_114' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_113' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_112' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_111' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_110' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_109' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_108' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_107' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_106' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_105' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_104' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_103' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_102' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_101' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_100' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_99' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_98' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_97' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_96' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_95' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_94' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_93' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_92' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_91' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_90' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_89' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_88' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_87' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_86' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_85' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_84' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_83' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_82' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_81' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_80' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_79' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_78' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_77' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_76' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_75' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_74' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_73' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_72' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_71' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_70' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_69' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_68' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_67' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_66' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_65' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_64' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_63' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_62' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_61' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_60' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_59' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_58' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_57' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_56' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_55' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_54' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_53' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_52' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_51' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_50' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_49' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_48' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_47' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_46' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_45' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_44' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_43' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_42' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_41' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_40' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_39' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_38' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_37' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_36' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_35' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_34' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_33' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_32' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_31' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_30' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_29' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_28' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_27' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_26' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_25' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_24' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_23' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_22' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_21' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_20' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_19' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_18' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_17' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_16' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_15' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_14' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_13' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_12' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_11' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_10' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_9' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_8' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_7' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_6' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_5' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_4' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_3' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_2' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_1' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'new_p_0' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO: [HLS 214-241] Aggregating bram variable 'p' with compact=bit mode in 64-bits (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:55:0)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 20.24 seconds. CPU system time: 0.33 seconds. Elapsed time: 22.9 seconds; current allocated memory: 195.609 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 195.609 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top ContourApproximation -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.0.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 1.28 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.28 seconds; current allocated memory: 219.145 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.1.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.42 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 225.914 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.g.1.bc to /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.1.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+Command         transform done; 3.94 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:9:31) to (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:31:1) in function 'LinearLine'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:159:9) to (../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:163:13) in function 'ContourApproximation'... converting 4 basic blocks.
+Command         transform done; 1.32 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.23 seconds. CPU system time: 0.03 seconds. Elapsed time: 5.26 seconds; current allocated memory: 288.809 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.2.bc -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute           auto_get_db
+Command         transform done; 7.74 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 7.68 seconds. CPU system time: 0.06 seconds. Elapsed time: 7.74 seconds; current allocated memory: 487.047 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 14.74 sec.
+Command     elaborate done; 37.99 sec.
+Execute     ap_eval exec zip -j /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'ContourApproximation' ...
+Execute       ap_set_top_model ContourApproximation 
+Execute       get_model_list ContourApproximation -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model ContourApproximation 
+Execute       preproc_iomode -model ContourApproximation_Pipeline_WRITE_BACK 
+Execute       preproc_iomode -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       preproc_iomode -model Distance_Point_Line_Square 
+Execute       preproc_iomode -model LinearLine 
+Execute       get_model_list ContourApproximation -filter all-wo-channel 
+INFO-FLOW: Model list for configure: LinearLine Distance_Point_Line_Square ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ContourApproximation_Pipeline_WRITE_BACK ContourApproximation
+INFO-FLOW: Configuring Module : LinearLine ...
+Execute       set_default_model LinearLine 
+Execute       apply_spec_resource_limit LinearLine 
+INFO-FLOW: Configuring Module : Distance_Point_Line_Square ...
+Execute       set_default_model Distance_Point_Line_Square 
+Execute       apply_spec_resource_limit Distance_Point_Line_Square 
+INFO-FLOW: Configuring Module : ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ...
+Execute       set_default_model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       apply_spec_resource_limit ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+INFO-FLOW: Configuring Module : ContourApproximation_Pipeline_WRITE_BACK ...
+Execute       set_default_model ContourApproximation_Pipeline_WRITE_BACK 
+Execute       apply_spec_resource_limit ContourApproximation_Pipeline_WRITE_BACK 
+INFO-FLOW: Configuring Module : ContourApproximation ...
+Execute       set_default_model ContourApproximation 
+Execute       apply_spec_resource_limit ContourApproximation 
+INFO-FLOW: Model list for preprocess: LinearLine Distance_Point_Line_Square ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ContourApproximation_Pipeline_WRITE_BACK ContourApproximation
+INFO-FLOW: Preprocessing Module: LinearLine ...
+Execute       set_default_model LinearLine 
+Execute       cdfg_preprocess -model LinearLine 
+Execute       rtl_gen_preprocess LinearLine 
+INFO-FLOW: Preprocessing Module: Distance_Point_Line_Square ...
+Execute       set_default_model Distance_Point_Line_Square 
+Execute       cdfg_preprocess -model Distance_Point_Line_Square 
+Execute       rtl_gen_preprocess Distance_Point_Line_Square 
+INFO-FLOW: Preprocessing Module: ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ...
+Execute       set_default_model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       cdfg_preprocess -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       rtl_gen_preprocess ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+INFO-FLOW: Preprocessing Module: ContourApproximation_Pipeline_WRITE_BACK ...
+Execute       set_default_model ContourApproximation_Pipeline_WRITE_BACK 
+Execute       cdfg_preprocess -model ContourApproximation_Pipeline_WRITE_BACK 
+Execute       rtl_gen_preprocess ContourApproximation_Pipeline_WRITE_BACK 
+INFO-FLOW: Preprocessing Module: ContourApproximation ...
+Execute       set_default_model ContourApproximation 
+Execute       cdfg_preprocess -model ContourApproximation 
+Command       cdfg_preprocess done; 54.61 sec.
+Execute       rtl_gen_preprocess ContourApproximation 
+INFO-FLOW: Model list for synthesis: LinearLine Distance_Point_Line_Square ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ContourApproximation_Pipeline_WRITE_BACK ContourApproximation
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LinearLine' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model LinearLine 
+Execute       schedule -model LinearLine 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.17 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 54.68 seconds. CPU system time: 0.14 seconds. Elapsed time: 54.86 seconds; current allocated memory: 578.754 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.sched.adb -f 
+INFO-FLOW: Finish scheduling LinearLine.
+Execute       set_default_model LinearLine 
+Execute       bind -model LinearLine 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 578.754 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.bind.adb -f 
+INFO-FLOW: Finish binding LinearLine.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Distance_Point_Line_Square' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Distance_Point_Line_Square 
+Execute       schedule -model Distance_Point_Line_Square 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.15 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 579.535 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.11 sec.
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.sched.adb -f 
+INFO-FLOW: Finish scheduling Distance_Point_Line_Square.
+Execute       set_default_model Distance_Point_Line_Square 
+Execute       bind -model Distance_Point_Line_Square 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 579.535 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.bind.adb -f 
+INFO-FLOW: Finish binding Distance_Point_Line_Square.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ContourApproximation_Pipeline_CHECK_DIFFER_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       schedule -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CHECK_DIFFER_LOOP'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'CHECK_DIFFER_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.22 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 580.453 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.sched.adb -f 
+INFO-FLOW: Finish scheduling ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.
+Execute       set_default_model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       bind -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 580.453 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.bind.adb -f 
+INFO-FLOW: Finish binding ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ContourApproximation_Pipeline_WRITE_BACK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ContourApproximation_Pipeline_WRITE_BACK 
+Execute       schedule -model ContourApproximation_Pipeline_WRITE_BACK 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'WRITE_BACK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'WRITE_BACK'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.9 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.9 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.92 seconds; current allocated memory: 614.453 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.16 sec.
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.sched.adb -f 
+INFO-FLOW: Finish scheduling ContourApproximation_Pipeline_WRITE_BACK.
+Execute       set_default_model ContourApproximation_Pipeline_WRITE_BACK 
+Execute       bind -model ContourApproximation_Pipeline_WRITE_BACK 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 614.453 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.bind.adb -f 
+INFO-FLOW: Finish binding ContourApproximation_Pipeline_WRITE_BACK.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ContourApproximation' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ContourApproximation 
+Execute       schedule -model ContourApproximation 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 286.24 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 286.12 seconds. CPU system time: 0.18 seconds. Elapsed time: 286.35 seconds; current allocated memory: 894.621 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 11.63 sec.
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.sched.adb -f 
+Command       db_write done; 0.91 sec.
+INFO-FLOW: Finish scheduling ContourApproximation.
+Execute       set_default_model ContourApproximation 
+Execute       bind -model ContourApproximation 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 16.55 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 29.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 29.09 seconds; current allocated memory: 894.621 MB.
+Execute       syn_report -verbosereport -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 2.67 sec.
+Execute       db_write -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.bind.adb -f 
+Command       db_write done; 1.04 sec.
+INFO-FLOW: Finish binding ContourApproximation.
+Execute       get_model_list ContourApproximation -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess LinearLine 
+Execute       rtl_gen_preprocess Distance_Point_Line_Square 
+Execute       rtl_gen_preprocess ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       rtl_gen_preprocess ContourApproximation_Pipeline_WRITE_BACK 
+Execute       rtl_gen_preprocess ContourApproximation 
+INFO-FLOW: Model list for RTL generation: LinearLine Distance_Point_Line_Square ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ContourApproximation_Pipeline_WRITE_BACK ContourApproximation
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LinearLine' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model LinearLine -top_prefix ContourApproximation_ -sub_prefix ContourApproximation_ -mg_file /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LinearLine'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.71 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.74 seconds; current allocated memory: 894.621 MB.
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl LinearLine -style xilinx -f -lang vhdl -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/vhdl/ContourApproximation_LinearLine 
+Execute       gen_rtl LinearLine -style xilinx -f -lang vlog -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/verilog/ContourApproximation_LinearLine 
+Execute       syn_report -csynth -model LinearLine -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/LinearLine_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model LinearLine -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/LinearLine_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model LinearLine -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model LinearLine -f -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.adb 
+Execute       db_write -model LinearLine -bindview -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info LinearLine -p /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Distance_Point_Line_Square' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model Distance_Point_Line_Square -top_prefix ContourApproximation_ -sub_prefix ContourApproximation_ -mg_file /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Distance_Point_Line_Square'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 894.621 MB.
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Distance_Point_Line_Square -style xilinx -f -lang vhdl -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/vhdl/ContourApproximation_Distance_Point_Line_Square 
+Execute       gen_rtl Distance_Point_Line_Square -style xilinx -f -lang vlog -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/verilog/ContourApproximation_Distance_Point_Line_Square 
+Execute       syn_report -csynth -model Distance_Point_Line_Square -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/Distance_Point_Line_Square_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model Distance_Point_Line_Square -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/Distance_Point_Line_Square_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model Distance_Point_Line_Square -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model Distance_Point_Line_Square -f -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.adb 
+Execute       db_write -model Distance_Point_Line_Square -bindview -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info Distance_Point_Line_Square -p /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ContourApproximation_Pipeline_CHECK_DIFFER_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -top_prefix ContourApproximation_ -sub_prefix ContourApproximation_ -mg_file /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ContourApproximation_Pipeline_CHECK_DIFFER_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 894.621 MB.
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -style xilinx -f -lang vhdl -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/vhdl/ContourApproximation_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       gen_rtl ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -style xilinx -f -lang vlog -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/verilog/ContourApproximation_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+Execute       syn_report -csynth -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -f -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.adb 
+Execute       db_write -model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -bindview -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info ContourApproximation_Pipeline_CHECK_DIFFER_LOOP -p /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ContourApproximation_Pipeline_WRITE_BACK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model ContourApproximation_Pipeline_WRITE_BACK -top_prefix ContourApproximation_ -sub_prefix ContourApproximation_ -mg_file /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ContourApproximation_Pipeline_WRITE_BACK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 894.621 MB.
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ContourApproximation_Pipeline_WRITE_BACK -style xilinx -f -lang vhdl -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/vhdl/ContourApproximation_ContourApproximation_Pipeline_WRITE_BACK 
+Execute       gen_rtl ContourApproximation_Pipeline_WRITE_BACK -style xilinx -f -lang vlog -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/verilog/ContourApproximation_ContourApproximation_Pipeline_WRITE_BACK 
+Execute       syn_report -csynth -model ContourApproximation_Pipeline_WRITE_BACK -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/ContourApproximation_Pipeline_WRITE_BACK_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model ContourApproximation_Pipeline_WRITE_BACK -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/ContourApproximation_Pipeline_WRITE_BACK_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model ContourApproximation_Pipeline_WRITE_BACK -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model ContourApproximation_Pipeline_WRITE_BACK -f -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.adb 
+Execute       db_write -model ContourApproximation_Pipeline_WRITE_BACK -bindview -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info ContourApproximation_Pipeline_WRITE_BACK -p /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ContourApproximation' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model ContourApproximation -top_prefix  -sub_prefix ContourApproximation_ -mg_file /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/nb_pts' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/p' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_64' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_65' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_66' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_67' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_68' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_69' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_70' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_71' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_72' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_73' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_74' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_75' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_76' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_77' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_78' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_79' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_80' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_81' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_82' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_83' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_84' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_85' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_86' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_87' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_88' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_89' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_90' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_91' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_92' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_93' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_94' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_95' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_96' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_97' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_98' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_99' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_100' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_101' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_102' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_103' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_104' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_105' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_106' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_107' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_108' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_109' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_110' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_111' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_112' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_113' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_114' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_115' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_116' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_117' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_118' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_119' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_120' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_121' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_122' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_123' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_124' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_125' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_126' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_127' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_128' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_129' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_130' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_131' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_132' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_133' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_134' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_135' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_136' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_137' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_138' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_139' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_140' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_141' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_142' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_143' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_144' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_145' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_146' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_147' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_148' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_149' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_150' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_151' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_152' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_153' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_154' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_155' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_156' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_157' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_158' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_159' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_160' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_161' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_162' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_163' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_164' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_165' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_166' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_167' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_168' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_169' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_170' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_171' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_172' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_173' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_174' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_175' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_176' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_177' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_178' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_179' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_180' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_181' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_182' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_183' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_184' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_185' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_186' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_187' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_188' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_189' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_190' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_191' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_192' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_193' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_194' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_195' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_196' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_197' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_198' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_199' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_200' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_201' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_202' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_203' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_204' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_205' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_206' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_207' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_208' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_209' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_210' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_211' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_212' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_213' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_214' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_215' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_216' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_217' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_218' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_219' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_220' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_221' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_222' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_223' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_224' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_225' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_226' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_227' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_228' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_229' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_230' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_231' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_232' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_233' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_234' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_235' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_236' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_237' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_238' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_239' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_240' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_241' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_242' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_243' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_244' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_245' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_246' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_247' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_248' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/new_p_249' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ContourApproximation/espilon' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ContourApproximation' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ContourApproximation'.
+Command       create_rtl_model done; 4.08 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.25 seconds. CPU system time: 0.05 seconds. Elapsed time: 4.31 seconds; current allocated memory: 894.621 MB.
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ContourApproximation -istop -style xilinx -f -lang vhdl -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/vhdl/ContourApproximation 
+Command       gen_rtl done; 1.71 sec.
+Execute       gen_rtl ContourApproximation -istop -style xilinx -f -lang vlog -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/verilog/ContourApproximation 
+Command       gen_rtl done; 0.81 sec.
+Execute       syn_report -csynth -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/ContourApproximation_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.54 sec.
+Execute       syn_report -rtlxml -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/ContourApproximation_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.5 sec.
+Execute       syn_report -verbosereport -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 4.05 sec.
+Execute       db_write -model ContourApproximation -f -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.adb 
+Command       db_write done; 2.29 sec.
+Execute       db_write -model ContourApproximation -bindview -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/design.bindinfo.xml 
+Command       db_write done; 0.2 sec.
+Execute       gen_tb_info ContourApproximation -p /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation 
+Execute       export_constraint_db -f -tool general -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.constraint.tcl 
+Execute       syn_report -designview -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.design.xml 
+Command       syn_report done; 1.06 sec.
+Execute       syn_report -csynthDesign -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth.rpt -MHOut /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -wcfg -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model ContourApproximation -o /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.protoinst 
+Execute       sc_get_clocks ContourApproximation 
+Execute       sc_get_portdomain ContourApproximation 
+INFO-FLOW: Model list for RTL component generation: LinearLine Distance_Point_Line_Square ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ContourApproximation_Pipeline_WRITE_BACK ContourApproximation
+INFO-FLOW: Handling components in module [LinearLine] ... 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.compgen.tcl 
+INFO-FLOW: Found component ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1.
+INFO-FLOW: Append model ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1
+INFO-FLOW: Found component ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1.
+INFO-FLOW: Append model ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: Handling components in module [Distance_Point_Line_Square] ... 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.compgen.tcl 
+INFO-FLOW: Found component ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Handling components in module [ContourApproximation_Pipeline_CHECK_DIFFER_LOOP] ... 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.compgen.tcl 
+INFO-FLOW: Handling components in module [ContourApproximation_Pipeline_WRITE_BACK] ... 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.compgen.tcl 
+INFO-FLOW: Handling components in module [ContourApproximation] ... 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.compgen.tcl 
+INFO-FLOW: Append model LinearLine
+INFO-FLOW: Append model Distance_Point_Line_Square
+INFO-FLOW: Append model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP
+INFO-FLOW: Append model ContourApproximation_Pipeline_WRITE_BACK
+INFO-FLOW: Append model ContourApproximation
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1 ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1 ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1 ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1 ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1 LinearLine Distance_Point_Line_Square ContourApproximation_Pipeline_CHECK_DIFFER_LOOP ContourApproximation_Pipeline_WRITE_BACK ContourApproximation
+INFO-FLOW: Generating /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1
+INFO-FLOW: To file: write model ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: To file: write model ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model LinearLine
+INFO-FLOW: To file: write model Distance_Point_Line_Square
+INFO-FLOW: To file: write model ContourApproximation_Pipeline_CHECK_DIFFER_LOOP
+INFO-FLOW: To file: write model ContourApproximation_Pipeline_WRITE_BACK
+INFO-FLOW: To file: write model ContourApproximation
+INFO-FLOW: Generating /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/vhdl' dstVlogDir='/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/vlog' tclDir='/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db' modelList='ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1
+ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1
+ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1
+ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1
+ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1
+LinearLine
+Distance_Point_Line_Square
+ContourApproximation_Pipeline_CHECK_DIFFER_LOOP
+ContourApproximation_Pipeline_WRITE_BACK
+ContourApproximation
+' expOnly='0'
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.compgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.compgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.compgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.compgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 12.55 seconds. CPU system time: 0.19 seconds. Elapsed time: 12.78 seconds; current allocated memory: 1.094 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='ContourApproximation_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1
+ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1
+ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1
+ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1
+ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1
+LinearLine
+Distance_Point_Line_Square
+ContourApproximation_Pipeline_CHECK_DIFFER_LOOP
+ContourApproximation_Pipeline_WRITE_BACK
+ContourApproximation
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.compgen.dataonly.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/LinearLine.tbgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/Distance_Point_Line_Square.tbgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_CHECK_DIFFER_LOOP.tbgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation_Pipeline_WRITE_BACK.tbgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.constraint.tcl 
+Execute       sc_get_clocks ContourApproximation 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/impl/misc/ContourApproximation_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/impl/misc/ContourApproximation_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/impl/misc/ContourApproximation_fdiv_32ns_32ns_32_12_no_dsp_1_ip.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/impl/misc/ContourApproximation_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+Execute       source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/impl/misc/ContourApproximation_fsub_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST ContourApproximation MODULE2INSTS {ContourApproximation ContourApproximation LinearLine grp_LinearLine_fu_19741 Distance_Point_Line_Square grp_Distance_Point_Line_Square_fu_19747 ContourApproximation_Pipeline_CHECK_DIFFER_LOOP grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499 ContourApproximation_Pipeline_WRITE_BACK grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508} INST2MODULE {ContourApproximation ContourApproximation grp_LinearLine_fu_19741 LinearLine grp_Distance_Point_Line_Square_fu_19747 Distance_Point_Line_Square grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499 ContourApproximation_Pipeline_CHECK_DIFFER_LOOP grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508 ContourApproximation_Pipeline_WRITE_BACK} INSTDATA {ContourApproximation {DEPTH 1 CHILDREN {grp_LinearLine_fu_19741 grp_Distance_Point_Line_Square_fu_19747 grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499 grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508}} grp_LinearLine_fu_19741 {DEPTH 2 CHILDREN {}} grp_Distance_Point_Line_Square_fu_19747 {DEPTH 2 CHILDREN {}} grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499 {DEPTH 2 CHILDREN {}} grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508 {DEPTH 2 CHILDREN {}}} MODULEDATA {LinearLine {BINDINFO {{BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_5_full_dsp_1_U1 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:9 VARIABLE sub LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fabric LATENCY 11 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_12_no_dsp_1_U4 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:9 VARIABLE inverse LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_5_full_dsp_1_U2 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:26 VARIABLE sub2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U3 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:26 VARIABLE L1_a LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U3 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:27 VARIABLE mul LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_5_full_dsp_1_U1 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:27 VARIABLE L1_c_2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}}} AREA {DSP 7 BRAM 0 URAM 0}} Distance_Point_Line_Square {BINDINFO {{BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U15 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:47 VARIABLE mul LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U16 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:47 VARIABLE mul1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U13 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:47 VARIABLE add LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U13 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:47 VARIABLE temp LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U17 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:48 VARIABLE mul5 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U18 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:48 VARIABLE mul8 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U14 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:48 VARIABLE add9 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 11 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_12_no_dsp_1_U19 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:50 VARIABLE div LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U15 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:50 VARIABLE mul2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U15 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:50 VARIABLE dist_square LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}}} AREA {DSP 16 BRAM 0 URAM 0}} ContourApproximation_Pipeline_CHECK_DIFFER_LOOP {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln160_fu_172_p2 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:160 VARIABLE add_ln160 LOOP CHECK_DIFFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln161_fu_382_p2 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:161 VARIABLE add_ln161 LOOP CHECK_DIFFER_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ContourApproximation_Pipeline_WRITE_BACK {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln128_fu_2914_p2 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:128 VARIABLE add_ln128 LOOP WRITE_BACK BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME newcnt_2_fu_3151_p2 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:130 VARIABLE newcnt_2 LOOP WRITE_BACK BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ContourApproximation {BINDINFO {{BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U287 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:57 VARIABLE espilon_square LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln75_fu_21815_p2 SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:75 VARIABLE add_ln75 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ap_return SOURCE ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:169 VARIABLE nb_pts_reduce LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 26 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 8.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 8.58 seconds; current allocated memory: 1.121 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ContourApproximation.
+INFO: [VLOG 209-307] Generating Verilog RTL for ContourApproximation.
+Execute       syn_report -model ContourApproximation -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 101.66 MHz
+Command     autosyn done; 402.08 sec.
+Command   csynth_design done; 440.15 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 436.38 seconds. CPU system time: 1.28 seconds. Elapsed time: 440.15 seconds; current allocated memory: 958.598 MB.
+Command ap_source done; 440.53 sec.
+Execute cleanup_all 
+Command cleanup_all done; 0.71 sec.
+INFO-FLOW: Workspace /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1 opened at Thu Dec 05 15:30:09 CET 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     ap_set_clock -name default -uncertainty 0 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+Execute     set_part xc7z020-clg484-1 
+Execute       create_platform xc7z020-clg484-1 -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2023.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+Command       create_platform done; 0.19 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.25 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -rtl=vhdl 
+INFO: [HLS 200-1464] Running solution command: config_cosim -rtl=vhdl
+Execute     config_cosim -rtl=vhdl 
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Command   open_solution done; 0.32 sec.
+Execute   set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+Execute     create_platform xc7z020-clg484-1 -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_cosim -rtl vhdl -tool xsim 
+INFO: [HLS 200-1510] Running: config_cosim -rtl vhdl -tool xsim 
+Execute   set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+Execute   source ./contour_approximation/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./contour_approximation/solution1/directives.tcl
+Execute     set_directive_top -name ContourApproximation ContourApproximation 
+INFO: [HLS 200-1510] Running: set_directive_top -name ContourApproximation ContourApproximation 
+Execute   cosim_design -rtl vhdl 
+INFO: [HLS 200-1510] Running: cosim_design -rtl vhdl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: TB processing: /home/dell3561-49/C_PROGRAM/3.ContourApproximation/tb_contour.c /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/tb_contour.c_pre.c
+Execute     clang_tidy xilinx-tb-process -desc tb-process /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/tb_contour.c_pre.c.tb.c std=gnu99 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/tb_contour.c_pre.c.tb.c -- -std=gnu99 -fhls -ferror-limit=0
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: TB processing: /home/dell3561-49/C_PROGRAM/3.ContourApproximation/contour_approximation.c /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/contour_approximation.c_pre.c
+Execute     clang_tidy xilinx-tb-process -desc tb-process /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/contour_approximation.c_pre.c.tb.c std=gnu99 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/contour_approximation.c_pre.c.tb.c -- -std=gnu99 -fhls -ferror-limit=0
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.rtl_wrap.cfg.tcl 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     source /home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/.autopilot/db/ContourApproximation.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 29.52 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 63.66 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 90.51 seconds. CPU system time: 2.83 seconds. Elapsed time: 63.66 seconds; current allocated memory: 17.000 MB.
+Command ap_source done; 64.05 sec.
+Execute cleanup_all 

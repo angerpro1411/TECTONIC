@@ -1,0 +1,482 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: obj_detect.cpp, Line: 38, Column: 19 }
+Function:        _ZL8uf_unionP7ap_uintILi16EES0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'uf_find(ap_uint<16>*, ap_uint<16>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 35, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: obj_detect.cpp, Line: 39, Column: 19 }
+Function:        _ZL8uf_unionP7ap_uintILi16EES0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'uf_find(ap_uint<16>*, ap_uint<16>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 35, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: obj_detect.cpp, Line: 281, Column: 31 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'is_green_rgb(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: obj_detect.cpp, Line: 219, Column: 29 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'uf_find(ap_uint<16>*, ap_uint<16>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: obj_detect.cpp, Line: 190, Column: 42 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 35, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 204, Column: 25 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Pass1_5_inner1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 205, Column: 26 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Pass1_5_inner2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Pass1_5_inner1
+  - String:          ''' ('
+  - LoopLoc:         'obj_detect.cpp:204:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hls_object_green_classification
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Pass1_5_inner2
+  - String:          ''' ('
+  - LoopLoc:         'obj_detect.cpp:205:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hls_object_green_classification
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Pass1_5_inner2
+  - String:          ''' ('
+  - LoopLoc:         'obj_detect.cpp:205:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hls_object_green_classification
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Pass1_5_inner2
+  - String:          ''' ('
+  - LoopLoc:         'obj_detect.cpp:205:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hls_object_green_classification
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_window
+  - String:          ''' ('
+  - LoopLoc:         'obj_detect.cpp:158:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hls_object_green_classification
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: obj_detect.cpp, Line: 133, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE7linebuf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 25, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:25:19'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 27, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:27:19'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 25, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:25:19'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 27, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:27:19'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 25, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:25:19'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 27, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:27:19'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: obj_detect.cpp, Line: 276, Column: 10 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        pass_4
+  - String:          ' '
+  - LoopLoc:         'obj_detect.cpp:276:10'
+  - String:          ' '
+  - Function:        'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)'
+    DebugLoc:        { File: obj_detect.cpp, Line: 79, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: obj_detect.cpp, Line: 25, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '''('
+  - LoopLoc:         'obj_detect.cpp:25:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: obj_detect.cpp, Line: 27, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          '''('
+  - LoopLoc:         'obj_detect.cpp:27:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: obj_detect.cpp, Line: 25, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '''('
+  - LoopLoc:         'obj_detect.cpp:25:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: obj_detect.cpp, Line: 27, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          '''('
+  - LoopLoc:         'obj_detect.cpp:27:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: obj_detect.cpp, Line: 25, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '''('
+  - LoopLoc:         'obj_detect.cpp:25:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: obj_detect.cpp, Line: 27, Column: 19 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_27_2
+  - String:          '''('
+  - LoopLoc:         'obj_detect.cpp:27:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  hls_object_green_classification
+  - String:          ' '
+  - varLoc:          'obj_detect.cpp:97:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'obj_detect.cpp:202:9'
+    DebugLoc:        { File: obj_detect.cpp, Line: 202, Column: 9 }
+  - VarName:         'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: obj_detect.cpp, Line: 202, Column: 9 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  hls_object_green_classification
+  - String:          ' '
+  - varLoc:          'obj_detect.cpp:97:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'obj_detect.cpp:202:9'
+    DebugLoc:        { File: obj_detect.cpp, Line: 202, Column: 9 }
+  - VarName:         'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: obj_detect.cpp, Line: 202, Column: 9 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: obj_detect.cpp, Line: 97, Column: 0 }
+Function:        _Z31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...

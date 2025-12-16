@@ -1,0 +1,51 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "2 1",
+    "file": "BaGr_ObjDetect.cpp",
+    "fileloc": 19,
+    "instructions": 23,
+    "loads": {
+      "G": 1
+    },
+    "name": "BaGr_ObjDetect",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 1710
+  },
+  "1": {
+    "basicblocks": 247,
+    "calls": "",
+    "file": "obj_detect.cpp",
+    "fileloc": 44,
+    "instructions": 1110,
+    "loads": {
+      "G": 80,
+      "L": 24
+    },
+    "name": "hls_object_green_classification",
+    "stores": {
+      "G": 45,
+      "L": 23
+    },
+    "total_instructions": 1110
+  },
+  "2": {
+    "basicblocks": 130,
+    "calls": "",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 10,
+    "instructions": 577,
+    "loads": {
+      "G": 22,
+      "L": 3
+    },
+    "name": "BackGrRemovalStream",
+    "stores": {
+      "G": 12,
+      "L": 7
+    },
+    "total_instructions": 577
+  }
+}

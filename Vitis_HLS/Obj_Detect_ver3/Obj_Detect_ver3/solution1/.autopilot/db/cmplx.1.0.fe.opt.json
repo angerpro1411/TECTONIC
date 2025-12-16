@@ -1,0 +1,59 @@
+{
+  "0": {
+    "basicblocks": 255,
+    "calls": "3 2 1",
+    "file": "obj_detect.cpp",
+    "fileloc": 59,
+    "instructions": 1581,
+    "loads": {
+      "G": 27,
+      "L": 47
+    },
+    "name": "hls_object_green_classification",
+    "stores": {
+      "G": 35,
+      "L": 37,
+      "T": 4
+    },
+    "total_instructions": 6943
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "obj_detect.cpp",
+    "fileloc": 15,
+    "instructions": 13,
+    "name": "is_green_rgb",
+    "total_instructions": 59
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "obj_detect.cpp",
+    "fileloc": 21,
+    "instructions": 45,
+    "loads": {
+      "L": 5
+    },
+    "name": "uf_find",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 92
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "2 2",
+    "file": "obj_detect.cpp",
+    "fileloc": 51,
+    "instructions": 29,
+    "loads": {
+      "L": 3
+    },
+    "name": "uf_union",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 229
+  }
+}

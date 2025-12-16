@@ -1,0 +1,315 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_object_green_classification'
+================================================================
++ General Information: 
+    * Date:           Mon Dec 15 18:24:31 2025
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        Obj_Detect_ver6
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------------------------------+------+------+------------+-----------+----------+---------+-------+----------+------------+---------+-----------+-------------+-----+
+    |                                    Modules                                    | Issue|      |  Latency   |  Latency  | Iteration|         |  Trip |          |            |         |           |             |     |
+    |                                    & Loops                                    | Type | Slack|  (cycles)  |    (ns)   |  Latency | Interval| Count | Pipelined|    BRAM    |   DSP   |     FF    |     LUT     | URAM|
+    +-------------------------------------------------------------------------------+------+------+------------+-----------+----------+---------+-------+----------+------------+---------+-----------+-------------+-----+
+    |+ hls_object_green_classification                                              |     -|  0.11|           -|          -|         -|        -|      -|        no|  337 (120%)|  20 (9%)|  5622 (5%)|  10154 (19%)|    -|
+    | + hls_object_green_classification_Pipeline_InitLoop                           |     -|  2.31|         514|  5.140e+03|         -|      514|      -|        no|           -|        -|   12 (~0%)|     52 (~0%)|    -|
+    |  o InitLoop                                                                   |     -|  7.30|         512|  5.120e+03|         1|        1|    512|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2  |     -|  0.11|      230402|  2.304e+06|         -|   230402|      -|        no|           -|        -|   76 (~0%)|    250 (~0%)|    -|
+    |  o VITIS_LOOP_206_1_VITIS_LOOP_207_2                                          |     -|  7.30|      230400|  2.304e+06|         4|        3|  76800|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4  |     -|  0.11|      230403|  2.304e+06|         -|   230403|      -|        no|           -|        -|  125 (~0%)|    322 (~0%)|    -|
+    |  o VITIS_LOOP_218_3_VITIS_LOOP_219_4                                          |     -|  7.30|      230401|  2.304e+06|         5|        3|  76800|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_PASS_3_5_1                         |     -|  1.97|       65537|  6.554e+05|         -|    65537|      -|        no|           -|        -|   46 (~0%)|     97 (~0%)|    -|
+    |  o PASS_3_5_1                                                                 |     -|  7.30|       65535|  6.554e+05|         3|        1|  65534|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_pass_4                             |     -|  0.11|           -|          -|         -|        -|      -|        no|           -|        -|  210 (~0%)|    408 (~0%)|    -|
+    |  o pass_4                                                                     |     -|  7.30|           -|          -|         8|        3|      -|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_VITIS_LOOP_276_5                   |     -|  2.66|       65537|  6.554e+05|         -|    65537|      -|        no|           -|        -|   15 (~0%)|     75 (~0%)|    -|
+    |  o VITIS_LOOP_276_5                                                           |     -|  7.30|       65535|  6.554e+05|         2|        1|  65535|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_pass5_out_pass5_in                 |     -|  0.11|       76814|  7.681e+05|         -|    76814|      -|        no|           -|  2 (~0%)|  732 (~0%)|     844 (1%)|    -|
+    |  o pass5_out_pass5_in                                                         |     -|  7.30|       76812|  7.681e+05|        14|        1|  76800|       yes|           -|        -|          -|            -|    -|
+    | + hls_object_green_classification_Pipeline_VITIS_LOOP_311_6                   |     -|  2.66|          65|    650.000|         -|       65|      -|        no|           -|        -|   15 (~0%)|     75 (~0%)|    -|
+    |  o VITIS_LOOP_311_6                                                           |     -|  7.30|          63|    630.000|         2|        1|     63|       yes|           -|        -|          -|            -|    -|
+    | o PASS_1                                                                      |     -|  7.30|           -|          -|         -|        -|      -|        no|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_VITIS_LOOP_26_1                   |     -|  0.38|           -|          -|         -|        -|      -|        no|           -|        -|   35 (~0%)|     64 (~0%)|    -|
+    |   o VITIS_LOOP_26_1                                                           |    II|  7.30|           -|          -|         2|        2|      -|       yes|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_VITIS_LOOP_28_2                   |     -|  0.90|           -|          -|         -|        -|      -|        no|           -|        -|  121 (~0%)|    194 (~0%)|    -|
+    |   o VITIS_LOOP_28_2                                                           |    II|  7.30|           -|          -|         3|        2|      -|       yes|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_VITIS_LOOP_26_11                  |     -|  0.38|           -|          -|         -|        -|      -|        no|           -|        -|   44 (~0%)|     64 (~0%)|    -|
+    |   o VITIS_LOOP_26_1                                                           |    II|  7.30|           -|          -|         2|        2|      -|       yes|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_VITIS_LOOP_28_22                  |     -|  0.90|           -|          -|         -|        -|      -|        no|           -|        -|  121 (~0%)|    194 (~0%)|    -|
+    |   o VITIS_LOOP_28_2                                                           |    II|  7.30|           -|          -|         3|        2|      -|       yes|           -|        -|          -|            -|    -|
+    | o PASS1_5_Outer                                                               |     -|  7.30|       82586|  8.259e+05|       347|        -|    238|        no|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_Pass1_5_inner0                    |     -|  0.63|         334|  3.340e+03|         -|      334|      -|        no|           -|   3 (1%)|  857 (~0%)|    1437 (2%)|    -|
+    |   o Pass1_5_inner0                                                            |     -|  7.30|         332|  3.320e+03|        16|        1|    318|       yes|           -|        -|          -|            -|    -|
+    | o PASS2                                                                       |     -|  7.30|           -|          -|         -|        -|      -|        no|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_VITIS_LOOP_26_13                  |     -|  0.38|           -|          -|         -|        -|      -|        no|           -|        -|   35 (~0%)|     64 (~0%)|    -|
+    |   o VITIS_LOOP_26_1                                                           |    II|  7.30|           -|          -|         2|        2|      -|       yes|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_VITIS_LOOP_28_24                  |     -|  0.90|           -|          -|         -|        -|      -|        no|           -|        -|  121 (~0%)|    194 (~0%)|    -|
+    |   o VITIS_LOOP_28_2                                                           |    II|  7.30|           -|          -|         3|        2|      -|       yes|           -|        -|          -|            -|    -|
+    | o PASS_3_5_2_out                                                              |     -|  7.30|  4295491564|  4.295e+10|     65546|        -|  65534|        no|           -|        -|          -|            -|    -|
+    |  + hls_object_green_classification_Pipeline_PASS_3_5_2_in                     |     -|  0.99|       65541|  6.554e+05|         -|    65541|      -|        no|           -|        -|  324 (~0%)|    318 (~0%)|    -|
+    |   o PASS_3_5_2_in                                                             |     -|  7.30|       65539|  6.554e+05|         7|        1|  65534|       yes|           -|        -|          -|            -|    -|
+    +-------------------------------------------------------------------------------+------+------+------------+-----------+----------+---------+-------+----------+------------+---------+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_CTRL | 32         | 8             | 64     | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register          | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL              | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER              | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER            | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR            | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CTRL | object_count      | 0x10   | 32    | R      | Data signal of object_count      |                                                                      |
+| s_axi_CTRL | object_count_ctrl | 0x14   | 32    | R      | Control signal of object_count   | 0=object_count_ap_vld                                                |
++------------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface  | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| in_stream  | in        | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| out_stream | out       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+---------------------------------------------+
+| Argument     | Direction | Datatype                                    |
++--------------+-----------+---------------------------------------------+
+| in_stream    | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| out_stream   | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| obj_x        | inout     | short*                                      |
+| obj_y        | inout     | short*                                      |
+| obj_is_green | inout     | ap_uint<1>*                                 |
+| object_count | out       | ap_uint<16>&                                |
++--------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++--------------+--------------+-----------+---------------------------------------------+
+| Argument     | HW Interface | HW Type   | HW Info                                     |
++--------------+--------------+-----------+---------------------------------------------+
+| in_stream    | in_stream    | interface |                                             |
+| out_stream   | out_stream   | interface |                                             |
+| obj_x        | s_axi_CTRL   | memory    | name=obj_x offset=64 range=64               |
+| obj_y        | s_axi_CTRL   | memory    | name=obj_y offset=128 range=64              |
+| obj_is_green | s_axi_CTRL   | memory    | name=obj_is_green offset=32 range=32        |
+| object_count | s_axi_CTRL   | register  | name=object_count offset=0x10 range=32      |
+| object_count | s_axi_CTRL   | register  | name=object_count_ctrl offset=0x14 range=32 |
++--------------+--------------+-----------+---------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| Name                                                                          | DSP | Pragma | Variable           | Op  | Impl   | Latency |
++-------------------------------------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| + hls_object_green_classification                                             | 20  |        |                    |     |        |         |
+|   i_9_fu_1141_p2                                                              | -   |        | i_9                | add | fabric | 0       |
+|   add_ln136_fu_1167_p2                                                        | -   |        | add_ln136          | add | fabric | 0       |
+|   mul_32ns_34ns_65_2_1_U167                                                   | 4   |        | mul_ln134          | mul | auto   | 1       |
+|   mac_muladd_14s_7ns_14ns_14_4_1_U184                                         | 1   |        | mul_ln163          | mul | dsp48  | 3       |
+|   sub_ln134_fu_1369_p2                                                        | -   |        | sub_ln134          | sub | fabric | 0       |
+|   add_ln136_1_fu_1277_p2                                                      | -   |        | add_ln136_1        | add | fabric | 0       |
+|   mul_32ns_34ns_65_2_1_U167                                                   | 4   |        | mul_ln134_1        | mul | auto   | 1       |
+|   mac_muladd_14s_7ns_14ns_14_4_1_U184                                         | 1   |        | add_ln163          | add | dsp48  | 3       |
+|   sub_ln134_1_fu_1399_p2                                                      | -   |        | sub_ln134_1        | sub | fabric | 0       |
+|   sub_ln138_fu_1311_p2                                                        | -   |        | sub_ln138          | sub | fabric | 0       |
+|   mac_muladd_8ns_6ns_40ns_41_4_1_U182                                         | 1   |        | mul_ln138          | mul | dsp48  | 3       |
+|   mac_muladd_8ns_6ns_40ns_41_4_1_U182                                         | 1   |        | add_ln138          | add | dsp48  | 3       |
+|   mac_muladd_8ns_4ns_41ns_41_4_1_U183                                         | 1   |        | mul_ln138_1        | mul | dsp48  | 3       |
+|   mac_muladd_8ns_4ns_41ns_41_4_1_U183                                         | 1   |        | add_ln138_1        | add | dsp48  | 3       |
+|   mul_41ns_43ns_56_3_1_U168                                                   | 6   |        | mul_ln138_2        | mul | auto   | 2       |
+|   sub_ln158_fu_1545_p2                                                        | -   |        | sub_ln158          | sub | fabric | 0       |
+|   add_ln158_fu_1512_p2                                                        | -   |        | add_ln158          | add | fabric | 0       |
+|   sub_ln158_1_fu_1575_p2                                                      | -   |        | sub_ln158_1        | sub | fabric | 0       |
+|   add_ln159_fu_1529_p2                                                        | -   |        | add_ln159          | add | fabric | 0       |
+|   sub_ln159_fu_1610_p2                                                        | -   |        | sub_ln159          | sub | fabric | 0       |
+|   sub_ln159_1_fu_1616_p2                                                      | -   |        | sub_ln159_1        | sub | fabric | 0       |
+|   mul_11s_11s_21_1_1_U173                                                     | 1   |        | mul_ln160          | mul | auto   | 0       |
+|   mac_muladd_11s_11s_21s_21_4_1_U185                                          | 1   |        | mul_ln160_1        | mul | dsp48  | 3       |
+|   mac_muladd_11s_11s_21s_21_4_1_U185                                          | 1   |        | mag_sq             | add | dsp48  | 3       |
+|   add_ln169_fu_1666_p2                                                        | -   |        | add_ln169          | add | fabric | 0       |
+|   next_label_1_fu_1740_p2                                                     | -   |        | next_label_1       | add | fabric | 0       |
+|   col_1_fu_1805_p2                                                            | -   |        | col_1              | add | fabric | 0       |
+|   add_ln178_fu_1844_p2                                                        | -   |        | add_ln178          | add | fabric | 0       |
+|   mul_8ns_10ns_17_1_1_U175                                                    | -   |        | mul_ln183          | mul | auto   | 0       |
+|   mul_7ns_8ns_14_1_1_U176                                                     | -   |        | empty_50           | mul | auto   | 0       |
+|   empty_51_fu_1943_p2                                                         | -   |        | empty_51           | add | fabric | 0       |
+|   mul_8ns_10ns_17_1_1_U177                                                    | -   |        | mul28              | mul | auto   | 0       |
+|   mul_7ns_8ns_14_1_1_U179                                                     | -   |        | mul_ln190          | mul | auto   | 0       |
+|   indvars_iv_next118_fu_1968_p2                                               | -   |        | indvars_iv_next118 | add | fabric | 0       |
+|   mul_8ns_10ns_17_1_1_U178                                                    | -   |        | mul26              | mul | auto   | 0       |
+|   mul_7ns_8ns_14_1_1_U180                                                     | -   |        | mul_ln190_1        | mul | auto   | 0       |
+|   add_ln199_fu_2058_p2                                                        | -   |        | add_ln199          | add | fabric | 0       |
+|   add_ln243_fu_2096_p2                                                        | -   |        | add_ln243          | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_InitLoop                          | 0   |        |                    |     |        |         |
+|    i_5_fu_199_p2                                                              | -   |        | i_5                | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_Pass1_5_inner0                    | 3   |        |                    |     |        |         |
+|    mul_9ns_11ns_19_1_1_U23                                                    | 1   |        | mul_ln186          | mul | auto   | 0       |
+|    add_ln190_2_fu_883_p2                                                      | -   |        | add_ln190_2        | add | fabric | 0       |
+|    add_ln190_3_fu_901_p2                                                      | -   |        | add_ln190_3        | add | fabric | 0       |
+|    add_ln190_4_fu_919_p2                                                      | -   |        | add_ln190_4        | add | fabric | 0       |
+|    add_ln190_fu_852_p2                                                        | -   |        | add_ln190          | add | fabric | 0       |
+|    mul_9ns_11ns_19_1_1_U24                                                    | 1   |        | mul_ln190_2        | mul | auto   | 0       |
+|    add_ln190_5_fu_940_p2                                                      | -   |        | add_ln190_5        | add | fabric | 0       |
+|    add_ln190_6_fu_958_p2                                                      | -   |        | add_ln190_6        | add | fabric | 0       |
+|    add_ln190_1_fu_803_p2                                                      | -   |        | add_ln190_1        | add | fabric | 0       |
+|    mul_9ns_11ns_19_1_1_U22                                                    | 1   |        | mul_ln190_3        | mul | auto   | 0       |
+|    add_ln190_7_fu_979_p2                                                      | -   |        | add_ln190_7        | add | fabric | 0       |
+|    add_ln190_8_fu_997_p2                                                      | -   |        | add_ln190_8        | add | fabric | 0       |
+|    add_ln190_9_fu_1015_p2                                                     | -   |        | add_ln190_9        | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2 | 0   |        |                    |     |        |         |
+|    add_ln206_1_fu_125_p2                                                      | -   |        | add_ln206_1        | add | fabric | 0       |
+|    add_ln206_fu_137_p2                                                        | -   |        | add_ln206          | add | fabric | 0       |
+|    add_ln207_fu_165_p2                                                        | -   |        | add_ln207          | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4 | 0   |        |                    |     |        |         |
+|    add_ln218_fu_204_p2                                                        | -   |        | add_ln218          | add | fabric | 0       |
+|    y_2_fu_216_p2                                                              | -   |        | y_2                | add | fabric | 0       |
+|    pixel_count_d1                                                             | -   |        | add_ln227          | add | fabric | 0       |
+|    x_1_fu_244_p2                                                              | -   |        | x_1                | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_PASS_3_5_1                        | 0   |        |                    |     |        |         |
+|    add_ln237_fu_103_p2                                                        | -   |        | add_ln237          | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_pass_4                            | 0   |        |                    |     |        |         |
+|    add_ln265_fu_399_p2                                                        | -   |        | add_ln265          | add | fabric | 0       |
+|    add_ln266_fu_423_p2                                                        | -   |        | add_ln266          | add | fabric | 0       |
+|    add_ln268_fu_489_p2                                                        | -   |        | add_ln268          | add | fabric | 0       |
+|    sub_ln269_fu_505_p2                                                        | -   |        | sub_ln269          | sub | fabric | 0       |
+|    count_2_fu_381_p2                                                          | -   |        | count_2            | add | fabric | 0       |
+|    i_2_fu_365_p2                                                              | -   |        | i_2                | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_PASS_3_5_2_in                     | 0   |        |                    |     |        |         |
+|    add_ln245_fu_212_p2                                                        | -   |        | add_ln245          | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_VITIS_LOOP_276_5                  | 0   |        |                    |     |        |         |
+|    add_ln276_fu_163_p2                                                        | -   |        | add_ln276          | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_pass5_out_pass5_in                | 2   |        |                    |     |        |         |
+|    add_ln285_1_fu_415_p2                                                      | -   |        | add_ln285_1        | add | fabric | 0       |
+|    add_ln285_fu_427_p2                                                        | -   |        | add_ln285          | add | fabric | 0       |
+|    mul_8ns_10ns_17_1_1_U128                                                   | -   |        | mul_ln285          | mul | auto   | 0       |
+|    mac_muladd_7ns_7ns_8ns_14_4_1_U134                                         | 1   |        | mul_ln294          | mul | dsp48  | 3       |
+|    mul_9ns_11ns_19_1_1_U129                                                   | 1   |        | mul_ln286          | mul | auto   | 0       |
+|    mac_muladd_7ns_7ns_8ns_14_4_1_U134                                         | 1   |        | add_ln294          | add | dsp48  | 3       |
+|    add_ln286_fu_493_p2                                                        | -   |        | add_ln286          | add | fabric | 0       |
+|  + hls_object_green_classification_Pipeline_VITIS_LOOP_311_6                  | 0   |        |                    |     |        |         |
+|    add_ln311_fu_161_p2                                                        | -   |        | add_ln311          | add | fabric | 0       |
++-------------------------------------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------------------------------------+---------+--------+---------+
+| Name                                                                                    | BRAM | URAM | Pragma | Variable                                                                            | Storage | Impl   | Latency |
++-----------------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------------------------------------+---------+--------+---------+
+| + hls_object_green_classification                                                       | 337  | 0    |        |                                                                                     |         |        |         |
+|   parent_U                                                                              | 1    | -    | pragma | parent                                                                              | ram_2p  | bram   | 1       |
+|   min_x_U                                                                               | 1    | -    | pragma | min_x                                                                               | ram_2p  | bram   | 1       |
+|   max_x_U                                                                               | 1    | -    | pragma | max_x                                                                               | ram_2p  | bram   | 1       |
+|   min_y_U                                                                               | 1    | -    | pragma | min_y                                                                               | ram_2p  | bram   | 1       |
+|   max_y_U                                                                               | 1    | -    | pragma | max_y                                                                               | ram_2p  | bram   | 1       |
+|   center_is_green_U                                                                     | -    | -    |        | center_is_green                                                                     | ram_1p  | auto   | 1       |
+|   pixel_count_U                                                                         | -    | -    | pragma | pixel_count                                                                         | ram_2p  | lutram | 1       |
+|   imgR_U                                                                                | 64   | -    | pragma | imgR                                                                                | ram_2p  | bram   | 1       |
+|   imgG_U                                                                                | 64   | -    | pragma | imgG                                                                                | ram_2p  | bram   | 1       |
+|   imgB_U                                                                                | 64   | -    | pragma | imgB                                                                                | ram_2p  | bram   | 1       |
+|   hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_U         | 1    | -    |        | hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1         | ram_1p  | auto   | 1       |
+|   hls_mulmulmulobject_green_classification_stream_stream_short_short_ap_uint_ap_uint_U  | 1    | -    |        | hls_mulmulmulobject_green_classification_stream_stream_short_short_ap_uint_ap_uint  | ram_1p  | auto   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_U | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1 | ram_2p  | bram   | 1       |
+|   p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_U   | 1    | -    | pragma | p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm   | ram_2p  | bram   | 1       |
+|   label_map_U                                                                           | 128  | -    | pragma | label_map                                                                           | ram_2p  | bram   | 1       |
+|   is_external_U                                                                         | 1    | -    | pragma | is_external                                                                         | ram_2p  | bram   | 1       |
+|   obj_x_buf_U                                                                           | -    | -    |        | obj_x_buf                                                                           | ram_1p  | auto   | 1       |
+|   obj_y_buf_U                                                                           | -    | -    |        | obj_y_buf                                                                           | ram_1p  | auto   | 1       |
+|   obj_is_green_buf_U                                                                    | -    | -    |        | obj_is_green_buf                                                                    | ram_1p  | auto   | 1       |
++-----------------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------------------------------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------------+--------------------------------------------------------------------+
+| Type            | Options                                      | Location                                                           |
++-----------------+----------------------------------------------+--------------------------------------------------------------------+
+| inline          |                                              | obj_detect.cpp:17 in is_green_rgb                                  |
+| inline          |                                              | obj_detect.cpp:24 in uf_find                                       |
+| inline          |                                              | obj_detect.cpp:38 in uf_union                                      |
+| interface       | axis port=in_stream                          | obj_detect.cpp:53 in hls_object_green_classification, in_stream    |
+| interface       | axis port=out_stream                         | obj_detect.cpp:54 in hls_object_green_classification, out_stream   |
+| interface       | s_axilite port=obj_x bundle=CTRL             | obj_detect.cpp:56 in hls_object_green_classification, obj_x        |
+| interface       | s_axilite port=obj_y bundle=CTRL             | obj_detect.cpp:57 in hls_object_green_classification, obj_y        |
+| interface       | s_axilite port=obj_is_green bundle=CTRL      | obj_detect.cpp:58 in hls_object_green_classification, obj_is_green |
+| interface       | s_axilite port=object_count bundle=CTRL      | obj_detect.cpp:59 in hls_object_green_classification, object_count |
+| interface       | s_axilite port=return bundle=CTRL            | obj_detect.cpp:61 in hls_object_green_classification, return       |
+| bind_storage    | variable=imgR type=ram_2p impl=bram          | obj_detect.cpp:72 in hls_object_green_classification, imgR         |
+| bind_storage    | variable=imgG type=ram_2p impl=bram          | obj_detect.cpp:73 in hls_object_green_classification, imgG         |
+| bind_storage    | variable=imgB type=ram_2p impl=bram          | obj_detect.cpp:74 in hls_object_green_classification, imgB         |
+| bind_storage    | variable=edge_mask type=ram_2p impl=bram     | obj_detect.cpp:78 in hls_object_green_classification, edge_mask    |
+| bind_storage    | variable=label_map type=ram_2p impl=bram     | obj_detect.cpp:82 in hls_object_green_classification, label_map    |
+| bind_storage    | variable=parent type=ram_2p impl=bram        | obj_detect.cpp:86 in hls_object_green_classification, parent       |
+| bind_storage    | variable=min_x type=ram_2p impl=bram         | obj_detect.cpp:95 in hls_object_green_classification, min_x        |
+| bind_storage    | variable=max_x type=ram_2p impl=bram         | obj_detect.cpp:96 in hls_object_green_classification, max_x        |
+| bind_storage    | variable=min_y type=ram_2p impl=bram         | obj_detect.cpp:97 in hls_object_green_classification, min_y        |
+| bind_storage    | variable=max_y type=ram_2p impl=bram         | obj_detect.cpp:98 in hls_object_green_classification, max_y        |
+| bind_storage    | variable=pixel_count type=ram_2p impl=lutram | obj_detect.cpp:102 in hls_object_green_classification, pixel_count |
+| pipeline        | II=1                                         | obj_detect.cpp:107 in hls_object_green_classification              |
+| array_partition | variable=linebuf complete dim=1              | obj_detect.cpp:118 in hls_object_green_classification, linebuf     |
+| array_partition | variable=window complete dim=0               | obj_detect.cpp:120 in hls_object_green_classification, window      |
+| unroll          |                                              | obj_detect.cpp:143 in hls_object_green_classification              |
+| pipeline        | II=1                                         | obj_detect.cpp:185 in hls_object_green_classification              |
+| unroll          |                                              | obj_detect.cpp:189 in hls_object_green_classification              |
+| pipeline        | II=3                                         | obj_detect.cpp:208 in hls_object_green_classification              |
+| pipeline        | II=3                                         | obj_detect.cpp:220 in hls_object_green_classification              |
+| bind_storage    | variable=is_external type=ram_2p impl=bram   | obj_detect.cpp:234 in hls_object_green_classification, is_external |
+| pipeline        | II=1                                         | obj_detect.cpp:238 in hls_object_green_classification              |
+| pipeline        | II=1                                         | obj_detect.cpp:246 in hls_object_green_classification              |
+| pipeline        | II=3                                         | obj_detect.cpp:261 in hls_object_green_classification              |
+| pipeline        | II=1                                         | obj_detect.cpp:277 in hls_object_green_classification              |
+| pipeline        | II=1                                         | obj_detect.cpp:288 in hls_object_green_classification              |
+| pipeline        | II=1                                         | obj_detect.cpp:312 in hls_object_green_classification              |
++-----------------+----------------------------------------------+--------------------------------------------------------------------+
+
+

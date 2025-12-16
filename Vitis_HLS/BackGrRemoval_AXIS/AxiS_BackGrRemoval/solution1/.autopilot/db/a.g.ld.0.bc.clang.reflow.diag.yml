@@ -1,0 +1,562 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 91, Column: 17 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'rgb_to_h_scaled(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 28, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'BackGrRemoval_stream_v2(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8>, int, int)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 95, Column: 9 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        shift_rows
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 97, Column: 19 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 107, Column: 9 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        fill_new_col
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 117, Column: 9 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        update_linebuf
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 134, Column: 13 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        count_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 136, Column: 20 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        shift_rows
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:95:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:97:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        fill_new_col
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:107:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        update_linebuf
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:117:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        count_window
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:134:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_136_3
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:136:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval_stream_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'unpack_axi_pixel(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul> const&, ap_uint<8>&, ap_uint<8>&, ap_uint<8>&)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'BackGrRemoval_stream_v2(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8>, int, int)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pack_axi_pixel(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>&, ap_uint<8>, ap_uint<8>, ap_uint<8>, bool)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'BackGrRemoval_stream_v2(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8>, int, int)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 67, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEiiE7linebuf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 73, Column: 0 }
+Function:        _Z23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEiiE9row_shift
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...

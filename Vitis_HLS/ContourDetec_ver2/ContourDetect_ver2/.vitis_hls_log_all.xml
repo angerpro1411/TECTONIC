@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'OUTER' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="ContourDetect_ver2" solutionName="solution1" date="2025-11-04T16:59:30.880+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="ContourDetect_ver2" solutionName="solution1" date="2025-11-04T16:59:30.871+0100" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sobel_rgb_green_outline_fixed(stream&amp;,stream&lt;axis,0>&amp;)linebuf.1'." projectName="ContourDetect_ver2" solutionName="solution1" date="2025-11-04T16:59:30.508+0100" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sobel_rgb_green_outline_fixed(stream&amp;,stream&lt;axis,0>&amp;)linebuf'." projectName="ContourDetect_ver2" solutionName="solution1" date="2025-11-04T16:59:30.488+0100" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sobel_rgb_green_outline_fixed(stream&amp;,stream&lt;axis,0>&amp;)linebuf.1'." projectName="ContourDetect_ver2" solutionName="solution1" date="2025-11-04T16:59:30.484+0100" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sobel_rgb_green_outline_fixed(stream&amp;,stream&lt;axis,0>&amp;)linebuf'." projectName="ContourDetect_ver2" solutionName="solution1" date="2025-11-04T16:59:30.481+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="MeanShiftFilter.cpp" path="/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter.cpp"/>
+    <originFiles name="MeanShiftFilter.h" path="/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter.h"/>
+  </source>
+  <testbench>
+    <originFiles name="MeanShifFilter_tb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShifFilter_tb.cpp"/>
+    <originFiles name="pepper.bmp" path="/home/dell3561-49/Vitis_HLS_folder/NewMeanShift/pepper.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

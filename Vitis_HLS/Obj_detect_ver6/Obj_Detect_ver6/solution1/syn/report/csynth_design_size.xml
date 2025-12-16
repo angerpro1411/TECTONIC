@@ -1,0 +1,33 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="hls_object_green_classification" col1="obj_detect.cpp:45" col2="7309" col3="1151" col4="1097" col5="1232">
+                    <row id="1" col0="uf_union" col1="obj_detect.cpp:36" col2="229" col3="" col4="" col5="">
+                        <row id="3" col0="uf_find" col1="obj_detect.cpp:22" col2="184" col2_disp="  184 (2 calls)" col3="" col4="" col5=""/>
+                    </row>
+                    <row id="3" col0="uf_find" col1="obj_detect.cpp:22" col2="92" col3="" col4="" col5=""/>
+                    <row id="2" col0="is_green_rgb" col1="obj_detect.cpp:16" col2="59" col3="" col4="" col5=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

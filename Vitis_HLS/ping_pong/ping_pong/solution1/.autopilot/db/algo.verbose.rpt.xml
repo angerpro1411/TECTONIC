@@ -1,0 +1,151 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'algo'" level="0">
+<item name = "Date">Tue Oct  7 16:23:28 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">ping_pong</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.708 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">331, 331, 3.310 us, 3.310 us, 332, 332, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_algo_Pipeline_REMAINDER_LOOP_fu_50">algo_Pipeline_REMAINDER_LOOP, 114, 114, 1.140 us, 1.140 us, 114, 114, no</column>
+<column name="grp_algo_Pipeline_ADD_LOOP_fu_62">algo_Pipeline_ADD_LOOP, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+<column name="grp_algo_Pipeline_MUL2ADD1_LOOP_fu_68">algo_Pipeline_MUL2ADD1_LOOP, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+<column name="grp_algo_Pipeline_DIVISION_LOOP_fu_74">algo_Pipeline_DIVISION_LOOP, 110, 110, 1.100 us, 1.100 us, 110, 110, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 609, 566, -</column>
+<column name="Memory">0, -, 14, 24, 0</column>
+<column name="Multiplexer">-, -, -, 185, -</column>
+<column name="Register">-, -, 10, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_algo_Pipeline_ADD_LOOP_fu_62">algo_Pipeline_ADD_LOOP, 0, 0, 17, 77, 0</column>
+<column name="grp_algo_Pipeline_DIVISION_LOOP_fu_74">algo_Pipeline_DIVISION_LOOP, 0, 0, 260, 185, 0</column>
+<column name="grp_algo_Pipeline_MUL2ADD1_LOOP_fu_68">algo_Pipeline_MUL2ADD1_LOOP, 0, 0, 17, 71, 0</column>
+<column name="grp_algo_Pipeline_REMAINDER_LOOP_fu_50">algo_Pipeline_REMAINDER_LOOP, 0, 0, 315, 233, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="a_U">a_RAM_AUTO_1R1W, 0, 2, 4, 0, 100, 2, 1, 200</column>
+<column name="b_U">b_RAM_AUTO_1R1W, 0, 4, 7, 0, 100, 4, 1, 400</column>
+<column name="c_U">c_RAM_AUTO_1R1W, 0, 3, 5, 0, 100, 3, 1, 300</column>
+<column name="d_U">d_RAM_AUTO_1R1W, 0, 5, 8, 0, 100, 5, 1, 500</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state4_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="a_address0">14, 3, 7, 21</column>
+<column name="a_ce0">14, 3, 1, 3</column>
+<column name="a_we0">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">37, 7, 1, 7</column>
+<column name="b_address0">14, 3, 7, 21</column>
+<column name="b_ce0">14, 3, 1, 3</column>
+<column name="b_we0">9, 2, 1, 2</column>
+<column name="c_address0">14, 3, 7, 21</column>
+<column name="c_ce0">14, 3, 1, 3</column>
+<column name="c_we0">9, 2, 1, 2</column>
+<column name="d_address0">14, 3, 7, 21</column>
+<column name="d_ce0">14, 3, 1, 3</column>
+<column name="d_we0">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="grp_algo_Pipeline_ADD_LOOP_fu_62_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_algo_Pipeline_DIVISION_LOOP_fu_74_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_algo_Pipeline_MUL2ADD1_LOOP_fu_68_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_algo_Pipeline_REMAINDER_LOOP_fu_50_ap_start_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, algo, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, algo, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, algo, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, algo, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, algo, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, algo, return value</column>
+<column name="vecIn_0_address0">out, 6, ap_memory, vecIn_0, array</column>
+<column name="vecIn_0_ce0">out, 1, ap_memory, vecIn_0, array</column>
+<column name="vecIn_0_q0">in, 8, ap_memory, vecIn_0, array</column>
+<column name="vecIn_1_address0">out, 6, ap_memory, vecIn_1, array</column>
+<column name="vecIn_1_ce0">out, 1, ap_memory, vecIn_1, array</column>
+<column name="vecIn_1_q0">in, 8, ap_memory, vecIn_1, array</column>
+<column name="vecOut_0_address0">out, 6, ap_memory, vecOut_0, array</column>
+<column name="vecOut_0_ce0">out, 1, ap_memory, vecOut_0, array</column>
+<column name="vecOut_0_we0">out, 1, ap_memory, vecOut_0, array</column>
+<column name="vecOut_0_d0">out, 8, ap_memory, vecOut_0, array</column>
+<column name="vecOut_1_address0">out, 6, ap_memory, vecOut_1, array</column>
+<column name="vecOut_1_ce0">out, 1, ap_memory, vecOut_1, array</column>
+<column name="vecOut_1_we0">out, 1, ap_memory, vecOut_1, array</column>
+<column name="vecOut_1_d0">out, 8, ap_memory, vecOut_1, array</column>
+</table>
+</item>
+</section>
+</profile>

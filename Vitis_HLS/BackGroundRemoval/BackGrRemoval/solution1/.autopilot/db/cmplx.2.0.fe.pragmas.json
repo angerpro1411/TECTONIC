@@ -1,19 +1,19 @@
 {
   "0": {
-    "basicblocks": 283,
+    "basicblocks": 292,
     "calls": "1",
     "file": "BackGrRemoval.cpp",
-    "fileloc": 73,
-    "instructions": 3945,
+    "fileloc": 161,
+    "instructions": 3704,
     "loads": {
-      "L": 122
+      "G": 125
     },
     "name": "BackGrRemoval",
     "stores": {
-      "L": 121,
+      "G": 3,
       "T": 363
     },
-    "total_instructions": 5615
+    "total_instructions": 5374
   },
   "1": {
     "basicblocks": 649,
@@ -26,7 +26,8 @@
     },
     "name": "findHSV",
     "stores": {
-      "L": 21
+      "G": 20,
+      "L": 1
     },
     "total_instructions": 1670
   }

@@ -1,0 +1,31 @@
+{
+    "1": {
+        "name": "Loop_row_loop_proc1",
+        "file": "BackGrRemoval.cpp",
+        "fileloc": "0",
+        "instructions": "263",
+        "total_instructions": "263",
+        "calls": "",
+        "basicblocks": "10",
+        "loads": {
+            "G": "10",
+            "L": "3"
+        },
+        "stores": {
+            "G": "10",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "BackGrRemovalStream",
+        "file": "BackGrRemoval.cpp",
+        "fileloc": "10",
+        "instructions": "23",
+        "total_instructions": "286",
+        "calls": "1",
+        "basicblocks": "1"
+    }
+}

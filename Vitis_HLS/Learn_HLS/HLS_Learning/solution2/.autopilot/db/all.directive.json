@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "find",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "find"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "find",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "find"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/csynth.tcl",
+    "sourceLine": 15,
+    "success": true
+  }
+]

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ContourApproximation.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_ContourApproximation_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation//AESL_inst_ContourApproximation_activity">
+         <obj_property name="label">AESL_inst_ContourApproximation_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_ContourApproximation_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_ContourApproximation_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation//AESL_inst_ContourApproximation_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation//AESL_inst_ContourApproximation_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation//AESL_inst_ContourApproximation_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/grp_LinearLine_fu_19741_activity">
+            <obj_property name="label">grp_LinearLine_fu_19741_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_LinearLine_fu_19741_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_LinearLine_fu_19741_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/grp_LinearLine_fu_19741_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/grp_LinearLine_fu_19741_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/grp_LinearLine_fu_19741_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/grp_Distance_Point_Line_Square_fu_19747_activity">
+            <obj_property name="label">grp_Distance_Point_Line_Square_fu_19747_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_Distance_Point_Line_Square_fu_19747_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_Distance_Point_Line_Square_fu_19747_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/grp_Distance_Point_Line_Square_fu_19747_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/grp_Distance_Point_Line_Square_fu_19747_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/grp_Distance_Point_Line_Square_fu_19747_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity">
+            <obj_property name="label">grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity">
+            <obj_property name="label">grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation//AESL_inst_ContourApproximation_activity">
+      <obj_property name="ElementShortName">AESL_inst_ContourApproximation_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_ContourApproximation_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_ContourApproximation_group">
+      <obj_property name="label">AESL_inst_ContourApproximation</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/grp_LinearLine_fu_19741_activity">
+         <obj_property name="ElementShortName">grp_LinearLine_fu_19741_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_LinearLine_fu_19741_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/grp_Distance_Point_Line_Square_fu_19747_activity">
+         <obj_property name="ElementShortName">grp_Distance_Point_Line_Square_fu_19747_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_Distance_Point_Line_Square_fu_19747_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity">
+         <obj_property name="ElementShortName">grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity">
+         <obj_property name="ElementShortName">grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_ContourApproximation_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_LinearLine_fu_19741_group">
+         <obj_property name="label">grp_LinearLine_fu_19741</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_LinearLine_fu_19741_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_LinearLine_fu_19741/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_Distance_Point_Line_Square_fu_19747_group">
+         <obj_property name="label">grp_Distance_Point_Line_Square_fu_19747</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_Distance_Point_Line_Square_fu_19747_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_Distance_Point_Line_Square_fu_19747/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_group">
+         <obj_property name="label">grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_CHECK_DIFFER_LOOP_fu_20499/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_group">
+         <obj_property name="label">grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ContourApproximation_top/AESL_inst_ContourApproximation/grp_ContourApproximation_Pipeline_WRITE_BACK_fu_20508/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,125 @@
+
+
+================================================================
+== Synthesis Summary Report of 'sobel_rgb_green_outline_fixed'
+================================================================
++ General Information: 
+    * Date:           Tue Nov  4 16:59:31 2025
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        ContourDetect_ver2
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+--------+-----------+-----------+-----+
+    |             Modules             | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |         |        |           |           |     |
+    |             & Loops             | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM   |   DSP  |     FF    |    LUT    | URAM|
+    +---------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+--------+-----------+-----------+-----+
+    |+ sobel_rgb_green_outline_fixed  |     -|  0.22|   153614|  1.536e+06|         -|   153615|      -|        no|  2 (~0%)|  9 (4%)|  1158 (1%)|  1235 (2%)|    -|
+    | o OUTER                         |     -|  7.30|   153612|  1.536e+06|        15|        2|  76800|       yes|        -|       -|          -|          -|    -|
+    +---------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface  | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| in_stream  | in        | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| out_stream | out       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------------+
+| Argument   | Direction | Datatype                                    |
++------------+-----------+---------------------------------------------+
+| in_stream  | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
++------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+
+| Argument   | HW Interface | HW Type   |
++------------+--------------+-----------+
+| in_stream  | in_stream    | interface |
+| out_stream | out_stream   | interface |
++------------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                                | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-------------------------------------+-----+--------+------------+-----+--------+---------+
+| + sobel_rgb_green_outline_fixed     | 9   |        |            |     |        |         |
+|   i_2_fu_278_p2                     | -   |        | i_2        | add | fabric | 0       |
+|   sub_ln46_fu_372_p2                | -   |        | sub_ln46   | sub | fabric | 0       |
+|   mul_8ns_7ns_14_1_1_U2             | -   |        | mul_ln46   | mul | auto   | 0       |
+|   mac_muladd_8ns_4ns_14ns_41_4_1_U6 | 1   |        | mul_ln46_1 | mul | dsp48  | 3       |
+|   mac_muladd_8ns_4ns_14ns_41_4_1_U6 | 1   |        | add_ln46   | add | dsp48  | 3       |
+|   add_ln46_1_fu_386_p2              | -   |        | add_ln46_1 | add | fabric | 0       |
+|   mul_41ns_43ns_56_3_1_U1           | 6   |        | mul_ln46_2 | mul | auto   | 2       |
+|   sub_ln74_fu_630_p2                | -   |        | sub_ln74   | sub | fabric | 0       |
+|   add_ln76_fu_537_p2                | -   |        | add_ln76   | add | fabric | 0       |
+|   sub_ln76_fu_660_p2                | -   |        | sub_ln76   | sub | fabric | 0       |
+|   add_ln79_fu_555_p2                | -   |        | add_ln79   | add | fabric | 0       |
+|   sub_ln79_fu_696_p2                | -   |        | sub_ln79   | sub | fabric | 0       |
+|   sub_ln78_fu_702_p2                | -   |        | sub_ln78   | sub | fabric | 0       |
+|   mul_11s_11s_21_1_1_U5             | 1   |        | mul_ln81   | mul | auto   | 0       |
+|   mac_muladd_11s_11s_21s_21_4_1_U7  | 1   |        | mul_ln81_1 | mul | dsp48  | 3       |
+|   mac_muladd_11s_11s_21s_21_4_1_U7  | 1   |        | mag_sq     | add | dsp48  | 3       |
+|   col_1_fu_423_p2                   | -   |        | col_1      | add | fabric | 0       |
+|   add_ln103_fu_566_p2               | -   |        | add_ln103  | add | fabric | 0       |
++-------------------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------------------------------------------------------+------+------+--------+--------------------------------------------------------------+---------+------+---------+
+| Name                                                             | BRAM | URAM | Pragma | Variable                                                     | Storage | Impl | Latency |
++------------------------------------------------------------------+------+------+--------+--------------------------------------------------------------+---------+------+---------+
+| + sobel_rgb_green_outline_fixed                                  | 2    | 0    |        |                                                              |         |      |         |
+|   sobel_rgb_green_outline_fixed_stream_stream_axis_0_linebuf_1_U | 1    | -    |        | sobel_rgb_green_outline_fixed_stream_stream_axis_0_linebuf_1 | ram_s2p | auto | 1       |
+|   sobel_rgb_green_outline_fixed_stream_stream_axis_0_linebuf_U   | 1    | -    |        | sobel_rgb_green_outline_fixed_stream_stream_axis_0_linebuf   | ram_s2p | auto | 1       |
++------------------------------------------------------------------+------+------+--------+--------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------+-------------------------------------------------------------------+
+| Type            | Options                         | Location                                                          |
++-----------------+---------------------------------+-------------------------------------------------------------------+
+| interface       | axis port=in_stream             | contourDetect.cpp:18 in sobel_rgb_green_outline_fixed, in_stream  |
+| interface       | axis port=out_stream            | contourDetect.cpp:19 in sobel_rgb_green_outline_fixed, out_stream |
+| interface       | ap_ctrl_none port=return        | contourDetect.cpp:20 in sobel_rgb_green_outline_fixed, return     |
+| dependence      | variable=linebuf inter false    | contourDetect.cpp:26 in sobel_rgb_green_outline_fixed, linebuf    |
+| array_partition | variable=linebuf complete dim=1 | contourDetect.cpp:27 in sobel_rgb_green_outline_fixed, linebuf    |
+| array_partition | variable=window complete dim=0  | contourDetect.cpp:31 in sobel_rgb_green_outline_fixed, window     |
+| pipeline        | II=2                            | contourDetect.cpp:36 in sobel_rgb_green_outline_fixed             |
+| unroll          |                                 | contourDetect.cpp:50 in sobel_rgb_green_outline_fixed             |
++-----------------+---------------------------------+-------------------------------------------------------------------+
+
+

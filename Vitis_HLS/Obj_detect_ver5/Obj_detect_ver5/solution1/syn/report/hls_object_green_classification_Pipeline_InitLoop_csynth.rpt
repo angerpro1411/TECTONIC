@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_object_green_classification_Pipeline_InitLoop'
+================================================================
+* Date:           Mon Nov 17 11:04:02 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Obj_detect_ver5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.985 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      514|      514|  5.140 us|  5.140 us|  514|  514|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- InitLoop  |      512|      512|         1|          1|          1|   512|       yes|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     25|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     27|    -|
+|Register         |        -|    -|      12|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      12|     52|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |i_5_fu_179_p2         |         +|   0|  0|  13|          10|           1|
+    |icmp_ln425_fu_173_p2  |      icmp|   0|  0|  12|          10|          11|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  25|          20|          12|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_4  |   9|          2|   10|         20|
+    |i_fu_54               |   9|          2|   10|         20|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  27|          6|   21|         42|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |   1|   0|    1|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |i_fu_54      |  10|   0|   10|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  12|   0|   12|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |                   Source Object                   |    C Type    |
++--------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_InitLoop|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_InitLoop|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_InitLoop|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_InitLoop|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_InitLoop|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_InitLoop|  return value|
+|parent_address1           |  out|    9|   ap_memory|                                             parent|         array|
+|parent_ce1                |  out|    1|   ap_memory|                                             parent|         array|
+|parent_we1                |  out|    1|   ap_memory|                                             parent|         array|
+|parent_d1                 |  out|   16|   ap_memory|                                             parent|         array|
+|min_x_address1            |  out|    9|   ap_memory|                                              min_x|         array|
+|min_x_ce1                 |  out|    1|   ap_memory|                                              min_x|         array|
+|min_x_we1                 |  out|    1|   ap_memory|                                              min_x|         array|
+|min_x_d1                  |  out|    9|   ap_memory|                                              min_x|         array|
+|max_x_address1            |  out|    9|   ap_memory|                                              max_x|         array|
+|max_x_ce1                 |  out|    1|   ap_memory|                                              max_x|         array|
+|max_x_we1                 |  out|    1|   ap_memory|                                              max_x|         array|
+|max_x_d1                  |  out|    9|   ap_memory|                                              max_x|         array|
+|min_y_address1            |  out|    9|   ap_memory|                                              min_y|         array|
+|min_y_ce1                 |  out|    1|   ap_memory|                                              min_y|         array|
+|min_y_we1                 |  out|    1|   ap_memory|                                              min_y|         array|
+|min_y_d1                  |  out|    8|   ap_memory|                                              min_y|         array|
+|max_y_address1            |  out|    9|   ap_memory|                                              max_y|         array|
+|max_y_ce1                 |  out|    1|   ap_memory|                                              max_y|         array|
+|max_y_we1                 |  out|    1|   ap_memory|                                              max_y|         array|
+|max_y_d1                  |  out|    8|   ap_memory|                                              max_y|         array|
+|center_is_green_address1  |  out|    9|   ap_memory|                                    center_is_green|         array|
+|center_is_green_ce1       |  out|    1|   ap_memory|                                    center_is_green|         array|
+|center_is_green_we1       |  out|    1|   ap_memory|                                    center_is_green|         array|
+|center_is_green_d1        |  out|    1|   ap_memory|                                    center_is_green|         array|
++--------------------------+-----+-----+------------+---------------------------------------------------+--------------+
+

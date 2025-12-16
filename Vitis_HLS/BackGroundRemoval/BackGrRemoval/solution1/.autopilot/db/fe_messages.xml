@@ -1,5 +1,8 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5531" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:84:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5531" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:176:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5531" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:178:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
         <args ClangWarningOption="ignored-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/csynth.tcl:25:9" msg_body="HLS pragma dump">
@@ -8,23 +11,35 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=BackGrRemoval" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:84:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:162:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=inBGR offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:163:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=threshold bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:176:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=h core=RAM_T2P_BRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:85:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=h block factor=32 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:177:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=h cyclic factor=32 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:95:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=mask core=RAM_T2P_BRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:183:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:104:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kernel complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:111:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:125:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="BackGrRemoval" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="MaxOf3" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
@@ -33,55 +48,58 @@
         <args ARG_PragmaFunction="Minof3" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="findHSV" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:24:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="findHSV" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=out_s cyclic factor=8 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:29:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:30:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="findHSV" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:30:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RGB2HSV.cpp:31:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="findHSV" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="RGB2HSV.cpp:32:18" msg_body="Inlining function 'Minof3(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)' into 'findHSV(PixelBGR*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="RGB2HSV.cpp:33:18" msg_body="Inlining function 'Minof3(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)' into 'findHSV(PixelBGR*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*)'">
         <args Callee="Minof3(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)" Callee-DebugLoc="File RGB2HSV.cpp Line 14 Column 0" Caller="findHSV(PixelBGR*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*)" Caller-DebugLoc="File RGB2HSV.cpp Line 22 Column 0"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="RGB2HSV.cpp:31:11" msg_body="Inlining function 'MaxOf3(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)' into 'findHSV(PixelBGR*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="RGB2HSV.cpp:32:11" msg_body="Inlining function 'MaxOf3(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)' into 'findHSV(PixelBGR*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*)'">
         <args Callee="MaxOf3(ap_uint&lt;8&gt;, ap_uint&lt;8&gt;, ap_uint&lt;8&gt;)" Callee-DebugLoc="File RGB2HSV.cpp Line 6 Column 0" Caller="findHSV(PixelBGR*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*, ap_uint&lt;8&gt;*)" Caller-DebugLoc="File RGB2HSV.cpp Line 22 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:109:17" msg_body="Loop 'load_kernel' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="load_kernel"/>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="BackGrRemoval.cpp:161:0" msg_body="A depth specification is required for MAXI interface port 'inBGR' for cosimulation.">
+        <args Name="inBGR"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:110:39" msg_body="Loop 'VITIS_LOOP_110_1' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_110_1"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:203:17" msg_body="Loop 'kernel_y' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="kernel_y"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:123:21" msg_body="Loop 'whiten_kernel' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:205:21" msg_body="Loop 'kernel_x' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="kernel_x"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:219:21" msg_body="Loop 'whiten_kernel' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="whiten_kernel"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:124:43" msg_body="Loop 'VITIS_LOOP_124_2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_124_2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:220:43" msg_body="Loop 'VITIS_LOOP_220_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_220_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:73:0" msg_body="Unrolling loop 'load_kernel' (BackGrRemoval.cpp:109:17) in function 'BackGrRemoval' completely with a factor of 11">
-        <args Factor="11" LoopLoc="BackGrRemoval.cpp:109:17" LoopName="load_kernel"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:161:0" msg_body="Unrolling loop 'kernel_y' (BackGrRemoval.cpp:203:17) in function 'BackGrRemoval' completely with a factor of 11">
+        <args Factor="11" LoopLoc="BackGrRemoval.cpp:203:17" LoopName="kernel_y"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:73:0" msg_body="Unrolling loop 'VITIS_LOOP_110_1' (BackGrRemoval.cpp:110:39) in function 'BackGrRemoval' completely with a factor of 11">
-        <args Factor="11" LoopLoc="BackGrRemoval.cpp:110:39" LoopName="VITIS_LOOP_110_1"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:161:0" msg_body="Unrolling loop 'kernel_x' (BackGrRemoval.cpp:205:21) in function 'BackGrRemoval' completely with a factor of 11">
+        <args Factor="11" LoopLoc="BackGrRemoval.cpp:205:21" LoopName="kernel_x"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:73:0" msg_body="Unrolling loop 'whiten_kernel' (BackGrRemoval.cpp:123:21) in function 'BackGrRemoval' completely with a factor of 11">
-        <args Factor="11" LoopLoc="BackGrRemoval.cpp:123:21" LoopName="whiten_kernel"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:161:0" msg_body="Unrolling loop 'whiten_kernel' (BackGrRemoval.cpp:219:21) in function 'BackGrRemoval' completely with a factor of 11">
+        <args Factor="11" LoopLoc="BackGrRemoval.cpp:219:21" LoopName="whiten_kernel"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:73:0" msg_body="Unrolling loop 'VITIS_LOOP_124_2' (BackGrRemoval.cpp:124:43) in function 'BackGrRemoval' completely with a factor of 11">
-        <args Factor="11" LoopLoc="BackGrRemoval.cpp:124:43" LoopName="VITIS_LOOP_124_2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:161:0" msg_body="Unrolling loop 'VITIS_LOOP_220_1' (BackGrRemoval.cpp:220:43) in function 'BackGrRemoval' completely with a factor of 11">
+        <args Factor="11" LoopLoc="BackGrRemoval.cpp:220:43" LoopName="VITIS_LOOP_220_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="RGB2HSV.cpp:22:0" msg_body="Unrolling loop 'HSV_LOOP' (RGB2HSV.cpp:28:5) in function 'findHSV' partially with a factor of 4">
-        <args Factor="4" LoopLoc="RGB2HSV.cpp:28:5" LoopName="HSV_LOOP"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="RGB2HSV.cpp:22:0" msg_body="Unrolling loop 'HSV_LOOP' (RGB2HSV.cpp:29:5) in function 'findHSV' partially with a factor of 4">
+        <args Factor="4" LoopLoc="RGB2HSV.cpp:29:5" LoopName="HSV_LOOP"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:80:8" msg_body="Applying array_partition to 'h': Block partitioning with factor 32 on dimension 1.">
-        <args Dim="1" Factor="32" Mode="Block" UOName="h"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:171:0" msg_body="Applying array_partition to '_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1h': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1h"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:81:8" msg_body="Applying array_partition to 's': Cyclic partitioning with factor 8 on dimension 1.">
-        <args Dim="1" Factor="8" Mode="Cyclic" UOName="s"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:73:0" msg_body="Aggregating scalar variable 'inBGR' with compact=bit mode in 24-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="24" HwTyName="scalar" Name="inBGR"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="BackGrRemoval.cpp:172:0" msg_body="Applying array_partition to '_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1s': Cyclic partitioning with factor 8 on dimension 1.">
+        <args Dim="1" Factor="8" Mode="Cyclic" UOName="_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1s"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

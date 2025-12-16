@@ -1,0 +1,24 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../../../C_PROGRAM/3.ContourApproximation/tb_contour.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-49-generic) on Thu Dec 05 15:15:35 CET 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dell3561-49/410961733408135317044
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.38 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 1.39 seconds; peak allocated memory: 99.008 MB.
+   Compiling(apcc) ../../../../../../C_PROGRAM/3.ContourApproximation/contour_approximation.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-49-generic) on Thu Dec 05 15:15:37 CET 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/Contour_approximation/contour_approximation/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dell3561-49/411691733408137668541
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.41 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 1.43 seconds; peak allocated memory: 99.008 MB.
+   Generating csim.exe
+Size of new_p = 40
+New array of points is: 
+(0.1,0.3) (0.7,4.2) (1.4,4.0) (1.8,8.9) (2.1,6.7) (3.6,5.7) (4.1,9.2) (4.7,8.5) (5.4,13.2) (6.0,10.0) (7.1,9.1) (7.5,4.8) (8.0,5.9) (8.3,9.9) (8.7,5.4) (9.1,0.6) (9.4,3.9) (9.7,0.5) (10.2,5.4) (10.6,1.4) (11.1,-1.9) (10.2,-5.4) (9.7,-0.5) (9.4,-3.9) (9.1,-0.6) (8.7,-5.4) (8.3,-9.9) (8.0,-5.9) (7.5,-4.8) (7.1,-9.1) (6.6,-11.1) (5.4,-13.2) (4.7,-8.5) (4.1,-9.2) (3.6,-5.7) (3.0,-9.6) (1.8,-8.9) (1.4,-4.0) (0.7,-4.2) (0.1,-0.3) 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

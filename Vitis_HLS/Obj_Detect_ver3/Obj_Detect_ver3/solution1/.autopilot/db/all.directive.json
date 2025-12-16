@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "hls_object_green_classification",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "hls_object_green_classification"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

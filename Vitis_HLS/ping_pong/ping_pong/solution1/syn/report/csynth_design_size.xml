@@ -1,0 +1,32 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="algo" col1="ping_pong.c:3" col2="138" col3="101" col4="78" col5="101">
+                    <row id="3" col0="getRemainder" col1="ping_pong.c:22" col2="28" col3="26" col4="" col5=""/>
+                    <row id="1" col0="add1" col1="ping_pong.c:33" col2="19" col3="17" col4="" col5=""/>
+                    <row id="2" col0="mul2add1" col1="ping_pong.c:43" col2="33" col3="20" col4="" col5=""/>
+                    <row id="4" col0="division" col1="ping_pong.c:54" col2="23" col3="21" col4="" col5=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

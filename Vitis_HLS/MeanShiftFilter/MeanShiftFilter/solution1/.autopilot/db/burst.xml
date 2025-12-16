@@ -1,0 +1,7 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="MeanShiftFilter.c:23:33" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="MeanShiftFilter.c:23:33" LoopName="do_while_loop" ParentFunc="MeanShiftFiltering"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="InsufficientAlignmentMissed" src_info="MeanShiftFilter.c:42:63" msg_id="214-228" msg_severity="INFO" msg_body="Alignment is insufficient, current alignment is 1 byte(s) but 4 is required" resolution="214-228" VarName="in" ParentFunc="MeanShiftFiltering" OrigID="if.end48.load.3" OrigAccess-DebugLoc="MeanShiftFilter.c:42:63" OrigDirection="read"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="InsufficientAlignmentMissed" src_info="MeanShiftFilter.c:16:48" msg_id="214-228" msg_severity="INFO" msg_body="Alignment is insufficient, current alignment is 1 byte(s) but 4 is required" resolution="214-228" VarName="in" ParentFunc="MeanShiftFiltering" OrigID="do_while_loop.load.6" OrigAccess-DebugLoc="MeanShiftFilter.c:16:48" OrigDirection="read"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="InsufficientAlignmentMissed" src_info="MeanShiftFilter.c:80:40" msg_id="214-228" msg_severity="INFO" msg_body="Alignment is insufficient, current alignment is 1 byte(s) but 4 is required" resolution="214-228" VarName="out" ParentFunc="MeanShiftFiltering" OrigID="for.inc143.store.23" OrigAccess-DebugLoc="MeanShiftFilter.c:80:40" OrigDirection="write"/>
+</VitisHLS:BurstInfo>
+

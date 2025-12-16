@@ -1,0 +1,36 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Instructions per Function for each Compilation Phase
++-----------------------+----------------------+--------------+---------------+----------------------+---------------+
+| Function              | Location             | Compile/Link | Unroll/Inline | Performance/Pipeline | Optimizations |
++-----------------------+----------------------+--------------+---------------+----------------------+---------------+
+| + BackGrRemovalStream | BackGrRemoval.cpp:96 | 8,507        | 5,551         | 170,897 *            | 172,438 *     |
+|                       | parameters.h:24      |    28        |               |                      |               |
+|  + BackGrRemoval      | BackGrRemoval.cpp:15 | 7,614        | 5,421         | 169,762              | 171,271       |
+|                       | parameters.h:24      |    28        |               |                      |               |
+|   + findHSV           | RGB2HSV.cpp:22       | 4,801        | 1,670         |   1,087              |   1,125       |
+|      MaxOf3           | RGB2HSV.cpp:6        |    37        |               |                      |               |
+|      Minof3           | RGB2HSV.cpp:14       |    37        |               |                      |               |
++-----------------------+----------------------+--------------+---------------+----------------------+---------------+
+    * - Exceeded design size warning message threshold
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

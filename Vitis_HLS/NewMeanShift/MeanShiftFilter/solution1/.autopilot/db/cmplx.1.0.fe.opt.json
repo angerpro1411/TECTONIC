@@ -1,0 +1,18 @@
+{
+  "0": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "MeanShiftFilter.cpp",
+    "fileloc": 3,
+    "instructions": 717,
+    "loads": {
+      "L": 20
+    },
+    "name": "MeanShiftFiltering",
+    "stores": {
+      "L": 22,
+      "T": 3
+    },
+    "total_instructions": 12013
+  }
+}

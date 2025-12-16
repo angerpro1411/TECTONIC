@@ -1,0 +1,814 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: RGB2HSV.cpp, Line: 33, Column: 18 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Minof3(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 14, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: RGB2HSV.cpp, Line: 32, Column: 11 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MaxOf3(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'findHSV(PixelBGR*, ap_uint<8>*, ap_uint<8>*, ap_uint<8>*)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 59, Column: 17 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        kernel_y
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 61, Column: 21 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        kernel_x
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 74, Column: 21 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        whiten_kernel
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 75, Column: 42 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_y
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:59:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_x
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:61:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        whiten_kernel
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:74:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 15, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_75_2
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:75:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemoval
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: RGB2HSV.cpp, Line: 22, Column: 0 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        HSV_LOOP
+  - String:          ''' ('
+  - LoopLoc:         'RGB2HSV.cpp:29:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          findHSV
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 25, Column: 0 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1h
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '32'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 26, Column: 0 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1s
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 106, Column: 0 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEE3img.r
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 106, Column: 0 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEE3img.g
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 106, Column: 0 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEE3img.b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=2 variable=_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1v'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  BackGrRemovalStream
+  - String:          ' '
+  - varLoc:          'BackGrRemoval.cpp:27:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'RGB2HSV.cpp:30:9'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 30, Column: 9 }
+  - VarName:         'BackGrRemoval(PixelBGR*, ap_uint<8>)::v'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: RGB2HSV.cpp, Line: 30, Column: 9 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '2'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            'BackGrRemoval(PixelBGR*, ap_uint<8>)::v'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=141 variable=_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE6outBGR.b'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  BackGrRemovalStream
+  - String:          ' '
+  - varLoc:          'BackGrRemoval.cpp:33:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'BackGrRemoval.cpp:51:9'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 51, Column: 9 }
+  - VarName:         'BackGrRemoval(PixelBGR*, ap_uint<8>)::outBGR (.b)'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 51, Column: 9 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '141'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            'BackGrRemoval(PixelBGR*, ap_uint<8>)::outBGR (.b)'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=141 variable=_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE6outBGR.g'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  BackGrRemovalStream
+  - String:          ' '
+  - varLoc:          'BackGrRemoval.cpp:33:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'BackGrRemoval.cpp:51:9'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 51, Column: 9 }
+  - VarName:         'BackGrRemoval(PixelBGR*, ap_uint<8>)::outBGR (.g)'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 51, Column: 9 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '141'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            'BackGrRemoval(PixelBGR*, ap_uint<8>)::outBGR (.g)'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=141 variable=_ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE6outBGR.r'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  BackGrRemovalStream
+  - String:          ' '
+  - varLoc:          'BackGrRemoval.cpp:33:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'BackGrRemoval.cpp:51:9'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 51, Column: 9 }
+  - VarName:         'BackGrRemoval(PixelBGR*, ap_uint<8>)::outBGR (.r)'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 51, Column: 9 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '141'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            'BackGrRemoval(PixelBGR*, ap_uint<8>)::outBGR (.r)'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 33, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE6outBGR.r
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '141'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 33, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE6outBGR.g
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '141'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 33, Column: 0 }
+Function:        _Z13BackGrRemovalP8PixelBGR7ap_uintILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE6outBGR.b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '141'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 27, Column: 0 }
+Function:        _Z7findHSVP8PixelBGRP7ap_uintILi8EES3_S3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ13BackGrRemovalP8PixelBGR7ap_uintILi8EEE1v
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

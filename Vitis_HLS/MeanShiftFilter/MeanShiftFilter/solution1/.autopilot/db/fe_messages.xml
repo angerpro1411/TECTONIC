@@ -1,0 +1,57 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/csynth.tcl:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="MeanShiftFiltering" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=MeanShiftFiltering" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MeanShiftFilter.c:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MeanShiftFiltering" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MeanShiftFilter.c:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MeanShiftFiltering" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=in complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MeanShiftFilter.c:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MeanShiftFiltering" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=out complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="MeanShiftFilter.c:14:23" msg_body="Loop 'height_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="height_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="MeanShiftFilter.c:15:26" msg_body="Loop 'width_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="width_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="MeanShiftFilter.c:23:33" msg_body="Loop 'do_while_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="do_while_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="MeanShiftFilter.c:28:38" msg_body="Loop 'VITIS_LOOP_28_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_28_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="MeanShiftFilter.c:29:42" msg_body="Loop 'VITIS_LOOP_29_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_29_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::fp_struct(float)' into 'unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::fp_struct(float)" Callee-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 312 Column 0" Caller="unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)" Caller-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h Line 65 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::mantissa() const' into 'unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::mantissa() const" Callee-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 369 Column 0" Caller="unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)" Caller-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h Line 65 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::expv() const' into 'unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)'">
+        <args Callee="fp_struct&lt;float&gt;::expv() const" Callee-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 345 Column 0" Caller="unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)" Caller-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h Line 65 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0" msg_body="Inlining function 'unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)' into 'unsigned char generic_cast_IEEE754&lt;unsigned char, float&gt;(float, bool)'">
+        <args Callee="unsigned char generic_cast_IEEE754&lt;unsigned char, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;!(std::numeric_limits&lt;unsigned char&gt;::is_signed), bool&gt;::type)" Callee-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h Line 65 Column 0" Caller="unsigned char generic_cast_IEEE754&lt;unsigned char, float&gt;(float, bool)" Caller-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h Line 116 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:63:0" msg_body="Inlining function 'unsigned char generic_cast_IEEE754&lt;unsigned char, float&gt;(float, bool)' into '__hls_fptoui_float_i8'">
+        <args Callee="unsigned char generic_cast_IEEE754&lt;unsigned char, float&gt;(float, bool)" Callee-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h Line 116 Column 0" Caller="__hls_fptoui_float_i8" Caller-DebugLoc="File /wrk/ci/prod/2023.1/hls_product/continuous/1026/2023.1/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp Line 63 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-253" msg_severity="WARNING" msg_loc="MeanShiftFilter.c:7:9" msg_body="Ignored unsupported array_partition pragma on variable 'out'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension.">
+        <args Name="out" PragmaName="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-253" msg_severity="WARNING" msg_loc="MeanShiftFilter.c:6:9" msg_body="Ignored unsupported array_partition pragma on variable 'in'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension.">
+        <args Name="in" PragmaName="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="MeanShiftFilter.c:4:0" msg_body="Aggregating scalar variable 'out' with compact=bit mode in 24-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="24" HwTyName="scalar" Name="out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="MeanShiftFilter.c:4:0" msg_body="Aggregating scalar variable 'in' with compact=bit mode in 24-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="24" HwTyName="scalar" Name="in"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,57 @@
+================================================================
+== Design Size Report
+================================================================
+
+* C-Synthesis has not completed, compilation phases remaining:
+    * Unroll/Inline
+    * Performance/Pipeline
+    * Optimizations
+
+* Instructions per Function for each Compilation Phase
++------------------------------+-------------------+-----------------+
+| Function                     | Location          | Compile/Link    |
++------------------------------+-------------------+-----------------+
+| + objectDetection            | main.cpp:178      | 6,400           |
+|  + ColorLabeler              | parameters.h:51   |   114           |
+|     rgb_to_lab_simple        | parameters.h:69   |    24           |
+|    ShapeDetector             | parameters.h:157  |     1           |
+|    adjustBrightness          | main.cpp:12       | 2,063           |
+|    convertToGray             | main.cpp:28       | 2,071           |
+|    simpleThreshold           | main.cpp:43       |    35           |
+|    morphologicalClose        | main.cpp:55       |   132           |
+|  + findContours              | main.cpp:96       |   180           |
+|     traceContour             | main.cpp:120      |   118           |
+|  + abs                       | absfloat.cpp:6    | 1,036           |
+|   + generic_fabs<float>      | hls_fabs.h:12     | 1,034           |
+|    + generic_copysign<float> | hls_copysign.h:10 | 1,032           |
+|       fp_struct              | x_hls_utils.h:312 |   698 (2 calls) |
+|     + to_ieee                | x_hls_utils.h:375 |   316           |
+|      + to_float              | x_hls_utils.h:351 |   314           |
+|         data                 | x_hls_utils.h:338 |   296           |
+|  + detect                    | parameters.h:159  |   152           |
+|     sqrt                     | sqrtfloat.cpp:6   |     2           |
+|  + label                     | parameters.h:78   |   302           |
+|     is_point_in_contour      | parameters.h:143  |    32           |
+|     rgb_to_lab_simple        | parameters.h:69   |    24           |
+|     sqrt                     | sqrtfloat.cpp:6   |     2           |
+|    objectLabeler             | main.cpp:166      |    26           |
++------------------------------+-------------------+-----------------+
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

@@ -22,10 +22,12 @@ using namespace std;
 #define AUTOTB_TVOUT_inBGR "../tv/cdatafile/c.BackGrRemoval.autotvout_inBGR.dat"
 #define AUTOTB_TVIN_threshold "../tv/cdatafile/c.BackGrRemoval.autotvin_threshold.dat"
 #define AUTOTB_TVOUT_threshold "../tv/cdatafile/c.BackGrRemoval.autotvout_threshold.dat"
+#define AUTOTB_TVIN_gmem "../tv/cdatafile/c.BackGrRemoval.autotvin_gmem.dat"
+#define AUTOTB_TVOUT_gmem "../tv/cdatafile/c.BackGrRemoval.autotvout_gmem.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_inBGR "../tv/rtldatafile/rtl.BackGrRemoval.autotvout_inBGR.dat"
+#define AUTOTB_TVOUT_PC_gmem "../tv/rtldatafile/rtl.BackGrRemoval.autotvout_gmem.dat"
 
 
 namespace hls::sim
@@ -1139,17 +1141,17 @@ void BackGrRemoval_hw_stub_wrapper(void*, hls::sim::Byte<1>*);
 extern "C"
 void apatb_BackGrRemoval_hw(void* __xlx_apatb_param_inBGR, hls::sim::Byte<1>* __xlx_apatb_param_threshold)
 {
+  hls::sim::Byte<4> __xlx_offset_byte_param_inBGR;
   static hls::sim::Register port0 {
     .name = "inBGR",
-    .width = 24,
+    .width = 32,
 #ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_inBGR),
 #else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_inBGR),
+    .owriter = nullptr,
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_inBGR),
 #endif
   };
-  port0.param = __xlx_apatb_param_inBGR;
+  port0.param = &__xlx_offset_byte_param_inBGR;
 
   static hls::sim::Register port1 {
     .name = "threshold",
@@ -1162,21 +1164,40 @@ void apatb_BackGrRemoval_hw(void* __xlx_apatb_param_inBGR, hls::sim::Byte<1>* __
   };
   port1.param = __xlx_apatb_param_threshold;
 
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port2 {
+    .width = 32,
+    .asize = 4,
+    .hbm = false,
+    .name = { "gmem" },
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gmem),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gmem),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gmem),
+#endif
+  };
+  port2.param = { __xlx_apatb_param_inBGR };
+  port2.nbytes = { 0 };
+  port2.offset = {  };
+  port2.hasWrite = { true };
+
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port0);
+    check(port2);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
     dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);
+    dump(port2, port2.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
+    port2.doTCL(tcl);
     CodeState = CALL_C_DUT;
     BackGrRemoval_hw_stub_wrapper(__xlx_apatb_param_inBGR, __xlx_apatb_param_threshold);
     CodeState = DUMP_OUTPUTS;
-    dump(port0, port0.owriter, tcl.AESL_transaction);
+    dump(port2, port2.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

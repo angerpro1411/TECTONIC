@@ -1,0 +1,101 @@
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:1452:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:1452:7: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:2426:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:2426:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:2440:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:2440:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:2454:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:2454:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:4065:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:4065:7: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6575:2: warning: Added loop label VITIS_LOOP_25_1:   [xilinx-label-all-loops]
+ while(parent[root] != root) root = parent[root];
+ ^~~~~
+ VITIS_LOOP_25_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6575:2: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6577:2: warning: Added loop label VITIS_LOOP_27_2:   [xilinx-label-all-loops]
+ while(parent[cur] != root) {
+ ^~~~~
+ VITIS_LOOP_27_2: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6577:2: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6621:45: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=imgR type=ram_2p impl=bram
+                                            ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6622:45: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=imgG type=ram_2p impl=bram
+                                            ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6623:45: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=imgB type=ram_2p impl=bram
+                                            ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6627:50: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=edge_mask type=ram_2p impl=bram
+                                                 ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6631:50: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=label_map type=ram_2p impl=bram
+                                                 ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6635:47: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=parent type=ram_2p impl=bram
+                                              ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6644:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=min_x type=ram_2p impl=bram
+                                             ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6645:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=max_x type=ram_2p impl=bram
+                                             ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6646:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=min_y type=ram_2p impl=bram
+                                             ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6647:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=max_y type=ram_2p impl=bram
+                                             ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6648:56: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=center_is_green type=ram_2p impl=bram
+                                                       ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6751:2: warning: Added loop label VITIS_LOOP_201_1:   [xilinx-label-all-loops]
+ for (int y=0; y<240; y++) {
+ ^~~
+ VITIS_LOOP_201_1: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6751:2: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6752:6: warning: Added loop label VITIS_LOOP_202_2:   [xilinx-label-all-loops]
+     for (int x=0; x<320; x++) {
+     ^~~
+     VITIS_LOOP_202_2: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6752:6: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6763:2: warning: Added loop label VITIS_LOOP_213_3:   [xilinx-label-all-loops]
+ for (int y=0; y<240; y++) {
+ ^~~
+ VITIS_LOOP_213_3: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6763:2: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6764:6: warning: Added loop label VITIS_LOOP_214_4:   [xilinx-label-all-loops]
+     for (int x=0; x<320; x++) {
+     ^~~
+     VITIS_LOOP_214_4: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6764:6: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6778:52: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=is_external type=ram_2p impl=bram
+                                                   ^
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6818:2: warning: Added loop label VITIS_LOOP_268_5:   [xilinx-label-all-loops]
+ for(int k=0; k<count; k++) {
+ ^~~
+ VITIS_LOOP_268_5: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6818:2: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6852:2: warning: Added loop label VITIS_LOOP_302_6:   [xilinx-label-all-loops]
+ for(int k=0; k<object_count_buf; k++) {
+ ^~~
+ VITIS_LOOP_302_6: 
+/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/.autopilot/db/obj_detect.pp.0.cpp:6852:2: note: FIX-IT applied suggested code changes

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"sobel_rgb_green_outline_fixed": {
+			"proto_instances": {
+			}
+		}
+	}
+}

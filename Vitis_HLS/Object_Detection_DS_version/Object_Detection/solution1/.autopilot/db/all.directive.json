@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "objectDetection",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "objectDetection"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

@@ -1,0 +1,402 @@
+
+
+================================================================
+== Vitis HLS Report for 'BackGrRemoval_stream_v2'
+================================================================
+* Date:           Tue Oct 21 15:11:16 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        AxiS_BackGrRemoval
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.304 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        4|        ?|  40.000 ns|         ?|    5|    ?|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------+--------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                             |                                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                           Instance                          |                      Module                      |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------------------+--------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788  |BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1  |       96|        ?|  0.960 us|         ?|   96|    ?|       no|
+        +-------------------------------------------------------------+--------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    157|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        8|    3|   10253|  11162|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     46|    -|
+|Register         |        -|    -|    1998|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        8|    3|   12251|  11365|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        2|    1|      11|     21|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------+--------------------------------------------------+---------+----+------+-------+-----+
+    |                           Instance                          |                      Module                      | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-------------------------------------------------------------+--------------------------------------------------+---------+----+------+-------+-----+
+    |grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788  |BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1  |        8|   0|  9962|  10928|    0|
+    |control_s_axi_U                                              |control_s_axi                                     |        0|   0|   126|    184|    0|
+    |mul_32s_32s_32_2_1_U246                                      |mul_32s_32s_32_2_1                                |        0|   3|   165|     50|    0|
+    +-------------------------------------------------------------+--------------------------------------------------+---------+----+------+-------+-----+
+    |Total                                                        |                                                  |        8|   3| 10253|  11162|    0|
+    +-------------------------------------------------------------+--------------------------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                                 Variable Name                                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |sub110_fu_1076_p2                                                              |         +|   0|  0|  38|          31|           2|
+    |sub81_fu_1082_p2                                                               |         +|   0|  0|  39|          32|           4|
+    |sub_fu_1070_p2                                                                 |         +|   0|  0|  39|          32|           4|
+    |grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788_out_stream_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln84_fu_1088_p2                                                           |      icmp|   0|  0|  39|          32|           1|
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                          |          |   0|  0| 157|         128|          12|
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  37|          7|    1|          7|
+    |in_stream_TREADY_int_regslice  |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  46|          9|    2|          9|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                          Name                                         | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                              |   6|   0|    6|          0|
+    |cols_read_reg_2633                                                                     |  32|   0|   32|          0|
+    |grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788_ap_start_reg               |   1|   0|    1|          0|
+    |hv_100_loc_fu_694                                                                      |   8|   0|    8|          0|
+    |hv_101_loc_fu_698                                                                      |   8|   0|    8|          0|
+    |hv_102_loc_fu_702                                                                      |   8|   0|    8|          0|
+    |hv_103_loc_fu_706                                                                      |   8|   0|    8|          0|
+    |hv_104_loc_fu_710                                                                      |   8|   0|    8|          0|
+    |hv_105_loc_fu_714                                                                      |   8|   0|    8|          0|
+    |hv_106_loc_fu_718                                                                      |   8|   0|    8|          0|
+    |hv_107_loc_fu_722                                                                      |   8|   0|    8|          0|
+    |hv_108_loc_fu_726                                                                      |   8|   0|    8|          0|
+    |hv_110_loc_fu_730                                                                      |   8|   0|    8|          0|
+    |hv_111_loc_fu_734                                                                      |   8|   0|    8|          0|
+    |hv_112_loc_fu_738                                                                      |   8|   0|    8|          0|
+    |hv_113_loc_fu_742                                                                      |   8|   0|    8|          0|
+    |hv_114_loc_fu_746                                                                      |   8|   0|    8|          0|
+    |hv_115_loc_fu_750                                                                      |   8|   0|    8|          0|
+    |hv_116_loc_fu_754                                                                      |   8|   0|    8|          0|
+    |hv_117_loc_fu_758                                                                      |   8|   0|    8|          0|
+    |hv_118_loc_fu_762                                                                      |   8|   0|    8|          0|
+    |hv_119_loc_fu_766                                                                      |   8|   0|    8|          0|
+    |hv_11_loc_fu_370                                                                       |   8|   0|    8|          0|
+    |hv_12_loc_fu_374                                                                       |   8|   0|    8|          0|
+    |hv_13_loc_fu_378                                                                       |   8|   0|    8|          0|
+    |hv_14_loc_fu_382                                                                       |   8|   0|    8|          0|
+    |hv_15_loc_fu_386                                                                       |   8|   0|    8|          0|
+    |hv_16_loc_fu_390                                                                       |   8|   0|    8|          0|
+    |hv_17_loc_fu_394                                                                       |   8|   0|    8|          0|
+    |hv_18_loc_fu_398                                                                       |   8|   0|    8|          0|
+    |hv_19_loc_fu_402                                                                       |   8|   0|    8|          0|
+    |hv_1_loc_fu_334                                                                        |   8|   0|    8|          0|
+    |hv_20_loc_fu_406                                                                       |   8|   0|    8|          0|
+    |hv_22_loc_fu_410                                                                       |   8|   0|    8|          0|
+    |hv_23_loc_fu_414                                                                       |   8|   0|    8|          0|
+    |hv_24_loc_fu_418                                                                       |   8|   0|    8|          0|
+    |hv_25_loc_fu_422                                                                       |   8|   0|    8|          0|
+    |hv_26_loc_fu_426                                                                       |   8|   0|    8|          0|
+    |hv_27_loc_fu_430                                                                       |   8|   0|    8|          0|
+    |hv_28_loc_fu_434                                                                       |   8|   0|    8|          0|
+    |hv_29_loc_fu_438                                                                       |   8|   0|    8|          0|
+    |hv_2_loc_fu_338                                                                        |   8|   0|    8|          0|
+    |hv_30_loc_fu_442                                                                       |   8|   0|    8|          0|
+    |hv_31_loc_fu_446                                                                       |   8|   0|    8|          0|
+    |hv_33_loc_fu_450                                                                       |   8|   0|    8|          0|
+    |hv_34_loc_fu_454                                                                       |   8|   0|    8|          0|
+    |hv_35_loc_fu_458                                                                       |   8|   0|    8|          0|
+    |hv_36_loc_fu_462                                                                       |   8|   0|    8|          0|
+    |hv_37_loc_fu_466                                                                       |   8|   0|    8|          0|
+    |hv_38_loc_fu_470                                                                       |   8|   0|    8|          0|
+    |hv_39_loc_fu_474                                                                       |   8|   0|    8|          0|
+    |hv_3_loc_fu_342                                                                        |   8|   0|    8|          0|
+    |hv_40_loc_fu_478                                                                       |   8|   0|    8|          0|
+    |hv_41_loc_fu_482                                                                       |   8|   0|    8|          0|
+    |hv_42_loc_fu_486                                                                       |   8|   0|    8|          0|
+    |hv_44_loc_fu_490                                                                       |   8|   0|    8|          0|
+    |hv_45_loc_fu_494                                                                       |   8|   0|    8|          0|
+    |hv_46_loc_fu_498                                                                       |   8|   0|    8|          0|
+    |hv_47_loc_fu_502                                                                       |   8|   0|    8|          0|
+    |hv_48_loc_fu_506                                                                       |   8|   0|    8|          0|
+    |hv_49_loc_fu_510                                                                       |   8|   0|    8|          0|
+    |hv_4_loc_fu_346                                                                        |   8|   0|    8|          0|
+    |hv_50_loc_fu_514                                                                       |   8|   0|    8|          0|
+    |hv_51_loc_fu_518                                                                       |   8|   0|    8|          0|
+    |hv_52_loc_fu_522                                                                       |   8|   0|    8|          0|
+    |hv_53_loc_fu_526                                                                       |   8|   0|    8|          0|
+    |hv_55_loc_fu_530                                                                       |   8|   0|    8|          0|
+    |hv_56_loc_fu_534                                                                       |   8|   0|    8|          0|
+    |hv_57_loc_fu_538                                                                       |   8|   0|    8|          0|
+    |hv_58_loc_fu_542                                                                       |   8|   0|    8|          0|
+    |hv_59_loc_fu_546                                                                       |   8|   0|    8|          0|
+    |hv_5_loc_fu_350                                                                        |   8|   0|    8|          0|
+    |hv_60_loc_fu_550                                                                       |   8|   0|    8|          0|
+    |hv_61_loc_fu_554                                                                       |   8|   0|    8|          0|
+    |hv_62_loc_fu_558                                                                       |   8|   0|    8|          0|
+    |hv_63_loc_fu_562                                                                       |   8|   0|    8|          0|
+    |hv_64_loc_fu_566                                                                       |   8|   0|    8|          0|
+    |hv_66_loc_fu_570                                                                       |   8|   0|    8|          0|
+    |hv_67_loc_fu_574                                                                       |   8|   0|    8|          0|
+    |hv_68_loc_fu_578                                                                       |   8|   0|    8|          0|
+    |hv_69_loc_fu_582                                                                       |   8|   0|    8|          0|
+    |hv_6_loc_fu_354                                                                        |   8|   0|    8|          0|
+    |hv_70_loc_fu_586                                                                       |   8|   0|    8|          0|
+    |hv_71_loc_fu_590                                                                       |   8|   0|    8|          0|
+    |hv_72_loc_fu_594                                                                       |   8|   0|    8|          0|
+    |hv_73_loc_fu_598                                                                       |   8|   0|    8|          0|
+    |hv_74_loc_fu_602                                                                       |   8|   0|    8|          0|
+    |hv_75_loc_fu_606                                                                       |   8|   0|    8|          0|
+    |hv_77_loc_fu_610                                                                       |   8|   0|    8|          0|
+    |hv_78_loc_fu_614                                                                       |   8|   0|    8|          0|
+    |hv_79_loc_fu_618                                                                       |   8|   0|    8|          0|
+    |hv_7_loc_fu_358                                                                        |   8|   0|    8|          0|
+    |hv_80_loc_fu_622                                                                       |   8|   0|    8|          0|
+    |hv_81_loc_fu_626                                                                       |   8|   0|    8|          0|
+    |hv_82_loc_fu_630                                                                       |   8|   0|    8|          0|
+    |hv_83_loc_fu_634                                                                       |   8|   0|    8|          0|
+    |hv_84_loc_fu_638                                                                       |   8|   0|    8|          0|
+    |hv_85_loc_fu_642                                                                       |   8|   0|    8|          0|
+    |hv_86_loc_fu_646                                                                       |   8|   0|    8|          0|
+    |hv_88_loc_fu_650                                                                       |   8|   0|    8|          0|
+    |hv_89_loc_fu_654                                                                       |   8|   0|    8|          0|
+    |hv_8_loc_fu_362                                                                        |   8|   0|    8|          0|
+    |hv_90_loc_fu_658                                                                       |   8|   0|    8|          0|
+    |hv_91_loc_fu_662                                                                       |   8|   0|    8|          0|
+    |hv_92_loc_fu_666                                                                       |   8|   0|    8|          0|
+    |hv_93_loc_fu_670                                                                       |   8|   0|    8|          0|
+    |hv_94_loc_fu_674                                                                       |   8|   0|    8|          0|
+    |hv_95_loc_fu_678                                                                       |   8|   0|    8|          0|
+    |hv_96_loc_fu_682                                                                       |   8|   0|    8|          0|
+    |hv_97_loc_fu_686                                                                       |   8|   0|    8|          0|
+    |hv_99_loc_fu_690                                                                       |   8|   0|    8|          0|
+    |hv_9_loc_fu_366                                                                        |   8|   0|    8|          0|
+    |hv_loc_fu_330                                                                          |   8|   0|    8|          0|
+    |icmp_ln84_reg_3337                                                                     |   1|   0|    1|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE      |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_1    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_10   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_109  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_11   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_110  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_111  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_112  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_113  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_114  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_115  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_116  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_117  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_118  |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_12   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_13   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_14   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_15   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_16   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_17   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_18   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_19   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_2    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_20   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_21   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_22   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_23   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_24   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_25   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_26   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_27   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_28   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_29   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_3    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_30   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_31   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_32   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_33   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_34   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_35   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_36   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_37   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_38   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_39   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_4    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_40   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_41   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_42   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_43   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_44   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_45   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_46   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_47   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_48   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_49   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_5    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_50   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_51   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_52   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_53   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_54   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_55   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_56   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_57   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_58   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_59   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_6    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_60   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_61   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_62   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_63   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_64   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_65   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_66   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_67   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_68   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_69   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_7    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_70   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_71   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_72   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_73   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_74   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_75   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_76   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_77   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_78   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_79   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_8    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_80   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_81   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_82   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_83   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_84   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_85   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_86   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_87   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_88   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_89   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_9    |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_90   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_91   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_92   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_93   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_94   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_95   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_96   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_97   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_98   |   8|   0|    8|          0|
+    |p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_99   |   8|   0|    8|          0|
+    |rows_read_reg_2640                                                                     |  32|   0|   32|          0|
+    |sub110_reg_3327                                                                        |  31|   0|   31|          0|
+    |sub81_reg_3332                                                                         |  32|   0|   32|          0|
+    |sub_reg_3322                                                                           |  32|   0|   32|          0|
+    |threshold_read_reg_2646                                                                |   8|   0|    8|          0|
+    |total_reg_3311                                                                         |  32|   0|   32|          0|
+    |trunc_ln79_reg_3316                                                                    |  31|   0|   31|          0|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                  |1998|   0| 1998|          0|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+-------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++-----------------------+-----+-----+------------+-------------------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|                  control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|                  control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|       s_axi|                  control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|                  control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|                  control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|                  control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|                  control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|                  control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|                  control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|       s_axi|                  control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|                  control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|                  control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|                  control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|                  control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|                  control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|                  control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|                  control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  BackGrRemoval_stream_v2|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|  BackGrRemoval_stream_v2|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|  BackGrRemoval_stream_v2|  return value|
+|in_stream_TDATA        |   in|   24|        axis|       in_stream_V_data_V|       pointer|
+|in_stream_TVALID       |   in|    1|        axis|       in_stream_V_dest_V|       pointer|
+|in_stream_TREADY       |  out|    1|        axis|       in_stream_V_dest_V|       pointer|
+|in_stream_TDEST        |   in|    1|        axis|       in_stream_V_dest_V|       pointer|
+|in_stream_TKEEP        |   in|    3|        axis|       in_stream_V_keep_V|       pointer|
+|in_stream_TSTRB        |   in|    3|        axis|       in_stream_V_strb_V|       pointer|
+|in_stream_TUSER        |   in|    1|        axis|       in_stream_V_user_V|       pointer|
+|in_stream_TLAST        |   in|    1|        axis|       in_stream_V_last_V|       pointer|
+|in_stream_TID          |   in|    1|        axis|         in_stream_V_id_V|       pointer|
+|out_stream_TDATA       |  out|   24|        axis|      out_stream_V_data_V|       pointer|
+|out_stream_TVALID      |  out|    1|        axis|      out_stream_V_dest_V|       pointer|
+|out_stream_TREADY      |   in|    1|        axis|      out_stream_V_dest_V|       pointer|
+|out_stream_TDEST       |  out|    1|        axis|      out_stream_V_dest_V|       pointer|
+|out_stream_TKEEP       |  out|    3|        axis|      out_stream_V_keep_V|       pointer|
+|out_stream_TSTRB       |  out|    3|        axis|      out_stream_V_strb_V|       pointer|
+|out_stream_TUSER       |  out|    1|        axis|      out_stream_V_user_V|       pointer|
+|out_stream_TLAST       |  out|    1|        axis|      out_stream_V_last_V|       pointer|
+|out_stream_TID         |  out|    1|        axis|        out_stream_V_id_V|       pointer|
++-----------------------+-----+-----+------------+-------------------------+--------------+
+

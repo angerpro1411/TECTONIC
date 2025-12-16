@@ -1,0 +1,335 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-87-generic) on Wed Nov 12 16:31:40 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project Obj_Detect_ver3 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3'.
+INFO: [HLS 200-1510] Running: set_top hls_object_green_classification 
+INFO: [HLS 200-1510] Running: add_files obj_detect.cpp 
+INFO: [HLS 200-10] Adding design file 'obj_detect.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb _output.bmp 
+INFO: [HLS 200-10] Adding test bench file '_output.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb output_.bmp 
+INFO: [HLS 200-10] Adding test bench file 'output_.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 189.535 MB.
+INFO: [HLS 200-10] Analyzing design file 'obj_detect.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.27 seconds. CPU system time: 0.31 seconds. Elapsed time: 2.58 seconds; current allocated memory: 190.613 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 6,943 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,066 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,081 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,214 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/Obj_Detect_ver3/Obj_Detect_ver3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'uf_find(ap_uint<16>*, ap_uint<16>)' into 'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)' (obj_detect.cpp:53:19)
+INFO: [HLS 214-131] Inlining function 'uf_find(ap_uint<16>*, ap_uint<16>)' into 'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)' (obj_detect.cpp:54:19)
+INFO: [HLS 214-131] Inlining function 'is_green_rgb(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)' (obj_detect.cpp:258:31)
+INFO: [HLS 214-131] Inlining function 'uf_find(ap_uint<16>*, ap_uint<16>)' into 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)' (obj_detect.cpp:205:29)
+INFO: [HLS 214-131] Inlining function 'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)' into 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)' (obj_detect.cpp:176:42)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_1' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:24:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_26_2' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:26:19)
+INFO: [HLS 214-291] Loop 'Pass1_5_inner1' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:190:25)
+INFO: [HLS 214-291] Loop 'Pass1_5_inner2' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:191:26)
+INFO: [HLS 214-291] Loop 'Shift_window' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:144:17)
+INFO: [HLS 214-186] Unrolling loop 'Pass1_5_inner1' (obj_detect.cpp:190:25) in function 'hls_object_green_classification' completely with a factor of 3 (obj_detect.cpp:65:0)
+INFO: [HLS 214-186] Unrolling loop 'Pass1_5_inner2' (obj_detect.cpp:191:26) in function 'hls_object_green_classification' completely with a factor of 3 (obj_detect.cpp:65:0)
+INFO: [HLS 214-186] Unrolling loop 'Shift_window' (obj_detect.cpp:144:17) in function 'hls_object_green_classification' completely with a factor of 3 (obj_detect.cpp:65:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE7linebuf': Complete partitioning on dimension 1. (obj_detect.cpp:119:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask' due to pipeline pragma (obj_detect.cpp:188:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=2' for array 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask' due to pipeline pragma (obj_detect.cpp:188:9)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 3 on dimension 2. (obj_detect.cpp:83:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.28 seconds. CPU system time: 0.24 seconds. Elapsed time: 6.95 seconds; current allocated memory: 192.816 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 192.816 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 197.758 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 198.465 MB.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'PASS_1' (obj_detect.cpp:129) in function 'hls_object_green_classification' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'PASS2' (obj_detect.cpp:202) in function 'hls_object_green_classification' for pipelining.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'PASS_3_5_1' (obj_detect.cpp:230:22) in function 'hls_object_green_classification'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'PASS_3_5_2_in' (obj_detect.cpp:238:30) in function 'hls_object_green_classification'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'PASS_3_5_2_out' (obj_detect.cpp:236:26) in function 'hls_object_green_classification'.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_24_1' (obj_detect.cpp:24) in function 'hls_object_green_classification' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_26_2' (obj_detect.cpp:26) in function 'hls_object_green_classification' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_24_1' (obj_detect.cpp:24) in function 'hls_object_green_classification' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_26_2' (obj_detect.cpp:26) in function 'hls_object_green_classification' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_24_1' (obj_detect.cpp:24) in function 'hls_object_green_classification' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_26_2' (obj_detect.cpp:26) in function 'hls_object_green_classification' completely: variable loop bound.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (obj_detect.cpp:131:9) to (obj_detect.cpp:156:21) in function 'hls_object_green_classification'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (obj_detect.cpp:171:52) to (obj_detect.cpp:176:20) in function 'hls_object_green_classification'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (obj_detect.cpp:271:9) to (obj_detect.cpp:269:13) in function 'hls_object_green_classification'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'hls_object_green_classification' (obj_detect.cpp:17:22)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 225.539 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'PASS_1' (obj_detect.cpp:129:10) in function 'hls_object_green_classification' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'PASS2' (obj_detect.cpp:202:9) in function 'hls_object_green_classification' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'Pass3_outer' (obj_detect.cpp:209:15) in function 'hls_object_green_classification'.
+WARNING: [HLS 200-960] Cannot flatten loop 'PASS_3_5_2_out' (obj_detect.cpp:236:18) in function 'hls_object_green_classification' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'pass5_out' (obj_detect.cpp:268:13) in function 'hls_object_green_classification'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 287.043 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hls_object_green_classification' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_InitLoop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'InitLoop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'InitLoop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 288.656 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 288.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_Pass1_5_inner0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Pass1_5_inner0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 16, loop 'Pass1_5_inner0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 292.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 292.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Pass3_outer_Pass3_inner'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'Pass3_outer_Pass3_inner'
+WARNING: [HLS 200-871] Estimated clock period (8.423 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner' consists of the following:
+	'load' operation ('min_y_load', obj_detect.cpp:219) on array 'min_y' [71]  (3.254 ns)
+	'icmp' operation ('icmp_ln219', obj_detect.cpp:219) [72]  (1.915 ns)
+	blocking operation 3.254 ns on control path)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 292.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 292.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_PASS_3_5_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PASS_3_5_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'PASS_3_5_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 292.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 292.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_PASS_3_5_2_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PASS_3_5_2_in'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'PASS_3_5_2_in'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 292.707 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 292.707 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_pass_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'pass_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 7, loop 'pass_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 293.562 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 293.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification_Pipeline_pass5_out_pass5_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln277) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'pass5_out_pass5_in'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 15, loop 'pass5_out_pass5_in'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 294.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 294.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_object_green_classification' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln141_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln141) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln166) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln163_1) to 3 in order to utilize available DSP registers.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'PASS_1': contains subloop(s) that are not unrolled or flattened.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'PASS2': contains subloop(s) that are not unrolled or flattened.
+WARNING: [HLS 200-871] Estimated clock period (8.585 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'hls_object_green_classification' consists of the following:
+	'load' operation ('parent_load_15', obj_detect.cpp:26->obj_detect.cpp:54->obj_detect.cpp:176) on array 'parent' [459]  (3.254 ns)
+	'icmp' operation ('icmp_ln26_5', obj_detect.cpp:26->obj_detect.cpp:54->obj_detect.cpp:176) [460]  (2.077 ns)
+	blocking operation 3.254 ns on control path)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.69 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.7 seconds; current allocated memory: 300.848 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.68 seconds. CPU system time: 0 seconds. Elapsed time: 0.69 seconds; current allocated memory: 300.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_InitLoop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_InitLoop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 300.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_Pass1_5_inner0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'Pass1_5_inner0' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hls_object_green_classification_Pipeline_Pass1_5_inner0' pipeline 'Pass1_5_inner0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_1_1_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_9ns_3ns_2_13_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_Pass1_5_inner0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 301.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'Pass3_outer_Pass3_inner' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner' pipeline 'Pass3_outer_Pass3_inner' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_Pass3_outer_Pass3_inner'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 307.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_PASS_3_5_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hls_object_green_classification_Pipeline_PASS_3_5_1' pipeline 'PASS_3_5_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_PASS_3_5_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 308.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_PASS_3_5_2_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hls_object_green_classification_Pipeline_PASS_3_5_2_in' pipeline 'PASS_3_5_2_in' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_PASS_3_5_2_in'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 310.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_pass_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hls_object_green_classification_Pipeline_pass_4' pipeline 'pass_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_pass_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 311.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification_Pipeline_pass5_out_pass5_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hls_object_green_classification_Pipeline_pass5_out_pass5_in' pipeline 'pass5_out_pass5_in' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_7ns_8ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9ns_11ns_19_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_1_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_3ns_2_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_9ns_3ns_2_13_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification_Pipeline_pass5_out_pass5_in'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 314.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_object_green_classification' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/in_stream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/out_stream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/obj_x' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/obj_y' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/obj_is_green' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_object_green_classification/object_count' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hls_object_green_classification' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_RAM_AUTO_1R1W' to 'hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_Rbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'hls_mulmulmulobject_green_classification_stream_stream_short_short_ap_uint_ap_uint_RAM_AUTO_1R1W' to 'hls_mulmulmulobject_green_classification_stream_stream_short_short_ap_uint_apcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmeOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmfYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmhbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmjbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_RAM_2P_BRAM_1R1W' to 'p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmlbW' due to the length limit 80
+INFO: [RTGEN 206-100] Bundling port 'object_count', 'obj_is_green', 'obj_x' and 'obj_y' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_21s_21_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_14s_7ns_14ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_4ns_41ns_41_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_6ns_40ns_41_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_11s_21_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_34ns_65_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_41ns_43ns_56_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_8ns_14_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2_1_8_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_3ns_2_36_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_3ns_2_12_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_object_green_classification'.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_parent_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_min_x_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_min_y_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_Rbkb' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hls_object_green_classification_label_map_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 323.590 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.81 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.85 seconds; current allocated memory: 334.992 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 348.805 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hls_object_green_classification.
+INFO: [VLOG 209-307] Generating Verilog RTL for hls_object_green_classification.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.48 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.3 seconds. CPU system time: 0.72 seconds. Elapsed time: 15.5 seconds; current allocated memory: 159.848 MB.
+INFO: [HLS 200-112] Total CPU user time: 11.18 seconds. Total CPU system time: 0.83 seconds. Total elapsed time: 16.36 seconds; peak allocated memory: 349.383 MB.

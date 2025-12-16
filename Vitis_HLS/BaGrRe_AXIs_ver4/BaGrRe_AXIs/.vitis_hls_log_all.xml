@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-656] Deadlocks can occur since process Loop_row_loop_proc1 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.&#xA;Resolution: For help on HLS 200-656 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-656.html" projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:33.521+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:33.512+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'row_loop_col_loop' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:32.961+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 240 for loop 'row_loop' (BackGrRemoval.cpp:24:28) in function 'BackGrRemovalStream'." projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:32.061+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 320 for loop 'col_loop' (BackGrRemoval.cpp:27:2) in function 'BackGrRemovalStream'." projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:32.034+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file BackGrRemoval.cpp&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-471.html" projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:22.243+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (BackGrRemoval.cpp:16:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-114.html" projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:21.872+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (BackGrRemoval.cpp:19:12)&#xA;Resolution: For help on HLS 214-111 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-111.html" projectName="BaGrRe_AXIs" solutionName="solution1" date="2025-10-29T16:03:21.867+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

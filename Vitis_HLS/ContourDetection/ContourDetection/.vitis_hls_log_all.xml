@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T16:08:10.438+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T16:05:32.619+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:59:41.282+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:57:16.306+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:56:56.796+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:49:52.448+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:48:36.449+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:40:25.991+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:40:00.610+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:35:41.857+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:33:33.094+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:31:24.805+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:09:14.642+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T15:08:15.350+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:59:35.122+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:58:57.013+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:57:22.945+0100"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:57:22.929+0100"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:52:32.548+0100"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xA;@E Simulation failed." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:52:32.542+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:51:15.319+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:50:26.170+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:43:06.288+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T14:42:18.008+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T11:00:39.785+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:57:48.365+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:56:40.877+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:52:48.113+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:46:14.453+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:43:38.152+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:43:11.051+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:42:50.301+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ContourDetection" solutionName="solution1" date="2025-11-04T10:16:22.342+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

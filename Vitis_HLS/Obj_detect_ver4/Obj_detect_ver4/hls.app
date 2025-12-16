@@ -1,0 +1,17 @@
+<project xmlns="com.autoesl.autopilot.project" top="hls_object_green_classification" name="Obj_detect_ver4" projectType="C/C++">
+    <includePaths/>
+    <libraryPaths/>
+    <Simulation>
+        <SimFlow name="csim"/>
+    </Simulation>
+    <files xmlns="">
+        <file name="obj_detect.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="../../_output.bmp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
+        <file name="../../output_.bmp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
+        <file name="../../tb.cpp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
+    </files>
+    <solutions xmlns="">
+        <solution name="solution1" status="active"/>
+    </solutions>
+</project>
+

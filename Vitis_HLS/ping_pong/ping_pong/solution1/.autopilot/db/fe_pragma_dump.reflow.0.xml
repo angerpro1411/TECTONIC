@@ -1,0 +1,4 @@
+<pragmas>
+<pragma file="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c" line="4" pragmaType="array_partition" parentfunction="algo" dim="1" factor="2" mode="cyclic" dynamic="0" variable="vecIn"/>
+<pragma file="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c" line="5" pragmaType="array_partition" parentfunction="algo" dim="1" factor="2" mode="cyclic" dynamic="0" variable="vecOut"/>
+</pragmas>

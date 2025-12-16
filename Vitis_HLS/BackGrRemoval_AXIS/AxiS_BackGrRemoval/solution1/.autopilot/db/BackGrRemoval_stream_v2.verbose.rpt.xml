@@ -1,0 +1,380 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'BackGrRemoval_stream_v2'" level="0">
+<item name = "Date">Tue Oct 21 15:11:16 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">AxiS_BackGrRemoval</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.304 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4, ?, 40.000 ns, ?, 5, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788">BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1, 96, ?, 0.960 us, ?, 96, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 157, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">8, 3, 10253, 11162, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 46, -</column>
+<column name="Register">-, -, 1998, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 1, 11, 21, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788">BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1, 8, 0, 9962, 10928, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 126, 184, 0</column>
+<column name="mul_32s_32s_32_2_1_U246">mul_32s_32s_32_2_1, 0, 3, 165, 50, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="sub110_fu_1076_p2">+, 0, 0, 38, 31, 2</column>
+<column name="sub81_fu_1082_p2">+, 0, 0, 39, 32, 4</column>
+<column name="sub_fu_1070_p2">+, 0, 0, 39, 32, 4</column>
+<column name="grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788_out_stream_TREADY">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln84_fu_1088_p2">icmp, 0, 0, 39, 32, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">37, 7, 1, 7</column>
+<column name="in_stream_TREADY_int_regslice">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="cols_read_reg_2633">32, 0, 32, 0</column>
+<column name="grp_BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1_fu_788_ap_start_reg">1, 0, 1, 0</column>
+<column name="hv_100_loc_fu_694">8, 0, 8, 0</column>
+<column name="hv_101_loc_fu_698">8, 0, 8, 0</column>
+<column name="hv_102_loc_fu_702">8, 0, 8, 0</column>
+<column name="hv_103_loc_fu_706">8, 0, 8, 0</column>
+<column name="hv_104_loc_fu_710">8, 0, 8, 0</column>
+<column name="hv_105_loc_fu_714">8, 0, 8, 0</column>
+<column name="hv_106_loc_fu_718">8, 0, 8, 0</column>
+<column name="hv_107_loc_fu_722">8, 0, 8, 0</column>
+<column name="hv_108_loc_fu_726">8, 0, 8, 0</column>
+<column name="hv_110_loc_fu_730">8, 0, 8, 0</column>
+<column name="hv_111_loc_fu_734">8, 0, 8, 0</column>
+<column name="hv_112_loc_fu_738">8, 0, 8, 0</column>
+<column name="hv_113_loc_fu_742">8, 0, 8, 0</column>
+<column name="hv_114_loc_fu_746">8, 0, 8, 0</column>
+<column name="hv_115_loc_fu_750">8, 0, 8, 0</column>
+<column name="hv_116_loc_fu_754">8, 0, 8, 0</column>
+<column name="hv_117_loc_fu_758">8, 0, 8, 0</column>
+<column name="hv_118_loc_fu_762">8, 0, 8, 0</column>
+<column name="hv_119_loc_fu_766">8, 0, 8, 0</column>
+<column name="hv_11_loc_fu_370">8, 0, 8, 0</column>
+<column name="hv_12_loc_fu_374">8, 0, 8, 0</column>
+<column name="hv_13_loc_fu_378">8, 0, 8, 0</column>
+<column name="hv_14_loc_fu_382">8, 0, 8, 0</column>
+<column name="hv_15_loc_fu_386">8, 0, 8, 0</column>
+<column name="hv_16_loc_fu_390">8, 0, 8, 0</column>
+<column name="hv_17_loc_fu_394">8, 0, 8, 0</column>
+<column name="hv_18_loc_fu_398">8, 0, 8, 0</column>
+<column name="hv_19_loc_fu_402">8, 0, 8, 0</column>
+<column name="hv_1_loc_fu_334">8, 0, 8, 0</column>
+<column name="hv_20_loc_fu_406">8, 0, 8, 0</column>
+<column name="hv_22_loc_fu_410">8, 0, 8, 0</column>
+<column name="hv_23_loc_fu_414">8, 0, 8, 0</column>
+<column name="hv_24_loc_fu_418">8, 0, 8, 0</column>
+<column name="hv_25_loc_fu_422">8, 0, 8, 0</column>
+<column name="hv_26_loc_fu_426">8, 0, 8, 0</column>
+<column name="hv_27_loc_fu_430">8, 0, 8, 0</column>
+<column name="hv_28_loc_fu_434">8, 0, 8, 0</column>
+<column name="hv_29_loc_fu_438">8, 0, 8, 0</column>
+<column name="hv_2_loc_fu_338">8, 0, 8, 0</column>
+<column name="hv_30_loc_fu_442">8, 0, 8, 0</column>
+<column name="hv_31_loc_fu_446">8, 0, 8, 0</column>
+<column name="hv_33_loc_fu_450">8, 0, 8, 0</column>
+<column name="hv_34_loc_fu_454">8, 0, 8, 0</column>
+<column name="hv_35_loc_fu_458">8, 0, 8, 0</column>
+<column name="hv_36_loc_fu_462">8, 0, 8, 0</column>
+<column name="hv_37_loc_fu_466">8, 0, 8, 0</column>
+<column name="hv_38_loc_fu_470">8, 0, 8, 0</column>
+<column name="hv_39_loc_fu_474">8, 0, 8, 0</column>
+<column name="hv_3_loc_fu_342">8, 0, 8, 0</column>
+<column name="hv_40_loc_fu_478">8, 0, 8, 0</column>
+<column name="hv_41_loc_fu_482">8, 0, 8, 0</column>
+<column name="hv_42_loc_fu_486">8, 0, 8, 0</column>
+<column name="hv_44_loc_fu_490">8, 0, 8, 0</column>
+<column name="hv_45_loc_fu_494">8, 0, 8, 0</column>
+<column name="hv_46_loc_fu_498">8, 0, 8, 0</column>
+<column name="hv_47_loc_fu_502">8, 0, 8, 0</column>
+<column name="hv_48_loc_fu_506">8, 0, 8, 0</column>
+<column name="hv_49_loc_fu_510">8, 0, 8, 0</column>
+<column name="hv_4_loc_fu_346">8, 0, 8, 0</column>
+<column name="hv_50_loc_fu_514">8, 0, 8, 0</column>
+<column name="hv_51_loc_fu_518">8, 0, 8, 0</column>
+<column name="hv_52_loc_fu_522">8, 0, 8, 0</column>
+<column name="hv_53_loc_fu_526">8, 0, 8, 0</column>
+<column name="hv_55_loc_fu_530">8, 0, 8, 0</column>
+<column name="hv_56_loc_fu_534">8, 0, 8, 0</column>
+<column name="hv_57_loc_fu_538">8, 0, 8, 0</column>
+<column name="hv_58_loc_fu_542">8, 0, 8, 0</column>
+<column name="hv_59_loc_fu_546">8, 0, 8, 0</column>
+<column name="hv_5_loc_fu_350">8, 0, 8, 0</column>
+<column name="hv_60_loc_fu_550">8, 0, 8, 0</column>
+<column name="hv_61_loc_fu_554">8, 0, 8, 0</column>
+<column name="hv_62_loc_fu_558">8, 0, 8, 0</column>
+<column name="hv_63_loc_fu_562">8, 0, 8, 0</column>
+<column name="hv_64_loc_fu_566">8, 0, 8, 0</column>
+<column name="hv_66_loc_fu_570">8, 0, 8, 0</column>
+<column name="hv_67_loc_fu_574">8, 0, 8, 0</column>
+<column name="hv_68_loc_fu_578">8, 0, 8, 0</column>
+<column name="hv_69_loc_fu_582">8, 0, 8, 0</column>
+<column name="hv_6_loc_fu_354">8, 0, 8, 0</column>
+<column name="hv_70_loc_fu_586">8, 0, 8, 0</column>
+<column name="hv_71_loc_fu_590">8, 0, 8, 0</column>
+<column name="hv_72_loc_fu_594">8, 0, 8, 0</column>
+<column name="hv_73_loc_fu_598">8, 0, 8, 0</column>
+<column name="hv_74_loc_fu_602">8, 0, 8, 0</column>
+<column name="hv_75_loc_fu_606">8, 0, 8, 0</column>
+<column name="hv_77_loc_fu_610">8, 0, 8, 0</column>
+<column name="hv_78_loc_fu_614">8, 0, 8, 0</column>
+<column name="hv_79_loc_fu_618">8, 0, 8, 0</column>
+<column name="hv_7_loc_fu_358">8, 0, 8, 0</column>
+<column name="hv_80_loc_fu_622">8, 0, 8, 0</column>
+<column name="hv_81_loc_fu_626">8, 0, 8, 0</column>
+<column name="hv_82_loc_fu_630">8, 0, 8, 0</column>
+<column name="hv_83_loc_fu_634">8, 0, 8, 0</column>
+<column name="hv_84_loc_fu_638">8, 0, 8, 0</column>
+<column name="hv_85_loc_fu_642">8, 0, 8, 0</column>
+<column name="hv_86_loc_fu_646">8, 0, 8, 0</column>
+<column name="hv_88_loc_fu_650">8, 0, 8, 0</column>
+<column name="hv_89_loc_fu_654">8, 0, 8, 0</column>
+<column name="hv_8_loc_fu_362">8, 0, 8, 0</column>
+<column name="hv_90_loc_fu_658">8, 0, 8, 0</column>
+<column name="hv_91_loc_fu_662">8, 0, 8, 0</column>
+<column name="hv_92_loc_fu_666">8, 0, 8, 0</column>
+<column name="hv_93_loc_fu_670">8, 0, 8, 0</column>
+<column name="hv_94_loc_fu_674">8, 0, 8, 0</column>
+<column name="hv_95_loc_fu_678">8, 0, 8, 0</column>
+<column name="hv_96_loc_fu_682">8, 0, 8, 0</column>
+<column name="hv_97_loc_fu_686">8, 0, 8, 0</column>
+<column name="hv_99_loc_fu_690">8, 0, 8, 0</column>
+<column name="hv_9_loc_fu_366">8, 0, 8, 0</column>
+<column name="hv_loc_fu_330">8, 0, 8, 0</column>
+<column name="icmp_ln84_reg_3337">1, 0, 1, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_1">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_10">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_109">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_11">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_110">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_111">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_112">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_113">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_114">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_115">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_116">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_117">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_118">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_12">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_13">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_14">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_15">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_16">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_17">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_18">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_19">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_2">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_20">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_21">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_22">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_23">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_24">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_25">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_26">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_27">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_28">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_29">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_3">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_30">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_31">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_32">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_33">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_34">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_35">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_36">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_37">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_38">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_39">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_4">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_40">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_41">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_42">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_43">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_44">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_45">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_46">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_47">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_48">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_49">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_5">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_50">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_51">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_52">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_53">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_54">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_55">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_56">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_57">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_58">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_59">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_6">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_60">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_61">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_62">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_63">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_64">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_65">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_66">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_67">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_68">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_69">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_7">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_70">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_71">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_72">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_73">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_74">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_75">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_76">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_77">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_78">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_79">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_8">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_80">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_81">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_82">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_83">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_84">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_85">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_86">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_87">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_88">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_89">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_9">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_90">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_91">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_92">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_93">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_94">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_95">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_96">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_97">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_98">8, 0, 8, 0</column>
+<column name="p_ZZ23BackGrRemoval_stream_v2RN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEE_99">8, 0, 8, 0</column>
+<column name="rows_read_reg_2640">32, 0, 32, 0</column>
+<column name="sub110_reg_3327">31, 0, 31, 0</column>
+<column name="sub81_reg_3332">32, 0, 32, 0</column>
+<column name="sub_reg_3322">32, 0, 32, 0</column>
+<column name="threshold_read_reg_2646">8, 0, 8, 0</column>
+<column name="total_reg_3311">32, 0, 32, 0</column>
+<column name="trunc_ln79_reg_3316">31, 0, 31, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_control_AWVALID">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_AWREADY">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_AWADDR">in, 6, s_axi, control, scalar</column>
+<column name="s_axi_control_WVALID">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_WREADY">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_WDATA">in, 32, s_axi, control, scalar</column>
+<column name="s_axi_control_WSTRB">in, 4, s_axi, control, scalar</column>
+<column name="s_axi_control_ARVALID">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_ARREADY">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_ARADDR">in, 6, s_axi, control, scalar</column>
+<column name="s_axi_control_RVALID">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_RREADY">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_RDATA">out, 32, s_axi, control, scalar</column>
+<column name="s_axi_control_RRESP">out, 2, s_axi, control, scalar</column>
+<column name="s_axi_control_BVALID">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_BREADY">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_BRESP">out, 2, s_axi, control, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, BackGrRemoval_stream_v2, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, BackGrRemoval_stream_v2, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, BackGrRemoval_stream_v2, return value</column>
+<column name="in_stream_TDATA">in, 24, axis, in_stream_V_data_V, pointer</column>
+<column name="in_stream_TVALID">in, 1, axis, in_stream_V_dest_V, pointer</column>
+<column name="in_stream_TREADY">out, 1, axis, in_stream_V_dest_V, pointer</column>
+<column name="in_stream_TDEST">in, 1, axis, in_stream_V_dest_V, pointer</column>
+<column name="in_stream_TKEEP">in, 3, axis, in_stream_V_keep_V, pointer</column>
+<column name="in_stream_TSTRB">in, 3, axis, in_stream_V_strb_V, pointer</column>
+<column name="in_stream_TUSER">in, 1, axis, in_stream_V_user_V, pointer</column>
+<column name="in_stream_TLAST">in, 1, axis, in_stream_V_last_V, pointer</column>
+<column name="in_stream_TID">in, 1, axis, in_stream_V_id_V, pointer</column>
+<column name="out_stream_TDATA">out, 24, axis, out_stream_V_data_V, pointer</column>
+<column name="out_stream_TVALID">out, 1, axis, out_stream_V_dest_V, pointer</column>
+<column name="out_stream_TREADY">in, 1, axis, out_stream_V_dest_V, pointer</column>
+<column name="out_stream_TDEST">out, 1, axis, out_stream_V_dest_V, pointer</column>
+<column name="out_stream_TKEEP">out, 3, axis, out_stream_V_keep_V, pointer</column>
+<column name="out_stream_TSTRB">out, 3, axis, out_stream_V_strb_V, pointer</column>
+<column name="out_stream_TUSER">out, 1, axis, out_stream_V_user_V, pointer</column>
+<column name="out_stream_TLAST">out, 1, axis, out_stream_V_last_V, pointer</column>
+<column name="out_stream_TID">out, 1, axis, out_stream_V_id_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

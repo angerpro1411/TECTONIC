@@ -1,0 +1,911 @@
+
+
+================================================================
+== Synthesis Summary Report of 'ContourApproximation'
+================================================================
++ General Information: 
+    * Date:           Thu Dec  5 15:29:18 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        contour_approximation
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----------+-------------+-------------+-----+
+    |                       Modules                      | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |          |             |             |     |
+    |                       & Loops                      | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |      FF     |     LUT     | URAM|
+    +----------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----------+-------------+-------------+-----+
+    |+ ContourApproximation                              |     -|   0.16|    15707|  1.571e+05|         -|    15708|     -|        no|     -|  26 (11%)|  31902 (29%)|  51374 (96%)|    -|
+    | + LinearLine                                       |     -|   1.25|       29|    290.000|         -|       29|     -|        no|     -|    7 (3%)|    952 (~0%)|    1779 (3%)|    -|
+    | + Distance_Point_Line_Square                       |     -|   1.25|       24|    240.000|         -|       24|     -|        no|     -|   16 (7%)|    1263 (1%)|    2258 (4%)|    -|
+    | + ContourApproximation_Pipeline_CHECK_DIFFER_LOOP  |     -|   0.22|      255|  2.550e+03|         -|      255|     -|        no|     -|         -|    134 (~0%)|    442 (~0%)|    -|
+    |  o CHECK_DIFFER_LOOP                               |     -|  10.00|      252|  2.520e+03|         3|        1|   250|       yes|     -|         -|            -|            -|    -|
+    | + ContourApproximation_Pipeline_WRITE_BACK         |     -|   1.31|      257|  2.570e+03|         -|      257|     -|        no|     -|         -|    348 (~0%)|    379 (~0%)|    -|
+    |  o WRITE_BACK                                      |     -|  10.00|      254|  2.540e+03|         5|        1|   250|       yes|     -|         -|            -|            -|    -|
+    +----------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------+-----------+----------+
+| Port       | Direction | Bitwidth |
++------------+-----------+----------+
+| p_address0 | out       | 8        |
+| p_address1 | out       | 8        |
+| p_d0       | out       | 64       |
+| p_d1       | out       | 64       |
+| p_q0       | in        | 64       |
+| p_q1       | in        | 64       |
++------------+-----------+----------+
+
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| ap_return |         | out       | 16       |
+| espilon   | ap_none | in        | 32       |
+| nb_pts    | ap_none | in        | 16       |
+| new_p_0   | ap_vld  | out       | 64       |
+| new_p_1   | ap_vld  | out       | 64       |
+| new_p_10  | ap_vld  | out       | 64       |
+| new_p_100 | ap_vld  | out       | 64       |
+| new_p_101 | ap_vld  | out       | 64       |
+| new_p_102 | ap_vld  | out       | 64       |
+| new_p_103 | ap_vld  | out       | 64       |
+| new_p_104 | ap_vld  | out       | 64       |
+| new_p_105 | ap_vld  | out       | 64       |
+| new_p_106 | ap_vld  | out       | 64       |
+| new_p_107 | ap_vld  | out       | 64       |
+| new_p_108 | ap_vld  | out       | 64       |
+| new_p_109 | ap_vld  | out       | 64       |
+| new_p_11  | ap_vld  | out       | 64       |
+| new_p_110 | ap_vld  | out       | 64       |
+| new_p_111 | ap_vld  | out       | 64       |
+| new_p_112 | ap_vld  | out       | 64       |
+| new_p_113 | ap_vld  | out       | 64       |
+| new_p_114 | ap_vld  | out       | 64       |
+| new_p_115 | ap_vld  | out       | 64       |
+| new_p_116 | ap_vld  | out       | 64       |
+| new_p_117 | ap_vld  | out       | 64       |
+| new_p_118 | ap_vld  | out       | 64       |
+| new_p_119 | ap_vld  | out       | 64       |
+| new_p_12  | ap_vld  | out       | 64       |
+| new_p_120 | ap_vld  | out       | 64       |
+| new_p_121 | ap_vld  | out       | 64       |
+| new_p_122 | ap_vld  | out       | 64       |
+| new_p_123 | ap_vld  | out       | 64       |
+| new_p_124 | ap_vld  | out       | 64       |
+| new_p_125 | ap_vld  | out       | 64       |
+| new_p_126 | ap_vld  | out       | 64       |
+| new_p_127 | ap_vld  | out       | 64       |
+| new_p_128 | ap_vld  | out       | 64       |
+| new_p_129 | ap_vld  | out       | 64       |
+| new_p_13  | ap_vld  | out       | 64       |
+| new_p_130 | ap_vld  | out       | 64       |
+| new_p_131 | ap_vld  | out       | 64       |
+| new_p_132 | ap_vld  | out       | 64       |
+| new_p_133 | ap_vld  | out       | 64       |
+| new_p_134 | ap_vld  | out       | 64       |
+| new_p_135 | ap_vld  | out       | 64       |
+| new_p_136 | ap_vld  | out       | 64       |
+| new_p_137 | ap_vld  | out       | 64       |
+| new_p_138 | ap_vld  | out       | 64       |
+| new_p_139 | ap_vld  | out       | 64       |
+| new_p_14  | ap_vld  | out       | 64       |
+| new_p_140 | ap_vld  | out       | 64       |
+| new_p_141 | ap_vld  | out       | 64       |
+| new_p_142 | ap_vld  | out       | 64       |
+| new_p_143 | ap_vld  | out       | 64       |
+| new_p_144 | ap_vld  | out       | 64       |
+| new_p_145 | ap_vld  | out       | 64       |
+| new_p_146 | ap_vld  | out       | 64       |
+| new_p_147 | ap_vld  | out       | 64       |
+| new_p_148 | ap_vld  | out       | 64       |
+| new_p_149 | ap_vld  | out       | 64       |
+| new_p_15  | ap_vld  | out       | 64       |
+| new_p_150 | ap_vld  | out       | 64       |
+| new_p_151 | ap_vld  | out       | 64       |
+| new_p_152 | ap_vld  | out       | 64       |
+| new_p_153 | ap_vld  | out       | 64       |
+| new_p_154 | ap_vld  | out       | 64       |
+| new_p_155 | ap_vld  | out       | 64       |
+| new_p_156 | ap_vld  | out       | 64       |
+| new_p_157 | ap_vld  | out       | 64       |
+| new_p_158 | ap_vld  | out       | 64       |
+| new_p_159 | ap_vld  | out       | 64       |
+| new_p_16  | ap_vld  | out       | 64       |
+| new_p_160 | ap_vld  | out       | 64       |
+| new_p_161 | ap_vld  | out       | 64       |
+| new_p_162 | ap_vld  | out       | 64       |
+| new_p_163 | ap_vld  | out       | 64       |
+| new_p_164 | ap_vld  | out       | 64       |
+| new_p_165 | ap_vld  | out       | 64       |
+| new_p_166 | ap_vld  | out       | 64       |
+| new_p_167 | ap_vld  | out       | 64       |
+| new_p_168 | ap_vld  | out       | 64       |
+| new_p_169 | ap_vld  | out       | 64       |
+| new_p_17  | ap_vld  | out       | 64       |
+| new_p_170 | ap_vld  | out       | 64       |
+| new_p_171 | ap_vld  | out       | 64       |
+| new_p_172 | ap_vld  | out       | 64       |
+| new_p_173 | ap_vld  | out       | 64       |
+| new_p_174 | ap_vld  | out       | 64       |
+| new_p_175 | ap_vld  | out       | 64       |
+| new_p_176 | ap_vld  | out       | 64       |
+| new_p_177 | ap_vld  | out       | 64       |
+| new_p_178 | ap_vld  | out       | 64       |
+| new_p_179 | ap_vld  | out       | 64       |
+| new_p_18  | ap_vld  | out       | 64       |
+| new_p_180 | ap_vld  | out       | 64       |
+| new_p_181 | ap_vld  | out       | 64       |
+| new_p_182 | ap_vld  | out       | 64       |
+| new_p_183 | ap_vld  | out       | 64       |
+| new_p_184 | ap_vld  | out       | 64       |
+| new_p_185 | ap_vld  | out       | 64       |
+| new_p_186 | ap_vld  | out       | 64       |
+| new_p_187 | ap_vld  | out       | 64       |
+| new_p_188 | ap_vld  | out       | 64       |
+| new_p_189 | ap_vld  | out       | 64       |
+| new_p_19  | ap_vld  | out       | 64       |
+| new_p_190 | ap_vld  | out       | 64       |
+| new_p_191 | ap_vld  | out       | 64       |
+| new_p_192 | ap_vld  | out       | 64       |
+| new_p_193 | ap_vld  | out       | 64       |
+| new_p_194 | ap_vld  | out       | 64       |
+| new_p_195 | ap_vld  | out       | 64       |
+| new_p_196 | ap_vld  | out       | 64       |
+| new_p_197 | ap_vld  | out       | 64       |
+| new_p_198 | ap_vld  | out       | 64       |
+| new_p_199 | ap_vld  | out       | 64       |
+| new_p_2   | ap_vld  | out       | 64       |
+| new_p_20  | ap_vld  | out       | 64       |
+| new_p_200 | ap_vld  | out       | 64       |
+| new_p_201 | ap_vld  | out       | 64       |
+| new_p_202 | ap_vld  | out       | 64       |
+| new_p_203 | ap_vld  | out       | 64       |
+| new_p_204 | ap_vld  | out       | 64       |
+| new_p_205 | ap_vld  | out       | 64       |
+| new_p_206 | ap_vld  | out       | 64       |
+| new_p_207 | ap_vld  | out       | 64       |
+| new_p_208 | ap_vld  | out       | 64       |
+| new_p_209 | ap_vld  | out       | 64       |
+| new_p_21  | ap_vld  | out       | 64       |
+| new_p_210 | ap_vld  | out       | 64       |
+| new_p_211 | ap_vld  | out       | 64       |
+| new_p_212 | ap_vld  | out       | 64       |
+| new_p_213 | ap_vld  | out       | 64       |
+| new_p_214 | ap_vld  | out       | 64       |
+| new_p_215 | ap_vld  | out       | 64       |
+| new_p_216 | ap_vld  | out       | 64       |
+| new_p_217 | ap_vld  | out       | 64       |
+| new_p_218 | ap_vld  | out       | 64       |
+| new_p_219 | ap_vld  | out       | 64       |
+| new_p_22  | ap_vld  | out       | 64       |
+| new_p_220 | ap_vld  | out       | 64       |
+| new_p_221 | ap_vld  | out       | 64       |
+| new_p_222 | ap_vld  | out       | 64       |
+| new_p_223 | ap_vld  | out       | 64       |
+| new_p_224 | ap_vld  | out       | 64       |
+| new_p_225 | ap_vld  | out       | 64       |
+| new_p_226 | ap_vld  | out       | 64       |
+| new_p_227 | ap_vld  | out       | 64       |
+| new_p_228 | ap_vld  | out       | 64       |
+| new_p_229 | ap_vld  | out       | 64       |
+| new_p_23  | ap_vld  | out       | 64       |
+| new_p_230 | ap_vld  | out       | 64       |
+| new_p_231 | ap_vld  | out       | 64       |
+| new_p_232 | ap_vld  | out       | 64       |
+| new_p_233 | ap_vld  | out       | 64       |
+| new_p_234 | ap_vld  | out       | 64       |
+| new_p_235 | ap_vld  | out       | 64       |
+| new_p_236 | ap_vld  | out       | 64       |
+| new_p_237 | ap_vld  | out       | 64       |
+| new_p_238 | ap_vld  | out       | 64       |
+| new_p_239 | ap_vld  | out       | 64       |
+| new_p_24  | ap_vld  | out       | 64       |
+| new_p_240 | ap_vld  | out       | 64       |
+| new_p_241 | ap_vld  | out       | 64       |
+| new_p_242 | ap_vld  | out       | 64       |
+| new_p_243 | ap_vld  | out       | 64       |
+| new_p_244 | ap_vld  | out       | 64       |
+| new_p_245 | ap_vld  | out       | 64       |
+| new_p_246 | ap_vld  | out       | 64       |
+| new_p_247 | ap_vld  | out       | 64       |
+| new_p_248 | ap_vld  | out       | 64       |
+| new_p_249 | ap_vld  | out       | 64       |
+| new_p_25  | ap_vld  | out       | 64       |
+| new_p_26  | ap_vld  | out       | 64       |
+| new_p_27  | ap_vld  | out       | 64       |
+| new_p_28  | ap_vld  | out       | 64       |
+| new_p_29  | ap_vld  | out       | 64       |
+| new_p_3   | ap_vld  | out       | 64       |
+| new_p_30  | ap_vld  | out       | 64       |
+| new_p_31  | ap_vld  | out       | 64       |
+| new_p_32  | ap_vld  | out       | 64       |
+| new_p_33  | ap_vld  | out       | 64       |
+| new_p_34  | ap_vld  | out       | 64       |
+| new_p_35  | ap_vld  | out       | 64       |
+| new_p_36  | ap_vld  | out       | 64       |
+| new_p_37  | ap_vld  | out       | 64       |
+| new_p_38  | ap_vld  | out       | 64       |
+| new_p_39  | ap_vld  | out       | 64       |
+| new_p_4   | ap_vld  | out       | 64       |
+| new_p_40  | ap_vld  | out       | 64       |
+| new_p_41  | ap_vld  | out       | 64       |
+| new_p_42  | ap_vld  | out       | 64       |
+| new_p_43  | ap_vld  | out       | 64       |
+| new_p_44  | ap_vld  | out       | 64       |
+| new_p_45  | ap_vld  | out       | 64       |
+| new_p_46  | ap_vld  | out       | 64       |
+| new_p_47  | ap_vld  | out       | 64       |
+| new_p_48  | ap_vld  | out       | 64       |
+| new_p_49  | ap_vld  | out       | 64       |
+| new_p_5   | ap_vld  | out       | 64       |
+| new_p_50  | ap_vld  | out       | 64       |
+| new_p_51  | ap_vld  | out       | 64       |
+| new_p_52  | ap_vld  | out       | 64       |
+| new_p_53  | ap_vld  | out       | 64       |
+| new_p_54  | ap_vld  | out       | 64       |
+| new_p_55  | ap_vld  | out       | 64       |
+| new_p_56  | ap_vld  | out       | 64       |
+| new_p_57  | ap_vld  | out       | 64       |
+| new_p_58  | ap_vld  | out       | 64       |
+| new_p_59  | ap_vld  | out       | 64       |
+| new_p_6   | ap_vld  | out       | 64       |
+| new_p_60  | ap_vld  | out       | 64       |
+| new_p_61  | ap_vld  | out       | 64       |
+| new_p_62  | ap_vld  | out       | 64       |
+| new_p_63  | ap_vld  | out       | 64       |
+| new_p_64  | ap_vld  | out       | 64       |
+| new_p_65  | ap_vld  | out       | 64       |
+| new_p_66  | ap_vld  | out       | 64       |
+| new_p_67  | ap_vld  | out       | 64       |
+| new_p_68  | ap_vld  | out       | 64       |
+| new_p_69  | ap_vld  | out       | 64       |
+| new_p_7   | ap_vld  | out       | 64       |
+| new_p_70  | ap_vld  | out       | 64       |
+| new_p_71  | ap_vld  | out       | 64       |
+| new_p_72  | ap_vld  | out       | 64       |
+| new_p_73  | ap_vld  | out       | 64       |
+| new_p_74  | ap_vld  | out       | 64       |
+| new_p_75  | ap_vld  | out       | 64       |
+| new_p_76  | ap_vld  | out       | 64       |
+| new_p_77  | ap_vld  | out       | 64       |
+| new_p_78  | ap_vld  | out       | 64       |
+| new_p_79  | ap_vld  | out       | 64       |
+| new_p_8   | ap_vld  | out       | 64       |
+| new_p_80  | ap_vld  | out       | 64       |
+| new_p_81  | ap_vld  | out       | 64       |
+| new_p_82  | ap_vld  | out       | 64       |
+| new_p_83  | ap_vld  | out       | 64       |
+| new_p_84  | ap_vld  | out       | 64       |
+| new_p_85  | ap_vld  | out       | 64       |
+| new_p_86  | ap_vld  | out       | 64       |
+| new_p_87  | ap_vld  | out       | 64       |
+| new_p_88  | ap_vld  | out       | 64       |
+| new_p_89  | ap_vld  | out       | 64       |
+| new_p_9   | ap_vld  | out       | 64       |
+| new_p_90  | ap_vld  | out       | 64       |
+| new_p_91  | ap_vld  | out       | 64       |
+| new_p_92  | ap_vld  | out       | 64       |
+| new_p_93  | ap_vld  | out       | 64       |
+| new_p_94  | ap_vld  | out       | 64       |
+| new_p_95  | ap_vld  | out       | 64       |
+| new_p_96  | ap_vld  | out       | 64       |
+| new_p_97  | ap_vld  | out       | 64       |
+| new_p_98  | ap_vld  | out       | 64       |
+| new_p_99  | ap_vld  | out       | 64       |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| nb_pts   | in        | unsigned short |
+| p        | inout     | Points*        |
+| new_p    | out       | Points*        |
+| espilon  | in        | float          |
+| return   | out       | unsigned short |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| nb_pts   | nb_pts           | port    |          |
+| p        | p_address0       | port    | offset   |
+| p        | p_ce0            | port    |          |
+| p        | p_we0            | port    |          |
+| p        | p_d0             | port    |          |
+| p        | p_q0             | port    |          |
+| p        | p_address1       | port    | offset   |
+| p        | p_ce1            | port    |          |
+| p        | p_we1            | port    |          |
+| p        | p_d1             | port    |          |
+| p        | p_q1             | port    |          |
+| new_p    | new_p_0          | port    |          |
+| new_p    | new_p_0_ap_vld   | port    |          |
+| new_p    | new_p_1          | port    |          |
+| new_p    | new_p_1_ap_vld   | port    |          |
+| new_p    | new_p_2          | port    |          |
+| new_p    | new_p_2_ap_vld   | port    |          |
+| new_p    | new_p_3          | port    |          |
+| new_p    | new_p_3_ap_vld   | port    |          |
+| new_p    | new_p_4          | port    |          |
+| new_p    | new_p_4_ap_vld   | port    |          |
+| new_p    | new_p_5          | port    |          |
+| new_p    | new_p_5_ap_vld   | port    |          |
+| new_p    | new_p_6          | port    |          |
+| new_p    | new_p_6_ap_vld   | port    |          |
+| new_p    | new_p_7          | port    |          |
+| new_p    | new_p_7_ap_vld   | port    |          |
+| new_p    | new_p_8          | port    |          |
+| new_p    | new_p_8_ap_vld   | port    |          |
+| new_p    | new_p_9          | port    |          |
+| new_p    | new_p_9_ap_vld   | port    |          |
+| new_p    | new_p_10         | port    |          |
+| new_p    | new_p_10_ap_vld  | port    |          |
+| new_p    | new_p_11         | port    |          |
+| new_p    | new_p_11_ap_vld  | port    |          |
+| new_p    | new_p_12         | port    |          |
+| new_p    | new_p_12_ap_vld  | port    |          |
+| new_p    | new_p_13         | port    |          |
+| new_p    | new_p_13_ap_vld  | port    |          |
+| new_p    | new_p_14         | port    |          |
+| new_p    | new_p_14_ap_vld  | port    |          |
+| new_p    | new_p_15         | port    |          |
+| new_p    | new_p_15_ap_vld  | port    |          |
+| new_p    | new_p_16         | port    |          |
+| new_p    | new_p_16_ap_vld  | port    |          |
+| new_p    | new_p_17         | port    |          |
+| new_p    | new_p_17_ap_vld  | port    |          |
+| new_p    | new_p_18         | port    |          |
+| new_p    | new_p_18_ap_vld  | port    |          |
+| new_p    | new_p_19         | port    |          |
+| new_p    | new_p_19_ap_vld  | port    |          |
+| new_p    | new_p_20         | port    |          |
+| new_p    | new_p_20_ap_vld  | port    |          |
+| new_p    | new_p_21         | port    |          |
+| new_p    | new_p_21_ap_vld  | port    |          |
+| new_p    | new_p_22         | port    |          |
+| new_p    | new_p_22_ap_vld  | port    |          |
+| new_p    | new_p_23         | port    |          |
+| new_p    | new_p_23_ap_vld  | port    |          |
+| new_p    | new_p_24         | port    |          |
+| new_p    | new_p_24_ap_vld  | port    |          |
+| new_p    | new_p_25         | port    |          |
+| new_p    | new_p_25_ap_vld  | port    |          |
+| new_p    | new_p_26         | port    |          |
+| new_p    | new_p_26_ap_vld  | port    |          |
+| new_p    | new_p_27         | port    |          |
+| new_p    | new_p_27_ap_vld  | port    |          |
+| new_p    | new_p_28         | port    |          |
+| new_p    | new_p_28_ap_vld  | port    |          |
+| new_p    | new_p_29         | port    |          |
+| new_p    | new_p_29_ap_vld  | port    |          |
+| new_p    | new_p_30         | port    |          |
+| new_p    | new_p_30_ap_vld  | port    |          |
+| new_p    | new_p_31         | port    |          |
+| new_p    | new_p_31_ap_vld  | port    |          |
+| new_p    | new_p_32         | port    |          |
+| new_p    | new_p_32_ap_vld  | port    |          |
+| new_p    | new_p_33         | port    |          |
+| new_p    | new_p_33_ap_vld  | port    |          |
+| new_p    | new_p_34         | port    |          |
+| new_p    | new_p_34_ap_vld  | port    |          |
+| new_p    | new_p_35         | port    |          |
+| new_p    | new_p_35_ap_vld  | port    |          |
+| new_p    | new_p_36         | port    |          |
+| new_p    | new_p_36_ap_vld  | port    |          |
+| new_p    | new_p_37         | port    |          |
+| new_p    | new_p_37_ap_vld  | port    |          |
+| new_p    | new_p_38         | port    |          |
+| new_p    | new_p_38_ap_vld  | port    |          |
+| new_p    | new_p_39         | port    |          |
+| new_p    | new_p_39_ap_vld  | port    |          |
+| new_p    | new_p_40         | port    |          |
+| new_p    | new_p_40_ap_vld  | port    |          |
+| new_p    | new_p_41         | port    |          |
+| new_p    | new_p_41_ap_vld  | port    |          |
+| new_p    | new_p_42         | port    |          |
+| new_p    | new_p_42_ap_vld  | port    |          |
+| new_p    | new_p_43         | port    |          |
+| new_p    | new_p_43_ap_vld  | port    |          |
+| new_p    | new_p_44         | port    |          |
+| new_p    | new_p_44_ap_vld  | port    |          |
+| new_p    | new_p_45         | port    |          |
+| new_p    | new_p_45_ap_vld  | port    |          |
+| new_p    | new_p_46         | port    |          |
+| new_p    | new_p_46_ap_vld  | port    |          |
+| new_p    | new_p_47         | port    |          |
+| new_p    | new_p_47_ap_vld  | port    |          |
+| new_p    | new_p_48         | port    |          |
+| new_p    | new_p_48_ap_vld  | port    |          |
+| new_p    | new_p_49         | port    |          |
+| new_p    | new_p_49_ap_vld  | port    |          |
+| new_p    | new_p_50         | port    |          |
+| new_p    | new_p_50_ap_vld  | port    |          |
+| new_p    | new_p_51         | port    |          |
+| new_p    | new_p_51_ap_vld  | port    |          |
+| new_p    | new_p_52         | port    |          |
+| new_p    | new_p_52_ap_vld  | port    |          |
+| new_p    | new_p_53         | port    |          |
+| new_p    | new_p_53_ap_vld  | port    |          |
+| new_p    | new_p_54         | port    |          |
+| new_p    | new_p_54_ap_vld  | port    |          |
+| new_p    | new_p_55         | port    |          |
+| new_p    | new_p_55_ap_vld  | port    |          |
+| new_p    | new_p_56         | port    |          |
+| new_p    | new_p_56_ap_vld  | port    |          |
+| new_p    | new_p_57         | port    |          |
+| new_p    | new_p_57_ap_vld  | port    |          |
+| new_p    | new_p_58         | port    |          |
+| new_p    | new_p_58_ap_vld  | port    |          |
+| new_p    | new_p_59         | port    |          |
+| new_p    | new_p_59_ap_vld  | port    |          |
+| new_p    | new_p_60         | port    |          |
+| new_p    | new_p_60_ap_vld  | port    |          |
+| new_p    | new_p_61         | port    |          |
+| new_p    | new_p_61_ap_vld  | port    |          |
+| new_p    | new_p_62         | port    |          |
+| new_p    | new_p_62_ap_vld  | port    |          |
+| new_p    | new_p_63         | port    |          |
+| new_p    | new_p_63_ap_vld  | port    |          |
+| new_p    | new_p_64         | port    |          |
+| new_p    | new_p_64_ap_vld  | port    |          |
+| new_p    | new_p_65         | port    |          |
+| new_p    | new_p_65_ap_vld  | port    |          |
+| new_p    | new_p_66         | port    |          |
+| new_p    | new_p_66_ap_vld  | port    |          |
+| new_p    | new_p_67         | port    |          |
+| new_p    | new_p_67_ap_vld  | port    |          |
+| new_p    | new_p_68         | port    |          |
+| new_p    | new_p_68_ap_vld  | port    |          |
+| new_p    | new_p_69         | port    |          |
+| new_p    | new_p_69_ap_vld  | port    |          |
+| new_p    | new_p_70         | port    |          |
+| new_p    | new_p_70_ap_vld  | port    |          |
+| new_p    | new_p_71         | port    |          |
+| new_p    | new_p_71_ap_vld  | port    |          |
+| new_p    | new_p_72         | port    |          |
+| new_p    | new_p_72_ap_vld  | port    |          |
+| new_p    | new_p_73         | port    |          |
+| new_p    | new_p_73_ap_vld  | port    |          |
+| new_p    | new_p_74         | port    |          |
+| new_p    | new_p_74_ap_vld  | port    |          |
+| new_p    | new_p_75         | port    |          |
+| new_p    | new_p_75_ap_vld  | port    |          |
+| new_p    | new_p_76         | port    |          |
+| new_p    | new_p_76_ap_vld  | port    |          |
+| new_p    | new_p_77         | port    |          |
+| new_p    | new_p_77_ap_vld  | port    |          |
+| new_p    | new_p_78         | port    |          |
+| new_p    | new_p_78_ap_vld  | port    |          |
+| new_p    | new_p_79         | port    |          |
+| new_p    | new_p_79_ap_vld  | port    |          |
+| new_p    | new_p_80         | port    |          |
+| new_p    | new_p_80_ap_vld  | port    |          |
+| new_p    | new_p_81         | port    |          |
+| new_p    | new_p_81_ap_vld  | port    |          |
+| new_p    | new_p_82         | port    |          |
+| new_p    | new_p_82_ap_vld  | port    |          |
+| new_p    | new_p_83         | port    |          |
+| new_p    | new_p_83_ap_vld  | port    |          |
+| new_p    | new_p_84         | port    |          |
+| new_p    | new_p_84_ap_vld  | port    |          |
+| new_p    | new_p_85         | port    |          |
+| new_p    | new_p_85_ap_vld  | port    |          |
+| new_p    | new_p_86         | port    |          |
+| new_p    | new_p_86_ap_vld  | port    |          |
+| new_p    | new_p_87         | port    |          |
+| new_p    | new_p_87_ap_vld  | port    |          |
+| new_p    | new_p_88         | port    |          |
+| new_p    | new_p_88_ap_vld  | port    |          |
+| new_p    | new_p_89         | port    |          |
+| new_p    | new_p_89_ap_vld  | port    |          |
+| new_p    | new_p_90         | port    |          |
+| new_p    | new_p_90_ap_vld  | port    |          |
+| new_p    | new_p_91         | port    |          |
+| new_p    | new_p_91_ap_vld  | port    |          |
+| new_p    | new_p_92         | port    |          |
+| new_p    | new_p_92_ap_vld  | port    |          |
+| new_p    | new_p_93         | port    |          |
+| new_p    | new_p_93_ap_vld  | port    |          |
+| new_p    | new_p_94         | port    |          |
+| new_p    | new_p_94_ap_vld  | port    |          |
+| new_p    | new_p_95         | port    |          |
+| new_p    | new_p_95_ap_vld  | port    |          |
+| new_p    | new_p_96         | port    |          |
+| new_p    | new_p_96_ap_vld  | port    |          |
+| new_p    | new_p_97         | port    |          |
+| new_p    | new_p_97_ap_vld  | port    |          |
+| new_p    | new_p_98         | port    |          |
+| new_p    | new_p_98_ap_vld  | port    |          |
+| new_p    | new_p_99         | port    |          |
+| new_p    | new_p_99_ap_vld  | port    |          |
+| new_p    | new_p_100        | port    |          |
+| new_p    | new_p_100_ap_vld | port    |          |
+| new_p    | new_p_101        | port    |          |
+| new_p    | new_p_101_ap_vld | port    |          |
+| new_p    | new_p_102        | port    |          |
+| new_p    | new_p_102_ap_vld | port    |          |
+| new_p    | new_p_103        | port    |          |
+| new_p    | new_p_103_ap_vld | port    |          |
+| new_p    | new_p_104        | port    |          |
+| new_p    | new_p_104_ap_vld | port    |          |
+| new_p    | new_p_105        | port    |          |
+| new_p    | new_p_105_ap_vld | port    |          |
+| new_p    | new_p_106        | port    |          |
+| new_p    | new_p_106_ap_vld | port    |          |
+| new_p    | new_p_107        | port    |          |
+| new_p    | new_p_107_ap_vld | port    |          |
+| new_p    | new_p_108        | port    |          |
+| new_p    | new_p_108_ap_vld | port    |          |
+| new_p    | new_p_109        | port    |          |
+| new_p    | new_p_109_ap_vld | port    |          |
+| new_p    | new_p_110        | port    |          |
+| new_p    | new_p_110_ap_vld | port    |          |
+| new_p    | new_p_111        | port    |          |
+| new_p    | new_p_111_ap_vld | port    |          |
+| new_p    | new_p_112        | port    |          |
+| new_p    | new_p_112_ap_vld | port    |          |
+| new_p    | new_p_113        | port    |          |
+| new_p    | new_p_113_ap_vld | port    |          |
+| new_p    | new_p_114        | port    |          |
+| new_p    | new_p_114_ap_vld | port    |          |
+| new_p    | new_p_115        | port    |          |
+| new_p    | new_p_115_ap_vld | port    |          |
+| new_p    | new_p_116        | port    |          |
+| new_p    | new_p_116_ap_vld | port    |          |
+| new_p    | new_p_117        | port    |          |
+| new_p    | new_p_117_ap_vld | port    |          |
+| new_p    | new_p_118        | port    |          |
+| new_p    | new_p_118_ap_vld | port    |          |
+| new_p    | new_p_119        | port    |          |
+| new_p    | new_p_119_ap_vld | port    |          |
+| new_p    | new_p_120        | port    |          |
+| new_p    | new_p_120_ap_vld | port    |          |
+| new_p    | new_p_121        | port    |          |
+| new_p    | new_p_121_ap_vld | port    |          |
+| new_p    | new_p_122        | port    |          |
+| new_p    | new_p_122_ap_vld | port    |          |
+| new_p    | new_p_123        | port    |          |
+| new_p    | new_p_123_ap_vld | port    |          |
+| new_p    | new_p_124        | port    |          |
+| new_p    | new_p_124_ap_vld | port    |          |
+| new_p    | new_p_125        | port    |          |
+| new_p    | new_p_125_ap_vld | port    |          |
+| new_p    | new_p_126        | port    |          |
+| new_p    | new_p_126_ap_vld | port    |          |
+| new_p    | new_p_127        | port    |          |
+| new_p    | new_p_127_ap_vld | port    |          |
+| new_p    | new_p_128        | port    |          |
+| new_p    | new_p_128_ap_vld | port    |          |
+| new_p    | new_p_129        | port    |          |
+| new_p    | new_p_129_ap_vld | port    |          |
+| new_p    | new_p_130        | port    |          |
+| new_p    | new_p_130_ap_vld | port    |          |
+| new_p    | new_p_131        | port    |          |
+| new_p    | new_p_131_ap_vld | port    |          |
+| new_p    | new_p_132        | port    |          |
+| new_p    | new_p_132_ap_vld | port    |          |
+| new_p    | new_p_133        | port    |          |
+| new_p    | new_p_133_ap_vld | port    |          |
+| new_p    | new_p_134        | port    |          |
+| new_p    | new_p_134_ap_vld | port    |          |
+| new_p    | new_p_135        | port    |          |
+| new_p    | new_p_135_ap_vld | port    |          |
+| new_p    | new_p_136        | port    |          |
+| new_p    | new_p_136_ap_vld | port    |          |
+| new_p    | new_p_137        | port    |          |
+| new_p    | new_p_137_ap_vld | port    |          |
+| new_p    | new_p_138        | port    |          |
+| new_p    | new_p_138_ap_vld | port    |          |
+| new_p    | new_p_139        | port    |          |
+| new_p    | new_p_139_ap_vld | port    |          |
+| new_p    | new_p_140        | port    |          |
+| new_p    | new_p_140_ap_vld | port    |          |
+| new_p    | new_p_141        | port    |          |
+| new_p    | new_p_141_ap_vld | port    |          |
+| new_p    | new_p_142        | port    |          |
+| new_p    | new_p_142_ap_vld | port    |          |
+| new_p    | new_p_143        | port    |          |
+| new_p    | new_p_143_ap_vld | port    |          |
+| new_p    | new_p_144        | port    |          |
+| new_p    | new_p_144_ap_vld | port    |          |
+| new_p    | new_p_145        | port    |          |
+| new_p    | new_p_145_ap_vld | port    |          |
+| new_p    | new_p_146        | port    |          |
+| new_p    | new_p_146_ap_vld | port    |          |
+| new_p    | new_p_147        | port    |          |
+| new_p    | new_p_147_ap_vld | port    |          |
+| new_p    | new_p_148        | port    |          |
+| new_p    | new_p_148_ap_vld | port    |          |
+| new_p    | new_p_149        | port    |          |
+| new_p    | new_p_149_ap_vld | port    |          |
+| new_p    | new_p_150        | port    |          |
+| new_p    | new_p_150_ap_vld | port    |          |
+| new_p    | new_p_151        | port    |          |
+| new_p    | new_p_151_ap_vld | port    |          |
+| new_p    | new_p_152        | port    |          |
+| new_p    | new_p_152_ap_vld | port    |          |
+| new_p    | new_p_153        | port    |          |
+| new_p    | new_p_153_ap_vld | port    |          |
+| new_p    | new_p_154        | port    |          |
+| new_p    | new_p_154_ap_vld | port    |          |
+| new_p    | new_p_155        | port    |          |
+| new_p    | new_p_155_ap_vld | port    |          |
+| new_p    | new_p_156        | port    |          |
+| new_p    | new_p_156_ap_vld | port    |          |
+| new_p    | new_p_157        | port    |          |
+| new_p    | new_p_157_ap_vld | port    |          |
+| new_p    | new_p_158        | port    |          |
+| new_p    | new_p_158_ap_vld | port    |          |
+| new_p    | new_p_159        | port    |          |
+| new_p    | new_p_159_ap_vld | port    |          |
+| new_p    | new_p_160        | port    |          |
+| new_p    | new_p_160_ap_vld | port    |          |
+| new_p    | new_p_161        | port    |          |
+| new_p    | new_p_161_ap_vld | port    |          |
+| new_p    | new_p_162        | port    |          |
+| new_p    | new_p_162_ap_vld | port    |          |
+| new_p    | new_p_163        | port    |          |
+| new_p    | new_p_163_ap_vld | port    |          |
+| new_p    | new_p_164        | port    |          |
+| new_p    | new_p_164_ap_vld | port    |          |
+| new_p    | new_p_165        | port    |          |
+| new_p    | new_p_165_ap_vld | port    |          |
+| new_p    | new_p_166        | port    |          |
+| new_p    | new_p_166_ap_vld | port    |          |
+| new_p    | new_p_167        | port    |          |
+| new_p    | new_p_167_ap_vld | port    |          |
+| new_p    | new_p_168        | port    |          |
+| new_p    | new_p_168_ap_vld | port    |          |
+| new_p    | new_p_169        | port    |          |
+| new_p    | new_p_169_ap_vld | port    |          |
+| new_p    | new_p_170        | port    |          |
+| new_p    | new_p_170_ap_vld | port    |          |
+| new_p    | new_p_171        | port    |          |
+| new_p    | new_p_171_ap_vld | port    |          |
+| new_p    | new_p_172        | port    |          |
+| new_p    | new_p_172_ap_vld | port    |          |
+| new_p    | new_p_173        | port    |          |
+| new_p    | new_p_173_ap_vld | port    |          |
+| new_p    | new_p_174        | port    |          |
+| new_p    | new_p_174_ap_vld | port    |          |
+| new_p    | new_p_175        | port    |          |
+| new_p    | new_p_175_ap_vld | port    |          |
+| new_p    | new_p_176        | port    |          |
+| new_p    | new_p_176_ap_vld | port    |          |
+| new_p    | new_p_177        | port    |          |
+| new_p    | new_p_177_ap_vld | port    |          |
+| new_p    | new_p_178        | port    |          |
+| new_p    | new_p_178_ap_vld | port    |          |
+| new_p    | new_p_179        | port    |          |
+| new_p    | new_p_179_ap_vld | port    |          |
+| new_p    | new_p_180        | port    |          |
+| new_p    | new_p_180_ap_vld | port    |          |
+| new_p    | new_p_181        | port    |          |
+| new_p    | new_p_181_ap_vld | port    |          |
+| new_p    | new_p_182        | port    |          |
+| new_p    | new_p_182_ap_vld | port    |          |
+| new_p    | new_p_183        | port    |          |
+| new_p    | new_p_183_ap_vld | port    |          |
+| new_p    | new_p_184        | port    |          |
+| new_p    | new_p_184_ap_vld | port    |          |
+| new_p    | new_p_185        | port    |          |
+| new_p    | new_p_185_ap_vld | port    |          |
+| new_p    | new_p_186        | port    |          |
+| new_p    | new_p_186_ap_vld | port    |          |
+| new_p    | new_p_187        | port    |          |
+| new_p    | new_p_187_ap_vld | port    |          |
+| new_p    | new_p_188        | port    |          |
+| new_p    | new_p_188_ap_vld | port    |          |
+| new_p    | new_p_189        | port    |          |
+| new_p    | new_p_189_ap_vld | port    |          |
+| new_p    | new_p_190        | port    |          |
+| new_p    | new_p_190_ap_vld | port    |          |
+| new_p    | new_p_191        | port    |          |
+| new_p    | new_p_191_ap_vld | port    |          |
+| new_p    | new_p_192        | port    |          |
+| new_p    | new_p_192_ap_vld | port    |          |
+| new_p    | new_p_193        | port    |          |
+| new_p    | new_p_193_ap_vld | port    |          |
+| new_p    | new_p_194        | port    |          |
+| new_p    | new_p_194_ap_vld | port    |          |
+| new_p    | new_p_195        | port    |          |
+| new_p    | new_p_195_ap_vld | port    |          |
+| new_p    | new_p_196        | port    |          |
+| new_p    | new_p_196_ap_vld | port    |          |
+| new_p    | new_p_197        | port    |          |
+| new_p    | new_p_197_ap_vld | port    |          |
+| new_p    | new_p_198        | port    |          |
+| new_p    | new_p_198_ap_vld | port    |          |
+| new_p    | new_p_199        | port    |          |
+| new_p    | new_p_199_ap_vld | port    |          |
+| new_p    | new_p_200        | port    |          |
+| new_p    | new_p_200_ap_vld | port    |          |
+| new_p    | new_p_201        | port    |          |
+| new_p    | new_p_201_ap_vld | port    |          |
+| new_p    | new_p_202        | port    |          |
+| new_p    | new_p_202_ap_vld | port    |          |
+| new_p    | new_p_203        | port    |          |
+| new_p    | new_p_203_ap_vld | port    |          |
+| new_p    | new_p_204        | port    |          |
+| new_p    | new_p_204_ap_vld | port    |          |
+| new_p    | new_p_205        | port    |          |
+| new_p    | new_p_205_ap_vld | port    |          |
+| new_p    | new_p_206        | port    |          |
+| new_p    | new_p_206_ap_vld | port    |          |
+| new_p    | new_p_207        | port    |          |
+| new_p    | new_p_207_ap_vld | port    |          |
+| new_p    | new_p_208        | port    |          |
+| new_p    | new_p_208_ap_vld | port    |          |
+| new_p    | new_p_209        | port    |          |
+| new_p    | new_p_209_ap_vld | port    |          |
+| new_p    | new_p_210        | port    |          |
+| new_p    | new_p_210_ap_vld | port    |          |
+| new_p    | new_p_211        | port    |          |
+| new_p    | new_p_211_ap_vld | port    |          |
+| new_p    | new_p_212        | port    |          |
+| new_p    | new_p_212_ap_vld | port    |          |
+| new_p    | new_p_213        | port    |          |
+| new_p    | new_p_213_ap_vld | port    |          |
+| new_p    | new_p_214        | port    |          |
+| new_p    | new_p_214_ap_vld | port    |          |
+| new_p    | new_p_215        | port    |          |
+| new_p    | new_p_215_ap_vld | port    |          |
+| new_p    | new_p_216        | port    |          |
+| new_p    | new_p_216_ap_vld | port    |          |
+| new_p    | new_p_217        | port    |          |
+| new_p    | new_p_217_ap_vld | port    |          |
+| new_p    | new_p_218        | port    |          |
+| new_p    | new_p_218_ap_vld | port    |          |
+| new_p    | new_p_219        | port    |          |
+| new_p    | new_p_219_ap_vld | port    |          |
+| new_p    | new_p_220        | port    |          |
+| new_p    | new_p_220_ap_vld | port    |          |
+| new_p    | new_p_221        | port    |          |
+| new_p    | new_p_221_ap_vld | port    |          |
+| new_p    | new_p_222        | port    |          |
+| new_p    | new_p_222_ap_vld | port    |          |
+| new_p    | new_p_223        | port    |          |
+| new_p    | new_p_223_ap_vld | port    |          |
+| new_p    | new_p_224        | port    |          |
+| new_p    | new_p_224_ap_vld | port    |          |
+| new_p    | new_p_225        | port    |          |
+| new_p    | new_p_225_ap_vld | port    |          |
+| new_p    | new_p_226        | port    |          |
+| new_p    | new_p_226_ap_vld | port    |          |
+| new_p    | new_p_227        | port    |          |
+| new_p    | new_p_227_ap_vld | port    |          |
+| new_p    | new_p_228        | port    |          |
+| new_p    | new_p_228_ap_vld | port    |          |
+| new_p    | new_p_229        | port    |          |
+| new_p    | new_p_229_ap_vld | port    |          |
+| new_p    | new_p_230        | port    |          |
+| new_p    | new_p_230_ap_vld | port    |          |
+| new_p    | new_p_231        | port    |          |
+| new_p    | new_p_231_ap_vld | port    |          |
+| new_p    | new_p_232        | port    |          |
+| new_p    | new_p_232_ap_vld | port    |          |
+| new_p    | new_p_233        | port    |          |
+| new_p    | new_p_233_ap_vld | port    |          |
+| new_p    | new_p_234        | port    |          |
+| new_p    | new_p_234_ap_vld | port    |          |
+| new_p    | new_p_235        | port    |          |
+| new_p    | new_p_235_ap_vld | port    |          |
+| new_p    | new_p_236        | port    |          |
+| new_p    | new_p_236_ap_vld | port    |          |
+| new_p    | new_p_237        | port    |          |
+| new_p    | new_p_237_ap_vld | port    |          |
+| new_p    | new_p_238        | port    |          |
+| new_p    | new_p_238_ap_vld | port    |          |
+| new_p    | new_p_239        | port    |          |
+| new_p    | new_p_239_ap_vld | port    |          |
+| new_p    | new_p_240        | port    |          |
+| new_p    | new_p_240_ap_vld | port    |          |
+| new_p    | new_p_241        | port    |          |
+| new_p    | new_p_241_ap_vld | port    |          |
+| new_p    | new_p_242        | port    |          |
+| new_p    | new_p_242_ap_vld | port    |          |
+| new_p    | new_p_243        | port    |          |
+| new_p    | new_p_243_ap_vld | port    |          |
+| new_p    | new_p_244        | port    |          |
+| new_p    | new_p_244_ap_vld | port    |          |
+| new_p    | new_p_245        | port    |          |
+| new_p    | new_p_245_ap_vld | port    |          |
+| new_p    | new_p_246        | port    |          |
+| new_p    | new_p_246_ap_vld | port    |          |
+| new_p    | new_p_247        | port    |          |
+| new_p    | new_p_247_ap_vld | port    |          |
+| new_p    | new_p_248        | port    |          |
+| new_p    | new_p_248_ap_vld | port    |          |
+| new_p    | new_p_249        | port    |          |
+| new_p    | new_p_249_ap_vld | port    |          |
+| espilon  | espilon          | port    |          |
+| return   | ap_return        | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------+-----+--------+----------------+------+---------+---------+
+| Name                                               | DSP | Pragma | Variable       | Op   | Impl    | Latency |
++----------------------------------------------------+-----+--------+----------------+------+---------+---------+
+| + ContourApproximation                             | 26  |        |                |      |         |         |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U287               | 3   |        | espilon_square | fmul | maxdsp  | 3       |
+|   add_ln75_fu_21815_p2                             | -   |        | add_ln75       | add  | fabric  | 0       |
+|   ap_return                                        | -   |        | nb_pts_reduce  | add  | fabric  | 0       |
+|  + LinearLine                                      | 7   |        |                |      |         |         |
+|    fsub_32ns_32ns_32_5_full_dsp_1_U1               | 2   |        | sub            | fsub | fulldsp | 4       |
+|    fdiv_32ns_32ns_32_12_no_dsp_1_U4                | -   |        | inverse        | fdiv | fabric  | 11      |
+|    fsub_32ns_32ns_32_5_full_dsp_1_U2               | 2   |        | sub2           | fsub | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U3                | 3   |        | L1_a           | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U3                | 3   |        | mul            | fmul | maxdsp  | 3       |
+|    fsub_32ns_32ns_32_5_full_dsp_1_U1               | 2   |        | L1_c_2         | fsub | fulldsp | 4       |
+|  + Distance_Point_Line_Square                      | 16  |        |                |      |         |         |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U15               | 3   |        | mul            | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U16               | 3   |        | mul1           | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U13              | 2   |        | add            | fadd | fulldsp | 4       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U13              | 2   |        | temp           | fadd | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U17               | 3   |        | mul5           | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U18               | 3   |        | mul8           | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U14              | 2   |        | add9           | fadd | fulldsp | 4       |
+|    fdiv_32ns_32ns_32_12_no_dsp_1_U19               | -   |        | div            | fdiv | fabric  | 11      |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U15               | 3   |        | mul2           | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U15               | 3   |        | dist_square    | fmul | maxdsp  | 3       |
+|  + ContourApproximation_Pipeline_CHECK_DIFFER_LOOP | 0   |        |                |      |         |         |
+|    add_ln160_fu_172_p2                             | -   |        | add_ln160      | add  | fabric  | 0       |
+|    add_ln161_fu_382_p2                             | -   |        | add_ln161      | add  | fabric  | 0       |
+|  + ContourApproximation_Pipeline_WRITE_BACK        | 0   |        |                |      |         |         |
+|    add_ln128_fu_2914_p2                            | -   |        | add_ln128      | add  | fabric  | 0       |
+|    newcnt_2_fu_3151_p2                             | -   |        | newcnt_2       | add  | fabric  | 0       |
++----------------------------------------------------+-----+--------+----------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------+--------------------------------------------------------------------------------------------------+
+| Type            | Options                      | Location                                                                                         |
++-----------------+------------------------------+--------------------------------------------------------------------------------------------------+
+| array_partition | variable=new_p type=complete | ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:60 in contourapproximation, new_p |
+| unroll          |                              | ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:84 in contourapproximation        |
+| pipeline        |                              | ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:127 in contourapproximation       |
+| pipeline        |                              | ../../C_PROGRAM/3.ContourApproximation/contour_approximation.c:159 in pointnbreduction           |
++-----------------+------------------------------+--------------------------------------------------------------------------------------------------+
+
+

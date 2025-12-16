@@ -1,0 +1,33 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="algo" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=algo" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="algo" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=algo" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="algo" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=vecIn cyclic factor=2 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="algo" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=vecOut cyclic factor=2 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:3:0" msg_body="Inlining function 'getRemainder' into 'algo'">
+        <args Callee="getRemainder" Callee-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 22 Column 0" Caller="algo" Caller-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 3 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:3:0" msg_body="Inlining function 'add1' into 'algo'">
+        <args Callee="add1" Callee-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 33 Column 0" Caller="algo" Caller-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 3 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:3:0" msg_body="Inlining function 'mul2add1' into 'algo'">
+        <args Callee="mul2add1" Callee-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 43 Column 0" Caller="algo" Caller-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 3 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:3:0" msg_body="Inlining function 'division' into 'algo'">
+        <args Callee="division" Callee-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 54 Column 0" Caller="algo" Caller-DebugLoc="File ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c Line 3 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:3:0" msg_body="Applying array_partition to 'vecIn': Cyclic partitioning with factor 2 on dimension 1.">
+        <args Dim="1" Factor="2" Mode="Cyclic" UOName="vecIn"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:3:0" msg_body="Applying array_partition to 'vecOut': Cyclic partitioning with factor 2 on dimension 1.">
+        <args Dim="1" Factor="2" Mode="Cyclic" UOName="vecOut"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

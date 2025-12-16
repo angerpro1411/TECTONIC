@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T17:39:32.209+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T16:51:12.872+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T16:32:47.319+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T16:30:12.722+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T16:20:16.167+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T15:05:26.638+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T15:04:44.090+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T15:02:38.970+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T14:58:54.534+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T14:57:06.690+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T14:54:38.811+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-06T14:52:02.905+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-05T15:35:13.719+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-05T15:14:58.024+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-05T15:13:18.841+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-05T15:11:09.920+0100"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Object_Detect" solutionName="solution1" date="2025-11-05T15:09:52.831+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

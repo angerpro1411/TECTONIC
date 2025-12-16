@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1763373842168">
+  <ports id="1" name="parent" type="PortType" coreName="RAM_2P_BRAM" coreId="3621216858" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="min_x" type="PortType" coreName="RAM_2P_BRAM" coreId="1869635878" bitwidth="9" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="3" name="max_x" type="PortType" coreName="RAM_2P_BRAM" coreId="1623832" bitwidth="9" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="4" name="min_y" type="PortType" coreName="RAM_2P_BRAM" coreId="0" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="5" name="max_y" type="PortType" coreName="RAM_2P_BRAM" coreId="1328493938" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="6" name="center_is_green" type="PortType" coreName="RAM_2P_BRAM" coreId="4221090256" bitwidth="1" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="49" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="50" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="58" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="59" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="61" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="70" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.1"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@ports.2"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@ports.3"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@ports.4"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@ports.5"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="158" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="160" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="161" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="162" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <blocks id="16" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1667592275" bitwidth="10" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_write_ln0" coreId="742453504" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln0" coreId="742453504" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="44" name="for.inc223.preheader.exitStub" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln0" coreId="4221100224" opcode="ret" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="142" pipe_depth="1" RegionName="InitLoop">
+    <basic_blocks id="21" name="for.inc" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc223.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_4" lineNumber="428" originalName="i" fileName="obj_detect.cpp" fileDirectory="../." coreId="742453504" contextFuncName="hls_object_green_classification" bitwidth="10" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="428" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="icmp_ln425" lineNumber="425" fileName="obj_detect.cpp" fileDirectory="../." rtlName="icmp_ln425_fu_173_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="hls_object_green_classification" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.73" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="425" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="i_5" lineNumber="425" originalName="i" fileName="obj_detect.cpp" fileDirectory="../." rtlName="i_5_fu_179_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="hls_object_green_classification" bitwidth="10" opcode="add" m_display="0" m_delay="1.73" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="425" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln425" lineNumber="425" fileName="obj_detect.cpp" fileDirectory="../." coreId="742453504" contextFuncName="hls_object_green_classification" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="425" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc.split</controlInputObjs>
+        <controlInputObjs>for.inc223.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="obj_detect.cpp">
+        <validLinenumbers>428</validLinenumbers>
+        <validLinenumbers>425</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="42" name="for.inc.split" type="BlockType">
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="zext_ln425" lineNumber="425" fileName="obj_detect.cpp" fileDirectory="../." rtlName="zext_ln425_fu_185_p1" coreId="4221097120" contextFuncName="hls_object_green_classification" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="425" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="trunc_ln428" lineNumber="428" fileName="obj_detect.cpp" fileDirectory="../." rtlName="trunc_ln428_fu_195_p1" coreId="4221355352" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="trunc" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="428" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln428" lineNumber="428" fileName="obj_detect.cpp" fileDirectory="../." rtlName="parent_d1" coreId="1362325724" contextFuncName="hls_object_green_classification" bitwidth="16" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="428" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="parent_addr" lineNumber="428" fileName="obj_detect.cpp" fileDirectory="../." coreId="0" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="428" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>parent</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="parent_addr_write_ln428" lineNumber="428" fileName="obj_detect.cpp" fileDirectory="../." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="91" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="428" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="min_x_addr" lineNumber="429" fileName="obj_detect.cpp" fileDirectory="../." coreId="4221356000" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="429" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>min_x</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="min_x_addr_write_ln429" lineNumber="429" fileName="obj_detect.cpp" fileDirectory="../." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="91" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="429" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="max_x_addr" lineNumber="429" fileName="obj_detect.cpp" fileDirectory="../." coreId="0" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="429" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>max_x</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="max_x_addr_write_ln429" lineNumber="429" fileName="obj_detect.cpp" fileDirectory="../." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="91" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="429" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="min_y_addr" lineNumber="430" fileName="obj_detect.cpp" fileDirectory="../." coreId="1362591468" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="430" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>min_y</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="min_y_addr_write_ln430" lineNumber="430" fileName="obj_detect.cpp" fileDirectory="../." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="91" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="430" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="max_y_addr" lineNumber="430" fileName="obj_detect.cpp" fileDirectory="../." coreId="1599294536" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="430" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>max_y</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="max_y_addr_write_ln430" lineNumber="430" fileName="obj_detect.cpp" fileDirectory="../." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="91" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="430" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="center_is_green_addr" lineNumber="431" fileName="obj_detect.cpp" fileDirectory="../." coreId="1819113532" contextFuncName="hls_object_green_classification" bitwidth="9" opcode="getelementptr" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="431" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>center_is_green</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="center_is_green_addr_write_ln431" lineNumber="431" fileName="obj_detect.cpp" fileDirectory="../." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="91" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="431" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="i_write_ln425" lineNumber="425" fileName="obj_detect.cpp" fileDirectory="../." coreId="542329928" contextFuncName="hls_object_green_classification" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="425" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln425" lineNumber="425" fileName="obj_detect.cpp" fileDirectory="../." coreId="1635018084" contextFuncName="hls_object_green_classification" opcode="br" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="obj_detect.cpp" linenumber="425" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver5" functionName="hls_object_green_classification"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="obj_detect.cpp">
+        <validLinenumbers>425</validLinenumbers>
+        <validLinenumbers>428</validLinenumbers>
+        <validLinenumbers>429</validLinenumbers>
+        <validLinenumbers>430</validLinenumbers>
+        <validLinenumbers>431</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="i_reg_209">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <expressionNodes realName="parent_addr_gep_fu_58">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln425_fu_185">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln428_fu_199">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="min_y_addr_gep_fu_111">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln428_fu_195">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_54">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln425_fu_173">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="min_x_addr_gep_fu_75">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="max_y_addr_gep_fu_129">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="max_x_addr_gep_fu_93">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="center_is_green_addr_gep_fu_147">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_5_fu_179">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_165">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln425_store_fu_204">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_4_load_fu_170">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="center_is_green" portID="1">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="max_x" portID="1">
+    <nodeIds>33</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="max_y" portID="1">
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="min_x" portID="1">
+    <nodeIds>31</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="min_y" portID="1">
+    <nodeIds>35</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="parent" portID="1">
+    <nodeIds>29</nodeIds>
+  </memoryPorts>
+  <ioPorts name="center_is_green(p1)">
+    <contents name="store">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="max_x(p1)">
+    <contents name="store">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="max_y(p1)">
+    <contents name="store">
+      <nodeIds>37</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="min_x(p1)">
+    <contents name="store">
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="min_y(p1)">
+    <contents name="store">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="parent(p1)">
+    <contents name="store">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="hls_object_green_classification_Pipeline_InitLoop" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="514" mMaxLatency="514">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="InitLoop" mII="1" mDepth="1" mMinTripCount="512" mMaxTripCount="512" mMinLatency="512" mMaxLatency="512" mType="1">
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>42</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>44</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

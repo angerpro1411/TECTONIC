@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "algo",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "algo"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "algo",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "algo"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]

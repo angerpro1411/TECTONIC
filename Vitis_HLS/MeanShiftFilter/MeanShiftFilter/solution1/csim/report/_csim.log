@@ -1,0 +1,22 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../MeanShifFilter_tb.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-60-generic) on Wed Jul 02 15:50:04 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dell3561-49/76451751464204613478
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.43 seconds. Total CPU system time: 0.11 seconds. Total elapsed time: 1.42 seconds; peak allocated memory: 98.992 MB.
+   Compiling(apcc) ../../../../MeanShiftFilter.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-60-generic) on Wed Jul 02 15:50:06 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dell3561-49/77101751464207023122
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.44 seconds. Total CPU system time: 0.12 seconds. Total elapsed time: 1.42 seconds; peak allocated memory: 98.992 MB.
+   Generating csim.exe
+Not be able to open file/File doesn't exist
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,65 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../testbench.cpp in debug mode
+   Compiling ../../../frame_differencer.cpp in debug mode
+   Compiling ../../../image_producer.cpp in debug mode
+   Compiling ../../../motion_analyzer.cpp in debug mode
+   Compiling ../../../motion_detection.cpp in debug mode
+   Generating csim.exe
+========================================
+Testbench HLS Motion Detection System
+Image size: 64x64
+Threshold: 30
+PPM files will be saved in ./output/
+========================================
+
+Processing frame 0...
+Saved: output/producer_frame_0.ppm
+Saved: output/motion_frame_0.ppm
+Frame 0: 3672 motion pixels
+Saved: output/motion_frame_0.ppm
+Verification: 3672 white pixels in output
+
+Processing frame 1...
+Saved: output/producer_frame_1.ppm
+Saved: output/motion_frame_1.ppm
+Frame 1: 734 motion pixels
+Saved: output/motion_frame_1.ppm
+Verification: 734 white pixels in output
+
+Processing frame 2...
+Saved: output/producer_frame_2.ppm
+Saved: output/motion_frame_2.ppm
+Frame 2: 749 motion pixels
+Saved: output/motion_frame_2.ppm
+Verification: 749 white pixels in output
+
+Processing frame 3...
+Saved: output/producer_frame_3.ppm
+Saved: output/motion_frame_3.ppm
+Frame 3: 751 motion pixels
+Saved: output/motion_frame_3.ppm
+Verification: 751 white pixels in output
+
+Processing frame 4...
+Saved: output/producer_frame_4.ppm
+Saved: output/motion_frame_4.ppm
+Frame 4: 709 motion pixels
+Saved: output/motion_frame_4.ppm
+Verification: 709 white pixels in output
+
+========================================
+Simulation completed successfully!
+Generated files in ./output/:
+  - producer_frame_X.ppm : Input images
+  - motion_frame_X.ppm   : Motion detection results
+  - simulation_report.txt: Summary report
+
+To view images, you can use:
+  convert output/*.ppm output/*.png  # Convert to PNG
+  eog output/*.png                   # View with Eye of GNOME
+  or use any image viewer that supports PPM
+========================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 4096
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

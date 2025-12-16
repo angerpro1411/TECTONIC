@@ -1,0 +1,44 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: contourDetect.cpp, Line: 49, Column: 16 }
+Function:        _Z29sobel_rgb_green_outline_fixedRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        INNER
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: contourDetect.cpp, Line: 17, Column: 0 }
+Function:        _Z29sobel_rgb_green_outline_fixedRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        INNER
+  - String:          ''' ('
+  - LoopLoc:         'contourDetect.cpp:49:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_rgb_green_outline_fixed
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: contourDetect.cpp, Line: 25, Column: 0 }
+Function:        _Z29sobel_rgb_green_outline_fixedRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ29sobel_rgb_green_outline_fixedRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_E7linebuf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

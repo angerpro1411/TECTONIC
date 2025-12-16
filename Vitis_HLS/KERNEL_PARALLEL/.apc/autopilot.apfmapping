@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top_level.h" path="/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/top_level.h"/>
+    <originFiles name="motion_detection.cpp" path="/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/motion_detection.cpp"/>
+    <originFiles name="motion_analyzer.cpp" path="/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/motion_analyzer.cpp"/>
+    <originFiles name="frame_differencer.cpp" path="/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/frame_differencer.cpp"/>
+    <originFiles name="image_producer.cpp" path="/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/image_producer.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

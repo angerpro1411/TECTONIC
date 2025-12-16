@@ -3,30 +3,27 @@
     "basicblocks": 9,
     "calls": "1",
     "file": "BackGrRemoval.cpp",
-    "fileloc": 73,
-    "instructions": 9699,
+    "fileloc": 161,
+    "instructions": 9997,
     "loads": {
-      "L": 3904
+      "G": 3904
     },
     "name": "BackGrRemoval",
     "stores": {
-      "T": 121
+      "T": 363
     },
-    "total_instructions": 11317
+    "total_instructions": 11052
   },
   "1": {
-    "basicblocks": 391,
+    "basicblocks": 199,
     "calls": "",
     "file": "RGB2HSV.cpp",
     "fileloc": 22,
-    "instructions": 1618,
-    "loads": {
-      "L": 4
-    },
+    "instructions": 1055,
     "name": "findHSV",
     "stores": {
-      "L": 276
+      "G": 84
     },
-    "total_instructions": 1618
+    "total_instructions": 1055
   }
 }

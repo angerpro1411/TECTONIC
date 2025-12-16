@@ -1,0 +1,34 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="ContourApproximation" col1="contour_approximation.c:55" col2="340" col3="25588" col4="25824" col5="23819">
+                    <row id="3" col0="LinearLine" col1="contour_approximation.c:5" col2="140" col2_disp="140 (2 calls)" col3="12750" col3_disp="12,750 (250 calls)" col4="10500" col4_disp="10,500 (250 calls)" col5="8500" col5_disp=" 8,500 (250 calls)"/>
+                    <row id="1" col0="Distance_Point_Line_Square" col1="contour_approximation.c:45" col2="32" col3="6225" col3_disp=" 6,225 (249 calls)" col4="5727" col4_disp=" 5,727 (249 calls)" col5="4731" col5_disp=" 4,731 (249 calls)"/>
+                    <row id="2" col0="PointNbReduction" col1="contour_approximation.c:152" col2="49" col3="48" col4="" col5="">
+                        <row id="4" col0="isDiffer" col1="contour_approximation.c:144" col2="16" col3="16" col4="" col5=""/>
+                    </row>
+                    <row id="4" col0="isDiffer" col1="contour_approximation.c:144" col2="16" col3="16" col4="" col5=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

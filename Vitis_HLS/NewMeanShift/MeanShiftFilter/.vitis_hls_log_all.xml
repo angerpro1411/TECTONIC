@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'Row_loop_Col_loop': contains subloop(s) that are not unrolled or flattened." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T18:04:34.507+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'Col_loop' (../MeanShiftFilter/MeanShiftFilter.cpp:17:4) in function 'MeanShiftFiltering' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T18:04:34.186+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'x_window' (../MeanShiftFilter/MeanShiftFilter.cpp:35) in function 'MeanShiftFiltering' completely: variable loop bound." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T18:04:34.166+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'y_window' (../MeanShiftFilter/MeanShiftFilter.cpp:33) in function 'MeanShiftFiltering' completely: variable loop bound." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T18:04:34.131+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_27_1' (../MeanShiftFilter/MeanShiftFilter.cpp:27) in function 'MeanShiftFiltering' completely: variable loop bound." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T18:04:34.127+0200" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-120] ../MeanShiftFilter/MeanShiftFilter.cpp:54: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T18:04:34.111+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

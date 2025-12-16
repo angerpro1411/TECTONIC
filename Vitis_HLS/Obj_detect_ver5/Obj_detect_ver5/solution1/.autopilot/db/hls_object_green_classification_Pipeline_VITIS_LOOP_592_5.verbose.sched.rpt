@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_object_green_classification_Pipeline_VITIS_LOOP_592_5'
+================================================================
+* Date:           Mon Nov 17 11:04:00 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Obj_detect_ver5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.644 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max  |   Type  |
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |        2|    65537|  20.000 ns|  0.655 ms|    2|  65537|       no|
+    +---------+---------+-----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |    Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_592_5  |        0|    65535|         2|          1|          1|  0 ~ 65535|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.66>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%k = alloca i32 1"   --->   Operation 5 'alloca' 'k' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %obj_is_green, i64 666, i64 207, i64 1"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %obj_y, i64 666, i64 207, i64 1"   --->   Operation 7 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %obj_x, i64 666, i64 207, i64 1"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %obj_is_green, void @empty_15, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %obj_y, void @empty_15, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %obj_x, void @empty_15, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%count_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %count_reload"   --->   Operation 12 'read' 'count_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i6 0, i6 %k"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc659"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%k_2 = load i6 %k" [obj_detect.cpp:592]   --->   Operation 15 'load' 'k_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln592_1 = zext i6 %k_2" [obj_detect.cpp:592]   --->   Operation 16 'zext' 'zext_ln592_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (2.07ns)   --->   "%icmp_ln592 = icmp_eq  i16 %zext_ln592_1, i16 %count_reload_read" [obj_detect.cpp:592]   --->   Operation 17 'icmp' 'icmp_ln592' <Predicate = true> <Delay = 2.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (1.82ns)   --->   "%add_ln592 = add i6 %k_2, i6 1" [obj_detect.cpp:592]   --->   Operation 18 'add' 'add_ln592' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln592 = br i1 %icmp_ln592, void %for.inc659.split, void %for.body671.preheader.exitStub" [obj_detect.cpp:592]   --->   Operation 19 'br' 'br_ln592' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln592 = zext i6 %k_2" [obj_detect.cpp:592]   --->   Operation 20 'zext' 'zext_ln592' <Predicate = (!icmp_ln592)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%obj_x_addr = getelementptr i16 %obj_x, i64 0, i64 %zext_ln592" [obj_detect.cpp:594]   --->   Operation 21 'getelementptr' 'obj_x_addr' <Predicate = (!icmp_ln592)> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (2.32ns)   --->   "%obj_x_load = load i5 %obj_x_addr" [obj_detect.cpp:594]   --->   Operation 22 'load' 'obj_x_load' <Predicate = (!icmp_ln592)> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 32> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%obj_y_addr = getelementptr i16 %obj_y, i64 0, i64 %zext_ln592" [obj_detect.cpp:595]   --->   Operation 23 'getelementptr' 'obj_y_addr' <Predicate = (!icmp_ln592)> <Delay = 0.00>
+ST_1 : Operation 24 [2/2] (2.32ns)   --->   "%obj_y_load = load i5 %obj_y_addr" [obj_detect.cpp:595]   --->   Operation 24 'load' 'obj_y_load' <Predicate = (!icmp_ln592)> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 32> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%obj_is_green_addr = getelementptr i1 %obj_is_green, i64 0, i64 %zext_ln592" [obj_detect.cpp:596]   --->   Operation 25 'getelementptr' 'obj_is_green_addr' <Predicate = (!icmp_ln592)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (2.32ns)   --->   "%obj_is_green_load = load i5 %obj_is_green_addr" [obj_detect.cpp:596]   --->   Operation 26 'load' 'obj_is_green_load' <Predicate = (!icmp_ln592)> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 1> <Depth = 32> <RAM>
+ST_1 : Operation 27 [1/1] (1.58ns)   --->   "%store_ln592 = store i6 %add_ln592, i6 %k" [obj_detect.cpp:592]   --->   Operation 27 'store' 'store_ln592' <Predicate = (!icmp_ln592)> <Delay = 1.58>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 41 'ret' 'ret_ln0' <Predicate = (icmp_ln592)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.64>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specpipeline_ln593 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0" [obj_detect.cpp:593]   --->   Operation 28 'specpipeline' 'specpipeline_ln593' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%speclooptripcount_ln592 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 65535, i64 32767" [obj_detect.cpp:592]   --->   Operation 29 'speclooptripcount' 'speclooptripcount_ln592' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln592 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [obj_detect.cpp:592]   --->   Operation 30 'specloopname' 'specloopname_ln592' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/2] (2.32ns)   --->   "%obj_x_load = load i5 %obj_x_addr" [obj_detect.cpp:594]   --->   Operation 31 'load' 'obj_x_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%obj_x_buf_addr = getelementptr i16 %obj_x_buf, i64 0, i64 %zext_ln592" [obj_detect.cpp:594]   --->   Operation 32 'getelementptr' 'obj_x_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (2.32ns)   --->   "%store_ln594 = store i16 %obj_x_load, i5 %obj_x_buf_addr" [obj_detect.cpp:594]   --->   Operation 33 'store' 'store_ln594' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 34 [1/2] (2.32ns)   --->   "%obj_y_load = load i5 %obj_y_addr" [obj_detect.cpp:595]   --->   Operation 34 'load' 'obj_y_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%obj_y_buf_addr = getelementptr i16 %obj_y_buf, i64 0, i64 %zext_ln592" [obj_detect.cpp:595]   --->   Operation 35 'getelementptr' 'obj_y_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (2.32ns)   --->   "%store_ln595 = store i16 %obj_y_load, i5 %obj_y_buf_addr" [obj_detect.cpp:595]   --->   Operation 36 'store' 'store_ln595' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%obj_is_green_buf_addr = getelementptr i1 %obj_is_green_buf, i64 0, i64 %zext_ln592" [obj_detect.cpp:596]   --->   Operation 37 'getelementptr' 'obj_is_green_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/2] (2.32ns)   --->   "%obj_is_green_load = load i5 %obj_is_green_addr" [obj_detect.cpp:596]   --->   Operation 38 'load' 'obj_is_green_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 86 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 1> <Depth = 32> <RAM>
+ST_2 : Operation 39 [1/1] (2.32ns)   --->   "%store_ln596 = store i1 %obj_is_green_load, i5 %obj_is_green_buf_addr" [obj_detect.cpp:596]   --->   Operation 39 'store' 'store_ln596' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 32> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln592 = br void %for.inc659" [obj_detect.cpp:592]   --->   Operation 40 'br' 'br_ln592' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.665ns
+The critical path consists of the following:
+	'alloca' operation ('k') [8]  (0.000 ns)
+	'load' operation ('k', obj_detect.cpp:592) on local variable 'k' [19]  (0.000 ns)
+	'add' operation ('add_ln592', obj_detect.cpp:592) [22]  (1.825 ns)
+	'store' operation ('store_ln592', obj_detect.cpp:592) of variable 'add_ln592', obj_detect.cpp:592 on local variable 'k' [41]  (1.588 ns)
+	blocking operation 0.252 ns on control path)
+
+ <State 2>: 4.644ns
+The critical path consists of the following:
+	'load' operation ('obj_x_load', obj_detect.cpp:594) on array 'obj_x' [30]  (2.322 ns)
+	'store' operation ('store_ln594', obj_detect.cpp:594) of variable 'obj_x_load', obj_detect.cpp:594 on array 'obj_x_buf' [32]  (2.322 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

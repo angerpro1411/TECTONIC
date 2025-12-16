@@ -1,0 +1,54 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-85-generic) on Thu Oct 09 10:11:45 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project Object_Detection 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection'.
+INFO: [HLS 200-1510] Running: set_top objectDetection 
+INFO: [HLS 200-1510] Running: add_files main.cpp 
+INFO: [HLS 200-10] Adding design file 'main.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files object_detection.h 
+INFO: [HLS 200-10] Adding design file 'object_detection.h' to the project
+INFO: [HLS 200-1510] Running: add_files parameters.h 
+INFO: [HLS 200-10] Adding design file 'parameters.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb main_tb.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'main_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a12ti-csg325-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../main_tb.cpp in debug mode
+../../../../main_tb.cpp: In function ‘int main()’:
+../../../../main_tb.cpp:67:21: error: cannot convert ‘unsigned char (*)[640][3]’ to ‘unsigned char (*)[320][3]’
+     objectDetection(test_image, results, num_objects);
+                     ^~~~~~~~~~
+In file included from ../../../../main_tb.cpp:3:
+../../../../object_detection.h:18:36: note:   initializing argument 1 of ‘void objectDetection(unsigned char (*)[320][3], DetectionResult*, int&)’
+ void objectDetection(unsigned char input_image[240][320][3],
+                      ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [csim.mk:79: obj/main_tb.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 4.15 seconds. CPU system time: 0.26 seconds. Elapsed time: 4.41 seconds; current allocated memory: 0.000 MB.
+4
+    while executing
+"source /home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection/solution1/csim.tcl"
+    invoked from within
+"hls::main /home/dell3561-49/Vitis_HLS_folder/Object_Detection_DS_version/Object_Detection/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 5.02 seconds. Total CPU system time: 0.37 seconds. Total elapsed time: 5.27 seconds; peak allocated memory: 189.488 MB.

@@ -1,0 +1,38 @@
+{
+    "0": {
+        "name": "BackGrRemoval_stream_v2",
+        "file": "BackGrRemoval.cpp",
+        "fileloc": "54",
+        "instructions": "491",
+        "total_instructions": "1754",
+        "calls": "1",
+        "basicblocks": "3",
+        "loads": {
+            "G": "110",
+            "L": "110"
+        },
+        "stores": {
+            "G": "110"
+        }
+    },
+    "1": {
+        "name": "BackGrRemoval_stream_v2_Pipeline_VITIS_LOOP_84_1",
+        "file": "BackGrRemoval.cpp",
+        "fileloc": "0",
+        "instructions": "1263",
+        "total_instructions": "1263",
+        "calls": "",
+        "basicblocks": "11",
+        "loads": {
+            "G": "10",
+            "L": "136"
+        },
+        "stores": {
+            "G": "10",
+            "L": "250"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "0": {
+    "basicblocks": 14,
+    "calls": "2",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 96,
+    "instructions": 1135,
+    "loads": {
+      "G": 24,
+      "L": 1
+    },
+    "name": "BackGrRemovalStream",
+    "stores": {
+      "G": 24,
+      "L": 7
+    },
+    "total_instructions": 170897
+  },
+  "1": {
+    "basicblocks": 199,
+    "calls": "",
+    "file": "RGB2HSV.cpp",
+    "fileloc": 22,
+    "instructions": 1087,
+    "loads": {
+      "G": 24
+    },
+    "name": "findHSV",
+    "stores": {
+      "G": 84
+    },
+    "total_instructions": 1087
+  },
+  "2": {
+    "basicblocks": 51710,
+    "calls": "1",
+    "file": "BackGrRemoval.cpp",
+    "fileloc": 15,
+    "instructions": 168675,
+    "loads": {
+      "G": 4351
+    },
+    "name": "BackGrRemoval",
+    "stores": {
+      "G": 51630
+    },
+    "total_instructions": 169762
+  }
+}

@@ -1,0 +1,98 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 156, Column: 26 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Minof3(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 14, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'BackGrRemovalStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 125, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 155, Column: 26 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'MaxOf3(ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: RGB2HSV.cpp, Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'BackGrRemovalStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8>)'
+    DebugLoc:        { File: BackGrRemoval.cpp, Line: 125, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 170, Column: 31 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_170_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 180, Column: 26 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        kernel_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 125, Column: 0 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_170_1
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:170:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemovalStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 125, Column: 0 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        kernel_loop
+  - String:          ''' ('
+  - LoopLoc:         'BackGrRemoval.cpp:180:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          BackGrRemovalStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '11'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: BackGrRemoval.cpp, Line: 133, Column: 0 }
+Function:        _Z19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_S2_ILi8EEE6h_line
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

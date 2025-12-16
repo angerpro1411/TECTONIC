@@ -1,0 +1,196 @@
+
+
+================================================================
+== Synthesis Summary Report of 'BackGrRemovalStream'
+================================================================
++ General Information: 
+    * Date:           Wed Oct 22 18:21:27 2025
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        BaGr_Removal_AXIs_ver3
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+----+-----------+-----------+-----+
+    |         Modules        | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |         |    |           |           |     |
+    |         & Loops        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
+    +------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+----+-----------+-----------+-----+
+    |+ BackGrRemovalStream*  |     -|  0.23|    76825|  7.682e+05|         -|    76826|      -|  dataflow|  10 (3%)|   -|  4124 (3%)|  3807 (7%)|    -|
+    | + Loop_row_loop_proc1  |     -|  0.23|    76825|  7.682e+05|         -|    76825|      -|        no|  10 (3%)|   -|  4074 (3%)|  3751 (7%)|    -|
+    |  o row_loop_col_loop   |     -|  7.30|    76823|  7.682e+05|        25|        1|  76800|       yes|        -|   -|          -|          -|    -|
+    +------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | threshold | 0x10   | 32    | W      | Data signal of threshold         |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++---------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface     | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++---------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| input_stream  | in        | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| output_stream | out       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++---------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------+-----------+---------------------------------------------+
+| Argument      | Direction | Datatype                                    |
++---------------+-----------+---------------------------------------------+
+| input_stream  | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| output_stream | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| threshold     | in        | ap_uint<8>                                  |
++---------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++---------------+---------------+-----------+-------------------------------------+
+| Argument      | HW Interface  | HW Type   | HW Info                             |
++---------------+---------------+-----------+-------------------------------------+
+| input_stream  | input_stream  | interface |                                     |
+| output_stream | output_stream | interface |                                     |
+| threshold     | s_axi_control | register  | name=threshold offset=0x10 range=32 |
++---------------+---------------+-----------+-------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------+-----+--------+------------+-----+--------+---------+
+| Name                     | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++--------------------------+-----+--------+------------+-----+--------+---------+
+| + BackGrRemovalStream    | 0   |        |            |     |        |         |
+|  + Loop_row_loop_proc1   | 0   |        |            |     |        |         |
+|    yy_fu_854_p2          | -   |        | yy         | add | fabric | 0       |
+|    yy_1_fu_866_p2        | -   |        | yy_1       | add | fabric | 0       |
+|    yy_2_fu_878_p2        | -   |        | yy_2       | add | fabric | 0       |
+|    yy_3_fu_890_p2        | -   |        | yy_3       | add | fabric | 0       |
+|    yy_4_fu_902_p2        | -   |        | yy_4       | add | fabric | 0       |
+|    y_fu_914_p2           | -   |        | y          | add | fabric | 0       |
+|    yy_7_fu_926_p2        | -   |        | yy_7       | add | fabric | 0       |
+|    yy_8_fu_938_p2        | -   |        | yy_8       | add | fabric | 0       |
+|    yy_9_fu_950_p2        | -   |        | yy_9       | add | fabric | 0       |
+|    yy_10_fu_962_p2       | -   |        | yy_10      | add | fabric | 0       |
+|    add_ln141_fu_470_p2   | -   |        | add_ln141  | add | fabric | 0       |
+|    yy_mid1_fu_986_p2     | -   |        | yy_mid1    | add | fabric | 0       |
+|    yy_1_mid1_fu_998_p2   | -   |        | yy_1_mid1  | add | fabric | 0       |
+|    yy_2_mid1_fu_1017_p2  | -   |        | yy_2_mid1  | add | fabric | 0       |
+|    yy_3_mid1_fu_1036_p2  | -   |        | yy_3_mid1  | add | fabric | 0       |
+|    yy_4_mid1_fu_1055_p2  | -   |        | yy_4_mid1  | add | fabric | 0       |
+|    yy_10_mid1_fu_1102_p2 | -   |        | yy_10_mid1 | add | fabric | 0       |
+|    diff_fu_619_p2        | -   |        | diff       | sub | fabric | 0       |
+|    sub_ln161_fu_647_p2   | -   |        | sub_ln161  | sub | fabric | 0       |
+|    sub_ln163_fu_704_p2   | -   |        | sub_ln163  | sub | fabric | 0       |
+|    tmp_2_fu_1484_p2      | -   |        | tmp_2      | add | fabric | 0       |
+|    sub_ln162_fu_756_p2   | -   |        | sub_ln162  | sub | fabric | 0       |
+|    tmp_1_fu_1494_p2      | -   |        | tmp_1      | add | fabric | 0       |
+|    add_ln165_fu_1512_p2  | -   |        | add_ln165  | add | fabric | 0       |
+|    total_2_fu_1229_p2    | -   |        | total_2    | add | fabric | 0       |
+|    count_5_fu_1235_p2    | -   |        | count_5    | add | fabric | 0       |
+|    total_4_fu_1289_p2    | -   |        | total_4    | add | fabric | 0       |
+|    count_8_fu_1266_p2    | -   |        | count_8    | add | fabric | 0       |
+|    total_6_fu_1302_p2    | -   |        | total_6    | add | fabric | 0       |
+|    count_11_fu_1308_p2   | -   |        | count_11   | add | fabric | 0       |
+|    count_14_fu_1332_p2   | -   |        | count_14   | add | fabric | 0       |
+|    count_16_fu_1358_p2   | -   |        | count_16   | add | fabric | 0       |
+|    total_8_fu_1352_p2    | -   |        | total_8    | add | fabric | 0       |
+|    total_9_fu_1382_p2    | -   |        | total_9    | add | fabric | 0       |
+|    count_19_fu_1388_p2   | -   |        | count_19   | add | fabric | 0       |
+|    total_11_fu_1415_p2   | -   |        | total_11   | add | fabric | 0       |
+|    count_22_fu_1428_p2   | -   |        | count_22   | add | fabric | 0       |
+|    total_13_fu_1445_p2   | -   |        | total_13   | add | fabric | 0       |
+|    count_25_fu_1450_p2   | -   |        | count_25   | add | fabric | 0       |
+|    total_15_fu_1556_p2   | -   |        | total_15   | add | fabric | 0       |
+|    count_28_fu_1551_p2   | -   |        | count_28   | add | fabric | 0       |
+|    add_ln191_fu_1592_p2  | -   |        | add_ln191  | add | fabric | 0       |
+|    add_ln143_fu_587_p2   | -   |        | add_ln143  | add | fabric | 0       |
++--------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------------------------------------------------------------------------+------+------+--------+-----------------------------------------------------------------------------------+---------+------+---------+
+| Name                                                                                   | BRAM | URAM | Pragma | Variable                                                                          | Storage | Impl | Latency |
++----------------------------------------------------------------------------------------+------+------+--------+-----------------------------------------------------------------------------------+---------+------+---------+
+| + BackGrRemovalStream                                                                  | 10   | 0    |        |                                                                                   |         |      |         |
+|  + Loop_row_loop_proc1                                                                 | 10   | 0    |        |                                                                                   |         |      |         |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_8_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_8                       | ram_1p  | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_7_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_7                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_6_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_6                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_5_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_5                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_4_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_4                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_3_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_3                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_2_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_2                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_1_U                       | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_1                       | ram_s2p | auto | 1       |
+|    BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line_U                         | 1    | -    |        | BackGrRemovalStream_stream_stream_axis_0_ap_uint_8_h_line                         | ram_s2p | auto | 1       |
+|    p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_U | 1    | -    |        | p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E | ram_s2p | auto | 1       |
++----------------------------------------------------------------------------------------+------+------+--------+-----------------------------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                                     | Messages                                                                                                                                                                           |
++----------+---------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | BackGrRemoval.cpp:130 in backgrremovalstream | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+----------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-----------------------------------------+-------------------------------------------------------------+
+| Type            | Options                                 | Location                                                    |
++-----------------+-----------------------------------------+-------------------------------------------------------------+
+| interface       | axis port=input_stream                  | BackGrRemoval.cpp:126 in backgrremovalstream, input_stream  |
+| interface       | axis port=output_stream                 | BackGrRemoval.cpp:127 in backgrremovalstream, output_stream |
+| interface       | s_axilite port=threshold bundle=control | BackGrRemoval.cpp:128 in backgrremovalstream, threshold     |
+| interface       | s_axilite port=return bundle=control    | BackGrRemoval.cpp:129 in backgrremovalstream, return        |
+| array_partition | variable=h_line complete dim=1          | BackGrRemoval.cpp:134 in backgrremovalstream, h_line        |
+| array_partition | variable=h_window complete              | BackGrRemoval.cpp:138 in backgrremovalstream, h_window      |
+| pipeline        | II=1                                    | BackGrRemoval.cpp:144 in backgrremovalstream                |
+| unroll          |                                         | BackGrRemoval.cpp:171 in backgrremovalstream                |
+| unroll          |                                         | BackGrRemoval.cpp:181 in backgrremovalstream                |
+| inline          |                                         | RGB2HSV.cpp:7 in maxof3                                     |
+| inline          |                                         | RGB2HSV.cpp:15 in minof3                                    |
+| inline          | off                                     | RGB2HSV.cpp:23 in findhsv                                   |
+| array_partition | variable=out_s cyclic factor=8 dim=1    | RGB2HSV.cpp:24 in findhsv, out_s                            |
+| pipeline        | II=1                                    | RGB2HSV.cpp:30 in findhsv                                   |
+| unroll          | factor=4                                | RGB2HSV.cpp:31 in findhsv                                   |
++-----------------+-----------------------------------------+-------------------------------------------------------------+
+
+

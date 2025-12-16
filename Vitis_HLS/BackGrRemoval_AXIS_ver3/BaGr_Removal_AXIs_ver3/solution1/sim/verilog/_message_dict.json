@@ -1,0 +1,21 @@
+{
+	"version" : {"major" : "1", "minor" : "0"},
+	"kernels" : 
+	[{
+		"name" : "",
+		"deadlock_register_list" : 
+		[
+			{"register_name" : "dl_diagnosis_info_P0_blocks",
+			"register_word_offset" : "0xFFFFFFFFFFFFFFFF",
+			"register_bit_info" : 
+			[
+			]},
+			{"register_name" : "dl_diagnosis_info_P0_is_blocked_by",
+			"register_word_offset" : "0xFFFFFFFFFFFFFFFF",
+			"register_bit_info" : 
+			[
+				{"bit" : "2","message" : "Loop_row_loop_proc1_U0 is idle"},
+			]}
+		]
+	}]
+}

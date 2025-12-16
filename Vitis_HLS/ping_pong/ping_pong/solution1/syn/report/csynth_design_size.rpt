@@ -1,0 +1,33 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Instructions per Function for each Compilation Phase
++-----------------+----------------+--------------+---------------+----------------------+---------------+
+| Function        | Location       | Compile/Link | Unroll/Inline | Performance/Pipeline | Optimizations |
++-----------------+----------------+--------------+---------------+----------------------+---------------+
+| + algo          | ping_pong.c:3  | 138          | 101           | 78                   | 101           |
+|    getRemainder | ping_pong.c:22 |  28          |  26           |                      |               |
+|    add1         | ping_pong.c:33 |  19          |  17           |                      |               |
+|    mul2add1     | ping_pong.c:43 |  33          |  20           |                      |               |
+|    division     | ping_pong.c:54 |  23          |  21           |                      |               |
++-----------------+----------------+--------------+---------------+----------------------+---------------+
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

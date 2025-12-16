@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'findHSV'" level="0">
-<item name = "Date">Thu Jul 10 14:40:48 2025
+<item name = "Date">Tue Oct 21 14:26:23 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">BackGrRemoval</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 9.219 ns, 0.50 ns</column>
+<column name="ap_clk">10.00 ns, 9.500 ns, 0.50 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">38440, 38440, 0.384 ms, 0.384 ms, 38440, 38440, no</column>
+<column name="">230451, 230451, 2.305 ms, 2.305 ms, 230451, 230451, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,6 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- HSV_LOOP">38438, 38438, 41, 2, 1, 19200, yes</column>
 </table>
 </item>
 </section>

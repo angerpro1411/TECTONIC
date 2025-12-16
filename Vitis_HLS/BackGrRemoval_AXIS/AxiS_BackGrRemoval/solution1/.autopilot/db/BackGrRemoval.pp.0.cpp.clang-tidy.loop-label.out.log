@@ -1,0 +1,43 @@
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:1336:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:1336:7: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:2310:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:2310:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:2324:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:2324:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:2338:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:2338:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:3937:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:3937:7: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6382:9: error: Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=linebuf core=RAM_1P_BRAM
+        ^
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6398:5: warning: Added loop label VITIS_LOOP_84_1:   [xilinx-label-all-loops]
+    for (int pix = 0; pix < total; pix++) {
+    ^~~
+    VITIS_LOOP_84_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6398:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6411:2: warning: Added loop label VITIS_LOOP_97_2:   [xilinx-label-all-loops]
+ for (int cc = 0; cc < K-1; cc++) {
+ ^~~
+ VITIS_LOOP_97_2: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6411:2: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6450:2: warning: Added loop label VITIS_LOOP_136_3:   [xilinx-label-all-loops]
+ for (int wx = 0; wx < K; wx++) {
+ ^~~
+ VITIS_LOOP_136_3: 
+/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS/AxiS_BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:6450:2: note: FIX-IT applied suggested code changes

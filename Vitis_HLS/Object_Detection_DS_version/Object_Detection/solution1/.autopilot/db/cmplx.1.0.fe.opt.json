@@ -1,0 +1,409 @@
+{
+  "0": {
+    "basicblocks": 25,
+    "calls": "5 20 2 13 33 29 27 21 24 22 18",
+    "file": "main.cpp",
+    "fileloc": 178,
+    "instructions": 288,
+    "loads": {
+      "L": 14,
+      "T": 8
+    },
+    "name": "objectDetection",
+    "stores": {
+      "L": 3,
+      "T": 5
+    },
+    "total_instructions": 6400
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "6",
+    "file": "hls_fabs.h",
+    "fileloc": 12,
+    "instructions": 2,
+    "name": "generic_fabs<float>",
+    "total_instructions": 1034
+  },
+  "10": {
+    "basicblocks": 34,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 120,
+    "instructions": 118,
+    "loads": {
+      "L": 7
+    },
+    "name": "traceContour",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 118
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "14",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 116,
+    "instructions": 2,
+    "name": "generic_cast_IEEE754<unsigned char, float>",
+    "total_instructions": 2011
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 532,
+    "instructions": 24,
+    "name": "mantissa",
+    "total_instructions": 193
+  },
+  "13": {
+    "basicblocks": 13,
+    "calls": "31",
+    "file": "main.cpp",
+    "fileloc": 28,
+    "instructions": 54,
+    "loads": {
+      "L": 3
+    },
+    "name": "convertToGray",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2071
+  },
+  "14": {
+    "basicblocks": 15,
+    "calls": "28 8 4 4 19 19",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 65,
+    "instructions": 108,
+    "name": "generic_cast_IEEE754<unsigned char, AP_TRN_ZERO, float>",
+    "total_instructions": 2009
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "sqrtfloat.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "name": "sqrt",
+    "total_instructions": 2
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "parameters.h",
+    "fileloc": 69,
+    "instructions": 24,
+    "name": "rgb_to_lab_simple",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 24
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "11",
+    "file": "lib_floatconversion.cpp",
+    "fileloc": 63,
+    "instructions": 2,
+    "name": "__hls_fptoui_float_i8",
+    "total_instructions": 2013
+  },
+  "18": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 166,
+    "instructions": 26,
+    "name": "objectLabeler",
+    "total_instructions": 26
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 378,
+    "instructions": 4,
+    "name": "__signbit",
+    "total_instructions": 9
+  },
+  "2": {
+    "basicblocks": 21,
+    "calls": "17",
+    "file": "main.cpp",
+    "fileloc": 12,
+    "instructions": 50,
+    "loads": {
+      "L": 1
+    },
+    "name": "adjustBrightness",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2063
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "parameters.h",
+    "fileloc": 157,
+    "instructions": 1,
+    "name": "ShapeDetector",
+    "total_instructions": 1
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "absfloat.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "name": "abs",
+    "total_instructions": 1036
+  },
+  "22": {
+    "basicblocks": 39,
+    "calls": "25 16 15",
+    "file": "parameters.h",
+    "fileloc": 78,
+    "instructions": 244,
+    "loads": {
+      "L": 22
+    },
+    "name": "label",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 302
+  },
+  "23": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 514,
+    "instructions": 8,
+    "name": "expv",
+    "total_instructions": 109
+  },
+  "24": {
+    "basicblocks": 34,
+    "calls": "15",
+    "file": "parameters.h",
+    "fileloc": 159,
+    "instructions": 150,
+    "loads": {
+      "L": 17
+    },
+    "name": "detect",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 152
+  },
+  "25": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "parameters.h",
+    "fileloc": 143,
+    "instructions": 32,
+    "loads": {
+      "L": 3
+    },
+    "name": "is_point_in_contour",
+    "total_instructions": 32
+  },
+  "26": {
+    "basicblocks": 1,
+    "calls": "34",
+    "file": "x_hls_utils.h",
+    "fileloc": 375,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 316
+  },
+  "27": {
+    "basicblocks": 20,
+    "calls": "10",
+    "file": "main.cpp",
+    "fileloc": 96,
+    "instructions": 62,
+    "loads": {
+      "L": 7
+    },
+    "name": "findContours",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 180
+  },
+  "28": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 312,
+    "instructions": 58,
+    "loads": {
+      "L": 1
+    },
+    "name": "fp_struct",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 349
+  },
+  "29": {
+    "basicblocks": 53,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 55,
+    "instructions": 132,
+    "loads": {
+      "L": 4
+    },
+    "name": "morphologicalClose",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 132
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 485,
+    "instructions": 58,
+    "loads": {
+      "L": 1
+    },
+    "name": "fp_struct",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 350
+  },
+  "30": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 338,
+    "instructions": 33,
+    "name": "data",
+    "total_instructions": 296
+  },
+  "31": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "lib_floatconversion.cpp",
+    "fileloc": 67,
+    "instructions": 2,
+    "name": "__hls_fptoui_double_i8",
+    "total_instructions": 2017
+  },
+  "32": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 541,
+    "instructions": 4,
+    "name": "__signbit",
+    "total_instructions": 9
+  },
+  "33": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 43,
+    "instructions": 35,
+    "loads": {
+      "L": 1
+    },
+    "name": "simpleThreshold",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 35
+  },
+  "34": {
+    "basicblocks": 1,
+    "calls": "30",
+    "file": "x_hls_utils.h",
+    "fileloc": 351,
+    "instructions": 14,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_float",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 314
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 345,
+    "instructions": 8,
+    "name": "expv",
+    "total_instructions": 109
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "16",
+    "file": "parameters.h",
+    "fileloc": 51,
+    "instructions": 90,
+    "loads": {
+      "L": 3
+    },
+    "name": "ColorLabeler",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 114
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "28 28 26",
+    "file": "hls_copysign.h",
+    "fileloc": 10,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "name": "generic_copysign<float>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1032
+  },
+  "7": {
+    "basicblocks": 15,
+    "calls": "3 12 23 23 32 32",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 65,
+    "instructions": 108,
+    "name": "generic_cast_IEEE754<unsigned char, AP_TRN_ZERO, double>",
+    "total_instructions": 2013
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 369,
+    "instructions": 24,
+    "name": "mantissa",
+    "total_instructions": 188
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 116,
+    "instructions": 2,
+    "name": "generic_cast_IEEE754<unsigned char, double>",
+    "total_instructions": 2015
+  }
+}

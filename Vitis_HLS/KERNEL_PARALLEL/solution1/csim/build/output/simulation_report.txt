@@ -1,0 +1,11 @@
+HLS Motion Detection Simulation Report
+======================================
+Image size: 64x64
+Threshold: 30
+Frames processed: 5
+
+Generated files:
+- producer_frame_X.ppm : Images générées par le producteur
+- motion_frame_X.ppm   : Résultats de détection de mouvement
+
+To view images: convert output/*.ppm output/*.png && eog output/*.png

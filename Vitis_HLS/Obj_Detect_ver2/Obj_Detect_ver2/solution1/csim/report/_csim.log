@@ -1,0 +1,33 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb.cpp in debug mode
+   Generating csim.exe
+✅ Output image written: output_320x240.bmp
+Detected objects: 24
+Object 0: center(-85, 28), color = GREEN
+Object 1: center(132, 0), color = RED
+Object 2: center(107, -2), color = RED
+Object 3: center(113, -2), color = RED
+Object 4: center(-36, -4), color = RED
+Object 5: center(113, 1), color = RED
+Object 6: center(-37, -7), color = RED
+Object 7: center(-38, -8), color = RED
+Object 8: center(71, -8), color = RED
+Object 9: center(-64, -9), color = RED
+Object 10: center(-39, -10), color = RED
+Object 11: center(-66, -10), color = RED
+Object 12: center(-69, -12), color = RED
+Object 13: center(-63, -13), color = RED
+Object 14: center(-72, -15), color = RED
+Object 15: center(-61, -13), color = RED
+Object 16: center(92, -15), color = RED
+Object 17: center(95, 2), color = RED
+Object 18: center(-83, -23), color = RED
+Object 19: center(-80, -22), color = RED
+Object 20: center(-77, -24), color = RED
+Object 21: center(-54, -22), color = RED
+Object 22: center(-60, -40), color = RED
+Object 23: center(-53, -41), color = RED
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 76800
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

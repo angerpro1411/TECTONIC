@@ -1,0 +1,32 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../BaGr_ObjDetect.cpp in debug mode
+   Compiling ../../../../BackGrRemoval.cpp in debug mode
+   Compiling ../../../../RGB2HSV.cpp in debug mode
+   Generating csim.exe
+Loading input.bmp...
+Software execution time: 834.573 ms
+Detected objects: 17
+Obj 0  X=-72  Y=109  Green=0
+Obj 1  X=120  Y=105  Green=0
+Obj 2  X=-133  Y=49  Green=0
+Obj 3  X=-107  Y=83  Green=0
+Obj 4  X=-101  Y=31  Green=0
+Obj 5  X=-110  Y=11  Green=0
+Obj 6  X=-60  Y=30  Green=0
+Obj 7  X=-149  Y=-10  Green=0
+Obj 8  X=-122  Y=-4  Green=0
+Obj 9  X=-158  Y=-18  Green=0
+Obj 10  X=-20  Y=-31  Green=0
+Obj 11  X=12  Y=23  Green=0
+Obj 12  X=128  Y=-75  Green=0
+Obj 13  X=158  Y=-94  Green=0
+Obj 14  X=29  Y=-114  Green=0
+Obj 15  X=-88  Y=-65  Green=0
+Obj 16  X=44  Y=-96  Green=0
+Saving output_pipeline.bmp...
+DONE.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 76800
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,313 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 27, 
+                   Column: 34 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 33, 
+                   Column: 21 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        y_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 35, 
+                   Column: 22 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        x_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                   Column: 0 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            out
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '24'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                   Column: 0 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            in
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '24'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 27, 
+                   Column: 34 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ' '
+  - LoopLoc:         '../MeanShiftFilter/MeanShiftFilter.cpp:27:34'
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 48, 
+                   Column: 41 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 48, 
+                       Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          if.end50.load.4
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 19, 
+                   Column: 13 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 19, 
+                       Column: 13 }
+  - OrigDirection:   read
+  - OrigID:          for.body9.load.6
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 83, 
+                   Column: 40 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 83, 
+                       Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          _ZN7ap_uintILi8EEC2ILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEERK8ap_fixedIXT_EXT0_EXT1_EXT2_EXT3_EE.exit334.load.6
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 83, 
+                   Column: 40 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 83, 
+                       Column: 40 }
+  - OrigDirection:   write
+  - OrigID:          _ZN7ap_uintILi8EEC2ILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEERK8ap_fixedIXT_EXT0_EXT1_EXT2_EXT3_EE.exit334.store.11
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 84, 
+                   Column: 40 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 84, 
+                       Column: 40 }
+  - OrigDirection:   write
+  - OrigID:          _ZN7ap_uintILi8EEC2ILi17ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EEERK8ap_fixedIXT_EXT0_EXT1_EXT2_EXT3_EE.exit170.store.7
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            InsufficientAlignment
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 85, 
+                   Column: 40 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Alignment is insufficient, current alignment is '
+  - Align:           '1'
+  - String:          ' byte(s) but '
+  - RequiredAlign:   '4'
+  - String:          ' is required'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 85, 
+                       Column: 40 }
+  - OrigDirection:   write
+  - OrigID:          for.inc136.store.6
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'MeanShiftFiltering(Pixel*, Pixel*, ap_uint<32>, ap_uint<32>, ap_uint<8>, ap_uint<8>, ap_uint<8>)'
+    DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 4, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 27, 
+                   Column: 34 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 33, 
+                   Column: 21 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        y_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 35, 
+                   Column: 22 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        x_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 27, 
+                   Column: 34 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_27_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 33, 
+                   Column: 21 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        y_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../MeanShiftFilter/MeanShiftFilter.cpp, Line: 35, 
+                   Column: 22 }
+Function:        _Z18MeanShiftFilteringP5PixelS0_7ap_uintILi32EES2_S1_ILi8EES3_S3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        x_window
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...

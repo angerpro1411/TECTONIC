@@ -1,0 +1,90 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-88-generic) on Tue Dec 16 11:21:25 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project BaGrRe_ObjDetect 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect'.
+INFO: [HLS 200-1510] Running: set_top BaGr_ObjDetect 
+INFO: [HLS 200-1510] Running: add_files BaGr_ObjDetect.cpp 
+INFO: [HLS 200-10] Adding design file 'BaGr_ObjDetect.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files BackGrRemoval.cpp 
+INFO: [HLS 200-10] Adding design file 'BackGrRemoval.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files BackGrRemoval.h 
+INFO: [HLS 200-10] Adding design file 'BackGrRemoval.h' to the project
+INFO: [HLS 200-1510] Running: add_files RGB2HSV.cpp 
+INFO: [HLS 200-10] Adding design file 'RGB2HSV.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files RGB2HSV.h 
+INFO: [HLS 200-10] Adding design file 'RGB2HSV.h' to the project
+INFO: [HLS 200-1510] Running: add_files obj_detect.cpp 
+INFO: [HLS 200-10] Adding design file 'obj_detect.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files parameters.h 
+INFO: [HLS 200-10] Adding design file 'parameters.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 10_320x240.bmp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '10_320x240.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 13_320x240.bmp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '13_320x240.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 189.754 MB.
+INFO: [HLS 200-10] Analyzing design file 'BaGr_ObjDetect.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'BackGrRemoval.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (BackGrRemoval.cpp:19:12)
+Resolution: For help on HLS 214-111 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-111.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (BackGrRemoval.cpp:16:9)
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file BackGrRemoval.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-471.html
+INFO: [HLS 200-10] Analyzing design file 'RGB2HSV.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'obj_detect.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 8.24 seconds. CPU system time: 1.1 seconds. Elapsed time: 9.35 seconds; current allocated memory: 191.555 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 10,673 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,710 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,482 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'Minof3(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'BackGrRemovalStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&)' (BackGrRemoval.cpp:37:26)
+INFO: [HLS 214-131] Inlining function 'MaxOf3(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'BackGrRemovalStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&)' (BackGrRemoval.cpp:36:26)
+INFO: [HLS 214-131] Inlining function 'uf_find(ap_uint<16>*, ap_uint<16>)' into 'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)' (obj_detect.cpp:38:19)
+INFO: [HLS 214-131] Inlining function 'uf_find(ap_uint<16>*, ap_uint<16>)' into 'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)' (obj_detect.cpp:39:19)
+INFO: [HLS 214-131] Inlining function 'is_green_rgb(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)' (obj_detect.cpp:259:31)
+INFO: [HLS 214-131] Inlining function 'uf_find(ap_uint<16>*, ap_uint<16>)' into 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)' (obj_detect.cpp:197:29)
+INFO: [HLS 214-131] Inlining function 'uf_union(ap_uint<16>*, ap_uint<16>, ap_uint<16>)' into 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)' (obj_detect.cpp:168:42)
+INFO: [HLS 214-291] Loop 'Pass1_5_inner1' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:182:25)
+INFO: [HLS 214-291] Loop 'Pass1_5_inner2' is marked as complete unroll implied by the pipeline pragma (obj_detect.cpp:183:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_51_1' is marked as complete unroll implied by the pipeline pragma (BackGrRemoval.cpp:51:30)
+INFO: [HLS 214-291] Loop 'kernel_loop' is marked as complete unroll implied by the pipeline pragma (BackGrRemoval.cpp:61:26)
+INFO: [HLS 214-186] Unrolling loop 'Pass1_5_inner1' (obj_detect.cpp:182:25) in function 'hls_object_green_classification' completely with a factor of 3 (obj_detect.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'Pass1_5_inner2' (obj_detect.cpp:183:26) in function 'hls_object_green_classification' completely with a factor of 3 (obj_detect.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'Shift_window' (obj_detect.cpp:136:17) in function 'hls_object_green_classification' completely with a factor of 3 (obj_detect.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_51_1' (BackGrRemoval.cpp:51:30) in function 'BackGrRemovalStream' completely with a factor of 10 (BackGrRemoval.cpp:12:0)
+INFO: [HLS 214-186] Unrolling loop 'kernel_loop' (BackGrRemoval.cpp:61:26) in function 'BackGrRemovalStream' completely with a factor of 11 (BackGrRemoval.cpp:12:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE7linebuf': Complete partitioning on dimension 1. (obj_detect.cpp:111:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_E6h_line': Complete partitioning on dimension 1. (BackGrRemoval.cpp:19:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask' due to pipeline pragma (obj_detect.cpp:180:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=2' for array 'hls_object_green_classification(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::edge_mask' due to pipeline pragma (obj_detect.cpp:180:9)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_PsS7_PS2_ILi1EERS2_ILi16EEE9edge_mask': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 3 on dimension 2. (obj_detect.cpp:75:0)
+ERROR: [HLS 214-208] The ap_axis|ap_axiu|qdma_axis|hls::axis data types must only be used for AXI-Stream ports in the interface. 'BaGr_ObjDetect(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, short*, short*, ap_uint<1>*, ap_uint<16>&)::mid_stream' is not an AXI-Stream and/or is not a port in the interface
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.7 seconds. CPU system time: 1.35 seconds. Elapsed time: 16.39 seconds; current allocated memory: 3.547 MB.
+Pre-synthesis failed.
+    while executing
+"source /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/csynth.tcl"
+    invoked from within
+"hls::main /home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 11.5 seconds. Total CPU system time: 1.46 seconds. Total elapsed time: 17.21 seconds; peak allocated memory: 193.301 MB.

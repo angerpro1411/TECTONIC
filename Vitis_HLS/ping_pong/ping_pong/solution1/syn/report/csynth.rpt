@@ -1,0 +1,137 @@
+
+
+================================================================
+== Synthesis Summary Report of 'algo'
+================================================================
++ General Information: 
+    * Date:           Tue Oct  7 16:23:28 2025
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        ping_pong
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |             Modules             | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |           |     |
+    |             & Loops             | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +---------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ algo                           |     -|  0.59|      331|  3.310e+03|         -|      332|     -|        no|     -|   -|  633 (~0%)|   777 (1%)|    -|
+    | + algo_Pipeline_REMAINDER_LOOP  |     -|  0.59|      114|  1.140e+03|         -|      114|     -|        no|     -|   -|  315 (~0%)|  233 (~0%)|    -|
+    |  o REMAINDER_LOOP               |     -|  7.30|      112|  1.120e+03|        14|        1|   100|       yes|     -|   -|          -|          -|    -|
+    | + algo_Pipeline_ADD_LOOP        |     -|  1.09|      102|  1.020e+03|         -|      102|     -|        no|     -|   -|   17 (~0%)|   77 (~0%)|    -|
+    |  o ADD_LOOP                     |     -|  7.30|      100|  1.000e+03|         2|        1|   100|       yes|     -|   -|          -|          -|    -|
+    | + algo_Pipeline_MUL2ADD1_LOOP   |     -|  2.66|      102|  1.020e+03|         -|      102|     -|        no|     -|   -|   17 (~0%)|   71 (~0%)|    -|
+    |  o MUL2ADD1_LOOP                |     -|  7.30|      100|  1.000e+03|         2|        1|   100|       yes|     -|   -|          -|          -|    -|
+    | + algo_Pipeline_DIVISION_LOOP   |     -|  1.77|      110|  1.100e+03|         -|      110|     -|        no|     -|   -|  260 (~0%)|  185 (~0%)|    -|
+    |  o DIVISION_LOOP                |     -|  7.30|      108|  1.080e+03|        10|        1|   100|       yes|     -|   -|          -|          -|    -|
+    +---------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-------------------+-----------+----------+
+| Port              | Direction | Bitwidth |
++-------------------+-----------+----------+
+| vecIn_0_address0  | out       | 6        |
+| vecIn_0_q0        | in        | 8        |
+| vecIn_1_address0  | out       | 6        |
+| vecIn_1_q0        | in        | 8        |
+| vecOut_0_address0 | out       | 6        |
+| vecOut_0_d0       | out       | 8        |
+| vecOut_1_address0 | out       | 6        |
+| vecOut_1_d0       | out       | 8        |
++-------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| vecIn    | in        | unsigned char* |
+| vecOut   | out       | unsigned char* |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+-------------------+---------+----------+
+| Argument | HW Interface      | HW Type | HW Usage |
++----------+-------------------+---------+----------+
+| vecIn    | vecIn_0_address0  | port    | offset   |
+| vecIn    | vecIn_0_ce0       | port    |          |
+| vecIn    | vecIn_0_q0        | port    |          |
+| vecIn    | vecIn_1_address0  | port    | offset   |
+| vecIn    | vecIn_1_ce0       | port    |          |
+| vecIn    | vecIn_1_q0        | port    |          |
+| vecOut   | vecOut_0_address0 | port    | offset   |
+| vecOut   | vecOut_0_ce0      | port    |          |
+| vecOut   | vecOut_0_we0      | port    |          |
+| vecOut   | vecOut_0_d0       | port    |          |
+| vecOut   | vecOut_1_address0 | port    | offset   |
+| vecOut   | vecOut_1_ce0      | port    |          |
+| vecOut   | vecOut_1_we0      | port    |          |
+| vecOut   | vecOut_1_d0       | port    |          |
++----------+-------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                            | DSP | Pragma | Variable | Op  | Impl   | Latency |
++---------------------------------+-----+--------+----------+-----+--------+---------+
+| + algo                          | 0   |        |          |     |        |         |
+|  + algo_Pipeline_REMAINDER_LOOP | 0   |        |          |     |        |         |
+|    add_ln24_fu_118_p2           | -   |        | add_ln24 | add | fabric | 0       |
+|  + algo_Pipeline_ADD_LOOP       | 0   |        |          |     |        |         |
+|    add_ln35_fu_76_p2            | -   |        | add_ln35 | add | fabric | 0       |
+|    c_d0                         | -   |        | add_ln38 | add | fabric | 0       |
+|  + algo_Pipeline_MUL2ADD1_LOOP  | 0   |        |          |     |        |         |
+|    add_ln46_fu_80_p2            | -   |        | add_ln46 | add | fabric | 0       |
+|  + algo_Pipeline_DIVISION_LOOP  | 0   |        |          |     |        |         |
+|    add_ln56_fu_114_p2           | -   |        | add_ln56 | add | fabric | 0       |
++---------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------+------+------+--------+----------+---------+------+---------+
+| Name   | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------+------+------+--------+----------+---------+------+---------+
+| + algo | 0    | 0    |        |          |         |      |         |
+|   a_U  | -    | -    |        | a        | ram_1p  | auto | 1       |
+|   b_U  | -    | -    |        | b        | ram_1p  | auto | 1       |
+|   c_U  | -    | -    |        | c        | ram_1p  | auto | 1       |
+|   d_U  | -    | -    |        | d        | ram_1p  | auto | 1       |
++--------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------+---------------------------------------------------------------+
+| Type            | Options                               | Location                                                      |
++-----------------+---------------------------------------+---------------------------------------------------------------+
+| array_partition | variable=vecIn cyclic factor=2 dim=1  | ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:4 in algo, vecIn  |
+| array_partition | variable=vecOut cyclic factor=2 dim=1 | ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c:5 in algo, vecOut |
++-----------------+---------------------------------------+---------------------------------------------------------------+
+
+

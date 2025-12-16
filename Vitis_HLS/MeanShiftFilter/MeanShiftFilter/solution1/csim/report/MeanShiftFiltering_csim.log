@@ -1,0 +1,6 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../MeanShifFilter_tb.cpp in debug mode
+make: *** No rule to make target '../../../../MeanShiftFilter.c', needed by 'obj/MeanShiftFilter.o'.  Stop.
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

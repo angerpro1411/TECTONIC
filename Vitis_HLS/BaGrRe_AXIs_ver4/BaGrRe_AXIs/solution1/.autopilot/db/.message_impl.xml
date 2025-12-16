@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file /home/dell3561-49/Vivado_Project_2023.1/ip_repo/BackGrRe_NoCtrl/export.zip" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 8.71 seconds. CPU system time: 0.6 seconds. Elapsed time: 11.65 seconds; current allocated memory: 7.457 MB." resolution=""/>
+</Messages>

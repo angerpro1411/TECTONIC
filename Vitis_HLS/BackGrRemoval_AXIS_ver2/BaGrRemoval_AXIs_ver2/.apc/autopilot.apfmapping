@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="BackGrRemoval.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/BackGrRemoval.h"/>
+    <originFiles name="RGB2HSV.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/RGB2HSV.h"/>
+    <originFiles name="parameters.h" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/parameters.h"/>
+    <originFiles name="RGB2HSV.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/RGB2HSV.cpp"/>
+    <originFiles name="BackGrRemoval.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/BackGrRemoval.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="BackGrRemoval_tb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/BackGrRemoval_tb.cpp"/>
+    <originFiles name="13_320x240.bmp" path="/home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/13_320x240.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

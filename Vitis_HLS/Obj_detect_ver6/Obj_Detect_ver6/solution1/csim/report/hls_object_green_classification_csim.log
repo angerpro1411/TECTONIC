@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../rb.cpp in debug mode
+   Generating csim.exe
+Reading input.bmp...
+Software execution time: 342.399 ms
+Writing output.bmp...
+
+Detected Objects: 7
+Obj[0] x=-107, y=83, green=0
+Obj[1] x=-60, y=30, green=0
+Obj[2] x=-65, y=-27, green=0
+Obj[3] x=12, y=23, green=0
+Obj[4] x=128, y=-75, green=0
+Obj[5] x=-91, y=-82, green=0
+Obj[6] x=44, y=-96, green=0
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 76800
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

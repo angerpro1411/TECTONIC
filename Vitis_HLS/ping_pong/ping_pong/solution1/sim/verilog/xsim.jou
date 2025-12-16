@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Oct  7 16:23:49 2025
+# Process ID: 40103
+# Current directory: /home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog
+# Command line: xsim -source {xsim.dir/algo/xsim_script.tcl}
+# Log file: /home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/xsim.log
+# Journal file: /home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/xsim.jou
+# Running On: dell3561-49, OS: Linux, CPU Frequency: 4001.134 MHz, CPU Physical cores: 6, Host memory: 16483 MB
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/algo/xsim_script.tcl
+open_wave_config algo_dataflow_ana.wcfg
+source algo.tcl
+close_sim

@@ -1,0 +1,30 @@
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:2218:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:2218:7: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:3192:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:3192:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:3206:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:3206:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:3220:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:3220:5: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:4831:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:4831:7: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:6624:2: warning: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+ for (ap_uint<8> idx = 0; idx < 10; idx ++){
+ ^~~
+ VITIS_LOOP_13_1: 
+/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/.autopilot/db/main.pp.0.cpp:6624:2: note: FIX-IT applied suggested code changes

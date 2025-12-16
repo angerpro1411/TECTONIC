@@ -23,16 +23,14 @@
       ^~~
       VITIS_LOOP_1247_1: 
 /home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:3936:7: note: FIX-IT applied suggested code changes
-/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5756:9: error: Resource with core_name: RAM_T2P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5760:9: error: Resource with core_name: RAM_T2P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=h core=RAM_T2P_BRAM
         ^
-/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5782:21: warning: Added loop label VITIS_LOOP_110_1:   [xilinx-label-all-loops]
-                    for (u32 i = 0; i < kernel_size; i++) {
-                    ^~~
-                    VITIS_LOOP_110_1: 
-/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5782:21: note: FIX-IT applied suggested code changes
-/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5796:25: warning: Added loop label VITIS_LOOP_124_2:   [xilinx-label-all-loops]
+/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5762:9: error: Resource with core_name: RAM_T2P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=mask core=RAM_T2P_BRAM
+        ^
+/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5804:25: warning: Added loop label VITIS_LOOP_220_1:   [xilinx-label-all-loops]
                         for (u32 i = 0; i < kernel_size; i++) {
                         ^~~
-                        VITIS_LOOP_124_2: 
-/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5796:25: note: FIX-IT applied suggested code changes
+                        VITIS_LOOP_220_1: 
+/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp:5804:25: note: FIX-IT applied suggested code changes

@@ -1,0 +1,157 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-85-generic) on Tue Oct 07 16:23:35 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/ping_pong'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/cosim.tcl
+INFO: [HLS 200-1510] Running: open_project ping_pong 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong'.
+INFO: [HLS 200-1510] Running: set_top algo 
+INFO: [HLS 200-1510] Running: add_files ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c 
+INFO: [HLS 200-10] Adding design file '../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.c' to the project
+INFO: [HLS 200-1510] Running: add_files ../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.h 
+INFO: [HLS 200-10] Adding design file '../../C_PROGRAM/5.Ping_pong_HLS/ping_pong.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../../C_PROGRAM/5.Ping_pong_HLS/tb.c -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../../C_PROGRAM/5.Ping_pong_HLS/tb.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1464] Running solution command: config_cosim -wave_debug=1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all -wave_debug 
+INFO: [HLS 200-1510] Running: source ./ping_pong/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name algo algo 
+INFO: [HLS 200-1510] Running: cosim_design -wave_debug -trace_level all 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_algo.cpp
+   Compiling (apcc) ping_pong.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-85-generic) on Tue Oct 07 16:23:39 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dell3561-49/398931759847019040565
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.42 seconds. Total CPU system time: 0.15 seconds. Total elapsed time: 1.43 seconds; peak allocated memory: 98.992 MB.
+   Compiling (apcc) tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-85-generic) on Tue Oct 07 16:23:41 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dell3561-49/399541759847021568571
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.53 seconds. Total CPU system time: 0.11 seconds. Total elapsed time: 1.5 seconds; peak allocated memory: 98.992 MB.
+   Compiling apatb_algo_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_algo_top glbl -Oenable_linking_all_libraries -prj algo.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s algo -debug all 
+Multi-threading is on. Using 10 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_urem_8ns_5ns_4_12_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_urem_8ns_5ns_4_12_1_divider
+INFO: [VRFC 10-311] analyzing module algo_urem_8ns_5ns_4_12_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_algo_Pipeline_ADD_LOOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_algo_Pipeline_ADD_LOOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_udiv_5ns_3ns_5_9_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_udiv_5ns_3ns_5_9_1_divider
+INFO: [VRFC 10-311] analyzing module algo_udiv_5ns_3ns_5_9_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_c_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_c_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_a_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_a_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_algo_Pipeline_REMAINDER_LOOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_algo_Pipeline_REMAINDER_LOOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_b_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_b_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_algo_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_algo_Pipeline_MUL2ADD1_LOOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_algo_Pipeline_MUL2ADD1_LOOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/AESL_automem_vecOut_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_vecOut_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/AESL_automem_vecIn_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_vecIn_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/AESL_automem_vecIn_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_vecIn_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/AESL_automem_vecOut_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_vecOut_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_algo_Pipeline_DIVISION_LOOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_algo_Pipeline_DIVISION_LOOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_d_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_d_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/algo_mux_2_1_8_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module algo_mux_2_1_8_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dell3561-49/Vitis_HLS_folder/ping_pong/ping_pong/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.algo_a_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.algo_b_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.algo_c_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.algo_d_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.algo_mux_2_1_8_1_1(ID=1,din0_WID...
+Compiling module xil_defaultlib.algo_urem_8ns_5ns_4_12_1_divider...
+Compiling module xil_defaultlib.algo_urem_8ns_5ns_4_12_1(NUM_STA...
+Compiling module xil_defaultlib.algo_flow_control_loop_pipe_sequ...
+Compiling module xil_defaultlib.algo_algo_Pipeline_REMAINDER_LOO...
+Compiling module xil_defaultlib.algo_algo_Pipeline_ADD_LOOP
+Compiling module xil_defaultlib.algo_algo_Pipeline_MUL2ADD1_LOOP
+Compiling module xil_defaultlib.algo_udiv_5ns_3ns_5_9_1_divider(...
+Compiling module xil_defaultlib.algo_udiv_5ns_3ns_5_9_1(NUM_STAG...
+Compiling module xil_defaultlib.algo_algo_Pipeline_DIVISION_LOOP
+Compiling module xil_defaultlib.algo
+Compiling module xil_defaultlib.AESL_automem_vecIn_0
+Compiling module xil_defaultlib.AESL_automem_vecIn_1
+Compiling module xil_defaultlib.AESL_automem_vecOut_0
+Compiling module xil_defaultlib.AESL_automem_vecOut_1
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_algo_top
+Compiling module work.glbl
+Built simulation snapshot algo
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+start_gui
+INFO: [Common 17-206] Exiting xsim at Tue Oct  7 16:27:00 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 61.73 seconds. CPU system time: 3.29 seconds. Elapsed time: 208.04 seconds; current allocated memory: 6.730 MB.
+INFO: [HLS 200-112] Total CPU user time: 62.52 seconds. Total CPU system time: 3.41 seconds. Total elapsed time: 208.82 seconds; peak allocated memory: 222.188 MB.

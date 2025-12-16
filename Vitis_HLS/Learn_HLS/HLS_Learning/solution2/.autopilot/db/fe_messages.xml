@@ -1,0 +1,30 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="find" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=find" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS/HLS_Learning/solution2/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="find" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=find" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="main.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="find" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=AP_FIFO port=IN_VEC" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="main.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="find" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=AP_FIFO port=OUT_VEC" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="main.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="find" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="main.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="find" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="main.cpp:5:0" msg_body="Unrolling loop 'VITIS_LOOP_13_1' (main.cpp:13:19) in function 'find' partially with a factor of 4">
+        <args Factor="4" LoopLoc="main.cpp:13:19" LoopName="VITIS_LOOP_13_1"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="main.cpp:5:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'IN_VEC'">
+        <args Name="IN_VEC"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="main.cpp:5:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'OUT_VEC'">
+        <args Name="OUT_VEC"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

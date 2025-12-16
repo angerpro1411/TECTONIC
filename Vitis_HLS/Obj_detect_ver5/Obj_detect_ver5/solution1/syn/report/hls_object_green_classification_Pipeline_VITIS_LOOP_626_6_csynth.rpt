@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_object_green_classification_Pipeline_VITIS_LOOP_626_6'
+================================================================
+* Date:           Mon Nov 17 11:04:03 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Obj_detect_ver5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.644 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|       65|  20.000 ns|  0.650 us|    2|   65|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_626_6  |        0|       63|         2|          1|          1|  0 ~ 63|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     39|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|      15|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      15|     75|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln626_fu_161_p2   |         +|   0|  0|  14|           6|           1|
+    |icmp_ln626_fu_155_p2  |      icmp|   0|  0|  23|          16|          16|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  39|          23|          19|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_k_1     |   9|          2|    6|         12|
+    |k_fu_52                  |   9|          2|    6|         12|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   14|         28|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |k_fu_52                  |  6|   0|    6|          0|
+    |zext_ln626_reg_189       |  6|   0|   64|         58|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 15|   0|   73|         58|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++---------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_626_6|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_626_6|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_626_6|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_626_6|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_626_6|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  hls_object_green_classification_Pipeline_VITIS_LOOP_626_6|  return value|
+|count_reload               |   in|   16|     ap_none|                                               count_reload|        scalar|
+|obj_x_address0             |  out|    5|   ap_memory|                                                      obj_x|         array|
+|obj_x_ce0                  |  out|    1|   ap_memory|                                                      obj_x|         array|
+|obj_x_we0                  |  out|    1|   ap_memory|                                                      obj_x|         array|
+|obj_x_d0                   |  out|   16|   ap_memory|                                                      obj_x|         array|
+|obj_y_address0             |  out|    5|   ap_memory|                                                      obj_y|         array|
+|obj_y_ce0                  |  out|    1|   ap_memory|                                                      obj_y|         array|
+|obj_y_we0                  |  out|    1|   ap_memory|                                                      obj_y|         array|
+|obj_y_d0                   |  out|   16|   ap_memory|                                                      obj_y|         array|
+|obj_is_green_address0      |  out|    5|   ap_memory|                                               obj_is_green|         array|
+|obj_is_green_ce0           |  out|    1|   ap_memory|                                               obj_is_green|         array|
+|obj_is_green_we0           |  out|    1|   ap_memory|                                               obj_is_green|         array|
+|obj_is_green_d0            |  out|    1|   ap_memory|                                               obj_is_green|         array|
+|obj_x_buf_address0         |  out|    5|   ap_memory|                                                  obj_x_buf|         array|
+|obj_x_buf_ce0              |  out|    1|   ap_memory|                                                  obj_x_buf|         array|
+|obj_x_buf_q0               |   in|   16|   ap_memory|                                                  obj_x_buf|         array|
+|obj_y_buf_address0         |  out|    5|   ap_memory|                                                  obj_y_buf|         array|
+|obj_y_buf_ce0              |  out|    1|   ap_memory|                                                  obj_y_buf|         array|
+|obj_y_buf_q0               |   in|   16|   ap_memory|                                                  obj_y_buf|         array|
+|obj_is_green_buf_address0  |  out|    5|   ap_memory|                                           obj_is_green_buf|         array|
+|obj_is_green_buf_ce0       |  out|    1|   ap_memory|                                           obj_is_green_buf|         array|
+|obj_is_green_buf_q0        |   in|    1|   ap_memory|                                           obj_is_green_buf|         array|
++---------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

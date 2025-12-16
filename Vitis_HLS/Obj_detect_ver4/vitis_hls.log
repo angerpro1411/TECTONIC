@@ -1,0 +1,48 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-87-generic) on Thu Nov 13 16:45:26 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver4'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver4/Obj_detect_ver4/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver4/Obj_detect_ver4/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project Obj_detect_ver4 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver4/Obj_detect_ver4'.
+INFO: [HLS 200-1510] Running: set_top hls_object_green_classification 
+INFO: [HLS 200-1510] Running: add_files obj_detect.cpp 
+INFO: [HLS 200-10] Adding design file 'obj_detect.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb _output.bmp 
+INFO: [HLS 200-10] Adding test bench file '_output.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb output_.bmp 
+INFO: [HLS 200-10] Adding test bench file 'output_.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver4/Obj_detect_ver4/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/dell3561-49/Vivado_Project_2023.1/ip_repo/Object_detect
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/dell3561-49/Vivado_Project_2023.1/ip_repo/Object_detect -rtl verilog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/dell3561-49/Vivado_Project_2023.1/ip_repo/Object_detect 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 16:45:36 2025...
+INFO: [HLS 200-802] Generated output file /home/dell3561-49/Vivado_Project_2023.1/ip_repo/Object_detect/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 9.71 seconds. CPU system time: 0.37 seconds. Elapsed time: 12.34 seconds; current allocated memory: 8.379 MB.
+INFO: [HLS 200-112] Total CPU user time: 10.52 seconds. Total CPU system time: 0.49 seconds. Total elapsed time: 13.15 seconds; peak allocated memory: 233.746 MB.

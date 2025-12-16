@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver3/BaGr_Removal_AXIs_ver3/solution1/./sim/autowrap/testbench/BackGrRemoval.cpp_pre.cpp.tb.cpp

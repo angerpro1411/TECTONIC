@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T17:42:19.878+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T17:40:52.841+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T17:36:36.876+0200"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T17:36:36.855+0200"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T17:36:36.849+0200"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T17:36:36.843+0200"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'MeanShiftFiltering': contains subloop(s) that are not unrolled." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.981+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_29_2' (MeanShiftFilter.c:29) in function 'MeanShiftFiltering' completely: variable loop bound." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.448+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_28_1' (MeanShiftFilter.c:28) in function 'MeanShiftFiltering' completely: variable loop bound." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.443+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-932] Cannot unroll loop 'do_while_loop' (MeanShiftFilter.c:23) in function 'MeanShiftFiltering' completely: variable loop bound." projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.439+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-936] Cannot unroll loop 'width_loop' (MeanShiftFilter.c:15) in function 'MeanShiftFiltering': cannot completely unroll a loop with a variable trip count.&#xA;Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.436+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-936] Cannot unroll loop 'height_loop' (MeanShiftFilter.c:14) in function 'MeanShiftFiltering': cannot completely unroll a loop with a variable trip count.&#xA;Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.432+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'in'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (MeanShiftFilter.c:6:9)" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.384+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'out'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (MeanShiftFilter.c:7:9)" projectName="MeanShiftFilter" solutionName="solution1" date="2025-07-02T16:23:43.381+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

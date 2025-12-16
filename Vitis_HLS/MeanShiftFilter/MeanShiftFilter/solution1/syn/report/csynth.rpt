@@ -1,0 +1,184 @@
+
+
+================================================================
+== Synthesis Summary Report of 'MeanShiftFiltering'
+================================================================
++ General Information: 
+    * Date:           Wed Jul  2 16:23:45 2025
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        MeanShiftFilter
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |         Modules        | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |           |     |
+    |         & Loops        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ MeanShiftFiltering    |     -|  0.63|        -|          -|         -|        -|     -|        no|     -|  18 (8%)|  2530 (2%)|  4792 (9%)|    -|
+    | o height_loop          |     -|  9.50|        -|          -|         -|        -|     -|        no|     -|        -|          -|          -|    -|
+    |  o width_loop          |     -|  9.50|        -|          -|         -|        -|     -|        no|     -|        -|          -|          -|    -|
+    |   o do_while_loop      |     -|  9.50|        -|          -|    455490|        -|     -|        no|     -|        -|          -|          -|    -|
+    |    o VITIS_LOOP_28_1   |     -|  9.50|   455429|  4.554e+06|      1786|        -|   255|        no|     -|        -|          -|          -|    -|
+    |     o VITIS_LOOP_29_2  |     -|  9.50|     1784|  1.784e+04|         7|        -|   255|        no|     -|        -|          -|          -|    -|
+    +------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-------------+---------+-----------+----------+
+| Port        | Mode    | Direction | Bitwidth |
++-------------+---------+-----------+----------+
+| ImageHeight | ap_none | in        | 32       |
+| ImageWidth  | ap_none | in        | 32       |
+| ap_return   |         | out       | 8        |
+| cd          | ap_none | in        | 8        |
+| in_r        | ap_none | in        | 24       |
+| max_iter    | ap_none | in        | 8        |
+| out_r       | ap_vld  | out       | 24       |
+| sd          | ap_none | in        | 8        |
++-------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| in          | in        | pointer       |
+| out         | out       | pointer       |
+| ImageWidth  | in        | unsigned int  |
+| ImageHeight | in        | unsigned int  |
+| sd          | in        | char          |
+| cd          | in        | char          |
+| max_iter    | in        | unsigned char |
+| return      | out       | char          |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+--------------+---------+
+| Argument    | HW Interface | HW Type |
++-------------+--------------+---------+
+| in          | in_r         | port    |
+| out         | out_r        | port    |
+| out         | out_r_ap_vld | port    |
+| ImageWidth  | ImageWidth   | port    |
+| ImageHeight | ImageHeight  | port    |
+| sd          | sd           | port    |
+| cd          | cd           | port    |
+| max_iter    | max_iter     | port    |
+| return      | ap_return    | port    |
++-------------+--------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* All M_AXI Variable Accesses
++--------------+----------+-------------------------+-----------+--------------+------------+-----------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location         | Direction | Burst Status | Resolution | Problem                                                                     |
++--------------+----------+-------------------------+-----------+--------------+------------+-----------------------------------------------------------------------------+
+| m_axi_       | in       | MeanShiftFilter.c:16:48 | read      | Fail         | 214-228    | Alignment is insufficient, current alignment is 1 byte(s) but 4 is required |
+| m_axi_       | in       | MeanShiftFilter.c:42:63 | read      | Fail         | 214-228    | Alignment is insufficient, current alignment is 1 byte(s) but 4 is required |
+| m_axi_       | out      | MeanShiftFilter.c:80:40 | write     | Fail         | 214-228    | Alignment is insufficient, current alignment is 1 byte(s) but 4 is required |
++--------------+----------+-------------------------+-----------+--------------+------------+-----------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+--------------------+------+---------+---------+
+| Name                                    | DSP | Pragma | Variable           | Op   | Impl    | Latency |
++-----------------------------------------+-----+--------+--------------------+------+---------+---------+
+| + MeanShiftFiltering                    | 18  |        |                    |      |         |         |
+|   dy_3_fu_577_p2                        | -   |        | dy_3               | sub  | fabric  | 0       |
+|   mul_8s_8s_16_1_1_U17                  | -   |        | mul33              | mul  | auto    | 0       |
+|   mul_8s_8s_16_1_1_U16                  | -   |        | mul77              | mul  | auto    | 0       |
+|   add_ln14_fu_603_p2                    | -   |        | add_ln14           | add  | fabric  | 0       |
+|   y_2_fu_634_p2                         | -   |        | y_2                | add  | fabric  | 0       |
+|   add_ln15_fu_645_p2                    | -   |        | add_ln15           | add  | fabric  | 0       |
+|   iter_numb_1_fu_655_p2                 | -   |        | iter_numb_1        | add  | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | db                 | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | dg                 | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | dr                 | fsub | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U4      | 3   |        | mul                | fmul | maxdsp  | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U5      | 3   |        | mul1               | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | add                | fsub | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U4      | 3   |        | mul2               | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | COLOR_DIST_SQ      | fsub | fulldsp | 4       |
+|   mul_32s_32s_32_1_1_U14                | 3   |        | mul_ln31           | mul  | auto    | 0       |
+|   mul_32s_32s_32_1_1_U15                | 3   |        | mul283             | mul  | auto    | 0       |
+|   add_ln31_fu_742_p2                    | -   |        | add_ln31           | add  | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | sum_b_2            | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | sum_g_2            | fsub | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U3     | 2   |        | sum_r_2            | fadd | fulldsp | 4       |
+|   pixel_cnt_2_fu_809_p2                 | -   |        | pixel_cnt_2        | add  | fabric  | 0       |
+|   dx_2_fu_798_p2                        | -   |        | dx_2               | add  | fabric  | 0       |
+|   dy_fu_843_p2                          | -   |        | dy                 | add  | fabric  | 0       |
+|   fdiv_32ns_32ns_32_12_no_dsp_1_U6      | -   |        | MEAN_b             | fdiv | fabric  | 11      |
+|   fdiv_32ns_32ns_32_12_no_dsp_1_U7      | -   |        | MEAN_g             | fdiv | fabric  | 11      |
+|   fdiv_32ns_32ns_32_12_no_dsp_1_U8      | -   |        | MEAN_r             | fdiv | fabric  | 11      |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | sub                | fsub | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U4      | 3   |        | mul3               | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | sub3               | fsub | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U5      | 3   |        | mul4               | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | add5               | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | sub4               | fsub | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U4      | 3   |        | mul5               | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | THRES_HOLD_DIST_SQ | fsub | fulldsp | 4       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | dc                 | fsub | fulldsp | 4       |
+|   add_ln346_fu_990_p2                   | -   |        | add_ln346          | add  | fabric  | 0       |
+|   sub_ln71_fu_1004_p2                   | -   |        | sub_ln71           | sub  | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | dc_1               | fsub | fulldsp | 4       |
+|   add_ln346_1_fu_1087_p2                | -   |        | add_ln346_1        | add  | fabric  | 0       |
+|   sub_ln71_1_fu_1101_p2                 | -   |        | sub_ln71_1         | sub  | fabric  | 0       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U3     | 2   |        | dc_2               | fadd | fulldsp | 4       |
+|   add_ln346_2_fu_1184_p2                | -   |        | add_ln346_2        | add  | fabric  | 0       |
+|   sub_ln71_2_fu_1198_p2                 | -   |        | sub_ln71_2         | sub  | fabric  | 0       |
++-----------------------------------------+-----+--------+--------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++-----------------+-----------------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type            | Options               | Location                                       | Messages                                                                                                                                                                                                                                             |
++-----------------+-----------------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| array_partition | variable=in complete  | MeanShiftFilter.c:6 in meanshiftfiltering, in  | Ignored unsupported array_partition pragma on variable 'in'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension.  |
+| array_partition | variable=out complete | MeanShiftFilter.c:7 in meanshiftfiltering, out | Ignored unsupported array_partition pragma on variable 'out'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. |
++-----------------+-----------------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++----------+---------+-------------------------------------------+
+| Type     | Options | Location                                  |
++----------+---------+-------------------------------------------+
+| pipeline |         | MeanShiftFilter.c:5 in meanshiftfiltering |
++----------+---------+-------------------------------------------+
+
+

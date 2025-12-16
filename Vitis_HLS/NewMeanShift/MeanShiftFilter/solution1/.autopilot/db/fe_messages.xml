@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dell3561-49/Vitis_HLS_folder/NewMeanShift/MeanShiftFilter/solution1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="MeanShiftFiltering" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=MeanShiftFiltering" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../MeanShiftFilter/MeanShiftFilter.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MeanShiftFiltering" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../MeanShiftFilter/MeanShiftFilter.cpp:27:34" msg_body="Loop 'VITIS_LOOP_27_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_27_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../MeanShiftFilter/MeanShiftFilter.cpp:33:21" msg_body="Loop 'y_window' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="y_window"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../MeanShiftFilter/MeanShiftFilter.cpp:35:22" msg_body="Loop 'x_window' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="x_window"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../MeanShiftFilter/MeanShiftFilter.cpp:4:0" msg_body="Aggregating scalar variable 'out' with compact=bit mode in 24-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="24" HwTyName="scalar" Name="out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../MeanShiftFilter/MeanShiftFilter.cpp:4:0" msg_body="Aggregating scalar variable 'in' with compact=bit mode in 24-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="24" HwTyName="scalar" Name="in"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

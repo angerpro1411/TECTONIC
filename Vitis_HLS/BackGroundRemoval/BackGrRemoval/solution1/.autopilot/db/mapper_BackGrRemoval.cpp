@@ -350,10 +350,23 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
+struct __cosim_s3__ { char data[3]; };
 struct __cosim_s1__ { char data[1]; };
-extern "C" void BackGrRemoval(volatile void *, __cosim_s1__);
+extern "C" void BackGrRemoval(Byte<4>*, int, __cosim_s1__);
 extern "C" void apatb_BackGrRemoval_hw(volatile void * __xlx_apatb_param_inBGR, __cosim_s1__* __xlx_apatb_param_threshold) {
 using hls::sim::createStream;
+  // Collect __xlx_inBGR__tmp_vec
+std::vector<Byte<4>> __xlx_inBGR__tmp_vec;
+for (size_t i = 0; i < 1; ++i){
+__xlx_inBGR__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_inBGR)[i]);
+}
+  int __xlx_size_param_inBGR = 1;
+  int __xlx_offset_param_inBGR = 0;
+  int __xlx_offset_byte_param_inBGR = 0*4;
   // DUT call
-  BackGrRemoval(__xlx_apatb_param_inBGR, *__xlx_apatb_param_threshold);
+  BackGrRemoval(__xlx_inBGR__tmp_vec.data(), __xlx_offset_byte_param_inBGR, *__xlx_apatb_param_threshold);
+// print __xlx_apatb_param_inBGR
+for (size_t i = 0; i < __xlx_size_param_inBGR; ++i) {
+((Byte<4>*)__xlx_apatb_param_inBGR)[i] = __xlx_inBGR__tmp_vec[__xlx_offset_param_inBGR+i];
+}
 }

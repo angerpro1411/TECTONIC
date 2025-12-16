@@ -1,0 +1,10 @@
+/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c:189:21: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+                    for(int dy=-sd;dy<=sd;++dy){
+                    ^~~
+                    VITIS_LOOP_28_1: 
+/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c:189:21: note: FIX-IT applied suggested code changes
+/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c:190:25: warning: Added loop label VITIS_LOOP_29_2:   [xilinx-label-all-loops]
+                        for(int dx=-sd;dx<=sd;++dx){
+                        ^~~
+                        VITIS_LOOP_29_2: 
+/home/dell3561-49/Vitis_HLS_folder/MeanShiftFilter/MeanShiftFilter/solution1/.autopilot/db/MeanShiftFilter.pp.0.c:190:25: note: FIX-IT applied suggested code changes

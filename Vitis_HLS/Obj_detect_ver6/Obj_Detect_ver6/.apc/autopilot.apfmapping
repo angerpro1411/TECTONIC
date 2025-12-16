@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="obj_detect.cpp" path="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/obj_detect.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="_output.bmp" path="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/_output.bmp"/>
+    <originFiles name="output_.bmp" path="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/output_.bmp"/>
+    <originFiles name="output_BackGrRemoval.bmp" path="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/output_BackGrRemoval.bmp"/>
+    <originFiles name="rb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/Obj_detect_ver6/rb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "contourDetect.cpp",
+    "fileloc": 13,
+    "instructions": 243,
+    "loads": {
+      "G": 4,
+      "L": 7
+    },
+    "name": "sobel_rgb_green_outline_fixed",
+    "stores": {
+      "G": 2,
+      "L": 21
+    },
+    "total_instructions": 243
+  }
+}

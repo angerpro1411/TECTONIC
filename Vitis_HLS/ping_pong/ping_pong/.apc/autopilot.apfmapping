@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ping_pong.c" path="/home/dell3561-49/C_PROGRAM/5.Ping_pong_HLS/ping_pong.c"/>
+    <originFiles name="ping_pong.h" path="/home/dell3561-49/C_PROGRAM/5.Ping_pong_HLS/ping_pong.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.c" path="/home/dell3561-49/C_PROGRAM/5.Ping_pong_HLS/tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "BaGr_ObjDetect",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "BaGr_ObjDetect"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/dell3561-49/Vitis_HLS_folder/BaGrRe_ObjDetect/BaGrRe_ObjDetect/solution1/csynth.tcl",
+    "sourceLine": 23,
+    "success": true
+  }
+]

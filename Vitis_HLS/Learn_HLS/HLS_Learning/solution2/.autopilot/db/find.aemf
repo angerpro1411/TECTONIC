@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1733840503742">
+  <ports id="1" name="val_r" type="PortType" originalName="val" coreId="54" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="IN_VEC" type="PortType" originalName="IN_VEC" coreName="FIFO" coreId="0" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="OUT_VEC" type="PortType" originalName="OUT_VEC" coreName="FIFO" coreId="0" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="77" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="81" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="87" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="88" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="91" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="109" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="111" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.4/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="113" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="114" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="122" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.7/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.7/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.2"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.2"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.2"/>
+  <edges id="132" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.8/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.8/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.2"/>
+  <edges id="136" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.2"/>
+  <edges id="137" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.2"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.10/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="147" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.11/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.1"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.1"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.11/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.2"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.2"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.2"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.12/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.1"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.13/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="160" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.1"/>
+  <edges id="161" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.0"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.14/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.2"/>
+  <edges id="258" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="259" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="260" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="261" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="262" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="263" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="264" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="265" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="266" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="267" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="268" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="269" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@blocks.1"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="272" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="273" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.11"/>
+  <edges id="274" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.11"/>
+  <edges id="275" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.13"/>
+  <edges id="276" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.12"/>
+  <edges id="277" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="278" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="279" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="280" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="281" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="282" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="283" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="284" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="285" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="286" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="287" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="288" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="289" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="290" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="291" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="292" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="293" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="294" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="295" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="296" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="297" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="298" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="299" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="300" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="301" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="302" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="303" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="304" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="305" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="306" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="307" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="308" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.8/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="309" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="310" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.9/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="311" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.10/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="312" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.10/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.11/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0" is_back_edge="1"/>
+  <blocks id="15" name="entry" type="BlockType">
+    <controlOutputObjs>for.body.0</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="idx" originalName="idx" coreId="2296604913" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="val_r_read" coreId="1729245918" bitwidth="8" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>val_r</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="idx_write_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." coreId="2498167372" contextFuncName="find" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="find" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+      <controlInputObjs>for.body.0</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>13</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="72" name="for.end" type="BlockType">
+    <controlInputObjs>for.body.0</controlInputObjs>
+    <controlInputObjs>for.inc.1</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln23" lineNumber="23" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="find" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="23" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>23</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="4" typeName="Pipeline" iiViolation="Memory Dependency;mFailedII=3;mDependenceDistancedII=1;mLimitedResource=0;nodes=57__,23__;" id="266" pipe_depth="6" RegionName="VITIS_LOOP_13_1">
+    <basic_blocks id="19" name="for.body.0" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>for.inc.3</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body.0.split</controlOutputObjs>
+      <controlOutputObjs>for.end</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="idx_1" lineNumber="13" originalName="idx" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="find" bitwidth="4" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="icmp_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." rtlName="icmp_ln13_fu_92_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="find" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.73" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="find" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.end</controlInputObjs>
+        <controlInputObjs>for.body.0.split</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>13</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="26" name="for.body.0.split" type="BlockType">
+      <controlInputObjs>for.body.0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.then.0</controlOutputObjs>
+      <controlOutputObjs>if.else.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="IN_VEC_read" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" bitwidth="8" opcode="read" nodeLabel="1.0" m_display="1" m_delay="3.47" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>IN_VEC</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="icmp_ln17" lineNumber="17" fileName="main.cpp" fileDirectory="../." rtlName="grp_fu_79_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="find" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.91" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln17" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreId="2552621694" contextFuncName="find" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>if.else.0</controlInputObjs>
+        <controlInputObjs>if.then.0</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>17</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="29" name="if.else.0" type="BlockType">
+      <controlInputObjs>for.body.0.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="OUT_VEC_write_ln21" lineNumber="21" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="2.0" m_display="0" m_delay="3.47" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="21" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln0" coreId="3768094496" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <controlInputObjs>for.inc.0</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>21</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="32" name="if.then.0" type="BlockType">
+      <controlInputObjs>for.body.0.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="OUT_VEC_write_ln18" lineNumber="18" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="2.0" m_display="0" m_delay="3.47" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="18" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln19" lineNumber="19" fileName="main.cpp" fileDirectory="../." coreId="2552886318" contextFuncName="find" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="19" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <controlInputObjs>for.inc.0</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>18</validLinenumbers>
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="36" name="for.inc.0" type="BlockType">
+      <controlInputObjs>if.else.0</controlInputObjs>
+      <controlInputObjs>if.then.0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.then.1</controlOutputObjs>
+      <controlOutputObjs>if.else.1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="IN_VEC_read_1" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="1" m_delay="3.47" m_isLCDNode="true" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>IN_VEC</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="icmp_ln17_1" lineNumber="17" fileName="main.cpp" fileDirectory="../." rtlName="grp_fu_79_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="find" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.91" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln17" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreId="2552591895" contextFuncName="find" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>if.else.1</controlInputObjs>
+        <controlInputObjs>if.then.1</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>17</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="39" name="if.else.1" type="BlockType">
+      <controlInputObjs>for.inc.0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="OUT_VEC_write_ln21" lineNumber="21" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="3.0" m_display="0" m_delay="3.47" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="21" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln0" coreId="0" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <controlInputObjs>for.inc.1</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>21</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="42" name="if.then.1" type="BlockType">
+      <controlInputObjs>for.inc.0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="OUT_VEC_write_ln18" lineNumber="18" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="3.0" m_display="0" m_delay="3.47" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="18" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln19" lineNumber="19" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="find" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="19" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <controlInputObjs>for.inc.1</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>18</validLinenumbers>
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="46" name="for.inc.1" type="BlockType">
+      <controlInputObjs>if.else.1</controlInputObjs>
+      <controlInputObjs>if.then.1</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body.2</controlOutputObjs>
+      <controlOutputObjs>for.end</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="or_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." rtlName="or_ln13_fu_98_p2" coreId="1702258035" contextFuncName="find" bitwidth="4" opcode="or" m_display="0" m_topoIndex="8" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln13_1" lineNumber="13" fileName="main.cpp" fileDirectory="../." rtlName="icmp_ln13_1_fu_104_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="find" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.73" m_topoIndex="9" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." coreId="3768241272" contextFuncName="find" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.end</controlInputObjs>
+        <controlInputObjs>for.body.2</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>13</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="50" name="for.body.2" type="BlockType">
+      <controlInputObjs>for.inc.1</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.then.2</controlOutputObjs>
+      <controlOutputObjs>if.else.2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="IN_VEC_read_2" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="1" m_delay="3.47" m_isLCDNode="true" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>IN_VEC</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln17_2" lineNumber="17" fileName="main.cpp" fileDirectory="../." rtlName="grp_fu_79_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="find" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="1.91" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln17" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreId="3104" contextFuncName="find" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>if.else.2</controlInputObjs>
+        <controlInputObjs>if.then.2</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>17</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="53" name="if.else.2" type="BlockType">
+      <controlInputObjs>for.body.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="OUT_VEC_write_ln21" lineNumber="21" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="4.0" m_display="0" m_delay="3.47" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="21" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="br_ln0" coreId="543450483" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <controlInputObjs>for.inc.2</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>21</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="56" name="if.then.2" type="BlockType">
+      <controlInputObjs>for.body.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="OUT_VEC_write_ln18" lineNumber="18" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="4.0" m_display="0" m_delay="3.47" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="18" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln19" lineNumber="19" fileName="main.cpp" fileDirectory="../." coreId="7237481" contextFuncName="find" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="19" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <controlInputObjs>for.inc.2</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>18</validLinenumbers>
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="60" name="for.inc.2" type="BlockType">
+      <controlInputObjs>if.else.2</controlInputObjs>
+      <controlInputObjs>if.then.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.then.3</controlOutputObjs>
+      <controlOutputObjs>if.else.3</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="IN_VEC_read_3" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" bitwidth="8" opcode="read" nodeLabel="4.0" m_display="1" m_delay="3.47" m_isLCDNode="true" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>IN_VEC</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="icmp_ln17_3" lineNumber="17" fileName="main.cpp" fileDirectory="../." rtlName="grp_fu_79_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="find" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.91" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln17" lineNumber="17" fileName="main.cpp" fileDirectory="../." coreId="1398752256" contextFuncName="find" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="17" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>if.else.3</controlInputObjs>
+        <controlInputObjs>if.then.3</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>17</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="63" name="if.else.3" type="BlockType">
+      <controlInputObjs>for.inc.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.3</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="OUT_VEC_write_ln21" lineNumber="21" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="5.0" m_display="0" m_delay="3.47" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="21" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="3768169888" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <controlInputObjs>for.inc.3</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>21</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="66" name="if.then.3" type="BlockType">
+      <controlInputObjs>for.inc.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.3</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="OUT_VEC_write_ln18" lineNumber="18" fileName="main.cpp" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="find" opcode="write" nodeLabel="5.0" m_display="0" m_delay="3.47" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="18" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataOutputObjs>OUT_VEC</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln19" lineNumber="19" fileName="main.cpp" fileDirectory="../." coreId="3768297216" contextFuncName="find" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="19" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <controlInputObjs>for.inc.3</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>18</validLinenumbers>
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="70" name="for.inc.3" type="BlockType">
+      <controlInputObjs>if.else.3</controlInputObjs>
+      <controlInputObjs>if.then.3</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." rtlName="add_ln13_fu_110_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="find" bitwidth="4" opcode="add" m_display="0" m_delay="1.73" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="idx_write_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." coreId="3768301592" contextFuncName="find" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="br_ln13" lineNumber="13" fileName="main.cpp" fileDirectory="../." coreId="3768302528" contextFuncName="find" opcode="br" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.cpp" linenumber="13" fileDirectory="/home/dell3561-49/Vitis_HLS_folder/Learn_HLS" functionName="find"/>
+        <controlInputObjs>for.body.0</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="main.cpp">
+        <validLinenumbers>13</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <regnodes realName="icmp_ln17_reg_141">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln13_reg_133">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln17_1_reg_145">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln17_3_reg_153">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="idx_reg_121">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln17_2_reg_149">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="val_r_read_reg_128">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln13_1_reg_137">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <expressionNodes realName="grp_fu_79">
+    <nodeIds>24</nodeIds>
+    <nodeIds>34</nodeIds>
+    <nodeIds>48</nodeIds>
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln13_fu_98">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln13_fu_110">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln13_1_fu_104">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idx_fu_54">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln13_fu_92">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="grp_write_fu_70">
+    <nodeIds>27</nodeIds>
+    <nodeIds>30</nodeIds>
+    <nodeIds>37</nodeIds>
+    <nodeIds>40</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>54</nodeIds>
+    <nodeIds>61</nodeIds>
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln13_store_fu_116">
+    <nodeIds>68</nodeIds>
+  </ioNodes>
+  <ioNodes realName="val_r_read_read_fu_58">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln13_store_fu_84">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_64">
+    <nodeIds>23</nodeIds>
+    <nodeIds>33</nodeIds>
+    <nodeIds>47</nodeIds>
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="idx_1_load_fu_89">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioPorts name="IN_VEC">
+    <contents name="read">
+      <nodeIds>23</nodeIds>
+      <nodeIds>33</nodeIds>
+      <nodeIds>47</nodeIds>
+      <nodeIds>57</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_VEC">
+    <contents name="write">
+      <nodeIds>30</nodeIds>
+      <nodeIds>27</nodeIds>
+      <nodeIds>37</nodeIds>
+      <nodeIds>40</nodeIds>
+      <nodeIds>51</nodeIds>
+      <nodeIds>54</nodeIds>
+      <nodeIds>61</nodeIds>
+      <nodeIds>64</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="val_r">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="find" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="17" mMaxLatency="17">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>15</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_13_1" mII="4" mDepth="6" mMinTripCount="3" mMaxTripCount="3" mMinLatency="15" mMaxLatency="15" mType="1">
+      <basicBlocks>19</basicBlocks>
+      <basicBlocks>26</basicBlocks>
+      <basicBlocks>29</basicBlocks>
+      <basicBlocks>32</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <basicBlocks>39</basicBlocks>
+      <basicBlocks>42</basicBlocks>
+      <basicBlocks>46</basicBlocks>
+      <basicBlocks>50</basicBlocks>
+      <basicBlocks>53</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>60</basicBlocks>
+      <basicBlocks>63</basicBlocks>
+      <basicBlocks>66</basicBlocks>
+      <basicBlocks>70</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>72</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

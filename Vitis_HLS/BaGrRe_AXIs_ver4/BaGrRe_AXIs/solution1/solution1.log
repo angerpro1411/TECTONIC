@@ -1,0 +1,202 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.03 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.18 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.99 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.11 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 5.12 seconds. CPU system time: 0.4 seconds. Elapsed time: 5.56 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 203.410 MB.
+INFO: [HLS 200-10] Analyzing design file 'BackGrRemoval.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (BackGrRemoval.cpp:19:12)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (BackGrRemoval.cpp:16:9)
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file BackGrRemoval.cpp
+INFO: [HLS 200-10] Analyzing design file 'RGB2HSV.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.39 seconds. CPU system time: 0.59 seconds. Elapsed time: 5.19 seconds; current allocated memory: 204.160 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,530 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_AXIs_ver4/BaGrRe_AXIs/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 586 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_AXIs_ver4/BaGrRe_AXIs/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 412 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_AXIs_ver4/BaGrRe_AXIs/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 441 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/dell3561-49/Vitis_HLS_folder/BaGrRe_AXIs_ver4/BaGrRe_AXIs/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'Minof3(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'BackGrRemovalStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&)' (BackGrRemoval.cpp:37:26)
+INFO: [HLS 214-131] Inlining function 'MaxOf3(ap_uint<8>, ap_uint<8>, ap_uint<8>)' into 'BackGrRemovalStream(hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>&)' (BackGrRemoval.cpp:36:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_51_1' is marked as complete unroll implied by the pipeline pragma (BackGrRemoval.cpp:51:30)
+INFO: [HLS 214-291] Loop 'kernel_loop' is marked as complete unroll implied by the pipeline pragma (BackGrRemoval.cpp:61:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_51_1' (BackGrRemoval.cpp:51:30) in function 'BackGrRemovalStream' completely with a factor of 10 (BackGrRemoval.cpp:12:0)
+INFO: [HLS 214-186] Unrolling loop 'kernel_loop' (BackGrRemoval.cpp:61:26) in function 'BackGrRemovalStream' completely with a factor of 11 (BackGrRemoval.cpp:12:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0EEES6_E6h_line': Complete partitioning on dimension 1. (BackGrRemoval.cpp:19:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.91 seconds. CPU system time: 0.21 seconds. Elapsed time: 6.96 seconds; current allocated memory: 206.059 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 206.059 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 207.004 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 207.465 MB.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 320 for loop 'col_loop' (BackGrRemoval.cpp:27:2) in function 'BackGrRemovalStream'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 240 for loop 'row_loop' (BackGrRemoval.cpp:24:28) in function 'BackGrRemovalStream'.
+INFO: [XFORM 203-721] Changing loop 'Loop_row_loop_proc' (BackGrRemoval.cpp:23) to a process function for dataflow in function 'BackGrRemovalStream'.
+INFO: [XFORM 203-712] Applying dataflow to function 'BackGrRemovalStream' (BackGrRemoval.cpp:10:1), detected/extracted 1 process function(s): 
+	 'Loop_row_loop_proc1'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (BackGrRemoval.cpp:39:21) to (BackGrRemoval.cpp:24:19) in function 'Loop_row_loop_proc1'... converting 19 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 231.332 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'row_loop' (BackGrRemoval.cpp:23:12) in function 'Loop_row_loop_proc1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 232.102 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'BackGrRemovalStream' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_row_loop_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'row_loop_col_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 25, loop 'row_loop_col_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.48 seconds; current allocated memory: 237.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 237.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'BackGrRemovalStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 237.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 237.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_row_loop_proc1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'row_loop_col_loop' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_8_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_7_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_6_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1uldEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_5_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1uleOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_4_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulfYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_3_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_2_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulhbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_1_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ul_1ul_0_h_line_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1uljbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'Loop_row_loop_proc1_p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm1ELm1EEELi0E_RAM_AUTO_1R1W' to 'Loop_row_loop_proc1_p_ZZ19BackGrRemovalStreamRN3hls6streamINS_4axisI7ap_uintIkbM' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'sdiv_16ns_9ns_16_20_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_row_loop_proc1'.
+INFO: [RTMG 210-278] Implementing memory 'BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulbkb' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'BackGrRemovalStream_Loop_row_loop_proc1_BackGrRemovalStream_stream_stream_axis_ap_uint_24_1ul_1ulcud' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 241.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'BackGrRemovalStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/input_stream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'BackGrRemovalStream/output_stream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'BackGrRemovalStream' to 'ap_ctrl_none'.
+WARNING: [HLS 200-656] Deadlocks can occur since process Loop_row_loop_proc1 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
+INFO: [HLS 200-633] Setting ap_ctrl_none interface for BackGrRemovalStream
+INFO: [RTGEN 206-100] Finished creating RTL model for 'BackGrRemovalStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.47 seconds; current allocated memory: 248.422 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 250.996 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 259.953 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for BackGrRemovalStream.
+INFO: [VLOG 209-307] Generating Verilog RTL for BackGrRemovalStream.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 141.36 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8.22 seconds. CPU system time: 0.89 seconds. Elapsed time: 14.22 seconds; current allocated memory: 56.715 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/dell3561-49/Vivado_Project_2023.1/ip_repo/BackGrRe_NoCtrl
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -output /home/dell3561-49/Vivado_Project_2023.1/ip_repo/BackGrRe_NoCtrl 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/dell3561-49/Vivado_Project_2023.1/ip_repo/BackGrRe_NoCtrl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file /home/dell3561-49/Vivado_Project_2023.1/ip_repo/BackGrRe_NoCtrl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 8.71 seconds. CPU system time: 0.6 seconds. Elapsed time: 11.65 seconds; current allocated memory: 7.457 MB.

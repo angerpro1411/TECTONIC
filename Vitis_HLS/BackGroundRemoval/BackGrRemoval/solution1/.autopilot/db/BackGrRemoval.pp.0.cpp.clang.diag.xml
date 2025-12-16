@@ -41,7 +41,55 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>84</integer>
+      <integer>162</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=m_axi port=inBGR offset=slave bundle=gmem_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>BackGrRemoval.cpp</string>
+      <key>line</key>
+      <integer>163</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=s_axilite port=threshold bundle=control_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>BackGrRemoval.cpp</string>
+      <key>line</key>
+      <integer>164</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>BackGrRemoval.cpp</string>
+      <key>line</key>
+      <integer>176</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +105,7 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>84</integer>
+      <integer>176</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,11 +121,11 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>85</integer>
+      <integer>177</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=variable=h block factor=32 dim=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=variable=h cyclic factor=32 dim=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -89,7 +137,39 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>95</integer>
+      <integer>178</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5531</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>BackGrRemoval.cpp</string>
+      <key>line</key>
+      <integer>178</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=variable=mask core=RAM_T2P_BRAM_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>BackGrRemoval.cpp</string>
+      <key>line</key>
+      <integer>183</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,11 +185,11 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>104</integer>
+      <integer>195</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=variable=local_kernel complete dim=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -121,11 +201,11 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>111</integer>
+      <integer>206</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -137,11 +217,11 @@
       <key>filename</key>
       <string>BackGrRemoval.cpp</string>
       <key>line</key>
-      <integer>125</integer>
+      <integer>221</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=BackGrRemoval_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

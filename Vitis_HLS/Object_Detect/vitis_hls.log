@@ -1,0 +1,33 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-87-generic) on Fri Nov 07 10:03:13 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder/Object_Detect'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/Object_Detect/Object_Detect/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/Object_Detect/Object_Detect/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project Object_Detect 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/Object_Detect/Object_Detect'.
+INFO: [HLS 200-1510] Running: add_files obj_detect.cpp 
+INFO: [HLS 200-10] Adding design file 'obj_detect.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb output.bmp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'output.bmp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/Object_Detect/Object_Detect/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make: 'csim.exe' is up to date.
+✅ Output image written: output_320x240.bmp
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 76800
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.43 seconds. CPU system time: 0.09 seconds. Elapsed time: 0.51 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 1.38 seconds. Total CPU system time: 0.24 seconds. Total elapsed time: 1.47 seconds; peak allocated memory: 189.484 MB.

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="contourDetect.cpp" path="/home/dell3561-49/Vitis_HLS_folder/ContourDetec_ver2/contourDetect.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="output.bmp" path="/home/dell3561-49/Vitis_HLS_folder/ContourDetec_ver2/output.bmp"/>
+    <originFiles name="tb.cpp" path="/home/dell3561-49/Vitis_HLS_folder/ContourDetec_ver2/tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

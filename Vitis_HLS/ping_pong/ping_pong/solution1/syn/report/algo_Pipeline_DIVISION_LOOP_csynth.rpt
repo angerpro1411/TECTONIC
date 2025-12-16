@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'algo_Pipeline_DIVISION_LOOP'
+================================================================
+* Date:           Tue Oct  7 16:23:28 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        ping_pong
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.524 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      110|      110|  1.100 us|  1.100 us|  110|  110|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- DIVISION_LOOP  |      108|      108|        10|          1|          1|   100|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     30|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      99|     55|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|     161|     64|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     260|    185|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+--------------------+---------+----+----+----+-----+
+    |        Instance        |       Module       | BRAM_18K| DSP| FF | LUT| URAM|
+    +------------------------+--------------------+---------+----+----+----+-----+
+    |udiv_5ns_3ns_5_9_1_U13  |udiv_5ns_3ns_5_9_1  |        0|   0|  99|  55|    0|
+    +------------------------+--------------------+---------+----+----+----+-----+
+    |Total                   |                    |        0|   0|  99|  55|    0|
+    +------------------------+--------------------+---------+----+----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln56_fu_114_p2   |         +|   0|  0|  14|           7|           1|
+    |icmp_ln56_fu_108_p2  |      icmp|   0|  0|  14|           7|           6|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  30|          15|           9|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3     |   9|          2|    7|         14|
+    |i_fu_44                  |   9|          2|    7|         14|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   16|         32|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg  |   1|   0|    1|          0|
+    |empty_reg_177                     |   1|   0|    1|          0|
+    |i_fu_44                           |   7|   0|    7|          0|
+    |lshr_ln1_reg_181                  |   6|   0|    6|          0|
+    |empty_reg_177                     |  64|  32|    1|          0|
+    |lshr_ln1_reg_181                  |  64|  32|    6|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 161|  64|   40|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-----------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++-------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  algo_Pipeline_DIVISION_LOOP|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  algo_Pipeline_DIVISION_LOOP|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  algo_Pipeline_DIVISION_LOOP|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  algo_Pipeline_DIVISION_LOOP|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  algo_Pipeline_DIVISION_LOOP|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  algo_Pipeline_DIVISION_LOOP|  return value|
+|vecOut_0_address0  |  out|    6|   ap_memory|                     vecOut_0|         array|
+|vecOut_0_ce0       |  out|    1|   ap_memory|                     vecOut_0|         array|
+|vecOut_0_we0       |  out|    1|   ap_memory|                     vecOut_0|         array|
+|vecOut_0_d0        |  out|    8|   ap_memory|                     vecOut_0|         array|
+|d_address0         |  out|    7|   ap_memory|                            d|         array|
+|d_ce0              |  out|    1|   ap_memory|                            d|         array|
+|d_q0               |   in|    5|   ap_memory|                            d|         array|
+|c_address0         |  out|    7|   ap_memory|                            c|         array|
+|c_ce0              |  out|    1|   ap_memory|                            c|         array|
+|c_q0               |   in|    3|   ap_memory|                            c|         array|
+|vecOut_1_address0  |  out|    6|   ap_memory|                     vecOut_1|         array|
+|vecOut_1_ce0       |  out|    1|   ap_memory|                     vecOut_1|         array|
+|vecOut_1_we0       |  out|    1|   ap_memory|                     vecOut_1|         array|
+|vecOut_1_d0        |  out|    8|   ap_memory|                     vecOut_1|         array|
++-------------------+-----+-----+------------+-----------------------------+--------------+
+

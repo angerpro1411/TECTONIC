@@ -1,0 +1,4 @@
+3 warnings and 3 errors generated.
+Error while processing /home/dell3561-49/Vitis_HLS_folder/BackGrRemoval_AXIS_ver2/BaGrRemoval_AXIs_ver2/solution1/.autopilot/db/BackGrRemoval.pp.0.cpp.
+clang-tidy applied 8 of 8 suggested fixes.
+Suppressed 3 warnings (3 with check filters).

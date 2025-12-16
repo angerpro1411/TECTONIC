@@ -1,0 +1,527 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'hls_object_green_classification'" level="0">
+<item name = "Date">Mon Nov 17 11:04:03 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">Obj_detect_ver5</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.186 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_hls_object_green_classification_Pipeline_InitLoop_fu_789">hls_object_green_classification_Pipeline_InitLoop, 514, 514, 5.140 us, 5.140 us, 514, 514, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1_fu_805">hls_object_green_classification_Pipeline_VITIS_LOOP_349_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813">hls_object_green_classification_Pipeline_VITIS_LOOP_351_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11_fu_821">hls_object_green_classification_Pipeline_VITIS_LOOP_349_11, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830">hls_object_green_classification_Pipeline_VITIS_LOOP_351_22, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838">hls_object_green_classification_Pipeline_Pass1_5_inner0, 334, 334, 3.340 us, 3.340 us, 334, 334, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2_fu_865">hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2, 230402, 230402, 2.304 ms, 2.304 ms, 230402, 230402, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13_fu_873">hls_object_green_classification_Pipeline_VITIS_LOOP_349_13, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24_fu_881">hls_object_green_classification_Pipeline_VITIS_LOOP_351_24, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889">hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4, 230403, 230403, 2.304 ms, 2.304 ms, 230403, 230403, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_PASS_3_5_1_fu_903">hls_object_green_classification_Pipeline_PASS_3_5_1, 4, 65537, 40.000 ns, 0.655 ms, 4, 65537, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass_4_fu_912">hls_object_green_classification_Pipeline_pass_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944">hls_object_green_classification_Pipeline_PASS_3_5_2_in, 8, 65541, 80.000 ns, 0.655 ms, 8, 65541, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5_fu_966">hls_object_green_classification_Pipeline_VITIS_LOOP_592_5, 2, 65537, 20.000 ns, 0.655 ms, 2, 65537, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983">hls_object_green_classification_Pipeline_pass5_out_pass5_in, 76814, 76814, 0.768 ms, 0.768 ms, 76814, 76814, no</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6_fu_1029">hls_object_green_classification_Pipeline_VITIS_LOOP_626_6, 2, 65, 20.000 ns, 0.650 us, 2, 65, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- PASS_1">?, ?, ?, -, -, 76800, no</column>
+<column name="- PASS1_5_Outer">82586, 82586, 347, -, -, 238, no</column>
+<column name="- PASS2">?, ?, ?, -, -, 0 ~ 65535, no</column>
+<column name="- PASS_3_5_2_out">3, 4295491564, 3 ~ 65546, -, -, 1 ~ 65534, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 4, -, -, -</column>
+<column name="Expression">-, -, 0, 1146, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 16, 4537, 5986, -</column>
+<column name="Memory">338, -, 33, 17, 0</column>
+<column name="Multiplexer">-, -, -, 2734, -</column>
+<column name="Register">-, -, 1072, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">120, 9, 5, 18, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="CTRL_s_axi_U">CTRL_s_axi, 0, 0, 298, 299, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_InitLoop_fu_789">hls_object_green_classification_Pipeline_InitLoop, 0, 0, 12, 52, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_PASS_3_5_1_fu_903">hls_object_green_classification_Pipeline_PASS_3_5_1, 0, 0, 46, 97, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944">hls_object_green_classification_Pipeline_PASS_3_5_2_in, 0, 0, 324, 318, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838">hls_object_green_classification_Pipeline_Pass1_5_inner0, 0, 3, 857, 1437, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1_fu_805">hls_object_green_classification_Pipeline_VITIS_LOOP_349_1, 0, 0, 35, 64, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11_fu_821">hls_object_green_classification_Pipeline_VITIS_LOOP_349_11, 0, 0, 44, 64, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13_fu_873">hls_object_green_classification_Pipeline_VITIS_LOOP_349_13, 0, 0, 35, 64, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813">hls_object_green_classification_Pipeline_VITIS_LOOP_351_2, 0, 0, 121, 194, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830">hls_object_green_classification_Pipeline_VITIS_LOOP_351_22, 0, 0, 121, 194, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24_fu_881">hls_object_green_classification_Pipeline_VITIS_LOOP_351_24, 0, 0, 121, 194, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2_fu_865">hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2, 0, 0, 76, 250, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889">hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4, 0, 0, 116, 299, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5_fu_966">hls_object_green_classification_Pipeline_VITIS_LOOP_592_5, 0, 0, 15, 75, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6_fu_1029">hls_object_green_classification_Pipeline_VITIS_LOOP_626_6, 0, 0, 15, 75, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983">hls_object_green_classification_Pipeline_pass5_out_pass5_in, 0, 2, 732, 819, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass_4_fu_912">hls_object_green_classification_Pipeline_pass_4, 0, 0, 272, 420, 0</column>
+<column name="mul_11s_11s_21_1_1_U169">mul_11s_11s_21_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_32ns_34ns_65_2_1_U163">mul_32ns_34ns_65_2_1, 0, 4, 173, 54, 0</column>
+<column name="mul_41ns_43ns_56_3_1_U164">mul_41ns_43ns_56_3_1, 0, 6, 230, 147, 0</column>
+<column name="mul_7ns_8ns_14_1_1_U172">mul_7ns_8ns_14_1_1, 0, 0, 0, 41, 0</column>
+<column name="mul_7ns_8ns_14_1_1_U175">mul_7ns_8ns_14_1_1, 0, 0, 0, 41, 0</column>
+<column name="mul_7ns_8ns_14_1_1_U176">mul_7ns_8ns_14_1_1, 0, 0, 0, 41, 0</column>
+<column name="mul_8ns_10ns_17_1_1_U171">mul_8ns_10ns_17_1_1, 0, 0, 0, 63, 0</column>
+<column name="mul_8ns_10ns_17_1_1_U173">mul_8ns_10ns_17_1_1, 0, 0, 0, 63, 0</column>
+<column name="mul_8ns_10ns_17_1_1_U174">mul_8ns_10ns_17_1_1, 0, 0, 0, 63, 0</column>
+<column name="mux_2_1_8_1_1_U167">mux_2_1_8_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_2_1_8_1_1_U168">mux_2_1_8_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_3_2_1_1_1_U177">mux_3_2_1_1_1, 0, 0, 0, 14, 0</column>
+<column name="urem_32ns_3ns_2_36_seq_1_U165">urem_32ns_3ns_2_36_seq_1, 0, 0, 394, 238, 0</column>
+<column name="urem_32ns_3ns_2_36_seq_1_U166">urem_32ns_3ns_2_36_seq_1, 0, 0, 394, 238, 0</column>
+<column name="urem_8ns_3ns_2_12_seq_1_U170">urem_8ns_3ns_2_12_seq_1, 0, 0, 106, 44, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="mac_muladd_11s_11s_21s_21_4_1_U181">mac_muladd_11s_11s_21s_21_4_1, i0 + i1 * i1</column>
+<column name="mac_muladd_14s_7ns_14ns_14_4_1_U180">mac_muladd_14s_7ns_14ns_14_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8ns_4ns_41ns_41_4_1_U179">mac_muladd_8ns_4ns_41ns_41_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_8ns_6ns_40ns_41_4_1_U178">mac_muladd_8ns_6ns_40ns_41_4_1, i0 * i1 + i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="center_is_green_U">center_is_green_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 1, 1, 512</column>
+<column name="is_external_U">center_is_green_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 1, 1, 512</column>
+<column name="hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_U">hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_Rbkb, 1, 0, 0, 0, 320, 8, 1, 2560</column>
+<column name="hls_mulmulmulobject_green_classification_stream_stream_short_short_ap_uint_ap_uint_U">hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_1_Rbkb, 1, 0, 0, 0, 320, 8, 1, 2560</column>
+<column name="imgR_U">imgR_RAM_2P_BRAM_1R1W, 64, 0, 0, 0, 76800, 8, 1, 614400</column>
+<column name="imgG_U">imgR_RAM_2P_BRAM_1R1W, 64, 0, 0, 0, 76800, 8, 1, 614400</column>
+<column name="imgB_U">imgR_RAM_2P_BRAM_1R1W, 64, 0, 0, 0, 76800, 8, 1, 614400</column>
+<column name="label_map_U">label_map_RAM_2P_BRAM_1R1W, 128, 0, 0, 0, 76800, 16, 1, 1228800</column>
+<column name="min_x_U">min_x_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 9, 1, 4608</column>
+<column name="max_x_U">min_x_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 9, 1, 4608</column>
+<column name="min_y_U">min_y_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 8, 1, 4096</column>
+<column name="max_y_U">min_y_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 8, 1, 4096</column>
+<column name="obj_is_green_buf_U">obj_is_green_buf_RAM_AUTO_1R1W, 0, 1, 1, 0, 32, 1, 1, 32</column>
+<column name="obj_x_buf_U">obj_x_buf_RAM_AUTO_1R1W, 0, 16, 8, 0, 32, 16, 1, 512</column>
+<column name="obj_y_buf_U">obj_x_buf_RAM_AUTO_1R1W, 0, 16, 8, 0, 32, 16, 1, 512</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_U">p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELmdEe, 1, 0, 0, 0, 8560, 1, 1, 8560</column>
+<column name="parent_U">parent_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 512, 16, 1, 8192</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln455_1_fu_1265_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln455_fu_1155_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln477_1_fu_1569_p2">+, 0, 0, 11, 11, 11</column>
+<column name="add_ln477_fu_1500_p2">+, 0, 0, 13, 10, 10</column>
+<column name="add_ln478_1_fu_1614_p2">+, 0, 0, 11, 11, 11</column>
+<column name="add_ln478_fu_1517_p2">+, 0, 0, 13, 10, 10</column>
+<column name="add_ln487_1_fu_1649_p2">+, 0, 0, 17, 17, 17</column>
+<column name="add_ln487_fu_1644_p2">+, 0, 0, 17, 17, 2</column>
+<column name="add_ln488_1_fu_1683_p2">+, 0, 0, 17, 17, 17</column>
+<column name="add_ln488_2_fu_1689_p2">+, 0, 0, 17, 17, 17</column>
+<column name="add_ln488_fu_1654_p2">+, 0, 0, 15, 8, 2</column>
+<column name="add_ln497_fu_1832_p2">+, 0, 0, 39, 32, 1</column>
+<column name="add_ln518_fu_2046_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln561_fu_2084_p2">+, 0, 0, 23, 16, 1</column>
+<column name="col_1_fu_1793_p2">+, 0, 0, 39, 32, 1</column>
+<column name="empty_51_fu_1931_p2">+, 0, 0, 15, 8, 2</column>
+<column name="gx_fu_1575_p2">+, 0, 0, 11, 11, 11</column>
+<column name="i_9_fu_1129_p2">+, 0, 0, 24, 17, 1</column>
+<column name="indvars_iv_next118_fu_1956_p2">+, 0, 0, 15, 8, 1</column>
+<column name="next_label_1_fu_1728_p2">+, 0, 0, 23, 16, 1</column>
+<column name="gy_fu_1620_p2">-, 0, 0, 11, 11, 11</column>
+<column name="sub_ln453_1_fu_1387_p2">-, 0, 0, 11, 3, 2</column>
+<column name="sub_ln453_fu_1357_p2">-, 0, 0, 11, 3, 2</column>
+<column name="sub_ln457_fu_1299_p2">-, 0, 0, 17, 14, 14</column>
+<column name="sub_ln477_1_fu_1563_p2">-, 0, 0, 12, 11, 11</column>
+<column name="sub_ln477_fu_1533_p2">-, 0, 0, 14, 9, 9</column>
+<column name="sub_ln478_1_fu_1604_p2">-, 0, 0, 14, 9, 9</column>
+<column name="sub_ln478_fu_1598_p2">-, 0, 0, 12, 11, 11</column>
+<column name="and_ln476_fu_1472_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln492_1_fu_1764_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln492_fu_1760_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state85_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983_out_stream_TREADY">and, 0, 0, 2, 1, 1</column>
+<column name="edge_fu_1639_p2">icmp, 0, 0, 28, 21, 16</column>
+<column name="icmp_ln364_fu_1777_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln445_fu_1123_p2">icmp, 0, 0, 24, 17, 17</column>
+<column name="icmp_ln466_fu_1409_p2">icmp, 0, 0, 38, 31, 1</column>
+<column name="icmp_ln467_fu_1433_p2">icmp, 0, 0, 39, 32, 1</column>
+<column name="icmp_ln476_fu_1466_p2">icmp, 0, 0, 38, 31, 1</column>
+<column name="icmp_ln489_fu_1710_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln492_1_fu_1722_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln492_fu_1716_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="icmp_ln497_fu_1827_p2">icmp, 0, 0, 39, 32, 9</column>
+<column name="icmp_ln502_fu_1864_p2">icmp, 0, 0, 15, 8, 6</column>
+<column name="icmp_ln518_1_fu_2026_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln518_fu_1886_p2">icmp, 0, 0, 20, 15, 1</column>
+<column name="icmp_ln521_fu_2037_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln561_fu_2064_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln562_fu_2079_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="ap_block_state90_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="col_2_fu_1837_p3">select, 0, 0, 32, 1, 1</column>
+<column name="lbl_1_fu_1741_p3">select, 0, 0, 16, 1, 16</column>
+<column name="lbl_3_fu_1754_p3">select, 0, 0, 16, 1, 16</column>
+<column name="middle_3_fu_1448_p3">select, 0, 0, 8, 1, 8</column>
+<column name="next_label_2_fu_1747_p3">select, 0, 0, 16, 1, 16</column>
+<column name="next_label_fu_1734_p3">select, 0, 0, 16, 1, 16</column>
+<column name="row_3_fu_1844_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln453_1_fu_1393_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln453_2_fu_1169_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln453_3_fu_1205_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln453_fu_1363_p3">select, 0, 0, 2, 1, 2</column>
+<column name="top_3_fu_1425_p3">select, 0, 0, 8, 1, 8</column>
+<column name="grp_fu_1183_p0">xor, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_1219_p0">xor, 0, 0, 32, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">462, 92, 1, 92</column>
+<column name="center_is_green_address1">14, 3, 9, 27</column>
+<column name="center_is_green_ce0">9, 2, 1, 2</column>
+<column name="center_is_green_ce1">14, 3, 1, 3</column>
+<column name="center_is_green_d1">14, 3, 1, 3</column>
+<column name="center_is_green_we1">14, 3, 1, 3</column>
+<column name="col_fu_312">9, 2, 32, 64</column>
+<column name="grp_fu_1046_p0">14, 3, 32, 96</column>
+<column name="i_2_fu_308">9, 2, 17, 34</column>
+<column name="i_5_fu_376">9, 2, 16, 32</column>
+<column name="i_6_fu_372">9, 2, 16, 32</column>
+<column name="imgB_address0">14, 3, 17, 51</column>
+<column name="imgB_ce0">14, 3, 1, 3</column>
+<column name="imgG_address0">14, 3, 17, 51</column>
+<column name="imgG_ce0">14, 3, 1, 3</column>
+<column name="imgR_address0">14, 3, 17, 51</column>
+<column name="imgR_ce0">14, 3, 1, 3</column>
+<column name="in_stream_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="is_external_address1">14, 3, 9, 27</column>
+<column name="is_external_ce0">9, 2, 1, 2</column>
+<column name="is_external_ce1">14, 3, 1, 3</column>
+<column name="is_external_d1">14, 3, 1, 3</column>
+<column name="is_external_we1">14, 3, 1, 3</column>
+<column name="label_map_address0">25, 5, 17, 85</column>
+<column name="label_map_address1">20, 4, 17, 68</column>
+<column name="label_map_ce0">25, 5, 1, 5</column>
+<column name="label_map_ce1">14, 3, 1, 3</column>
+<column name="label_map_d1">14, 3, 16, 48</column>
+<column name="label_map_we1">14, 3, 1, 3</column>
+<column name="lbl_2_reg_774">9, 2, 16, 32</column>
+<column name="lbl_fu_332">9, 2, 16, 32</column>
+<column name="max_x_address0">25, 5, 9, 45</column>
+<column name="max_x_address1">14, 3, 9, 27</column>
+<column name="max_x_ce0">25, 5, 1, 5</column>
+<column name="max_x_ce1">14, 3, 1, 3</column>
+<column name="max_x_d1">14, 3, 9, 27</column>
+<column name="max_x_we1">14, 3, 1, 3</column>
+<column name="max_y_address0">25, 5, 9, 45</column>
+<column name="max_y_address1">14, 3, 9, 27</column>
+<column name="max_y_ce0">25, 5, 1, 5</column>
+<column name="max_y_ce1">14, 3, 1, 3</column>
+<column name="max_y_d1">14, 3, 8, 24</column>
+<column name="max_y_we1">14, 3, 1, 3</column>
+<column name="min_x_address0">25, 5, 9, 45</column>
+<column name="min_x_address1">14, 3, 9, 27</column>
+<column name="min_x_ce0">25, 5, 1, 5</column>
+<column name="min_x_ce1">14, 3, 1, 3</column>
+<column name="min_x_d1">14, 3, 9, 27</column>
+<column name="min_x_we1">14, 3, 1, 3</column>
+<column name="min_y_address0">25, 5, 9, 45</column>
+<column name="min_y_address1">14, 3, 9, 27</column>
+<column name="min_y_ce0">25, 5, 1, 5</column>
+<column name="min_y_ce1">14, 3, 1, 3</column>
+<column name="min_y_d1">14, 3, 8, 24</column>
+<column name="min_y_we1">14, 3, 1, 3</column>
+<column name="obj_is_green_address0">20, 4, 5, 20</column>
+<column name="obj_is_green_buf_address0">14, 3, 5, 15</column>
+<column name="obj_is_green_buf_ce0">14, 3, 1, 3</column>
+<column name="obj_is_green_buf_we0">9, 2, 1, 2</column>
+<column name="obj_is_green_ce0">20, 4, 1, 4</column>
+<column name="obj_is_green_d0">14, 3, 1, 3</column>
+<column name="obj_is_green_we0">14, 3, 1, 3</column>
+<column name="obj_x_address0">20, 4, 5, 20</column>
+<column name="obj_x_buf_address0">14, 3, 5, 15</column>
+<column name="obj_x_buf_ce0">14, 3, 1, 3</column>
+<column name="obj_x_buf_we0">9, 2, 1, 2</column>
+<column name="obj_x_ce0">20, 4, 1, 4</column>
+<column name="obj_x_d0">14, 3, 16, 48</column>
+<column name="obj_x_we0">14, 3, 1, 3</column>
+<column name="obj_y_address0">20, 4, 5, 20</column>
+<column name="obj_y_buf_address0">14, 3, 5, 15</column>
+<column name="obj_y_buf_ce0">14, 3, 1, 3</column>
+<column name="obj_y_buf_we0">9, 2, 1, 2</column>
+<column name="obj_y_ce0">20, 4, 1, 4</column>
+<column name="obj_y_d0">14, 3, 16, 48</column>
+<column name="obj_y_we0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_address0">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_ce0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_1_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_address0">20, 4, 14, 56</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_ce0">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_2_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address0">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_ce0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_3_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_address0">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_ce0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_4_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_address0">20, 4, 14, 56</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_ce0">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_5_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_address0">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_ce0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_6_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address0">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_ce0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_7_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_address0">20, 4, 14, 56</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_ce0">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_8_we1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_address0">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_address1">14, 3, 14, 42</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_ce0">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_ce1">14, 3, 1, 3</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_d1">20, 4, 1, 4</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_we1">14, 3, 1, 3</column>
+<column name="parent_address0">65, 13, 9, 117</column>
+<column name="parent_address1">37, 7, 9, 63</column>
+<column name="parent_ce0">65, 12, 1, 12</column>
+<column name="parent_ce1">31, 6, 1, 6</column>
+<column name="parent_d1">37, 7, 16, 112</column>
+<column name="parent_we1">31, 6, 1, 6</column>
+<column name="row_fu_316">9, 2, 32, 64</column>
+<column name="y_fu_368">9, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="B_reg_2297">8, 0, 8, 0</column>
+<column name="G_reg_2292">8, 0, 8, 0</column>
+<column name="R_reg_2285">8, 0, 8, 0</column>
+<column name="add_ln455_reg_2257">11, 0, 17, 6</column>
+<column name="add_ln457_1_reg_2338">41, 0, 41, 0</column>
+<column name="add_ln477_reg_2455">10, 0, 10, 0</column>
+<column name="add_ln478_reg_2460">10, 0, 10, 0</column>
+<column name="add_ln487_1_reg_2494">17, 0, 17, 0</column>
+<column name="add_ln488_2_reg_2499">17, 0, 17, 0</column>
+<column name="and_ln476_reg_2451">1, 0, 1, 0</column>
+<column name="and_ln492_1_reg_2565">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">91, 0, 91, 0</column>
+<column name="col_1_reg_2584">32, 0, 32, 0</column>
+<column name="col_fu_312">32, 0, 32, 0</column>
+<column name="col_load_1_reg_2244">32, 0, 32, 0</column>
+<column name="cur_7_reg_2525">16, 0, 16, 0</column>
+<column name="cur_reg_2514">16, 0, 16, 0</column>
+<column name="edge_reg_2481">1, 0, 1, 0</column>
+<column name="empty_50_reg_2614">14, 0, 14, 0</column>
+<column name="gray_pix_1_fu_344">8, 0, 8, 0</column>
+<column name="gray_pix_1_load_load_fu_1112_p1">8, 0, 8, 0</column>
+<column name="gray_pix_reg_2368">8, 0, 8, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_InitLoop_fu_789_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_PASS_3_5_1_fu_903_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_PASS_3_5_2_in_fu_944_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_Pass1_5_inner0_fu_838_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11_fu_821_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13_fu_873_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1_fu_805_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22_fu_830_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24_fu_881_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2_fu_813_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2_fu_865_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4_fu_889_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5_fu_966_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6_fu_1029_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_object_green_classification_Pipeline_pass_4_fu_912_ap_start_reg">1, 0, 1, 0</column>
+<column name="gx_reg_2465">11, 0, 11, 0</column>
+<column name="hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_2_reg_2353">9, 0, 9, 0</column>
+<column name="hls_object_green_classification_stream_stream_short_short_ap_uint_ap_uint_3_reg_2358">9, 0, 9, 0</column>
+<column name="i_2_fu_308">17, 0, 17, 0</column>
+<column name="i_5_fu_376">16, 0, 16, 0</column>
+<column name="i_6_fu_372">16, 0, 16, 0</column>
+<column name="i_9_reg_2239">17, 0, 17, 0</column>
+<column name="icmp_ln364_reg_2575">1, 0, 1, 0</column>
+<column name="icmp_ln489_reg_2536">1, 0, 1, 0</column>
+<column name="icmp_ln492_1_reg_2550">1, 0, 1, 0</column>
+<column name="icmp_ln492_reg_2543">1, 0, 1, 0</column>
+<column name="icmp_ln518_reg_2605">1, 0, 1, 0</column>
+<column name="icmp_ln521_reg_2697">1, 0, 1, 0</column>
+<column name="icmp_ln562_reg_2735">1, 0, 1, 0</column>
+<column name="label_map_addr_reg_2313">17, 0, 17, 0</column>
+<column name="lbl_2_reg_774">16, 0, 16, 0</column>
+<column name="lbl_3_reg_2560">16, 0, 16, 0</column>
+<column name="lbl_fu_332">16, 0, 16, 0</column>
+<column name="max_x_load_reg_2764">9, 0, 9, 0</column>
+<column name="max_y_load_reg_2774">8, 0, 8, 0</column>
+<column name="middle_2_fu_340">8, 0, 8, 0</column>
+<column name="middle_2_load_load_fu_1109_p1">8, 0, 8, 0</column>
+<column name="middle_3_reg_2445">8, 0, 8, 0</column>
+<column name="min_x_load_reg_2759">9, 0, 9, 0</column>
+<column name="min_y_load_reg_2769">8, 0, 8, 0</column>
+<column name="mul_ln479_reg_2476">21, 0, 21, 0</column>
+<column name="mul_ln509_1_reg_2650">14, 0, 14, 0</column>
+<column name="mul_ln509_reg_2645">14, 0, 14, 0</column>
+<column name="next_label_2_reg_2555">16, 0, 16, 0</column>
+<column name="p_0_0_0178769_fu_320">8, 0, 8, 0</column>
+<column name="p_0_0_01787_171_fu_324">8, 0, 8, 0</column>
+<column name="p_0_0_01787_273_fu_328">8, 0, 8, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_171_reg_2389">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_172_reg_2394">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_173_reg_2399">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_174_reg_2404">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_175_reg_2409">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_176_reg_2414">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_177_reg_2419">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_178_reg_2424">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_179_reg_2429">14, 0, 14, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_183_reg_2655">1, 0, 1, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_184_reg_2660">1, 0, 1, 0</column>
+<column name="p_ZZ31hls_object_green_classificationRN3hls6streamINS_4axisI7ap_uintILi24EELm1ELm_185_reg_2665">1, 0, 1, 0</column>
+<column name="parent_addr_reg_2691">9, 0, 9, 0</column>
+<column name="reg_1074">16, 0, 16, 0</column>
+<column name="row_fu_316">32, 0, 32, 0</column>
+<column name="select_ln453_1_reg_2434">2, 0, 2, 0</column>
+<column name="select_ln453_reg_2385">2, 0, 2, 0</column>
+<column name="tmp_37_reg_2268">1, 0, 1, 0</column>
+<column name="tmp_41_reg_2609">7, 0, 7, 0</column>
+<column name="tmp_42_reg_2635">7, 0, 7, 0</column>
+<column name="tmp_43_reg_2640">7, 0, 7, 0</column>
+<column name="tmp_reg_2675">1, 0, 1, 0</column>
+<column name="top_2_fu_336">8, 0, 8, 0</column>
+<column name="top_2_load_load_fu_1106_p1">8, 0, 8, 0</column>
+<column name="top_3_reg_2438">8, 0, 8, 0</column>
+<column name="trunc_ln350_1_reg_2531">9, 0, 9, 0</column>
+<column name="trunc_ln350_reg_2520">9, 0, 9, 0</column>
+<column name="trunc_ln445_2_reg_2377">8, 0, 8, 0</column>
+<column name="trunc_ln445_3_reg_2250">17, 0, 17, 0</column>
+<column name="trunc_ln502_reg_2670">2, 0, 2, 0</column>
+<column name="trunc_ln518_reg_2683">9, 0, 9, 0</column>
+<column name="udiv_ln453_1_cast_reg_2363">14, 0, 14, 0</column>
+<column name="udiv_ln_cast_reg_2333">14, 0, 14, 0</column>
+<column name="y_fu_368">8, 0, 8, 0</column>
+<column name="zext_ln349_2_reload_cast_reg_2579">9, 0, 64, 55</column>
+<column name="zext_ln561_reg_2717">16, 0, 64, 48</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CTRL_AWVALID">in, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_AWREADY">out, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_AWADDR">in, 8, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_WVALID">in, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_WREADY">out, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_WDATA">in, 32, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_WSTRB">in, 4, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_ARVALID">in, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_ARREADY">out, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_ARADDR">in, 8, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_RVALID">out, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_RREADY">in, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_RDATA">out, 32, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_RRESP">out, 2, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_BVALID">out, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_BREADY">in, 1, s_axi, CTRL, array</column>
+<column name="s_axi_CTRL_BRESP">out, 2, s_axi, CTRL, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, hls_object_green_classification, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, hls_object_green_classification, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, hls_object_green_classification, return value</column>
+<column name="in_stream_TDATA">in, 24, axis, in_stream_V_data_V, pointer</column>
+<column name="in_stream_TVALID">in, 1, axis, in_stream_V_dest_V, pointer</column>
+<column name="in_stream_TREADY">out, 1, axis, in_stream_V_dest_V, pointer</column>
+<column name="in_stream_TDEST">in, 1, axis, in_stream_V_dest_V, pointer</column>
+<column name="in_stream_TKEEP">in, 3, axis, in_stream_V_keep_V, pointer</column>
+<column name="in_stream_TSTRB">in, 3, axis, in_stream_V_strb_V, pointer</column>
+<column name="in_stream_TUSER">in, 1, axis, in_stream_V_user_V, pointer</column>
+<column name="in_stream_TLAST">in, 1, axis, in_stream_V_last_V, pointer</column>
+<column name="in_stream_TID">in, 1, axis, in_stream_V_id_V, pointer</column>
+<column name="out_stream_TDATA">out, 24, axis, out_stream_V_data_V, pointer</column>
+<column name="out_stream_TVALID">out, 1, axis, out_stream_V_dest_V, pointer</column>
+<column name="out_stream_TREADY">in, 1, axis, out_stream_V_dest_V, pointer</column>
+<column name="out_stream_TDEST">out, 1, axis, out_stream_V_dest_V, pointer</column>
+<column name="out_stream_TKEEP">out, 3, axis, out_stream_V_keep_V, pointer</column>
+<column name="out_stream_TSTRB">out, 3, axis, out_stream_V_strb_V, pointer</column>
+<column name="out_stream_TUSER">out, 1, axis, out_stream_V_user_V, pointer</column>
+<column name="out_stream_TLAST">out, 1, axis, out_stream_V_last_V, pointer</column>
+<column name="out_stream_TID">out, 1, axis, out_stream_V_id_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

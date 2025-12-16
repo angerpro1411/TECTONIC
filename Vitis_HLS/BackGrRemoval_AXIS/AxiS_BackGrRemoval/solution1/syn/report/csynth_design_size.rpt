@@ -1,0 +1,32 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Instructions per Function for each Compilation Phase
++---------------------------+----------------------+--------------+---------------+----------------------+---------------+
+| Function                  | Location             | Compile/Link | Unroll/Inline | Performance/Pipeline | Optimizations |
++---------------------------+----------------------+--------------+---------------+----------------------+---------------+
+| + BackGrRemoval_stream_v2 | BackGrRemoval.cpp:54 | 1,571        | 1,352         | 926                  | 957           |
+|    unpack_axi_pixel       | BackGrRemoval.cpp:21 |   198        |    15         |                      |               |
+|    rgb_to_h_scaled        | BackGrRemoval.cpp:28 |   400        |               |                      |               |
+|    pack_axi_pixel         | BackGrRemoval.cpp:10 |   377        |    15         |                      |               |
++---------------------------+----------------------+--------------+---------------+----------------------+---------------+
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

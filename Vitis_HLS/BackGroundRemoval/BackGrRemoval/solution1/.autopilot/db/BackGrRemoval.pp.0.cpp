@@ -5733,59 +5733,67 @@ void findHSV(PixelBGR* in,u8* out_h,u8* out_s,u8* out_v);
 
 __attribute__((sdx_kernel("BackGrRemoval", 0))) void BackGrRemoval(PixelBGR* inBGR,u8 threshold);
 # 4 "BackGrRemoval.cpp" 2
-# 73 "BackGrRemoval.cpp"
+# 161 "BackGrRemoval.cpp"
 __attribute__((sdx_kernel("BackGrRemoval", 0))) void BackGrRemoval(PixelBGR* inBGR, u8 threshold) {
 #line 25 "/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=BackGrRemoval
-# 73 "BackGrRemoval.cpp"
+# 161 "BackGrRemoval.cpp"
 
 #line 7 "/home/dell3561-49/Vitis_HLS_folder/BackGroundRemoval/BackGrRemoval/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=BackGrRemoval
-# 73 "BackGrRemoval.cpp"
+# 161 "BackGrRemoval.cpp"
 
+#pragma HLS INTERFACE m_axi port=inBGR offset=slave bundle=gmem
+#pragma HLS INTERFACE s_axilite port=threshold bundle=control
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 
-    const u8 kernel_size = 11;
+ const u8 kernel_size = 11;
     const u8 total_Pixel_in_kernel = 121;
     const u8 EightyPercentOfKernel = 96;
     const u8 Half_size_kernel = 5;
 
-    u8 h[(320*240)];
-    u8 s[(320*240)];
-    u8 v[(320*240)];
+    static u8 h[(320*240)];
+    static u8 s[(320*240)];
+    static u8 v[(320*240)];
+    static bool mask[(320*240)];
 
 #pragma HLS RESOURCE variable=h core=RAM_T2P_BRAM
-#pragma HLS ARRAY_PARTITION variable=h block factor=32 dim=1
+#pragma HLS ARRAY_PARTITION variable=h cyclic factor=32 dim=1
+#pragma HLS RESOURCE variable=mask core=RAM_T2P_BRAM
 
 
- findHSV(inBGR, h, s, v);
+ Mask_init:
+    for (u32 index = 0; index < (320*240); index++) {
+#pragma HLS PIPELINE II=1
+ mask[index] = false;
+    }
+
+
+    findHSV(inBGR, h, s, v);
+
 
     image_row_loop:
     for (u32 y = Half_size_kernel; y < 240 - Half_size_kernel; y++) {
-
         image_column_loop:
         for (u32 x = Half_size_kernel; x < 320 - Half_size_kernel; x++) {
 #pragma HLS PIPELINE II=1
-
  u32 center_idx = x + y * 320;
             u8 center_h = h[center_idx];
-
+            u32 count = 0;
 
             if (center_h < threshold) {
 
-                u8 local_kernel[121];
-#pragma HLS ARRAY_PARTITION variable=local_kernel complete dim=1
-
-
- u32 count = 0;
-                load_kernel:
+                kernel_y:
                 for (u32 j = 0; j < kernel_size; j++) {
-                    VITIS_LOOP_110_1: for (u32 i = 0; i < kernel_size; i++) {
-#pragma HLS UNROLL
- u32 idx = (x + i - Half_size_kernel) +
-                                  (y + j - Half_size_kernel) * 320;
-                        u8 h_val = h[idx];
-                        local_kernel[j * kernel_size + i] = h_val;
-                        if (h_val < threshold) count++;
+                    kernel_x:
+                    for (u32 i = 0; i < kernel_size; i++) {
+#pragma HLS UNROLL factor=4
+ u32 idx = (x + i - Half_size_kernel)
+                                + (y + j - Half_size_kernel) * 320;
+                        if (h[idx] < threshold) {
+                            mask[idx] = true;
+                            count++;
+                        }
                     }
                 }
 
@@ -5793,10 +5801,10 @@ __attribute__((sdx_kernel("BackGrRemoval", 0))) void BackGrRemoval(PixelBGR* inB
                 if (count >= EightyPercentOfKernel) {
                     whiten_kernel:
                     for (u32 j = 0; j < kernel_size; j++) {
-                        VITIS_LOOP_124_2: for (u32 i = 0; i < kernel_size; i++) {
-#pragma HLS UNROLL
- u32 idx = (x + i - Half_size_kernel) +
-                                      (y + j - Half_size_kernel) * 320;
+                        VITIS_LOOP_220_1: for (u32 i = 0; i < kernel_size; i++) {
+#pragma HLS UNROLL factor=4
+ u32 idx = (x + i - Half_size_kernel)
+                                    + (y + j - Half_size_kernel) * 320;
                             inBGR[idx].r = 255;
                             inBGR[idx].g = 255;
                             inBGR[idx].b = 255;

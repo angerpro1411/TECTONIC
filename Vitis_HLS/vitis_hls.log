@@ -1,0 +1,97 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dell3561-49' on host 'dell3561-49' (Linux_x86_64 version 6.8.0-85-generic) on Wed Oct 08 14:45:22 CEST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dell3561-49/Vitis_HLS_folder'
+Sourcing Tcl script '/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project KERNEL_PARALLEL 
+INFO: [HLS 200-10] Opening project '/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL'.
+INFO: [HLS 200-1510] Running: add_files KERNEL_PARALLEL/frame_differencer.cpp 
+INFO: [HLS 200-10] Adding design file 'KERNEL_PARALLEL/frame_differencer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files KERNEL_PARALLEL/image_producer.cpp 
+INFO: [HLS 200-10] Adding design file 'KERNEL_PARALLEL/image_producer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files KERNEL_PARALLEL/motion_analyzer.cpp 
+INFO: [HLS 200-10] Adding design file 'KERNEL_PARALLEL/motion_analyzer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files KERNEL_PARALLEL/motion_detection.cpp 
+INFO: [HLS 200-10] Adding design file 'KERNEL_PARALLEL/motion_detection.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files KERNEL_PARALLEL/top_level.h 
+INFO: [HLS 200-10] Adding design file 'KERNEL_PARALLEL/top_level.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb KERNEL_PARALLEL/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'KERNEL_PARALLEL/testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dell3561-49/Vitis_HLS_folder/KERNEL_PARALLEL/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../testbench.cpp in debug mode
+   Compiling ../../../frame_differencer.cpp in debug mode
+   Compiling ../../../image_producer.cpp in debug mode
+   Compiling ../../../motion_analyzer.cpp in debug mode
+   Compiling ../../../motion_detection.cpp in debug mode
+   Generating csim.exe
+========================================
+Testbench HLS Motion Detection System
+Image size: 64x64
+Threshold: 30
+PPM files will be saved in ./output/
+========================================
+
+Processing frame 0...
+Saved: output/producer_frame_0.ppm
+Saved: output/motion_frame_0.ppm
+Frame 0: 3672 motion pixels
+Saved: output/motion_frame_0.ppm
+Verification: 3672 white pixels in output
+
+Processing frame 1...
+Saved: output/producer_frame_1.ppm
+Saved: output/motion_frame_1.ppm
+Frame 1: 734 motion pixels
+Saved: output/motion_frame_1.ppm
+Verification: 734 white pixels in output
+
+Processing frame 2...
+Saved: output/producer_frame_2.ppm
+Saved: output/motion_frame_2.ppm
+Frame 2: 749 motion pixels
+Saved: output/motion_frame_2.ppm
+Verification: 749 white pixels in output
+
+Processing frame 3...
+Saved: output/producer_frame_3.ppm
+Saved: output/motion_frame_3.ppm
+Frame 3: 751 motion pixels
+Saved: output/motion_frame_3.ppm
+Verification: 751 white pixels in output
+
+Processing frame 4...
+Saved: output/producer_frame_4.ppm
+Saved: output/motion_frame_4.ppm
+Frame 4: 709 motion pixels
+Saved: output/motion_frame_4.ppm
+Verification: 709 white pixels in output
+
+========================================
+Simulation completed successfully!
+Generated files in ./output/:
+  - producer_frame_X.ppm : Input images
+  - motion_frame_X.ppm   : Motion detection results
+  - simulation_report.txt: Summary report
+
+To view images, you can use:
+  convert output/*.ppm output/*.png  # Convert to PNG
+  eog output/*.png                   # View with Eye of GNOME
+  or use any image viewer that supports PPM
+========================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 4096
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 5.52 seconds. CPU system time: 0.57 seconds. Elapsed time: 6.09 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6.41 seconds. Total CPU system time: 0.69 seconds. Total elapsed time: 6.95 seconds; peak allocated memory: 215.277 MB.

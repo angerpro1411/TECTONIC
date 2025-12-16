@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln13_fu_92_p2" SOURCE="main.cpp:13" VARIABLE="icmp_ln13" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="grp_fu_79_p2" SOURCE="main.cpp:17" VARIABLE="icmp_ln17" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="grp_fu_79_p2" SOURCE="main.cpp:17" VARIABLE="icmp_ln17_1" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln13_1_fu_104_p2" SOURCE="main.cpp:13" VARIABLE="icmp_ln13_1" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="grp_fu_79_p2" SOURCE="main.cpp:17" VARIABLE="icmp_ln17_2" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="grp_fu_79_p2" SOURCE="main.cpp:17" VARIABLE="icmp_ln17_3" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln13_fu_110_p2" SOURCE="main.cpp:13" VARIABLE="add_ln13" MODULE="find" LOOP="VITIS_LOOP_13_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>
