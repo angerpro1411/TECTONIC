@@ -1,0 +1,125 @@
+    //stimulus
+    initial begin
+        //Initiate data for 12 MASK BUFFER and 12 MASK BUFFERs
+        repeat(2)
+            @(posedge clk);
+
+        fork
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF0 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF0 = 1'b1;
+                    end
+            end
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF1 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF1 = 1'b1;
+                    end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);            
+                    DATA2_MASKBUFF2 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF2 = 1'b1;
+                    end
+            end
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF3 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF3 = 1'b1;
+                end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF4 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF4 = 1'b1;
+                    end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF5 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF5 = 1'b1;
+                    end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF6 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF6 = 1'b1;
+                    end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF7 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF7 = 1'b1;
+                    end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF8 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF8 = 1'b1;
+                    end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF9 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF9 = 1'b1;
+                end
+            end
+
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF10 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF10 = 1'b1;
+                    end
+            end
+
+            begin
+                for(int i=0;i<320;i++) begin
+                    @(posedge clk);
+                    DATA2_MASKBUFF11 = $urandom_range(1,0);
+                    DATAVALID_MASKBUFF11 = 1'b1;
+                    end
+            end
+        join
+        @(posedge clk);
+        DATAVALID_MASKBUFF0 = 1'b0;
+        DATAVALID_MASKBUFF1 = 1'b0;
+        DATAVALID_MASKBUFF2 = 1'b0;
+        DATAVALID_MASKBUFF3 = 1'b0;
+        DATAVALID_MASKBUFF4 = 1'b0;
+        DATAVALID_MASKBUFF5 = 1'b0;
+        DATAVALID_MASKBUFF6 = 1'b0;
+        DATAVALID_MASKBUFF7 = 1'b0;
+        DATAVALID_MASKBUFF8 = 1'b0;
+        DATAVALID_MASKBUFF9 = 1'b0;
+        DATAVALID_MASKBUFF10 = 1'b0;
+        DATAVALID_MASKBUFF11 = 1'b0;
+    end

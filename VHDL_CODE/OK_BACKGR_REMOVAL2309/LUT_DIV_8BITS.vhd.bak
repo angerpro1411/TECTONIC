@@ -1,0 +1,90 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 09/09/2025 03:34:12 PM
+-- Design Name: 
+-- Module Name: LUT_DIV_8BITS - RTL
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description:
+--      With 8 bits input divisor we create a LUT-Based Methods, when we store all precomputed reciprocals(from 1 -> 255)
+--      So after that, we only need to use multiplication to ease hardware calculation.
+--      It means, instead of divide by y(8 bits). We will divide by (255/y)/255 with precomputed (255/y) and shift left 8 with (1/255) 
+--      Our real equation is 60*(8 bits)/diff. If we let 8bits/diff first, the integer quotient could be zero if 8bits < diff. 
+--      So we will do the multiplication by 60 first.
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use work.reciprocal_pkg.all;
+use ieee.numeric_std.all;
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity LUT_DIV_8BITS is
+    port(
+        i_CLK      : in std_logic;
+        i_RSTn     : in std_logic;
+        i_START    : in std_logic;
+        i_DIVIDEND : in std_logic_vector(7 downto 0);
+        i_DIVISOR  : in std_logic_vector(7 downto 0);
+        o_QUOTIENT : out std_logic_vector(13 downto 0)
+    );
+end LUT_DIV_8BITS;
+
+architecture RTL of LUT_DIV_8BITS is
+
+    -- 16 bit reciprocal value Q0.16(from 2 to 255) * 14 bits dividend_times60
+    signal UNPROCESS_QUOTIENT : std_logic_vector(29 downto 0);
+    signal INTEGER_DIVISOR : integer range 0 to 255;
+    
+    --8bits * 60(64 = 2^6) 6bits = 14 bits
+    signal DIVIDEND_TIMES60 : unsigned(13 downto 0);
+
+begin
+    INTEGER_DIVISOR <= to_integer(unsigned(i_DIVISOR));
+    DIVIDEND_TIMES60 <= unsigned(i_DIVIDEND)*to_unsigned(60,6);
+
+
+    DIVISION_PROC: process(i_CLK)
+    begin
+        if rising_edge(i_CLK) then
+            if i_RSTn = '0' then
+                UNPROCESS_QUOTIENT <= (others => '0');
+            elsif i_START = '1' then
+                if (unsigned(i_DIVISOR) = 0) then
+                    UNPROCESS_QUOTIENT <= (others => '0');
+                elsif (unsigned(i_DIVISOR) = 1) then --divide by 1
+                    UNPROCESS_QUOTIENT <=  std_logic_vector(DIVIDEND_TIMES60) & x"0000";
+                else
+                    UNPROCESS_QUOTIENT <= std_logic_vector(DIVIDEND_TIMES60 * recip_table(INTEGER_DIVISOR)(15 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+    
+    ROUNDING_PROC : process(UNPROCESS_QUOTIENT)
+    begin
+        if UNPROCESS_QUOTIENT(15) = '1' then
+            o_QUOTIENT <= std_logic_vector(unsigned(UNPROCESS_QUOTIENT(29 downto 16)) + 1);
+        else
+            o_QUOTIENT <= UNPROCESS_QUOTIENT(29 downto 16);
+        end if;
+    end process;
+
+end RTL;
