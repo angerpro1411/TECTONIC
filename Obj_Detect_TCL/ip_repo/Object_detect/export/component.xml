@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>DuyManhNGUYEN</spirit:vendor>
+  <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>hls</spirit:library>
   <spirit:name>hls_object_green_classification</spirit:name>
   <spirit:version>1.0</spirit:version>
@@ -855,7 +855,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b5c67ead</spirit:value>
+            <spirit:value>7ec74ad4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -871,7 +871,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>12c1bb10</spirit:value>
+            <spirit:value>30c88e67</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -887,7 +887,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c687f98b</spirit:value>
+            <spirit:value>7d202028</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -903,7 +903,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bfc4fcbb</spirit:value>
+            <spirit:value>2a61be12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1590,11 +1590,11 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_AUTO_1R1W.dat</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1638,43 +1638,43 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_11.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_13.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_2.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_22.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_24.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_276_5.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_311_6.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1691,14 +1691,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_is_external_RAM_2P_BRAM_1R1W.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_is_external_RAM_2P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1807,14 +1799,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/hls_object_green_classification_parent_RAM_2P_BRAM_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_pixel_count_RAM_2P_LUTRAM_1R1W.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_pixel_count_RAM_2P_LUTRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1845,11 +1829,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_AUTO_1R1W.dat</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1904,52 +1888,52 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_11.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_13.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_2.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_22.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_24.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_276_5.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_311_6.v</spirit:name>
+        <spirit:name>hdl/verilog/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1968,15 +1952,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_is_external_RAM_2P_BRAM_1R1W.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_is_external_RAM_2P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2105,15 +2080,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/hls_object_green_classification_parent_RAM_2P_BRAM_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_pixel_count_RAM_2P_LUTRAM_1R1W.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/hls_object_green_classification_pixel_count_RAM_2P_LUTRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2156,7 +2122,7 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_center_is_green_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2192,43 +2158,43 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_11.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_13.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_22.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_24.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_276_5.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_311_6.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2237,10 +2203,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_is_external_RAM_2P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2321,10 +2283,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/hls_object_green_classification_parent_RAM_2P_BRAM_1R1W.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_pixel_count_RAM_2P_LUTRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2350,13 +2308,13 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/hls_object_green_classification.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_7491d51e</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_629cc5c8</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_center_is_green_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_center_is_green_RAM_2P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2401,52 +2359,52 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_11.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_11.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_26_13.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_349_13.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_22.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_22.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_28_24.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_351_24.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_206_1_VITIS_LOOP_207_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_525_1_VITIS_LOOP_526_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_218_3_VITIS_LOOP_219_4.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_537_3_VITIS_LOOP_538_4.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_276_5.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_592_5.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_311_6.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/hls_object_green_classification_hls_object_green_classification_Pipeline_VITIS_LOOP_626_6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2457,11 +2415,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/hls_object_green_classification_imgR_RAM_2P_BRAM_1R1W.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_is_external_RAM_2P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2562,11 +2515,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/hls_object_green_classification_parent_RAM_2P_BRAM_1R1W.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/hls_object_green_classification_pixel_count_RAM_2P_LUTRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2703,10 +2651,10 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VITIS_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>obj_detect</xilinx:displayName>
+      <xilinx:displayName>Hls_object_green_classification</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114392825</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-12-15T17:25:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114352064</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-11-17T10:04:26Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2716,7 +2664,7 @@
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9aca5450"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ab22af15"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="af247c05"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="35e95a1b"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0cd6a1ff"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="4395c73a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="5e61ed2c"/>

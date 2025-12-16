@@ -11,12 +11,12 @@ wire [0:0] inst_block_sigs;
 wire kernel_block;
 
 assign axis_block_sigs[0] = ~in_stream_TDATA_blk_n;
-assign axis_block_sigs[1] = ~grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_993.out_stream_TDATA_blk_n;
+assign axis_block_sigs[1] = ~grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983.out_stream_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
-assign inst_idle_sigs[1] = grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_993.ap_idle;
+assign inst_idle_sigs[1] = grp_hls_object_green_classification_Pipeline_pass5_out_pass5_in_fu_983.ap_idle;
 
 hls_object_green_classification_hls_deadlock_idx0_monitor hls_object_green_classification_hls_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

@@ -33,14 +33,10 @@ module hls_object_green_classification_hls_object_green_classification_Pipeline_
         max_y_ce1,
         max_y_we1,
         max_y_d1,
-        center_is_green_address0,
-        center_is_green_ce0,
-        center_is_green_we0,
-        center_is_green_d0,
-        pixel_count_address1,
-        pixel_count_ce1,
-        pixel_count_we1,
-        pixel_count_d1
+        center_is_green_address1,
+        center_is_green_ce1,
+        center_is_green_we1,
+        center_is_green_d1
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
@@ -71,14 +67,10 @@ output  [8:0] max_y_address1;
 output   max_y_ce1;
 output   max_y_we1;
 output  [7:0] max_y_d1;
-output  [8:0] center_is_green_address0;
-output   center_is_green_ce0;
-output   center_is_green_we0;
-output  [0:0] center_is_green_d0;
-output  [8:0] pixel_count_address1;
-output   pixel_count_ce1;
-output   pixel_count_we1;
-output  [15:0] pixel_count_d1;
+output  [8:0] center_is_green_address1;
+output   center_is_green_ce1;
+output   center_is_green_we1;
+output  [0:0] center_is_green_d1;
 
 reg ap_idle;
 reg parent_ce1;
@@ -91,24 +83,22 @@ reg min_y_ce1;
 reg min_y_we1;
 reg max_y_ce1;
 reg max_y_we1;
-reg center_is_green_ce0;
-reg center_is_green_we0;
-reg pixel_count_ce1;
-reg pixel_count_we1;
+reg center_is_green_ce1;
+reg center_is_green_we1;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [0:0] icmp_ln105_fu_193_p2;
+wire   [0:0] icmp_ln425_fu_173_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] zext_ln105_fu_205_p1;
-reg   [9:0] i_fu_60;
-wire   [9:0] i_5_fu_199_p2;
+wire   [63:0] zext_ln425_fu_185_p1;
+reg   [9:0] i_fu_54;
+wire   [9:0] i_5_fu_179_p2;
 wire    ap_loop_init;
 reg   [9:0] ap_sig_allocacmp_i_4;
-wire   [8:0] trunc_ln108_fu_216_p1;
+wire   [8:0] trunc_ln428_fu_195_p1;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -160,10 +150,10 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        if ((icmp_ln105_fu_193_p2 == 1'd0)) begin
-            i_fu_60 <= i_5_fu_199_p2;
+        if ((icmp_ln425_fu_173_p2 == 1'd0)) begin
+            i_fu_54 <= i_5_fu_179_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_60 <= 10'd0;
+            i_fu_54 <= 10'd0;
         end
     end
 end
@@ -177,7 +167,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((icmp_ln425_fu_173_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -212,23 +202,23 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_sig_allocacmp_i_4 = 10'd0;
     end else begin
-        ap_sig_allocacmp_i_4 = i_fu_60;
+        ap_sig_allocacmp_i_4 = i_fu_54;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        center_is_green_ce0 = 1'b1;
+        center_is_green_ce1 = 1'b1;
     end else begin
-        center_is_green_ce0 = 1'b0;
+        center_is_green_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        center_is_green_we0 = 1'b1;
+    if (((icmp_ln425_fu_173_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+        center_is_green_we1 = 1'b1;
     end else begin
-        center_is_green_we0 = 1'b0;
+        center_is_green_we1 = 1'b0;
     end
 end
 
@@ -241,7 +231,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((icmp_ln425_fu_173_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         max_x_we1 = 1'b1;
     end else begin
         max_x_we1 = 1'b0;
@@ -257,7 +247,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((icmp_ln425_fu_173_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         max_y_we1 = 1'b1;
     end else begin
         max_y_we1 = 1'b0;
@@ -273,7 +263,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((icmp_ln425_fu_173_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         min_x_we1 = 1'b1;
     end else begin
         min_x_we1 = 1'b0;
@@ -289,7 +279,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((icmp_ln425_fu_173_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         min_y_we1 = 1'b1;
     end else begin
         min_y_we1 = 1'b0;
@@ -305,26 +295,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
+    if (((icmp_ln425_fu_173_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         parent_we1 = 1'b1;
     end else begin
         parent_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        pixel_count_ce1 = 1'b1;
-    end else begin
-        pixel_count_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((icmp_ln105_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
-        pixel_count_we1 = 1'b1;
-    end else begin
-        pixel_count_we1 = 1'b0;
     end
 end
 
@@ -347,40 +321,36 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign center_is_green_address0 = zext_ln105_fu_205_p1;
+assign center_is_green_address1 = zext_ln425_fu_185_p1;
 
-assign center_is_green_d0 = 1'd0;
+assign center_is_green_d1 = 1'd0;
 
-assign i_5_fu_199_p2 = (ap_sig_allocacmp_i_4 + 10'd1);
+assign i_5_fu_179_p2 = (ap_sig_allocacmp_i_4 + 10'd1);
 
-assign icmp_ln105_fu_193_p2 = ((ap_sig_allocacmp_i_4 == 10'd512) ? 1'b1 : 1'b0);
+assign icmp_ln425_fu_173_p2 = ((ap_sig_allocacmp_i_4 == 10'd512) ? 1'b1 : 1'b0);
 
-assign max_x_address1 = zext_ln105_fu_205_p1;
+assign max_x_address1 = zext_ln425_fu_185_p1;
 
 assign max_x_d1 = 9'd0;
 
-assign max_y_address1 = zext_ln105_fu_205_p1;
+assign max_y_address1 = zext_ln425_fu_185_p1;
 
 assign max_y_d1 = 8'd0;
 
-assign min_x_address1 = zext_ln105_fu_205_p1;
+assign min_x_address1 = zext_ln425_fu_185_p1;
 
 assign min_x_d1 = 9'd320;
 
-assign min_y_address1 = zext_ln105_fu_205_p1;
+assign min_y_address1 = zext_ln425_fu_185_p1;
 
 assign min_y_d1 = 8'd240;
 
-assign parent_address1 = zext_ln105_fu_205_p1;
+assign parent_address1 = zext_ln425_fu_185_p1;
 
-assign parent_d1 = trunc_ln108_fu_216_p1;
+assign parent_d1 = trunc_ln428_fu_195_p1;
 
-assign pixel_count_address1 = zext_ln105_fu_205_p1;
+assign trunc_ln428_fu_195_p1 = ap_sig_allocacmp_i_4[8:0];
 
-assign pixel_count_d1 = 16'd0;
-
-assign trunc_ln108_fu_216_p1 = ap_sig_allocacmp_i_4[8:0];
-
-assign zext_ln105_fu_205_p1 = ap_sig_allocacmp_i_4;
+assign zext_ln425_fu_185_p1 = ap_sig_allocacmp_i_4;
 
 endmodule //hls_object_green_classification_hls_object_green_classification_Pipeline_InitLoop
