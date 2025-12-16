@@ -25,8 +25,8 @@
 
 
 //Define for reading data from object_detection ip
-#define HLS_IP_BASE     XPAR_HLS_OBJECT_GREEN_CLA_0_S_AXI_CTRL_BASEADDR
-#define HLS_IP_INTR_ID  XPAR_FABRIC_HLS_OBJECT_GREEN_CLA_0_INTERRUPT_INTR
+//#define HLS_IP_BASE     XPAR_HLS_OBJECT_GREEN_CLA_0_S_AXI_CTRL_BASEADDR
+//#define HLS_IP_INTR_ID  XPAR_FABRIC_HLS_OBJECT_GREEN_CLA_0_INTERRUPT_INTR
 
 
 //function definitions
@@ -52,6 +52,8 @@ u8 g_obj_count = 0;
 /*Execution time calculation*/
 //Using the global timer
 XTime start,end;
+
+unsigned int sendCnt=0;
 
 
 
@@ -135,7 +137,6 @@ int main(){
 		print("\r\nFailed to XScuGic_Connect_OBj_Detect GIC");
 		return XST_FAILURE;
 	}
-
 	//Enable back the interrupt - OBjDetect
 	XScuGic_Enable(&mycuGic, XPAR_FABRIC_HLS_OBJECT_GREEN_CLA_0_INTERRUPT_INTR);
 
@@ -172,7 +173,7 @@ int main(){
 	//Polling to wait result of object detection then print the result
 	while(1){
 		if(g_obj_ready == 1){
-		printf("\r\nProcessing time %f ns",(end-start)*1000000000.0/COUNTS_PER_SECOND);
+		printf("\r\nProcessing time %f ns",(end-start)*1000000000.0/(sendCnt*COUNTS_PER_SECOND));
 		xil_printf("\r\nDetected %d objects:", g_obj_count);
 		for (u8 i = 0;i<g_obj_count;i++){
 			xil_printf("\r\nObj %d:(%d,%d)",i,list[i].x,list[i].y);
@@ -190,6 +191,7 @@ int main(){
 
 //Interrupt Service Routine for DMA interrupt
 static void DMA_REPEAT_READ_ISR(void *CallBackRef){
+
 
 	XAxiDma *instDMA = (XAxiDma *)CallBackRef;
 
@@ -209,6 +211,7 @@ static void DMA_REPEAT_READ_ISR(void *CallBackRef){
 //Interrupt for Object Detection
 void Obj_detect_read_result(void *CallbackRef)
 {
+	sendCnt++;
 	//Calculate the end time
 	XTime_GetTime(&end);
 
@@ -228,4 +231,5 @@ void Obj_detect_read_result(void *CallbackRef)
     // Start again for the next frame
     XHls_object_green_classification_Start(ip);
 }
+
 
